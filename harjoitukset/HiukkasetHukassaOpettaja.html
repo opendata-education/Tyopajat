@@ -526,7 +526,7 @@
 <h2>Työpajan rakenne<a class="headerlink" href="#tyopajan-rakenne" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="esitys-20-25-min">
 <h3>Esitys (20-25 min)<a class="headerlink" href="#esitys-20-25-min" title="Permalink to this headline">¶</a></h3>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Osa aiheista voidaan käsitellä ennen tyopajaa koulussa. 
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Osa aiheista voidaan käsitellä ennen työpajaa koulussa. 
 </pre></div>
 </div>
 <p>Assari esittelee <strong>oppilaan notebookin (.slides tiedoston?)</strong> avulla ryhmän tason / kiinnostuksen mukaan otsikot:</p>
@@ -561,7 +561,7 @@ Jaetaan oppilaat 2-3 hengen ryhmiin ja annetaan jokaiselle ryhmällä oman datas
 <ol class="simple">
 <li><p><a class="reference external" href="#os1">Datan tarkastelu</a></p></li>
 <li><p><a class="reference external" href="#os2">Datan käsittely</a></p></li>
-<li><p><span class="xref myst">Datan visualisointi</span></p></li>
+<li><p><a class="reference external" href="#os3">Datan visualisointi</a></p></li>
 <li><p><a class="reference external" href="#os4">Kuvaajien tulkinta ja tulokset</a></p></li>
 </ol>
 </div>
@@ -581,7 +581,7 @@ Kerätään tulokset yhteen ja koostetaan kuva jossa näkyy kahden myonin invari
 <p><a id="alustus"></a></p>
 <div class="section" id="alustus">
 <h4>Alustus<a class="headerlink" href="#alustus" title="Permalink to this headline">¶</a></h4>
-<p>Alla on koodisolu joka ajettaessa hakee tarvittavat python paketit. Pandas on data-analyysiä varten, numpy tieteellistä laskentaa ja matplotlib.pyplot mahdollistaa kuvaajien piirtämisen. Annetaan näille lyhyemmät nimet (pd, np ja plt),
+<p>Alla on koodisolu, joka ajettaessa hakee tarvittavat python paketit. Pandas on data-analyysiä varten, numpy tieteellistä laskentaa ja matplotlib.pyplot mahdollistaa kuvaajien piirtämisen. Annetaan näille lyhyemmät nimet (pd, np ja plt),
 jotta myöhemmin niitä käytettäessä ei tarvitse kirjoittaa koko paketin nimeä.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -614,7 +614,7 @@ jotta myöhemmin niitä käytettäessä ei tarvitse kirjoittaa koko paketin nime
 <span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
 
 <span class="ne">Exception</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1675</span><span class="o">/</span><span class="mf">491733481.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1608</span><span class="o">/</span><span class="mf">491733481.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="c1">#!curl -O https://raw.githubusercontent.com/cms-opendata-education/cms-jupyter-materials-finnish/master/Data/Apufunktiot/hiukkasethukassa.ipynb</span>
 <span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="c1">#%run hiukkasethukassa.ipynb</span>
 <span class="ne">----&gt; </span><span class="mi">8</span> <span class="n">get_ipython</span><span class="p">()</span><span class="o">.</span><span class="n">run_line_magic</span><span class="p">(</span><span class="s1">&#39;run&#39;</span><span class="p">,</span> <span class="s1">&#39;../../Data/Apufunktiot/hiukkasethukassa.ipynb&#39;</span><span class="p">)</span>
@@ -690,7 +690,7 @@ Yksi esimerkki paradoksista on niin sanottu Schrödingerin kissa.
 </div>
 <blockquote>
 <div><p>Tämä ei tunnu järkevältä, jos asiaa tarkastellaan klassisen fysiikan näkökulmasta, toisin sanoen niiden fysiikan lakien pohjalta, jotka tunnemme arkipäivän elämästä. Niiden mukaan kissa ei voi olla yhtaikaa kuollut ja elävä – vaan ainoastaan jompaakumpaa.
-Suuri osa kvanttimekaniikasta on kuitenkin Schrödingerin kissa -ajatusleikin kaltaisia kahden eri tilan yhdistelmiä
+Suuri osa kvanttimekaniikasta on kuitenkin Schrödingerin kissa -ajatusleikin kaltaisia kahden eri tilan yhdistelmiä.
 [<a class="reference external" href="#tk">1</a>]</p>
 </div></blockquote>
 <p>Hiukkasfysiikan kokeellinen tutkimus onkin usein epäsuoraa ja dataa kerätään paljon, jotta todennäköisyyksien avulla saadaan tuloksia ja uusia havaintoja.</p>
@@ -909,7 +909,7 @@ Elektronivoltti on tuttu energian yksikkönä. Hiukkasfyysikot voivat kuitenkin 
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1675</span><span class="o">/</span><span class="mf">704671555.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1608</span><span class="o">/</span><span class="mf">704671555.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">5</span> 
 <span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="c1"># Pyydetään käyttäjää valitsemaan tapahtumien lukumäärä. Tallennetaan luku muuttujaan &#39;määrä&#39;.</span>
 <span class="ne">----&gt; </span><span class="mi">7</span>     <span class="n">määrä</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Kuinka monta tapahtumaa valitaan: &#39;</span><span class="p">))</span>
@@ -1435,7 +1435,7 @@ Pienin myonin energia on 2.66819 GeV
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1675</span><span class="o">/</span><span class="mf">4051652215.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1608</span><span class="o">/</span><span class="mf">4051652215.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">tarkista_arvot</span><span class="p">()</span>
 
 <span class="ne">NameError</span>: name &#39;tarkista_arvot&#39; is not defined
@@ -1638,7 +1638,7 @@ dtype: float64
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1675</span><span class="o">/</span><span class="mf">4256767755.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1608</span><span class="o">/</span><span class="mf">4256767755.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">tarkista_inv_massat</span><span class="p">()</span>
 
 <span class="ne">NameError</span>: name &#39;tarkista_inv_massat&#39; is not defined
@@ -1945,7 +1945,7 @@ Kuvio johtuu emohiukkasen hajoamisesta kahdeksi myoniksi, joista sitten lasketaa
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>475465
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7f19ea68c310&gt;]
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;matplotlib.lines.Line2D at 0x7fc640e8b340&gt;]
 </pre></div>
 </div>
 <img alt="../_images/HiukkasetHukassaOpettaja_54_2.png" src="../_images/HiukkasetHukassaOpettaja_54_2.png" />

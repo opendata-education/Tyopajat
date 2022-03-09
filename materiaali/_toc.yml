@@ -4,3 +4,7 @@
 - part: Valmiit työpajat
   chapters:
   - file: harjoitukset/hiukkasfysiikka1
+- part: Lyhyet esimerkit
+  chapters:
+  - file: harjoitukset/UV
+  - file: harjoitukset/Lumensyvyys

@@ -8,6 +8,7 @@
   chapters:
   - file: harjoitukset/UV
   - file: harjoitukset/Lumensyvyys
+  - file: harjoitukset/tiedekurssi_malli
 - part: Omaan työhön
   chapters:
   - file: harjoitukset/Pohja

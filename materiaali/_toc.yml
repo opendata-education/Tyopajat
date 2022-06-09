@@ -3,6 +3,7 @@
 format: jb-book
 root: intro
 parts:
+- caption: CERN Opettajakurssi
 - caption: Valmiit työpajat
   chapters:
   - file: harjoitukset/hiukkasfysiikka1

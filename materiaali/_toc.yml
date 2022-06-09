@@ -1,14 +1,16 @@
 # Table of contents
 # Learn more at https://jupyterbook.org/customize/toc.html
-- file: intro
-- part: Valmiit työpajat
+format: jb-book
+root: intro
+parts:
+- caption: Valmiit työpajat
   chapters:
   - file: harjoitukset/hiukkasfysiikka1
-- part: Lyhyet esimerkit
+- caption: Lyhyet esimerkit
   chapters:
   - file: harjoitukset/UV
   - file: harjoitukset/Lumensyvyys
   - file: harjoitukset/tiedekurssi_malli
-- part: Omaan työhön
+- caption: Omaan työhön
   chapters:
   - file: harjoitukset/Pohja

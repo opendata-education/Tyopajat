@@ -5,7 +5,7 @@ root: intro
 chapters:
 - file: harjoitukset/opettajakoulutus
   sections:
-  - harjoitukset/mika_on_jupyter_notebook
+  - file: harjoitukset/mika_on_jupyter_notebook
 - file: harjoitukset/valmiit_tyopajat
   sections:
   - file: harjoitukset/hiukkasfysiikka1

@@ -2,16 +2,12 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 format: jb-book
 root: intro
-parts:
-- caption: CERN Opettajakurssi
-- caption: Valmiit työpajat
+chapters:
+- file: harjoitukset/opettajakoulutus
   sections:
   - file: harjoitukset/hiukkasfysiikka1
-- caption: Lyhyet esimerkit
+- file: harjoitukset/valmiit_tyopajat
   sections:
   - file: harjoitukset/UV
   - file: harjoitukset/Lumensyvyys
   - file: harjoitukset/tiedekurssi_malli
-- caption: Omaan työhön
-  sections:
-  - file: harjoitukset/Pohja

@@ -37,7 +37,7 @@ Harjoituksissa tarvittavat perustiedot Python ohjelmointikielen käyttöön
 
 Tässä tehtävässä pääset tutustumaan muutamiin Python-ohjelmoinnin peruskomentoihin Jupyter Notebook -ympäristössä.
 
-#### CMS-simulaatio [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/cms-opendata-education/cms-jupyter-materials-finnish/master?filepath=Opetusmateriaalit%2FAvoinDataHiukkasfysiikassa%2F2_CMS-simulaatio.ipynb) [![Colaboratory](https://github.com/cms-opendata-education/cms-jupyter-materials-finnish/blob/master/Kuvat/colab_icon.png?raw=true)](https://colab.research.google.com/github/cms-opendata-education/cms-jupyter-materials-finnish/blob/master/Opetusmateriaalit/AvoinDataHiukkasfysiikassa/2_CMS-simulaatio.ipynb)
+#### Törmäykset CMS-kokeessa [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/cms-opendata-education/cms-jupyter-materials-finnish/master?filepath=Opetusmateriaalit%2FAvoinDataHiukkasfysiikassa%2F2_CMS-simulaatio.ipynb) [![Colaboratory](https://github.com/cms-opendata-education/cms-jupyter-materials-finnish/blob/master/Kuvat/colab_icon.png?raw=true)](https://colab.research.google.com/github/cms-opendata-education/cms-jupyter-materials-finnish/blob/master/Opetusmateriaalit/AvoinDataHiukkasfysiikassa/2_CMS-simulaatio.ipynb)
 
 Kiinnostaako, miltä hiukkausten törmäykset näyttävät? Törmäykset tapahtuvat todellisuudessa niin nopeasti ja pienessä mittakaavassa, että niitä ei ole mahdollista nähdä tai valokuvata, mutta niitä voidaan mallintaa ohjelmistoilla kokeissa tallennetun datan perusteella. Yllä olevasta linkistä pääset tutkimaan hiukkasten törmäyksiä CMS-ilmasimessa kerätyn aidon datan perusteella.
 

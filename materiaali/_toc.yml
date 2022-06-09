@@ -5,8 +5,11 @@ root: intro
 chapters:
 - file: harjoitukset/opettajakoulutus
   sections:
-  - file: harjoitukset/hiukkasfysiikka1
+  - harjoitukset/mika_on_jupyter_notebook
 - file: harjoitukset/valmiit_tyopajat
+  sections:
+  - file: harjoitukset/hiukkasfysiikka1
+- file: harjoitukset/esimerkit
   sections:
   - file: harjoitukset/UV
   - file: harjoitukset/Lumensyvyys

@@ -5,13 +5,13 @@ root: intro
 parts:
 - caption: CERN Opettajakurssi
 - caption: Valmiit työpajat
-  chapters:
+  sections:
   - file: harjoitukset/hiukkasfysiikka1
 - caption: Lyhyet esimerkit
-  chapters:
+  sections:
   - file: harjoitukset/UV
   - file: harjoitukset/Lumensyvyys
   - file: harjoitukset/tiedekurssi_malli
 - caption: Omaan työhön
-  chapters:
+  sections:
   - file: harjoitukset/Pohja

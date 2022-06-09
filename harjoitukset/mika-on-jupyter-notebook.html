@@ -1,0 +1,1111 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Mikä on Jupyter Notebook? &#8212; Työpajat</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=62ba249389abaaa9ffc34bf36a076bdc1d65ee18" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=f31d14ad54b65d19161ba51d4ffff3a77ae00456"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://opendata-education.github.io/Biologia/intro.html/harjoitukset/mika-on-jupyter-notebook.html" />
+    <link rel="shortcut icon" href="../_static/logo.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Valmiit työpajat" href="valmiit_tyopajat.html" />
+    <link rel="prev" title="CERN Opettajakoulutus" href="opettajakoulutus.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Työpajat</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Tervetuloa avoimen datan pariin
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="opettajakoulutus.html">
+   CERN Opettajakoulutus
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Mikä on Jupyter Notebook?
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="valmiit_tyopajat.html">
+   Valmiit työpajat
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="hiukkasfysiikka1.html">
+     Hiukkasfysiikan työpaja lukiolaisille
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="esimerkit.html">
+   Lyhyet esimerkit
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="UV.html">
+     ESIMERKKI: Ultraviolettisäteily
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Lumensyvyys.html">
+     ESIMERKKI: Lumensyvyys
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="tiedekurssi_malli.html">
+     Tiedekurssin malliraportti
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/opendata-education/Tyopajat/main?urlpath=tree/materiaali/harjoitukset/mika-on-jupyter-notebook.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://colab.research.google.com/github/opendata-education/Tyopajat/blob/main/materiaali/harjoitukset/mika-on-jupyter-notebook.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Colab"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_colab.png">
+  </span>
+<span class="headerbtn__text-container">Colab</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/opendata-education/Tyopajat"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/opendata-education/Tyopajat/issues/new?title=Issue%20on%20page%20%2Fharjoitukset/mika-on-jupyter-notebook.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/harjoitukset/mika-on-jupyter-notebook.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tehtava-muokkaa-tata-tekstisolua-lisaa-alle-lause-jossa-kerrot-minkalainen-saa-on-tanaan">
+   Tehtävä: Muokkaa tätä tekstisolua – lisää alle lause, jossa kerrot minkälainen sää on tänään.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tehtava-kokeile-lisata-alle-uusi-koodisolu-ja-laske-jokin-mielivaltainen-summa-muuttujaan-b">
+   Tehtävä: Kokeile lisätä alle uusi koodisolu ja laske jokin mielivaltainen summa muuttujaan b.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#funktiokirjastot">
+   1. Funktiokirjastot
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tehtava-luo-kaksi-mielivaltaista-vektoria-muuttujiin-vek1-ja-vek2-seka-laske-niiden-vektorisumma">
+     Tehtävä: Luo kaksi mielivaltaista vektoria muuttujiin vek1 ja vek2 sekä laske niiden vektorisumma.
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#datan-lukeminen">
+   2. Datan lukeminen
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tehtava-kokeile-avata-tassa-notebookissa-jokin-toinen-cms-kokeen-datasetti">
+     Tehtävä: Kokeile avata tässä notebookissa jokin toinen CMS-kokeen datasetti.
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kuvaajat">
+   3. Kuvaajat
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tehtava-piirra-kuvaaja-kosinifunktiosta">
+     Tehtävä: Piirrä kuvaaja kosinifunktiosta.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tehtava-valitse-jokin-toinen-datasetti-ja-piirra-vastaava-histogrammi">
+     Tehtävä: Valitse jokin toinen datasetti ja piirrä vastaava histogrammi.
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Mikä on Jupyter Notebook?</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tehtava-muokkaa-tata-tekstisolua-lisaa-alle-lause-jossa-kerrot-minkalainen-saa-on-tanaan">
+   Tehtävä: Muokkaa tätä tekstisolua – lisää alle lause, jossa kerrot minkälainen sää on tänään.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tehtava-kokeile-lisata-alle-uusi-koodisolu-ja-laske-jokin-mielivaltainen-summa-muuttujaan-b">
+   Tehtävä: Kokeile lisätä alle uusi koodisolu ja laske jokin mielivaltainen summa muuttujaan b.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#funktiokirjastot">
+   1. Funktiokirjastot
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tehtava-luo-kaksi-mielivaltaista-vektoria-muuttujiin-vek1-ja-vek2-seka-laske-niiden-vektorisumma">
+     Tehtävä: Luo kaksi mielivaltaista vektoria muuttujiin vek1 ja vek2 sekä laske niiden vektorisumma.
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#datan-lukeminen">
+   2. Datan lukeminen
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tehtava-kokeile-avata-tassa-notebookissa-jokin-toinen-cms-kokeen-datasetti">
+     Tehtävä: Kokeile avata tässä notebookissa jokin toinen CMS-kokeen datasetti.
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kuvaajat">
+   3. Kuvaajat
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tehtava-piirra-kuvaaja-kosinifunktiosta">
+     Tehtävä: Piirrä kuvaaja kosinifunktiosta.
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#tehtava-valitse-jokin-toinen-datasetti-ja-piirra-vastaava-histogrammi">
+     Tehtävä: Valitse jokin toinen datasetti ja piirrä vastaava histogrammi.
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="mika-on-jupyter-notebook">
+<h1>Mikä on Jupyter Notebook?<a class="headerlink" href="#mika-on-jupyter-notebook" title="Permalink to this headline">#</a></h1>
+<p>Moi! Tämä alusta tässä on Jupyter Notebook. Täällä voit samassa dokumentissa käsitellä tekstiä, koodia, yhtälöitä, kuvia sekä data-aineistoja interaktiivisesti. Näppärää! Näitä dokumentteja kutsutaan notebookeiksi.</p>
+<p>Kuten varmaan jo huomasit, tämä alusta toimii sinun internet-selaimessa. Se mahdollistaa oppilaille suunnattujen tehtävien helpon jakamisen ilman kömpelöä välivaihetta, jossa ohjelmistoja pitää ladata ja niiden opettelu vie hirveästi aikaa. Tämän alustan etuja on ehdottomasti helppokäyttöisyys.</p>
+<p>Jupyter Notebookia voi käyttää myös <em>lokaalisti</em>, eli asentamalla ohjelman omalle tietokoneelle. Silloinkin tisamalleen samanlainen alusta avautuu selaimeen, mutta voit käyttää sinun koneella olevia tiedostoja suoraan tai tallentaa keskeneräisen tiedoston omalle koneelle. Tämä on kannattavaa silloin, kun haluat luoda omia tehtäviä tai tarkastaa oppilaiden tekemiä vastauksia, jotka sisältävät koodia tai dataa. Esimerkiksi Anaconda-Navigator sisältää Jupyter Notebookin.</p>
+<p>Jupyter Notebookien kanssa työskennellessä on hyvä muistaa, että nämä virtuaaliset (ei koske lokaalia työskentelyä) “sessiot” vanhentuvat, jos et ole aktiivinen kymmeneen minuuttiin. Jos uudelleen käynnistys ei onnistu, niin siinä tapauksessa muokatun tiedoston voi vielä tallentaa, jolloin siihen voi palata sitä kautta uudelleen.</p>
+<p>Yläpalkista löytyy kaikki tarpeellinen – voit tallentaa tiedoston ja luoda checkpointteja, lisätä tai poistaa uusia soluja, liikutella soluja ylös tai alas sekä ajaa/suorittaa soluja. Alasvetovalikosta voit valita, onko muokkaamasi solu tekstisolu (markdown) vai koodisolu (code).</p>
+<p>Jos haluat muokata jotain yksittäistä solua, sen saa editointitilaan tuplaklikkaamalla solua. Muokatun solun voit suorittaa Run-painikkeella tai pikakomentona Control + Enter (Mac: Command + Enter).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tältä näyttää koodisolu. Risuaidalla voit kirjoittaa koodisoluun kommentteja tai ohjeita.</span>
+<span class="c1"># Esimerkin vuoksi tehdään pieni laskutoimitus</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="o">+</span><span class="mi">1</span> <span class="c1"># muuttuja &#39;a&#39; sisältää nyt laskutoimituksen 1+1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="c1"># tulostetaan muuttuja &#39;a&#39; näkyviin, jolloin nähdään laskutoimituksen lopputulos.</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2
+</pre></div>
+</div>
+</div>
+</div>
+<p>Ylhäällä on koodisolu, joka sisältää pienen laskutoimituksen. Voit suorittaa solun, jolloin sen alapuolelle tulostuu kaikki, mitä koodisolussa käsketään tulostaa. Jos ihan vasemmalla olevissa hakasulkeissa on <strong>In [*]</strong>, niin solun suorittaminen on vielä kesken. Suoritetun koodisolun kohdalla hakasulkeisiin tulee numero, josta näkee, missä järjestyksessä solut on suoritettu. Jos suoritit ylempänä olevan solun kerran, hakasulkeissa pitäisi olla 1, jos suoritat sen saman solun nyt toisen kerran, siihen pitäisi tulla 2.</p>
+<section id="tehtava-muokkaa-tata-tekstisolua-lisaa-alle-lause-jossa-kerrot-minkalainen-saa-on-tanaan">
+<h2>Tehtävä: Muokkaa tätä tekstisolua – lisää alle lause, jossa kerrot minkälainen sää on tänään.<a class="headerlink" href="#tehtava-muokkaa-tata-tekstisolua-lisaa-alle-lause-jossa-kerrot-minkalainen-saa-on-tanaan" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="tehtava-kokeile-lisata-alle-uusi-koodisolu-ja-laske-jokin-mielivaltainen-summa-muuttujaan-b">
+<h2>Tehtävä: Kokeile lisätä alle uusi koodisolu ja laske jokin mielivaltainen summa muuttujaan b.<a class="headerlink" href="#tehtava-kokeile-lisata-alle-uusi-koodisolu-ja-laske-jokin-mielivaltainen-summa-muuttujaan-b" title="Permalink to this headline">#</a></h2>
+</section>
+<section id="funktiokirjastot">
+<h2>1. Funktiokirjastot<a class="headerlink" href="#funktiokirjastot" title="Permalink to this headline">#</a></h2>
+<p>Pythonia käytettäessä hyödynnetään erilaisia paketteja, joista kukin sisältää oman valikoimansa erilaisia funktioita. Meillä yleisimmin käytössä olevat paketit ovat</p>
+<ul class="simple">
+<li><p><strong>numpy</strong>, sisältää numeerisen laskennan työkaluja</p></li>
+<li><p><strong>pandas</strong>, sisältää työkaluja datan lukemiseen</p></li>
+<li><p><strong>matplotlib.pyplot</strong>, sisältää kuvaajien piirtotyökaluja</p></li>
+</ul>
+<p>Jokainen haluttu paketti voidaan tuoda erikseen käyttöön <strong>import</strong>-komennolla.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Aja tämä solu ensin</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span> <span class="c1"># tuodaan numpy-paketti käyttöön ja annetaan sille lyhenne funktioiden kutsumista varten</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Luodaan lista [1 3 6] ja tallennetaan se muuttujaan &#39;vektori&#39;</span>
+
+<span class="n">vektori</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">vektori</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1 3 6]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Array-funktion avulla voidaan rakentaa taulukoita ja listoja, jolloin sillä voidaan kuvata esimerkiksi vektoreita ja matriiseja. Se sopii myös todella hyvin mittausdatan käsittelyyn.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Lisätään jokaiseen elementtiin 2. </span>
+<span class="nb">print</span><span class="p">(</span><span class="n">vektori</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[3 5 8]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Mitä veikkaatte, jos tämän jälkeen printataan pelkkä muuttuja &#39;vektori&#39;?</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">vektori</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1 3 6]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vektori</span> <span class="o">=</span> <span class="n">vektori</span> <span class="o">+</span> <span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">vektori</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[3 5 8]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Luodaan kaksi listaa ja testataan erilaisia summia.</span>
+
+<span class="n">lista1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span>
+                    <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]])</span>
+<span class="n">lista2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">],</span>
+                   <span class="p">[</span><span class="mi">20</span><span class="p">,</span><span class="mi">21</span><span class="p">]])</span>
+<span class="n">summa</span> <span class="o">=</span> <span class="n">lista1</span><span class="o">+</span><span class="n">lista2</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Listan 1 elementtien summa: &quot;</span><span class="p">,</span> <span class="n">lista1</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Vektorisummmat: &quot;</span><span class="p">,</span> <span class="n">summa</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Listan 1 elementtien summa:  7
+Vektorisummmat:  [[12 13]
+ [21 23]]
+</pre></div>
+</div>
+</div>
+</div>
+<section id="tehtava-luo-kaksi-mielivaltaista-vektoria-muuttujiin-vek1-ja-vek2-seka-laske-niiden-vektorisumma">
+<h3>Tehtävä: Luo kaksi mielivaltaista vektoria muuttujiin vek1 ja vek2 sekä laske niiden vektorisumma.<a class="headerlink" href="#tehtava-luo-kaksi-mielivaltaista-vektoria-muuttujiin-vek1-ja-vek2-seka-laske-niiden-vektorisumma" title="Permalink to this headline">#</a></h3>
+</section>
+</section>
+<section id="datan-lukeminen">
+<h2>2. Datan lukeminen<a class="headerlink" href="#datan-lukeminen" title="Permalink to this headline">#</a></h2>
+<p>Jupyter Notebookiin voi tuoda datasettejä suoraan avoimien linkkien kautta. Datasettien lukemista varten tarvitaan pandas-pakettia sekä <strong>read.csv()</strong>-funktiota. CSV (comma-separated values) on tiedostomuoto, jolla voidaan tallentaa yksinkertaista taulukkomuotoista tietoa tekstitiedostoon. Vastaavasti <strong>head()</strong>-komennolla voidaan kurkistaa datasetin sisälle.</p>
+<p>Kokeillaan tätä CERN:n CMS-kokeen avoimella datalla.
+http://opendata.cern.ch/</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;http://opendata.cern.ch/record/5209/files/diphoton.csv&quot;</span><span class="p">)</span>
+<span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Run</th>
+      <th>Event</th>
+      <th>pt1</th>
+      <th>eta1</th>
+      <th>phi1</th>
+      <th>pt2</th>
+      <th>eta2</th>
+      <th>phi2</th>
+      <th>M</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>199319</td>
+      <td>641436592</td>
+      <td>77.2006</td>
+      <td>0.250438</td>
+      <td>0.605505</td>
+      <td>60.1382</td>
+      <td>0.650821</td>
+      <td>-1.53900</td>
+      <td>122.797901</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>199699</td>
+      <td>336259924</td>
+      <td>64.1091</td>
+      <td>0.473667</td>
+      <td>-0.815133</td>
+      <td>58.6038</td>
+      <td>0.032018</td>
+      <td>2.58568</td>
+      <td>124.586979</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>201602</td>
+      <td>114902683</td>
+      <td>73.7489</td>
+      <td>0.800788</td>
+      <td>0.261020</td>
+      <td>55.9369</td>
+      <td>0.698872</td>
+      <td>3.03502</td>
+      <td>126.462830</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>202087</td>
+      <td>923352992</td>
+      <td>102.9550</td>
+      <td>0.979959</td>
+      <td>0.148624</td>
+      <td>76.6940</td>
+      <td>0.815527</td>
+      <td>1.67359</td>
+      <td>123.622542</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>203894</td>
+      <td>688901524</td>
+      <td>53.4409</td>
+      <td>-0.709665</td>
+      <td>1.642300</td>
+      <td>46.4314</td>
+      <td>0.945537</td>
+      <td>-2.71670</td>
+      <td>123.203887</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Jos haluat poimia datasetistä jonkin tietyn muuttujan esimerkiksi kuvaajaa varten, se tapahtuu näin:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tietyn sarakkeen poimiminen</span>
+<span class="n">invariantti_massa</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;M&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">invariantti_massa</span><span class="p">)</span>
+
+<span class="c1"># Tietyn rivin poimiminen</span>
+<span class="n">rivi</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">rivi</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    122.797901
+1    124.586979
+2    126.462830
+3    123.622542
+4    123.203887
+5    124.444405
+6    124.776915
+7    125.704971
+8    125.691479
+9    123.273271
+Name: M, dtype: float64
+Run      1.996990e+05
+Event    3.362599e+08
+pt1      6.410910e+01
+eta1     4.736670e-01
+phi1    -8.151330e-01
+pt2      5.860380e+01
+eta2     3.201850e-02
+phi2     2.585680e+00
+M        1.245870e+02
+Name: 1, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<section id="tehtava-kokeile-avata-tassa-notebookissa-jokin-toinen-cms-kokeen-datasetti">
+<h3>Tehtävä: Kokeile avata tässä notebookissa jokin toinen CMS-kokeen datasetti.<a class="headerlink" href="#tehtava-kokeile-avata-tassa-notebookissa-jokin-toinen-cms-kokeen-datasetti" title="Permalink to this headline">#</a></h3>
+</section>
+</section>
+<section id="kuvaajat">
+<h2>3. Kuvaajat<a class="headerlink" href="#kuvaajat" title="Permalink to this headline">#</a></h2>
+<p>Seuraavaksi piirrellään kuvaajia. Sitä varten tarvitaan matplotlip.pyplot -pakettia. Käytetään apuna myös numpy-pakettia, mutta koska se on tuotu meidän käyttöön jo aiemmin, niin sitä ei tarvitse tuoda uudestaan.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Piirretään kuvaaja sinifunktiosta</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Kulma [rad]&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;sin(x)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Kuvaaja 1: Sinifunktio kulman funktiona&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/mika-on-jupyter-notebook_25_0.png" src="../_images/mika-on-jupyter-notebook_25_0.png" />
+</div>
+</div>
+<section id="tehtava-piirra-kuvaaja-kosinifunktiosta">
+<h3>Tehtävä: Piirrä kuvaaja kosinifunktiosta.<a class="headerlink" href="#tehtava-piirra-kuvaaja-kosinifunktiosta" title="Permalink to this headline">#</a></h3>
+<p>Seuraavaksi yhdistetään: valitaan datasetti ja poimitaan sieltä tiedot haluttua kuvaajaa varten.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">kaksi_myonia</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;http://opendata.cern.ch/record/303/files/dimuon.csv&quot;</span><span class="p">)</span>
+<span class="n">kaksi_myonia</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Type</th>
+      <th>Run</th>
+      <th>Event</th>
+      <th>E1</th>
+      <th>px1</th>
+      <th>py1</th>
+      <th>pz1</th>
+      <th>pt1</th>
+      <th>eta1</th>
+      <th>phi1</th>
+      <th>Q1</th>
+      <th>E2</th>
+      <th>px2</th>
+      <th>py2</th>
+      <th>pz2</th>
+      <th>pt2</th>
+      <th>eta2</th>
+      <th>phi2</th>
+      <th>Q2</th>
+      <th>M</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>GT</td>
+      <td>146511</td>
+      <td>25343052</td>
+      <td>7.33390</td>
+      <td>2.060420</td>
+      <td>5.88580</td>
+      <td>-3.85836</td>
+      <td>6.23602</td>
+      <td>-0.584812</td>
+      <td>1.234060</td>
+      <td>-1</td>
+      <td>5.20755</td>
+      <td>-1.55016</td>
+      <td>-1.819760</td>
+      <td>4.62525</td>
+      <td>2.39050</td>
+      <td>1.414110</td>
+      <td>-2.276360</td>
+      <td>1</td>
+      <td>11.82820</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>GG</td>
+      <td>146511</td>
+      <td>25341481</td>
+      <td>18.46720</td>
+      <td>8.033950</td>
+      <td>-3.94072</td>
+      <td>-16.15410</td>
+      <td>8.94839</td>
+      <td>-1.352990</td>
+      <td>-0.456026</td>
+      <td>-1</td>
+      <td>10.72950</td>
+      <td>6.29476</td>
+      <td>-2.524410</td>
+      <td>-8.31349</td>
+      <td>6.78208</td>
+      <td>-1.032390</td>
+      <td>-0.381397</td>
+      <td>1</td>
+      <td>2.58406</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>GG</td>
+      <td>146511</td>
+      <td>25390065</td>
+      <td>7.70222</td>
+      <td>-0.248771</td>
+      <td>4.08338</td>
+      <td>6.52511</td>
+      <td>4.09095</td>
+      <td>1.246340</td>
+      <td>1.631640</td>
+      <td>-1</td>
+      <td>6.90202</td>
+      <td>-3.02439</td>
+      <td>3.751290</td>
+      <td>4.94041</td>
+      <td>4.81862</td>
+      <td>0.899132</td>
+      <td>2.249320</td>
+      <td>1</td>
+      <td>3.11929</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>GG</td>
+      <td>146511</td>
+      <td>25391068</td>
+      <td>6.59462</td>
+      <td>5.246510</td>
+      <td>2.16082</td>
+      <td>3.35900</td>
+      <td>5.67407</td>
+      <td>0.561945</td>
+      <td>0.390686</td>
+      <td>1</td>
+      <td>7.43461</td>
+      <td>-5.06069</td>
+      <td>4.408010</td>
+      <td>3.19704</td>
+      <td>6.71127</td>
+      <td>0.459977</td>
+      <td>2.425020</td>
+      <td>-1</td>
+      <td>10.51920</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>GG</td>
+      <td>146511</td>
+      <td>25489877</td>
+      <td>45.77350</td>
+      <td>8.864420</td>
+      <td>1.28931</td>
+      <td>-44.88830</td>
+      <td>8.95770</td>
+      <td>-2.314620</td>
+      <td>0.144435</td>
+      <td>-1</td>
+      <td>9.27485</td>
+      <td>-3.64696</td>
+      <td>-0.276874</td>
+      <td>8.52260</td>
+      <td>3.65745</td>
+      <td>1.582250</td>
+      <td>-3.065820</td>
+      <td>1</td>
+      <td>40.98300</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">invariantti_massa</span> <span class="o">=</span> <span class="n">kaksi_myonia</span><span class="p">[</span><span class="s1">&#39;M&#39;</span><span class="p">]</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">invariantti_massa</span> <span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Invariantti massa [GeV/c²]&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Tapahtumien lukumäärä&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Kahden myonin invariantti massa&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/mika-on-jupyter-notebook_29_0.png" src="../_images/mika-on-jupyter-notebook_29_0.png" />
+</div>
+</div>
+</section>
+<section id="tehtava-valitse-jokin-toinen-datasetti-ja-piirra-vastaava-histogrammi">
+<h3>Tehtävä: Valitse jokin toinen datasetti ja piirrä vastaava histogrammi.<a class="headerlink" href="#tehtava-valitse-jokin-toinen-datasetti-ja-piirra-vastaava-histogrammi" title="Permalink to this headline">#</a></h3>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./harjoitukset"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="opettajakoulutus.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">CERN Opettajakoulutus</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="valmiit_tyopajat.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Valmiit työpajat</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By HIP Education and Open Data Team<br/>
+  
+    <div class="extra_footer">
+      <div>
+<a>Toteutettu Opetushallituksen valtionavustuksella tiedekasvatuksen edistämiseen.</a></br><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img class="license" alt="Creative Commons License" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a> Tämän sivuston materiaali on käytettävissä seuraavalla lisenssillä: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC-BY 4.0.</a>
+</div>
+
+    </div>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

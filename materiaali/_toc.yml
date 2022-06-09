@@ -4,6 +4,8 @@ format: jb-book
 root: intro
 chapters:
 - file: harjoitukset/opettajakoulutus
+- file: harjoitukset/cms-esimerkki
+- file: harjoitukset/Vuosirenkaat
   sections:
   - file: harjoitukset/mika-on-jupyter-notebook
 - file: harjoitukset/valmiit_tyopajat

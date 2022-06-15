@@ -16,3 +16,6 @@ chapters:
   - file: harjoitukset/UV
   - file: harjoitukset/Lumensyvyys
   - file: harjoitukset/tiedekurssi_malli
+- file: harjoitukset/mallipohjat
+  sections:
+  - file: harjoitukset/viivakuvaaja1

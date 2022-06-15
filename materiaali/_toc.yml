@@ -18,4 +18,5 @@ chapters:
   - file: harjoitukset/tiedekurssi_malli
 - file: harjoitukset/mallipohjat
   sections:
+  - file: harjoitukset/Pohja
   - file: harjoitukset/viivakuvaaja1

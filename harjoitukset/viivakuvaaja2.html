@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>CMS ja avoin data &#8212; Työpajat</title>
+    <title>Viivakuvaaja - data yhdestä sarakkeesta &#8212; Työpajat</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -50,14 +50,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <link rel="canonical" href="https://opendata-education.github.io/Tyopajat/intro.html/harjoitukset/cms-esimerkki.html" />
+    <link rel="canonical" href="https://opendata-education.github.io/Tyopajat/intro.html/harjoitukset/viivakuvaaja2.html" />
     <link rel="shortcut icon" href="../_static/logo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Niin hyvää puuta" href="Vuosirenkaat.html" />
-    <link rel="prev" title="Mikä on Jupyter Notebook?" href="mika-on-jupyter-notebook.html" />
+    <link rel="prev" title="Viivakuvaaja 1 - data yhdeltä riviltä" href="viivakuvaaja1.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
     
@@ -118,23 +115,23 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active has-children">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="opettajakoulutus.html">
    CERN Opettajakoulutus
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
+  <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="mika-on-jupyter-notebook.html">
      Mikä on Jupyter Notebook?
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="cms-esimerkki.html">
      CMS ja avoin data
     </a>
    </li>
@@ -189,16 +186,16 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
+ <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="mallipohjat.html">
    Mallipohjat
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul>
+  <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="Pohja.html">
      Tyhjä pohja
@@ -209,8 +206,8 @@ const thebe_selector_output = ".output, .cell_output"
      Viivakuvaaja 1 - data yhdeltä riviltä
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="viivakuvaaja2.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Viivakuvaaja - data yhdestä sarakkeesta
     </a>
    </li>
@@ -275,7 +272,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/opendata-education/Tyopajat/main?urlpath=tree/materiaali/harjoitukset/cms-esimerkki.ipynb"
+        <a href="https://mybinder.org/v2/gh/opendata-education/Tyopajat/main?urlpath=tree/materiaali/harjoitukset/viivakuvaaja2.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -293,7 +290,7 @@ title="Launch on Binder"
       </li>
       
       <li>
-        <a href="https://colab.research.google.com/github/opendata-education/Tyopajat/blob/main/materiaali/harjoitukset/cms-esimerkki.ipynb"
+        <a href="https://colab.research.google.com/github/opendata-education/Tyopajat/blob/main/materiaali/harjoitukset/viivakuvaaja2.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -353,7 +350,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/opendata-education/Tyopajat/issues/new?title=Issue%20on%20page%20%2Fharjoitukset/cms-esimerkki.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/opendata-education/Tyopajat/issues/new?title=Issue%20on%20page%20%2Fharjoitukset/viivakuvaaja2.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -381,7 +378,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/harjoitukset/cms-esimerkki.ipynb"
+        <a href="../_sources/harjoitukset/viivakuvaaja2.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -441,13 +438,18 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#datan-hakeminen">
-   1. Datan hakeminen
+  <a class="reference internal nav-link" href="#tama-pohja-on-tehty-sinulle-muokattavaksi">
+   Tämä pohja on tehty sinulle muokattavaksi.
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#invariantti-massa-histogrammi">
-   2. Invariantti massa &amp; histogrammi
+  <a class="reference internal nav-link" href="#useamman-viivan-tapaus">
+   Useamman viivan tapaus
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kumulatiivisen-kuvaajan-tekeminen-tasta-samasta-datasta">
+   Kumulatiivisen kuvaajan tekeminen tästä samasta datasta
   </a>
  </li>
 </ul>
@@ -459,7 +461,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>CMS ja avoin data</h1>
+                <h1>Viivakuvaaja - data yhdestä sarakkeesta</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -470,13 +472,18 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#datan-hakeminen">
-   1. Datan hakeminen
+  <a class="reference internal nav-link" href="#tama-pohja-on-tehty-sinulle-muokattavaksi">
+   Tämä pohja on tehty sinulle muokattavaksi.
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#invariantti-massa-histogrammi">
-   2. Invariantti massa &amp; histogrammi
+  <a class="reference internal nav-link" href="#useamman-viivan-tapaus">
+   Useamman viivan tapaus
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#kumulatiivisen-kuvaajan-tekeminen-tasta-samasta-datasta">
+   Kumulatiivisen kuvaajan tekeminen tästä samasta datasta
   </a>
  </li>
 </ul>
@@ -489,16 +496,15 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="cms-ja-avoin-data">
-<h1>CMS ja avoin data<a class="headerlink" href="#cms-ja-avoin-data" title="Permalink to this headline">#</a></h1>
-<p>CERN:n CMS-kokeessa törmäytetään protoneita toisiinsa ja tutkitaan, mitä hiukkasia törmäyksessä syntyy. Törmäystapahtumista kertyy valtava määrä dataa, jota on julkaistu myös avoimesti saataville <a class="reference external" href="https://opendata.cern.ch/">CERN:n avoin data portaalissa</a>. Tässä harjoituksessa tutustutaan siihen, mitä nämä datasetit sisältävät ja mitä niiden avulla voitaisiin selvittää. Tämä tarjoaa oppilaille mainion tilaisuuden kokeilla oikean tieteen metodeja autenttisilla mittaustuloksilla.</p>
-<section id="datan-hakeminen">
-<h2>1. Datan hakeminen<a class="headerlink" href="#datan-hakeminen" title="Permalink to this headline">#</a></h2>
-<p>Aloitetaan hakemalla data. Data on ladattu CERN:n avoin data portaalista ja tallennettu samaan hakemistoon tämän notebookin kanssa. Tarkastellaan datatiedostoa <strong>Dimuon_DoubleMu.csv</strong>, joka sisältää dataa törmäystapahtumista, joissa on havaittu kaksi myonia.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="viivakuvaaja-data-yhdesta-sarakkeesta">
+<h1>Viivakuvaaja - data yhdestä sarakkeesta<a class="headerlink" href="#viivakuvaaja-data-yhdesta-sarakkeesta" title="Permalink to this headline">#</a></h1>
+<section id="tama-pohja-on-tehty-sinulle-muokattavaksi">
+<h2>Tämä pohja on tehty sinulle muokattavaksi.<a class="headerlink" href="#tama-pohja-on-tehty-sinulle-muokattavaksi" title="Permalink to this headline">#</a></h2>
+<p>Toisinaan data on eritelty omiin sarakkeisiin, jolloin haluatkin tehdä kuvaajan suoraan sarakkeiden tietojen perusteella. Tässä on esitelty yksinkertainen tapa siihen, jos haluat tehdä yhden viivan kuvaajan, tai kenties useammankin viivan kuvaajan, jostain haluamastasi datatiedostosta. Tietysti voit käyttää myös tätä hauskaa datasettiä asteroideista, joka on poimittu <a class="reference external" href="https://ourworldindata.org/space-exploration-satellites">täältä</a>. Tämän datasetin takaa löytyy tieto siitä, kuinka monta asteroidia on havaittu lähellä Maata 1900-luvulta lähtien ja mihin kokoluokkaan ne kuuluvat.</p>
+<p>Voit käyttää tätä tiedostoa mallipohjana, jos haluat tehdä viivakuvaajan jonkin datatiedoston sarakkeesta. Luet vain oman datatiedoston, muokkailet vähän muuttujien nimiä ja lisäät sopivat tekstit ympärille. Jos tulee ongelmia joihin ei Googlesta tunnu löytyvän vastausta, niin meille voi laittaa sähköpostia matalalla kynnyksellä.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Aloitetaan hakemalla tarvittavat python-paketit import-komennolla</span>
-<span class="c1"># Voit suorittaa koodisolut Run-painikkeella tai paina CTRL+ENTER.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ladataan halutut tietokirjastot käyttöön.</span>
 
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -508,18 +514,10 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Luetaan datatiedoston sisältö ja tallennetaan tiedot muuttujaan &quot;kaksi_myonia&quot;</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ladataan data ja kurkataan sen sisälle. Siistiltä näyttää!</span>
 
-<span class="n">kaksi_myonia</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;http://opendata.cern.ch/record/545/files/Dimuon_DoubleMu.csv&#39;</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tarkastellaan miltä data näyttää</span>
-
-<span class="n">kaksi_myonia</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="n">asteroidit</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/near-earth-asteroids-discovered-over-time.csv&#39;</span><span class="p">)</span>
+<span class="n">asteroidit</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -542,226 +540,195 @@ title="Print to PDF"
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Run</th>
-      <th>Event</th>
-      <th>type1</th>
-      <th>E1</th>
-      <th>px1</th>
-      <th>py1</th>
-      <th>pz1</th>
-      <th>pt1</th>
-      <th>eta1</th>
-      <th>phi1</th>
-      <th>...</th>
-      <th>type2</th>
-      <th>E2</th>
-      <th>px2</th>
-      <th>py2</th>
-      <th>pz2</th>
-      <th>pt2</th>
-      <th>eta2</th>
-      <th>phi2</th>
-      <th>Q2</th>
-      <th>M</th>
+      <th>Entity</th>
+      <th>Code</th>
+      <th>Year</th>
+      <th>smaller_than_140m</th>
+      <th>between_140m_and_1km</th>
+      <th>larger_than_1km</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>165617</td>
-      <td>74601703</td>
-      <td>G</td>
-      <td>9.6987</td>
-      <td>-9.5104</td>
-      <td>0.3662</td>
-      <td>1.8633</td>
-      <td>9.5175</td>
-      <td>0.1945</td>
-      <td>3.1031</td>
-      <td>...</td>
-      <td>G</td>
-      <td>9.7633</td>
-      <td>7.3277</td>
-      <td>-1.1524</td>
-      <td>6.3473</td>
-      <td>7.4178</td>
-      <td>0.7756</td>
-      <td>-0.1560</td>
+      <td>World</td>
+      <td>OWID_WRL</td>
+      <td>1900</td>
+      <td>0</td>
+      <td>0</td>
       <td>1</td>
-      <td>17.4922</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>165617</td>
-      <td>75100943</td>
-      <td>G</td>
-      <td>6.2039</td>
-      <td>-4.2666</td>
-      <td>0.4565</td>
-      <td>-4.4793</td>
-      <td>4.2910</td>
-      <td>-0.9121</td>
-      <td>3.0350</td>
-      <td>...</td>
-      <td>G</td>
-      <td>9.6690</td>
-      <td>7.2740</td>
-      <td>-2.8211</td>
-      <td>-5.7104</td>
-      <td>7.8019</td>
-      <td>-0.6786</td>
-      <td>-0.3700</td>
+      <td>World</td>
+      <td>OWID_WRL</td>
+      <td>1910</td>
+      <td>0</td>
+      <td>0</td>
       <td>1</td>
-      <td>11.5534</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>165617</td>
-      <td>75587682</td>
-      <td>G</td>
-      <td>19.2892</td>
-      <td>-4.2121</td>
-      <td>-0.6516</td>
-      <td>18.8121</td>
-      <td>4.2622</td>
-      <td>2.1905</td>
-      <td>-2.9881</td>
-      <td>...</td>
-      <td>G</td>
-      <td>9.8244</td>
-      <td>4.3439</td>
-      <td>-0.4735</td>
-      <td>8.7985</td>
-      <td>4.3697</td>
-      <td>1.4497</td>
-      <td>-0.1086</td>
-      <td>1</td>
-      <td>9.1636</td>
+      <td>World</td>
+      <td>OWID_WRL</td>
+      <td>1920</td>
+      <td>0</td>
+      <td>0</td>
+      <td>3</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>165617</td>
-      <td>75660978</td>
-      <td>G</td>
-      <td>7.0427</td>
-      <td>-6.3268</td>
-      <td>-0.2685</td>
-      <td>3.0802</td>
-      <td>6.3325</td>
-      <td>0.4690</td>
-      <td>-3.0992</td>
-      <td>...</td>
-      <td>G</td>
-      <td>5.5857</td>
-      <td>4.4748</td>
-      <td>0.8489</td>
-      <td>-3.2319</td>
-      <td>4.5546</td>
-      <td>-0.6605</td>
-      <td>0.1875</td>
-      <td>1</td>
-      <td>12.4774</td>
+      <td>World</td>
+      <td>OWID_WRL</td>
+      <td>1930</td>
+      <td>0</td>
+      <td>0</td>
+      <td>5</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>165617</td>
-      <td>75947690</td>
-      <td>G</td>
-      <td>7.2751</td>
-      <td>0.1030</td>
-      <td>-5.5331</td>
-      <td>-4.7212</td>
-      <td>5.5340</td>
-      <td>-0.7736</td>
-      <td>-1.5522</td>
-      <td>...</td>
-      <td>G</td>
-      <td>7.3181</td>
-      <td>-0.3988</td>
-      <td>6.9408</td>
-      <td>2.2825</td>
-      <td>6.9523</td>
-      <td>0.3227</td>
-      <td>1.6282</td>
+      <td>World</td>
+      <td>OWID_WRL</td>
+      <td>1940</td>
+      <td>0</td>
       <td>1</td>
-      <td>14.3159</td>
+      <td>8</td>
     </tr>
   </tbody>
 </table>
-<p>5 rows × 21 columns</p>
 </div></div></div>
 </div>
-<p>Datatiedostotta näyttäisi olevan paljon tietoa. Jokainen rivi vastaa yhtä törmäystapahtumaa, jossa on havaittu kaksi myonia. Rivillä on aina mittausdataa molemmista havaitusta myonista. Esimerkiksi <em>E</em> tarkoittaa myonin energiaa ja <em>p</em> liikemäärää. Viimeinen sarake <em>M</em> viittaa myoneiden <em>invarianttiin massaan</em>, jota tarkastellaan pian enemmän.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Katsotaan vielä, kuinka monta riviä dataa tiedostossa on</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Valmistellaan x-akselin tiedot, tässä tapauksessa poimitaan vuosiluvut &#39;Year&#39;-sarakkeesta muuttujaan &#39;vuodet&#39;.</span>
+<span class="c1"># Hakasulkeisiin tulee suoraan datatiedoston sen sarakkeen nimi, jonka tiedot haluat tallentaa käyttöön.</span>
 
-<span class="nb">len</span><span class="p">(</span><span class="n">kaksi_myonia</span><span class="p">)</span>
+<span class="n">vuodet</span> <span class="o">=</span> <span class="n">asteroidit</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span>
+<span class="n">vuodet</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100000
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     1900
+1     1910
+2     1920
+3     1930
+4     1940
+5     1950
+6     1960
+7     1970
+8     1980
+9     1990
+10    2000
+11    2001
+12    2002
+13    2003
+14    2004
+15    2005
+16    2006
+17    2007
+18    2008
+19    2009
+20    2010
+21    2011
+22    2012
+23    2013
+24    2014
+25    2015
+26    2016
+27    2017
+28    2018
+29    2019
+30    2020
+31    2021
+Name: Year, dtype: int64
 </pre></div>
 </div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Valmistellaan y-akselin tiedot. Valitaan tarkasteluun pienten asteroidien lukumäärä.</span>
+
+<span class="n">pienet</span> <span class="o">=</span> <span class="n">asteroidit</span><span class="p">[</span><span class="s1">&#39;smaller_than_140m&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Muodostetaan kuvaaja plt.plot(x,y)-komennon avulla.</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">vuodet</span><span class="p">,</span> <span class="n">pienet</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Otsikko&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x-akselin nimi&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;y-akselin nimi&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/viivakuvaaja2_6_0.png" src="../_images/viivakuvaaja2_6_0.png" />
 </div>
 </div>
 </section>
-<section id="invariantti-massa-histogrammi">
-<h2>2. Invariantti massa &amp; histogrammi<a class="headerlink" href="#invariantti-massa-histogrammi" title="Permalink to this headline">#</a></h2>
-<p>Aiemmasta tutkimuksesta tiedetään, että monet eri hiukkaset voivat hajota kahdeksi myoniksi ja että alkuperäinen hiukkanen voidaan tunnistaa laskemalla myoneiden niin sanottu <strong>invariantti massa</strong>. CMS-detektorilla voidaan mitata mm. myoneiden energia ja liikemäärä. Kun nämä suureet tiedetään, myoneiden invariantti massa on</p>
-<p><span class="math notranslate nohighlight">\(M = \sqrt{(E_1 + E_2)^2 - \|\textbf{p}_1 + \textbf{p}_2 \| ^2}\)</span>.</p>
-<p>Mikäli myonit olivat peräisin yhden hiukkasen hajoamisesta, myoneiden invariantti massa vastaa tämän hiukkasen massaa. Jos taas myonit eivät olleet peräisin samasta hiukkasesta, invariantin massan arvo ei merkitse mitään.</p>
-<p>Kun protonit törmäävät hiukkaskiihdyttimessä, vapautuu valtava määrä energiaa, joka muuttuu uusiksi hiukkasiksi. Törmäyksessä voisi syntyä esimerkiksi Z-bosoni, joka on kuitenkin niin lyhytikäinen, että se hajoaa nopeasti toisiksi hiukkasiksi, esimerkiksi kahdeksi myoniksi. Nämä myonit havaitaan hiukkasilmaisimessa ja myoneille lasketun invariantin massan avulla pääsemme käsiksi “emohiukkasen” eli tässä tapauksessa Z-bosonin massaan.</p>
-<p>Histogrammi on erinomainen työkalu hiukkasfysiikan tutkimuksessa. Tekemällä histogrammin invarianttien massojen arvosta, voimme erottaa merkityksettömistä taustatapahtumista ne tapahtumat, jotka ovat kiinnostavia. Eikun tutkimaan!</p>
+<section id="useamman-viivan-tapaus">
+<h2>Useamman viivan tapaus<a class="headerlink" href="#useamman-viivan-tapaus" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Invariantti massa voitaisiin laskea ylläolevan kaavan avulla.</span>
-<span class="c1"># Se löytyy kuitenkin valmiiksi laskettuna jo datasetin viimeisestä sarakkeesta &quot;M&quot;, joten käytetään sitä.</span>
-<span class="c1"># Tallennetaan invarianttien massojen sarake omaan muuttujaan</span>
-<span class="n">invariantti_massa</span> <span class="o">=</span> <span class="n">kaksi_myonia</span><span class="p">[</span><span class="s1">&#39;M&#39;</span><span class="p">]</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Valmistellaan loputkin y-akselin ainekset kuvaajaa varten.</span>
 
-<span class="c1"># Piirretään histogrammi kahden myonin invarianteista massoista 300 pylväällä</span>
-<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">invariantti_massa</span> <span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
+<span class="n">keskikokoiset</span> <span class="o">=</span> <span class="n">asteroidit</span><span class="p">[</span><span class="s1">&#39;between_140m_and_1km&#39;</span><span class="p">]</span>
+<span class="n">isot</span> <span class="o">=</span> <span class="n">asteroidit</span><span class="p">[</span><span class="s1">&#39;larger_than_1km&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Piirretään kaikki kolme viivaa, lisätään halutut värit ja viivojen nimet.</span>
 
-<span class="c1"># Näillä riveillä määritellään otsikko sekä akseleiden tekstit.</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Invariantti massa [GeV/c²]&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Tapahtumien lukumäärä&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Kahden myonin invariantti massa&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">vuodet</span><span class="p">,</span> <span class="n">pienet</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Pienet&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">vuodet</span><span class="p">,</span> <span class="n">keskikokoiset</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Keskikokoiset&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">vuodet</span><span class="p">,</span> <span class="n">isot</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;green&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Isot&#39;</span><span class="p">)</span>
 
-<span class="c1"># Näytetään kuvaaja</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Otsikko&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x-akselin nimi&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;y-akselin nimi&#39;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span> <span class="c1"># Tulostaa viivojen nimet</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/cms-esimerkki_11_0.png" src="../_images/cms-esimerkki_11_0.png" />
+<img alt="../_images/viivakuvaaja2_9_0.png" src="../_images/viivakuvaaja2_9_0.png" />
 </div>
 </div>
-<p>Huomataan, että muutamilla invariantin massan arvoilla histogrammiin syntyy piikki. Nämä piikit vastaavat emohiukkasten massaa, joista kaksi myonia ovat peräisin. Tutkitaan tarkemmin histogrammin väliä 80 GeV - 100 GeV.</p>
+</section>
+<section id="kumulatiivisen-kuvaajan-tekeminen-tasta-samasta-datasta">
+<h2>Kumulatiivisen kuvaajan tekeminen tästä samasta datasta<a class="headerlink" href="#kumulatiivisen-kuvaajan-tekeminen-tasta-samasta-datasta" title="Permalink to this headline">#</a></h2>
+<p>Toisinaan asioita on helpompi havainnollistaa kumulatiivisilla kuvaajilla. Se voidaan toteuttaa suoraan Matplotlib-kirjaston stackplot-komennolla.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Piirretään histogrammi kahden myonin invarianteista massoista 100 pylväällä välillä 80 GeV - 100 GeV</span>
-<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">invariantti_massa</span> <span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="nb">range</span><span class="o">=</span><span class="p">(</span><span class="mi">80</span><span class="p">,</span><span class="mi">100</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span> <span class="c1"># Tarvitset tämän rivin, jos haluat tehdä alarivillä olevan x-akselin rajauksen.</span>
 
-<span class="c1"># Näillä riveillä määritellään otsikko sekä akseleiden tekstit.</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Invariantti massa [GeV/c²]&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Tapahtumien lukumäärä&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Kahden myonin invariantti massa&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">stackplot</span><span class="p">(</span><span class="n">vuodet</span><span class="p">,</span> <span class="n">isot</span><span class="p">,</span> <span class="n">keskikokoiset</span><span class="p">,</span> <span class="n">pienet</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Yli 1 km&#39;</span><span class="p">,</span><span class="s1">&#39;Alle 1 km, yli 140 m&#39;</span><span class="p">,</span><span class="s1">&#39;Alle 140 m&#39;</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span><span class="o">=</span><span class="s1">&#39;upper left&#39;</span><span class="p">)</span> <span class="c1"># Pakotetaan kuvaajien nimet näkymään vasemmassa ylänurkassa.</span>
 
-<span class="c1"># Näytetään kuvaaja</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">1990</span><span class="p">,</span> <span class="mi">2021</span><span class="p">)</span> <span class="c1"># Rajataan x-akseli näyttämään vuodet 1990 - 2021</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/cms-esimerkki_13_0.png" src="../_images/cms-esimerkki_13_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1990.0, 2021.0)
+</pre></div>
+</div>
+<img alt="../_images/viivakuvaaja2_11_1.png" src="../_images/viivakuvaaja2_11_1.png" />
 </div>
 </div>
-<p>Huomataan, että datasta erottuu selkeä piikki noin 91 GeV kohdalla. Tämä johtuu siitä, taustatapahtumissa syntyvien kahden myonin lisäksi syntyy paljon sellaisia tapahtumia, joissa myonien invariantti massa on lähellä 91 GeV:iä. Tämä tarkoittaa sitä, että myonit ovat peräisin johtain hiukkasesta, jonka massa on 91 GeV. Tämä hiukkanen tunnetaan nimellä Z-bosoni.</p>
-<p>Kokeile itse etsiä alkuperäisestä datasta toinen piikki, ja katso löydätkö jonkin toisen hiukkasen! Mikä hiukkanen voisi olla kyseessä?</p>
 </section>
 </section>
 
@@ -792,19 +759,12 @@ title="Print to PDF"
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="mika-on-jupyter-notebook.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="viivakuvaaja1.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Mikä on Jupyter Notebook?</p>
+            <p class="prev-next-title">Viivakuvaaja 1 - data yhdeltä riviltä</p>
         </div>
-    </a>
-    <a class='right-next' id="next-link" href="Vuosirenkaat.html" title="next page">
-    <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Niin hyvää puuta</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             </footer>

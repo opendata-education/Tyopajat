@@ -207,6 +207,11 @@ const thebe_selector_output = ".output, .cell_output"
      Viivakuvaaja 1 - data yhdeltä riviltä
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="viivakuvaaja2.html">
+     Viivakuvaaja - data yhdestä sarakkeesta
+    </a>
+   </li>
   </ul>
  </li>
 </ul>
@@ -634,12 +639,12 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>     pop_est      continent                      name iso_a3  gdp_md_est  \
-0     920938        Oceania                      Fiji    FJI      8374.0   
-1   53950935         Africa                  Tanzania    TZA    150600.0   
-2     603253         Africa                 W. Sahara    ESH       906.5   
-3   35623680  North America                    Canada    CAN   1674000.0   
-4  326625791  North America  United States of America    USA  18560000.0   
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       pop_est      continent                      name iso_a3  gdp_md_est  \
+0     889953.0        Oceania                      Fiji    FJI        5496   
+1   58005463.0         Africa                  Tanzania    TZA       63177   
+2     603253.0         Africa                 W. Sahara    ESH         907   
+3   37589262.0  North America                    Canada    CAN     1736425   
+4  328239523.0  North America  United States of America    USA    21433226   
 
                                             geometry  
 0  MULTIPOLYGON (((180.00000 -16.06713, 180.00000...  
@@ -753,18 +758,18 @@ title="Print to PDF"
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>       pop_est      continent                      name iso_a3  gdp_md_est  \
-0       920938        Oceania                      Fiji    FJI      8374.0   
-1     53950935         Africa                  Tanzania    TZA    150600.0   
-2     35623680  North America                    Canada    CAN   1674000.0   
-3    326625791  North America  United States of America    USA  18560000.0   
-4     18556698           Asia                Kazakhstan    KAZ    460700.0   
-..         ...            ...                       ...    ...         ...   
-140   11901484         Africa                    Rwanda    RWA     21970.0   
-141    7111024         Europe                    Serbia    SRB    101800.0   
-142     642550         Europe                Montenegro    MNE     10610.0   
-143    1895250         Europe                    Kosovo    -99     18490.0   
-144    1218208  North America       Trinidad and Tobago    TTO     43570.0   
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>         pop_est      continent                      name iso_a3  gdp_md_est  \
+0       889953.0        Oceania                      Fiji    FJI        5496   
+1     58005463.0         Africa                  Tanzania    TZA       63177   
+2     37589262.0  North America                    Canada    CAN     1736425   
+3    328239523.0  North America  United States of America    USA    21433226   
+4     18513930.0           Asia                Kazakhstan    KAZ      181665   
+..           ...            ...                       ...    ...         ...   
+141    2083459.0         Europe           North Macedonia    MKD       12547   
+142    6944975.0         Europe                    Serbia    SRB       51475   
+143     622137.0         Europe                Montenegro    MNE        5542   
+144    1794248.0         Europe                    Kosovo    KOS        7926   
+145    1394973.0  North America       Trinidad and Tobago    TTO       24269   
 
                                               geometry  \
 0    MULTIPOLYGON (((180.00000 -16.06713, 180.00000...   
@@ -773,11 +778,11 @@ title="Print to PDF"
 3    MULTIPOLYGON (((-122.84000 49.00000, -120.0000...   
 4    POLYGON ((87.35997 49.21498, 86.59878 48.54918...   
 ..                                                 ...   
-140  POLYGON ((30.41910 -1.13466, 30.81613 -1.69891...   
-141  POLYGON ((18.82982 45.90887, 18.82984 45.90888...   
-142  POLYGON ((20.07070 42.58863, 19.80161 42.50009...   
-143  POLYGON ((20.59025 41.85541, 20.52295 42.21787...   
-144  POLYGON ((-61.68000 10.76000, -61.10500 10.890...   
+141  POLYGON ((22.38053 42.32026, 22.88137 41.99930...   
+142  POLYGON ((18.82982 45.90887, 18.82984 45.90888...   
+143  POLYGON ((20.07070 42.58863, 19.80161 42.50009...   
+144  POLYGON ((20.59025 41.85541, 20.52295 42.21787...   
+145  POLYGON ((-61.68000 10.76000, -61.10500 10.890...   
 
                  Country Name  2020 [YR2020]  
 0                        Fiji            1.0  
@@ -786,25 +791,25 @@ title="Print to PDF"
 3    United States of America            1.0  
 4                  Kazakhstan            1.0  
 ..                        ...            ...  
-140                    Rwanda            1.0  
-141                    Serbia            1.0  
-142                Montenegro            1.0  
-143                    Kosovo            1.0  
-144       Trinidad and Tobago            1.0  
+141           North Macedonia            1.0  
+142                    Serbia            1.0  
+143                Montenegro            1.0  
+144                    Kosovo            1.0  
+145       Trinidad and Tobago            1.0  
 
-[145 rows x 8 columns]
-pop_est             int64
+[146 rows x 8 columns]
+pop_est           float64
 continent          object
 name               object
 iso_a3             object
-gdp_md_est        float64
+gdp_md_est          int64
 geometry         geometry
 Country Name       object
 2020 [YR2020]     float64
 dtype: object
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_1845/1245473717.py:19: SettingWithCopyWarning: 
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_1870/1245473717.py:19: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame.
 Try using .loc[row_indexer,col_indexer] = value instead
 

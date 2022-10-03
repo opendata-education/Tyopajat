@@ -8,18 +8,6 @@ chapters:
   - file: harjoitukset/mika-on-jupyter-notebook
   - file: harjoitukset/cms-esimerkki
   - file: harjoitukset/Vuosirenkaat
-- file: harjoitukset/valmiit_tyopajat
-  sections:
-  - file: harjoitukset/hiukkasfysiikka1
-- file: harjoitukset/esimerkit
-  sections:
-  - file: harjoitukset/UV
-  - file: harjoitukset/Lumensyvyys
-  - file: harjoitukset/tiedekurssi_malli
-- file: harjoitukset/mallipohjat
-  sections:
-  - file: harjoitukset/Pohja
-  - file: harjoitukset/viivakuvaaja1
-  - file: harjoitukset/viivakuvaaja2
 - file: harjoitukset/ilmastopaja
+  sections:
   - file: harjoitukset/co2

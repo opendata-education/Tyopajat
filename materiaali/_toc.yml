@@ -11,4 +11,5 @@ chapters:
 - file: harjoitukset/ilmastopaja
   sections:
   - file: harjoitukset/lampotila-intro
+  - file: harjoitukset/dataraati
   - file: harjoitukset/UV-paja

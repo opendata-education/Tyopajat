@@ -10,4 +10,5 @@ chapters:
   - file: harjoitukset/Vuosirenkaat
 - file: harjoitukset/ilmastopaja
   sections:
-  - file: harjoitukset/co2
+  - file: harjoitukset/lampotila-intro
+  #- file: harjoitukset/co2

@@ -8,6 +8,10 @@ chapters:
   - file: harjoitukset/mika-on-jupyter-notebook
   - file: harjoitukset/cms-esimerkki
   - file: harjoitukset/Vuosirenkaat
+- file: harjoitukset/esimerkit
+  sections:
+  - file: harjoitukset/lumensyvyys
+  - file: harjoitukset/UV
 - file: harjoitukset/ilmastopaja
   sections:
   - file: harjoitukset/lampotila-intro

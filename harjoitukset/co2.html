@@ -1,0 +1,951 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>ESIMERKKI 3: Maapallon ilmakehä &#8212; Työpajat</title>
+    
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
+    
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://opendata-education.github.io/Tyopajat/intro.html/harjoitukset/co2.html" />
+    <link rel="shortcut icon" href="../_static/logo.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="ESIMERKKI 4: Pienhiukkaset - saasteita ja aerosoleja" href="Pienhiukkaset.html" />
+    <link rel="prev" title="ESIMERKKI 2: Ultraviolettisäteily" href="UV-paja.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Työpajat</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Tervetuloa avoimen datan pariin
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="opettajakoulutus.html">
+   CERN Opettajakoulutus
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="mika-on-jupyter-notebook.html">
+     Mikä on Jupyter Notebook?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="cms-esimerkki.html">
+     CMS ja avoin data
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Vuosirenkaat.html">
+     Niin hyvää puuta
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="esimerkit.html">
+   Lyhyet esimerkit
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Lumensyvyys.html">
+     ESIMERKKI: Lumensyvyys
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="UV.html">
+     ESIMERKKI: Ultraviolettisäteily
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="ilmastopaja.html">
+   Ilmastotyöpaja
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="lampotila-intro.html">
+     ESIMERKKI 1: Maan lämpötilapoikkeaman määritys
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="dataraati.html">
+     Visualisaatioraati
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="UV-paja.html">
+     ESIMERKKI 2: Ultraviolettisäteily
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     ESIMERKKI 3: Maapallon ilmakehä
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Pienhiukkaset.html">
+     ESIMERKKI 4: Pienhiukkaset - saasteita ja aerosoleja
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
+            
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+            </div>
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://mybinder.org/v2/gh/opendata-education/Tyopajat/main?urlpath=tree/materiaali/harjoitukset/co2.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://colab.research.google.com/github/opendata-education/Tyopajat/blob/main/materiaali/harjoitukset/co2.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Colab"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_colab.png">
+  </span>
+<span class="headerbtn__text-container">Colab</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/opendata-education/Tyopajat"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="headerbtn__text-container">repository</span>
+</a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/opendata-education/Tyopajat/issues/new?title=Issue%20on%20page%20%2Fharjoitukset/co2.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/harjoitukset/co2.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hiilidioksidipitoisuus-viimeisen-800-000-vuoden-aikana">
+   Hiilidioksidipitoisuus viimeisen 800 000 vuoden aikana
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hiilipitoisuuden-vertailu-muihin-arvoihin">
+   Hiilipitoisuuden vertailu muihin arvoihin
+  </a>
+ </li>
+</ul>
+
+    </nav>
+</div>
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>ESIMERKKI 3: Maapallon ilmakehä</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hiilidioksidipitoisuus-viimeisen-800-000-vuoden-aikana">
+   Hiilidioksidipitoisuus viimeisen 800 000 vuoden aikana
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#hiilipitoisuuden-vertailu-muihin-arvoihin">
+   Hiilipitoisuuden vertailu muihin arvoihin
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <main id="main-content" role="main">
+                
+              <div>
+                
+  <section class="tex2jax_ignore mathjax_ignore" id="esimerkki-3-maapallon-ilmakeha">
+<h1>ESIMERKKI 3: Maapallon ilmakehä<a class="headerlink" href="#esimerkki-3-maapallon-ilmakeha" title="Permalink to this headline">#</a></h1>
+<p>Tutustutaan ihan ensimmäisenä siihen, miten Maan ilmakehä on syntynyt. Alla on esitetty karkea aikajana niistä asioista, joilla on ollut merkittävä vaikutus siihen miten meille on muodostunut näinkin harvinaislaatuinen ilmakehä. Voit avata kuvan uuteen välilehteen, jotta pääset suurentamaan sen isommaksi.</p>
+<p><img alt="ilmakehan_synty" src="../_images/IMG_5773.jpg" /></p>
+<hr class="docutils" />
+<p>Vertaillaan Maapallon nykyistä ilmakehää planeettanaapureiden ilmakehiin.</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Planeetta</p></th>
+<th class="head"><p>Ilmanpaine (bar)</p></th>
+<th class="head"><p>CO2 (%)</p></th>
+<th class="head"><p>O2 (%)</p></th>
+<th class="head"><p>N2 (%)</p></th>
+<th class="head"><p>H2O (%)</p></th>
+<th class="head"><p>Pintalämpötila (C)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Venus</p></td>
+<td><p>92</p></td>
+<td><p>96.5</p></td>
+<td><p>hyvin vähän</p></td>
+<td><p>3.5</p></td>
+<td><p>&lt; 0.00003</p></td>
+<td><p>464</p></td>
+</tr>
+<tr class="row-odd"><td><p>Maa</p></td>
+<td><p>1</p></td>
+<td><p>0.033</p></td>
+<td><p>20</p></td>
+<td><p>78</p></td>
+<td><p>&lt; 3</p></td>
+<td><p>14</p></td>
+</tr>
+<tr class="row-even"><td><p>Mars</p></td>
+<td><p>0.006</p></td>
+<td><p>95.3</p></td>
+<td><p>hyvin vähän</p></td>
+<td><p>2.7</p></td>
+<td><p>&lt; 0.0001</p></td>
+<td><p>-63</p></td>
+</tr>
+</tbody>
+</table>
+<section id="hiilidioksidipitoisuus-viimeisen-800-000-vuoden-aikana">
+<h2>Hiilidioksidipitoisuus viimeisen 800 000 vuoden aikana<a class="headerlink" href="#hiilidioksidipitoisuus-viimeisen-800-000-vuoden-aikana" title="Permalink to this headline">#</a></h2>
+<p>Tarkastellaan täältä löytyvän datan avulla, miten Maan ilmakehän hiilidioksidipitoisuus on muuttunut viimeisen 800 000 vuoden aikana.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Otetaan tarvittavat kirjastot käyttöön ajamalla tämä solu</span>
+
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ladataan datasetti ja kurkataan sisälle.</span>
+
+<span class="n">ilmasto_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/ilmakehan_pitoisuudet.csv&#39;</span><span class="p">)</span>
+<span class="n">ilmasto_data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Entity</th>
+      <th>Year</th>
+      <th>CO2 concentrations</th>
+      <th>CH4 concentrations</th>
+      <th>N2O concentrations</th>
+      <th>February</th>
+      <th>September</th>
+      <th>Mass U.S. glaciers</th>
+      <th>CSIRO</th>
+      <th>IAP</th>
+      <th>MRIJMA</th>
+      <th>NOAA</th>
+      <th>Snow cover</th>
+      <th>Sea surface temp</th>
+      <th>Sea surface temp (lower-bound)</th>
+      <th>Sea surface temp (upper-bound)</th>
+      <th>IAP.1</th>
+      <th>NOAA.1</th>
+      <th>MRIJMA.1</th>
+      <th>Arctic sea ice</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Antarctica</td>
+      <td>1979</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.212361</td>
+      <td>7.027059</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Antarctica</td>
+      <td>1980</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.088808</td>
+      <td>7.266443</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Antarctica</td>
+      <td>1981</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.108113</td>
+      <td>7.181500</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Antarctica</td>
+      <td>1982</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.208500</td>
+      <td>7.084975</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Antarctica</td>
+      <td>1983</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>1.185334</td>
+      <td>7.177639</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Otetaan ne tiedot talteen, jotka koskettaa koko maapalloa.</span>
+<span class="n">ilmasto</span> <span class="o">=</span> <span class="n">ilmasto_data</span><span class="p">[(</span><span class="n">ilmasto_data</span><span class="p">[</span><span class="s1">&#39;Entity&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;World&#39;</span><span class="p">)]</span>
+
+<span class="c1"># Ja tallennetaan omiin muuttujiin x- ja y-akselille tulevat tiedot.</span>
+<span class="n">vuosi</span> <span class="o">=</span> <span class="n">ilmasto</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span>
+<span class="n">co2</span> <span class="o">=</span> <span class="n">ilmasto</span><span class="p">[</span><span class="s1">&#39;CO2 concentrations&#39;</span><span class="p">]</span> <span class="c1"># yksikkö on ppm = parts per million eli miljoonasosa</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Sitten piirretään kuvaaja.</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span> <span class="c1"># Voit muokata kuvaajan kokoa.</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">vuosi</span><span class="p">,</span> <span class="n">co2</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Otsikko&#39;</span><span class="p">)</span> <span class="c1"># Määritä kuvaajalle otsikko</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x-akselin nimi&#39;</span><span class="p">)</span> <span class="c1"># ja molempien akseleiden nimet ja yksiköt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;y-akselin nimi&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">90</span><span class="p">)</span>
+
+<span class="c1">#plt.xlim(1700, 1800) # Tämän komennon avulla voit skaalata x-akselia, esimerkkinä näytetään 1700 - 1800 -luvut.</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/co2_7_0.png" src="../_images/co2_7_0.png" />
+</div>
+</div>
+<hr class="docutils" />
+<p><strong>Pohdintaa</strong></p>
+<p>Komennon plt.xlim(min,max) avulla voit tarkastella erilaisia ajankohtia ylemmästä kuvaajasta. Käyttäkää kyseistä komentoa ja käykää vieruskaverin kanssa läpi seuraavat kysymykset:</p>
+<ol class="simple">
+<li><p>Millä tavalla CO2-pitoisuus on muuttunut viimeisen 2000 vuoden aikana?</p></li>
+<li><p>Löydätkö kuvaajasta xlim-komennon vuosia vaihtamalla sen kohdan, milloin säännöllisten mittausten ottaminen on aloitettu?</p></li>
+<li><p>Jos mietitään ajanjaksoa ennen 1800-lukua, mikä on ollut korkein CO2-pitoisuus viimeisen 800 000 vuoden aikana? Milloin tämä korkein lukema on ollut?</p></li>
+</ol>
+</section>
+<section id="hiilipitoisuuden-vertailu-muihin-arvoihin">
+<h2>Hiilipitoisuuden vertailu muihin arvoihin<a class="headerlink" href="#hiilipitoisuuden-vertailu-muihin-arvoihin" title="Permalink to this headline">#</a></h2>
+<hr class="docutils" />
+<p>Tässä alla on muutama solu, joissa valmistellaan muutama datasetti valmiiksi vertailua varten. Voit ajaa solut ilman sen suurempaa tarkastelua.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Valmistellaan fossiilisien polttoaineiden kulutukseen liittyvä datasetti.</span>
+
+<span class="c1"># Tämän solun ajamisesta tulee punainen &quot;virheilmoitus&quot;, mutta se ei menoa haittaa. Eteenpäin vain.</span>
+
+<span class="n">fossiiliset_polttoaineet_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/fossil-fuel-consumption-by-fuel-type.csv&#39;</span><span class="p">)</span>
+
+<span class="n">fossiiliset_polttoaineet</span> <span class="o">=</span> <span class="n">fossiiliset_polttoaineet_data</span><span class="p">[(</span><span class="n">fossiiliset_polttoaineet_data</span><span class="p">[</span><span class="s1">&#39;Entity&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;World&#39;</span><span class="p">)]</span>
+<span class="n">fossiiliset_polttoaineet</span> <span class="o">=</span> <span class="n">fossiiliset_polttoaineet</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">fossiiliset_polttoaineet</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+
+<span class="n">yht</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">fossiiliset_polttoaineet</span><span class="p">))</span>
+<span class="n">fossiiliset_polttoaineet</span><span class="p">[</span><span class="s2">&quot;Yht&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">yht</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">fossiiliset_polttoaineet</span><span class="p">)):</span>
+    <span class="n">fossiiliset_polttoaineet</span><span class="p">[</span><span class="s2">&quot;Yht&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">fossiiliset_polttoaineet</span><span class="p">[</span><span class="s1">&#39;Gas Consumption - TWh&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">fossiiliset_polttoaineet</span><span class="p">[</span><span class="s1">&#39;Coal Consumption - TWh&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">fossiiliset_polttoaineet</span><span class="p">[</span><span class="s1">&#39;Oil Consumption - TWh&#39;</span><span class="p">][</span><span class="n">i</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_1882/2983891996.py:15: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame
+
+See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
+  fossiiliset_polttoaineet[&quot;Yht&quot;][i] = (fossiiliset_polttoaineet[&#39;Gas Consumption - TWh&#39;][i] + fossiiliset_polttoaineet[&#39;Coal Consumption - TWh&#39;][i] + fossiiliset_polttoaineet[&#39;Oil Consumption - TWh&#39;][i])
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Valmistellaan raportoituihin katastrofeihin liittyvä datasetti.</span>
+
+<span class="n">katastrofit_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/number-of-natural-disaster-events.csv&#39;</span><span class="p">)</span>
+<span class="n">katastrofit</span> <span class="o">=</span> <span class="n">katastrofit_data</span><span class="p">[(</span><span class="n">katastrofit_data</span><span class="p">[</span><span class="s1">&#39;Entity&#39;</span><span class="p">]</span><span class="o">==</span><span class="s1">&#39;All natural disasters&#39;</span><span class="p">)]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Valmistellaan eri muuttujiin halutut tiedot dataseteistä valmiiksi.</span>
+
+<span class="n">metaani</span> <span class="o">=</span> <span class="n">ilmasto</span><span class="p">[</span><span class="s1">&#39;CH4 concentrations&#39;</span><span class="p">]</span>
+<span class="n">typpi_oksidi</span> <span class="o">=</span> <span class="n">ilmasto</span><span class="p">[</span><span class="s1">&#39;N2O concentrations&#39;</span><span class="p">]</span>
+<span class="n">fossiiliset_kulutus</span> <span class="o">=</span> <span class="n">fossiiliset_polttoaineet</span><span class="p">[</span><span class="s1">&#39;Yht&#39;</span><span class="p">]</span>
+<span class="n">fossiiliset_vuosi</span> <span class="o">=</span> <span class="n">fossiiliset_polttoaineet</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span>
+<span class="n">katastrofit_maara</span> <span class="o">=</span> <span class="n">katastrofit</span><span class="p">[</span><span class="s1">&#39;Number of disasters (EMDAT (2020))&#39;</span><span class="p">]</span>
+<span class="n">katastrofit_vuosi</span> <span class="o">=</span> <span class="n">katastrofit</span><span class="p">[</span><span class="s1">&#39;Year&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tyhjä koodisolu, jos lopuksi haluat lisätä omia kuvaajia tarkasteltavaksi.</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Ja tähän loppuu datasettien valmistelu.</p>
+<hr class="docutils" />
+<p>Nyt piirretään kuva, johon voidaan plotata samaan aikaan kaksi eri kuvaajaa. Ax1-komennolla ohjaillaan ensimmäistä kuvaajaa ja ax2-komennoilla toista kuvaajaa. Tarkoituksena on vertailla erilaisia käyriä aiemman hiilidioksidipitoisuus-käyrän kanssa. Alla on listattu valmiiksi neljä eri vaihtoehtoa toiselle kuvaajalle, joita voit vaihdella vapaasti sen mukaan, mikä rivi on näkyvillä ja mitkä kommentoitu piiloon.</p>
+<p>Vertailtavat kuvaajat ovat:</p>
+<ol class="simple">
+<li><p>Ilmakehän metaanipitoisuus, yksikkö on ppb = parts per billion eli miljardisosa</p></li>
+<li><p>Ilmakehän typpioksidipitoisuus, yksikkö on ppb</p></li>
+<li><p>Globaali fossiilisten polttoaineiden kulutus, yksikkö on TWh</p></li>
+<li><p>Globaali tilasto raportoiduista luonnonkatastrofeista</p></li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+
+<span class="c1">#########</span>
+<span class="c1"># Valmistellaan kuvaaja</span>
+
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s1">&#39;X1-axis&#39;</span><span class="p">)</span> 
+<span class="n">ax1</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Y1-axis&#39;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;red&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
+<span class="n">ax1</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span> <span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">labelcolor</span> <span class="o">=</span> <span class="s1">&#39;red&#39;</span><span class="p">)</span>
+
+<span class="n">ax2</span> <span class="o">=</span> <span class="n">ax1</span><span class="o">.</span><span class="n">twinx</span><span class="p">()</span> 
+<span class="n">ax2</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s1">&#39;Y2-axis&#39;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;blue&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span> 
+<span class="n">ax2</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span> <span class="o">=</span><span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">labelcolor</span> <span class="o">=</span> <span class="s1">&#39;blue&#39;</span><span class="p">)</span> 
+
+<span class="c1">#########</span>
+<span class="c1"># Kuvaajavaihtoehdot</span>
+
+<span class="n">ax1</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">vuosi</span><span class="p">,</span> <span class="n">co2</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;co2&#39;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;red&#39;</span><span class="p">)</span>
+<span class="c1">#ax2.plot(vuosi, metaani, label = &#39;metaani&#39;, color = &#39;blue&#39;) # metaanipitoisuuden yksikkö on ppb = parts per billion eli miljardisosa</span>
+<span class="c1">#ax2.plot(vuosi, typpi_oksidi, label = &#39;typpioksidi&#39;, color = &#39;black&#39;) # typpi-oksidipitoisuuden yksikkö on ppb</span>
+<span class="c1">#ax2.plot(fossiiliset_vuosi, fossiiliset_kulutus, label = &#39;fossiiliset&#39;, color = &#39;orange&#39;) # fossiilisten polttoaineiden kulutuksen yksikkö on TWh</span>
+<span class="n">ax2</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">katastrofit_vuosi</span><span class="p">,</span> <span class="n">katastrofit_maara</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;katastrofit&#39;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;purple&#39;</span><span class="p">)</span> <span class="c1"># raportoidut katastrofit</span>
+
+<span class="c1">#########</span>
+<span class="c1"># Asetukset, kuten x-akselin skaalaus ja otsikointi.</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="mi">1900</span><span class="p">,</span><span class="mi">2022</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Otsikko&#39;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figlegend</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="s2">&quot;upper right&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/co2_15_0.png" src="../_images/co2_15_0.png" />
+</div>
+</div>
+<p><strong>Pohdintaa</strong></p>
+<ol class="simple">
+<li><p>Miten metaani- ja typpioksidipitoisuus ovat muuttuneet lähivuosien aikana? Milloin näitä suureita on alettu mittaamaan tarkemmin? Löydätkö jotakin poikkeamia tai erilaisuuksia niistä verrattuna hiilidioksidikuvaajaan?</p></li>
+<li><p>Miten fossiilisten polttoaineiden kulutus on muuttunut? Onko sillä yhtenevyyttä hiilidioksidipitoisuuksien kanssa?</p></li>
+<li><p>Pohdi katastrofien lukumäärään liittyvän kuvaajan luotettavuutta? Miksi kuvaajan mukaan näyttäisi siltä, että ennen ei ole tapahtunut katastrofeja juuri lainkaan nykymäärään verrattuna?</p></li>
+</ol>
+<hr class="docutils" />
+<p>Jos aikaa riittää, voit lisätä myös 1-2 muuta kuvaajaa tarkasteluun kirjoittamalla niille sopivat koodit. Voit kopioida tästä linkin datasettiin ja kirjoittaa koodin ylempänä olevaan tyhjään koodisoluun. Komennot kopioituvat aiemmista koodisoluista, kunhan vain kirjoittaa uudet muuttujat.</p>
+<ol class="simple">
+<li><p>Ihmisten elinajanodote (https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/life-expectancy.csv)</p></li>
+<li><p>Globaalit hiilidioksidipäästöt, lukuarvot annettu tonneissa (https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/annual-co2-emissions-per-country.csv)</p></li>
+</ol>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./harjoitukset"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='left-prev' id="prev-link" href="UV-paja.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">ESIMERKKI 2: Ultraviolettisäteily</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="Pienhiukkaset.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">ESIMERKKI 4: Pienhiukkaset - saasteita ja aerosoleja</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            </footer>
+        </div>
+    </div>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By HIP Education and Open Data Team<br/>
+  
+    <div class="extra_footer">
+      <div>
+<a>Toteutettu Opetushallituksen valtionavustuksella tiedekasvatuksen edistämiseen.</a></br><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img class="license" alt="Creative Commons License" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a> Tämän sivuston materiaali on käytettävissä seuraavalla lisenssillä: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC-BY 4.0.</a>
+</div>
+
+    </div>
+</p>
+        </footer>
+    </div>
+    
+</div>
+
+
+      </div>
+    </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
+
+  </body>
+</html>

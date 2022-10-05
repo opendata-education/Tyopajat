@@ -10,10 +10,12 @@ chapters:
   - file: harjoitukset/Vuosirenkaat
 - file: harjoitukset/esimerkit
   sections:
-  - file: harjoitukset/lumensyvyys
+  - file: harjoitukset/Lumensyvyys
   - file: harjoitukset/UV
 - file: harjoitukset/ilmastopaja
   sections:
   - file: harjoitukset/lampotila-intro
   - file: harjoitukset/dataraati
   - file: harjoitukset/UV-paja
+  - file: co2
+  - file: Pienhiukkaset

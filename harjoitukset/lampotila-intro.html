@@ -524,25 +524,173 @@ title="Print to PDF"
 <p>Nyt tarvitaan jotain dataa, jotta voidaan edetä tässä tarkastelussa. Otetaan käyttöön datasetti, joka on löydetty <span class="xref myst">täältä</span>. Ladataan tiedosto tänne ja kurkataan sen sisältö.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># lampotilat_kaikki on nyt muuttuja, johon me tallennetaan koko datasetin sisältö sellaisenaan.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># lampotilat_data on nyt muuttuja, johon me tallennetaan koko datasetin sisältö sellaisenaan.</span>
 
 <span class="n">lampotilat_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/climate-change.csv&#39;</span><span class="p">)</span> <span class="c1"># Luetaan tiedosto ja tallennetaan se muuttujaan.</span>
-<span class="n">lampotilat_kaikki</span><span class="o">.</span><span class="n">head</span><span class="p">()</span> <span class="c1"># head()-käskyllä voidaan kurkata datasetin sisälle.</span>
+<span class="n">lampotilat_data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span> <span class="c1"># head()-käskyllä voidaan kurkata datasetin sisälle.</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">4</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># lampotilat_kaikki on nyt muuttuja, johon me tallennetaan koko datasetin sisältö sellaisenaan.</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">lampotilat_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/climate-change.csv&#39;</span><span class="p">)</span> <span class="c1"># Luetaan tiedosto ja tallennetaan se muuttujaan.</span>
-<span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">lampotilat_kaikki</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<span class="ne">NameError</span>: name &#39;lampotilat_kaikki&#39; is not defined
-</pre></div>
-</div>
-</div>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Entity</th>
+      <th>Date</th>
+      <th>Combined measurements</th>
+      <th>Seasonal variation</th>
+      <th>Monthly averaged</th>
+      <th>Annual averaged</th>
+      <th>monthly_sea_surface_temperature_anomaly</th>
+      <th>Sea surface temp (lower-bound)</th>
+      <th>Sea surface temp (upper-bound)</th>
+      <th>Monthly pH measurement</th>
+      <th>Annual average</th>
+      <th>Temperature anomaly</th>
+      <th>Church &amp; White</th>
+      <th>University of Hawaii</th>
+      <th>Average</th>
+      <th>arctic_sea_ice_osisaf</th>
+      <th>Monthly averaged.1</th>
+      <th>Annual averaged.1</th>
+      <th>Monthly averaged.2</th>
+      <th>Annual averaged.2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Antarctica</td>
+      <td>1992-01-01</td>
+      <td>NaN</td>
+      <td>418.310350</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Antarctica</td>
+      <td>1992-01-31</td>
+      <td>NaN</td>
+      <td>425.377021</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Antarctica</td>
+      <td>1992-03-01</td>
+      <td>NaN</td>
+      <td>433.552016</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Antarctica</td>
+      <td>1992-04-01</td>
+      <td>NaN</td>
+      <td>424.496837</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Antarctica</td>
+      <td>1992-05-01</td>
+      <td>NaN</td>
+      <td>423.362721</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">head()-komennon</span> <span class="pre">sulkujen</span> <span class="pre">sisälle</span> <span class="pre">voi</span> <span class="pre">laittaa</span> <span class="pre">lukuarvoja,</span> <span class="pre">jolla</span> <span class="pre">voidaan</span> <span class="pre">vaikuttaa</span> <span class="pre">siihen,</span> <span class="pre">mitä</span> <span class="pre">datasetistä</span> <span class="pre">näytetään</span> <span class="pre">tässä</span> <span class="pre">esikatselussa.</span> <span class="pre">Kokeile</span> <span class="pre">laittaa</span> <span class="pre">sinne</span> <span class="pre">vaikka</span> <span class="pre">luvut</span> <span class="pre">10</span> <span class="pre">ja</span> <span class="pre">-20.</span></code></p>
 <p>Datasetti näyttää sisältävän mittaustuloksia useista eri paikoista. Listan lopussa on myös globaalit arvot, joten keskitytään nyt niihin.</p>

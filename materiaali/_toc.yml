@@ -12,6 +12,7 @@ chapters:
   sections:
   - file: harjoitukset/Lumensyvyys
   - file: harjoitukset/UV
+  - file: harjoitukset/fossiiliset_ja_koulutus
 - file: harjoitukset/ilmastopaja
   sections:
   - file: harjoitukset/lampotila-intro

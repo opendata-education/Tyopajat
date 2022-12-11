@@ -545,32 +545,32 @@ title="Print to PDF"
 <p>Tiedot on noudettu palvelusta 6.3.2022</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tuodaan tarvittavat työkalukirjastot</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Tuodaan tarvittavat työkalukirjastot
 
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+import pandas as pd
+import matplotlib.pyplot as plt
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Huomaa lukukomennon sisään lisätty &#39;parse&#39;-parametri, jolla luodaan tiedostoon yhdistelmä päivämääräsarakkeista,</span>
-<span class="c1"># jolloin saadaan juoksevasti kasvava luku tulevan visualisoinnin aika-akseliksi.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Huomaa lukukomennon sisään lisätty &#39;parse&#39;-parametri, jolla luodaan tiedostoon yhdistelmä päivämääräsarakkeista,
+# jolloin saadaan juoksevasti kasvava luku tulevan visualisoinnin aika-akseliksi.
 
-<span class="n">Tapiola</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/EspooTapiola.csv&quot;</span><span class="p">,</span>
-                    <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Aika&quot;</span><span class="p">:[</span><span class="s2">&quot;Vuosi&quot;</span><span class="p">,</span> <span class="s2">&quot;Kk&quot;</span><span class="p">,</span> <span class="s2">&quot;Pv&quot;</span><span class="p">,</span> <span class="s2">&quot;Klo&quot;</span><span class="p">]},</span> <span class="n">keep_date_col</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
-<span class="n">Nupuri</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/EspooNupuri.csv&quot;</span><span class="p">,</span>
-                    <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Aika&quot;</span><span class="p">:[</span><span class="s2">&quot;Vuosi&quot;</span><span class="p">,</span> <span class="s2">&quot;Kk&quot;</span><span class="p">,</span> <span class="s2">&quot;Pv&quot;</span><span class="p">,</span> <span class="s2">&quot;Klo&quot;</span><span class="p">]},</span> <span class="n">keep_date_col</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
-<span class="n">Nuuksio</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/EspooNuuksio.csv&quot;</span><span class="p">,</span>
-                    <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Aika&quot;</span><span class="p">:[</span><span class="s2">&quot;Vuosi&quot;</span><span class="p">,</span> <span class="s2">&quot;Kk&quot;</span><span class="p">,</span> <span class="s2">&quot;Pv&quot;</span><span class="p">,</span> <span class="s2">&quot;Klo&quot;</span><span class="p">]},</span> <span class="n">keep_date_col</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+Tapiola = pd.read_csv(&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/EspooTapiola.csv&quot;,
+                    parse_dates = {&quot;Aika&quot;:[&quot;Vuosi&quot;, &quot;Kk&quot;, &quot;Pv&quot;, &quot;Klo&quot;]}, keep_date_col = True)
+Nupuri = pd.read_csv(&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/EspooNupuri.csv&quot;,
+                    parse_dates = {&quot;Aika&quot;:[&quot;Vuosi&quot;, &quot;Kk&quot;, &quot;Pv&quot;, &quot;Klo&quot;]}, keep_date_col = True)
+Nuuksio = pd.read_csv(&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/EspooNuuksio.csv&quot;,
+                    parse_dates = {&quot;Aika&quot;:[&quot;Vuosi&quot;, &quot;Kk&quot;, &quot;Pv&quot;, &quot;Klo&quot;]}, keep_date_col = True)
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Tapiola</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>Tapiola
 </pre></div>
 </div>
 </div>
@@ -720,7 +720,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Nupuri</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>Nupuri
 </pre></div>
 </div>
 </div>
@@ -870,7 +870,7 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Nuuksio</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>Nuuksio
 </pre></div>
 </div>
 </div>
@@ -1024,20 +1024,20 @@ title="Print to PDF"
 <p>Kuvaajat ovat erinomainen työkalu nopeisiin arviointeihin. Otetaan ensimmäiseksi yleiskuva ajan suhteen:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">Tapiola</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">Tapiola</span><span class="p">[</span><span class="s2">&quot;Lumensyvyys (cm)&quot;</span><span class="p">])</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Lumensyvyys Tapiolan mitta-asemalla (cm) </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">30</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>plt.figure(figsize = (30, 5))
+plt.scatter(Tapiola[&quot;Aika&quot;], Tapiola[&quot;Lumensyvyys (cm)&quot;])
+plt.title(&quot;Lumensyvyys Tapiolan mitta-asemalla (cm) \n&quot;, fontsize = 30)
+plt.show()
 
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">Nupuri</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">Nupuri</span><span class="p">[</span><span class="s2">&quot;Lumensyvyys (cm)&quot;</span><span class="p">])</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Lumensyvyys Nupurin mitta-asemalla (cm) </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">30</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+plt.figure(figsize = (30, 5))
+plt.scatter(Nupuri[&quot;Aika&quot;], Nupuri[&quot;Lumensyvyys (cm)&quot;])
+plt.title(&quot;Lumensyvyys Nupurin mitta-asemalla (cm) \n&quot;, fontsize = 30)
+plt.show()
 
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">Nuuksio</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">Nuuksio</span><span class="p">[</span><span class="s2">&quot;Lumensyvyys (cm)&quot;</span><span class="p">])</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Lumensyvyys Nuuksion mitta-asemalla (cm) </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">30</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+plt.figure(figsize = (30, 5))
+plt.scatter(Nuuksio[&quot;Aika&quot;], Nuuksio[&quot;Lumensyvyys (cm)&quot;])
+plt.title(&quot;Lumensyvyys Nuuksion mitta-asemalla (cm) \n&quot;, fontsize = 30)
+plt.show()
 </pre></div>
 </div>
 </div>
@@ -1050,13 +1050,13 @@ title="Print to PDF"
 <p>Tapiolan ja Nuuksion tiedot näyttävät olevan samalta ajalta, mikä helpottaa rinnakkaista vertailua:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">Nupuri</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">Nupuri</span><span class="p">[</span><span class="s2">&quot;Lumensyvyys (cm)&quot;</span><span class="p">],</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Nupuri&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">Nuuksio</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">Nuuksio</span><span class="p">[</span><span class="s2">&quot;Lumensyvyys (cm)&quot;</span><span class="p">],</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Nuuksio&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">Tapiola</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">Tapiola</span><span class="p">[</span><span class="s2">&quot;Lumensyvyys (cm)&quot;</span><span class="p">],</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Tapiola&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Lumensyvyys Espoon mitta-asemilla (cm) </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">30</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>plt.figure(figsize = (30, 5))
+plt.scatter(Nupuri[&quot;Aika&quot;], Nupuri[&quot;Lumensyvyys (cm)&quot;], c = &quot;red&quot;, label = &quot;Nupuri&quot;)
+plt.scatter(Nuuksio[&quot;Aika&quot;], Nuuksio[&quot;Lumensyvyys (cm)&quot;], c = &quot;blue&quot;, label = &quot;Nuuksio&quot;)
+plt.scatter(Tapiola[&quot;Aika&quot;], Tapiola[&quot;Lumensyvyys (cm)&quot;], c = &quot;orange&quot;, label = &quot;Tapiola&quot;)
+plt.title(&quot;Lumensyvyys Espoon mitta-asemilla (cm) \n&quot;, fontsize = 30)
+plt.legend(fontsize = 20)
+plt.show()
 </pre></div>
 </div>
 </div>
@@ -1067,22 +1067,22 @@ title="Print to PDF"
 <p>Aineistossa näkyy muutamia poikkeuksellisia kausia, kuten poikkeuksellisen lumettomia vuosia (2008, 2020) tai korkeita kinoksia (2010, 2022). Tarkastellaan niitä vähän lähemmin.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Tapiola20</span> <span class="o">=</span> <span class="n">Tapiola</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;Vuosi &gt;= &#39;2019&#39;&quot;</span><span class="p">)</span>
-<span class="n">Nuuksio20</span> <span class="o">=</span> <span class="n">Nuuksio</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;Vuosi &gt;= &#39;2019&#39;&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>Tapiola20 = Tapiola.query(&quot;Vuosi &gt;= &#39;2019&#39;&quot;)
+Nuuksio20 = Nuuksio.query(&quot;Vuosi &gt;= &#39;2019&#39;&quot;)
 
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+plt.figure(figsize = (30, 5))
 
-<span class="c1">#plt.subplot(1,2,1)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">Tapiola20</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">Tapiola20</span><span class="p">[</span><span class="s2">&quot;Lumensyvyys (cm)&quot;</span><span class="p">],</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Tapiola&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span> <span class="o">=</span> <span class="mi">45</span><span class="p">)</span>
+#plt.subplot(1,2,1)
+plt.scatter(Tapiola20[&quot;Aika&quot;], Tapiola20[&quot;Lumensyvyys (cm)&quot;], c = &quot;orange&quot;, label = &quot;Tapiola&quot;)
+plt.xticks(rotation = 45)
 
-<span class="c1">#plt.subplot(1,2,2)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">Nuuksio20</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">Nuuksio20</span><span class="p">[</span><span class="s2">&quot;Lumensyvyys (cm)&quot;</span><span class="p">],</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Nuuksio&quot;</span><span class="p">)</span>
+#plt.subplot(1,2,2)
+plt.scatter(Nuuksio20[&quot;Aika&quot;], Nuuksio20[&quot;Lumensyvyys (cm)&quot;], c = &quot;b&quot;, alpha = 0.5, label = &quot;Nuuksio&quot;)
 
-<span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s2">&quot;Lumensyvyys viime vuosina Espoon mitta-asemilla (cm) </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">30</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span> <span class="o">=</span> <span class="mi">45</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+plt.suptitle(&quot;Lumensyvyys viime vuosina Espoon mitta-asemilla (cm) \n&quot;, fontsize = 30)
+plt.xticks(rotation = 45)
+plt.legend(fontsize = 20)
+plt.show()
 </pre></div>
 </div>
 </div>
@@ -1092,22 +1092,22 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Tapiola21</span> <span class="o">=</span> <span class="n">Tapiola</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;Vuosi &gt;= &#39;2021&#39;&quot;</span><span class="p">)</span>
-<span class="n">Nuuksio21</span> <span class="o">=</span> <span class="n">Nuuksio</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;Vuosi &gt;= &#39;2021&#39;&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>Tapiola21 = Tapiola.query(&quot;Vuosi &gt;= &#39;2021&#39;&quot;)
+Nuuksio21 = Nuuksio.query(&quot;Vuosi &gt;= &#39;2021&#39;&quot;)
 
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+plt.figure(figsize = (15, 5))
 
-<span class="c1">#plt.subplot(1,2,1)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">Tapiola21</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">Tapiola21</span><span class="p">[</span><span class="s2">&quot;Lumensyvyys (cm)&quot;</span><span class="p">],</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Tapiola&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span> <span class="o">=</span> <span class="mi">45</span><span class="p">)</span>
+#plt.subplot(1,2,1)
+plt.scatter(Tapiola21[&quot;Aika&quot;], Tapiola21[&quot;Lumensyvyys (cm)&quot;], c = &quot;orange&quot;, label = &quot;Tapiola&quot;)
+plt.xticks(rotation = 45)
 
-<span class="c1">#plt.subplot(1,2,2)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">Nuuksio21</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">Nuuksio21</span><span class="p">[</span><span class="s2">&quot;Lumensyvyys (cm)&quot;</span><span class="p">],</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Nuuksio&quot;</span><span class="p">)</span>
+#plt.subplot(1,2,2)
+plt.scatter(Nuuksio21[&quot;Aika&quot;], Nuuksio21[&quot;Lumensyvyys (cm)&quot;], c = &quot;b&quot;, alpha = 0.5, label = &quot;Nuuksio&quot;)
 
-<span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s2">&quot;Lumensyvyys 21-22 Espoon mitta-asemilla (cm) </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">30</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span> <span class="o">=</span> <span class="mi">45</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+plt.suptitle(&quot;Lumensyvyys 21-22 Espoon mitta-asemilla (cm) \n&quot;, fontsize = 30)
+plt.xticks(rotation = 45)
+plt.legend(fontsize = 20)
+plt.show()
 </pre></div>
 </div>
 </div>

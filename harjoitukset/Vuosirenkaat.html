@@ -549,11 +549,11 @@ title="Print to PDF"
 <p>AJA TÄMÄ SOLU ENSIMMÄISENÄ!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tuodaan importilla tarvittavat kirjastot käyttöön.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Tuodaan importilla tarvittavat kirjastot käyttöön.
 
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
 </pre></div>
 </div>
 </div>
@@ -564,19 +564,19 @@ title="Print to PDF"
 <p>Kaisaniemen asema on Suomen vanhimpia säähavainnointipisteitä ja riittävän lähellä kyseisen mäntyvanhuksen kasvupaikkaa, jotta mahdolliset korrelaatiot havainnoissa ovat vähemmän satunnaisia. Ensimmäiset havainnot ovat kesältä 1844, mutta käytetyn laskentatavan vuoksi tässä yhteydessä lasketaan lähinnä täysiä vuosia, jolloin ensimmäiset kuvaajissa näkyvät pisteet ovat vuodelta 1845. Jos olet hurjempi ohjelmoija, muokkaa toki koodia niin että nekin tiedot tulevat mukaan pienellä lisävaivalla.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ladataan käytettävät tiedot muuttujiin. </span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Ladataan käytettävät tiedot muuttujiin. 
 
-<span class="n">KLam</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Biologia/main/materiaali/data/KeskLam.txt&quot;</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="n">KSade</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Biologia/main/materiaali/data/Sadesumma.txt&quot;</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">)</span>
+KLam = pd.read_csv(&quot;https://raw.githubusercontent.com/opendata-education/Biologia/main/materiaali/data/KeskLam.txt&quot;, sep = &quot;\t&quot;)
+KSade = pd.read_csv(&quot;https://raw.githubusercontent.com/opendata-education/Biologia/main/materiaali/data/Sadesumma.txt&quot;, sep = &quot;\t&quot;)
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tarkastetaan, miltä data näyttää lämpötilan suhteen (celsius-asteina).</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Tarkastetaan, miltä data näyttää lämpötilan suhteen (celsius-asteina).
 
-<span class="n">KLam</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+KLam.head(10)
 </pre></div>
 </div>
 </div>
@@ -781,9 +781,9 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Entä sademäärän (millimetreinä)?</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Entä sademäärän (millimetreinä)?
 
-<span class="n">KSade</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+KSade.head(10)
 </pre></div>
 </div>
 </div>
@@ -991,41 +991,41 @@ title="Print to PDF"
 <h3>2. Analyysi<a class="headerlink" href="#analyysi" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Lähdetään hyvin karkeasti liikkeelle: erottuuko vuoden keskiarvoista jotain?</span>
-<span class="c1"># Älä huoli, jos tämä solu heittää varoitusviestiä (tämän voisi tehdä paljon nätimminkin).</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Lähdetään hyvin karkeasti liikkeelle: erottuuko vuoden keskiarvoista jotain?
+# Älä huoli, jos tämä solu heittää varoitusviestiä (tämän voisi tehdä paljon nätimminkin).
 
-<span class="c1"># Tässä tehdään äskeisiin taulukoihin uusi sarake, nimeltään KA.</span>
+# Tässä tehdään äskeisiin taulukoihin uusi sarake, nimeltään KA.
 
-<span class="n">sa</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">KSade</span><span class="p">))</span>
-<span class="n">KSade</span><span class="p">[</span><span class="s2">&quot;KA&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">sa</span>
+sa = np.zeros(len(KSade))
+KSade[&quot;KA&quot;] = sa
 
-<span class="n">la</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">KLam</span><span class="p">))</span>
-<span class="n">KLam</span><span class="p">[</span><span class="s2">&quot;KA&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">la</span>
+la = np.zeros(len(KLam))
+KLam[&quot;KA&quot;] = la
 
-<span class="c1"># Tässä käydään tiedot rivi kerrallaan läpi, asettaen äskeiseen uuteen sarakkeeseen arvo. Mikä arvo?</span>
-<span class="c1"># Miten siihen vaikuttaa, mikäli tietoaineistossa on puuttuvia kohtia (NaN, not a number)?</span>
+# Tässä käydään tiedot rivi kerrallaan läpi, asettaen äskeiseen uuteen sarakkeeseen arvo. Mikä arvo?
+# Miten siihen vaikuttaa, mikäli tietoaineistossa on puuttuvia kohtia (NaN, not a number)?
 
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">KSade</span><span class="p">)):</span>
-    <span class="n">KSade</span><span class="p">[</span><span class="s2">&quot;KA&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">KSade</span><span class="p">[</span><span class="s2">&quot;Tammi&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="n">KSade</span><span class="p">[</span><span class="s2">&quot;Helmi&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="n">KSade</span><span class="p">[</span><span class="s2">&quot;Maalis&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="n">KSade</span><span class="p">[</span><span class="s2">&quot;Huhti&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="n">KSade</span><span class="p">[</span><span class="s2">&quot;Touko&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span>
-    <span class="o">+</span><span class="n">KSade</span><span class="p">[</span><span class="s2">&quot;Kesä&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="n">KSade</span><span class="p">[</span><span class="s2">&quot;Heinä&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="n">KSade</span><span class="p">[</span><span class="s2">&quot;Elo&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="n">KSade</span><span class="p">[</span><span class="s2">&quot;Syys&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="n">KSade</span><span class="p">[</span><span class="s2">&quot;Loka&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span>
-    <span class="o">+</span><span class="n">KSade</span><span class="p">[</span><span class="s2">&quot;Marras&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="n">KSade</span><span class="p">[</span><span class="s2">&quot;Joulu&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">])</span><span class="o">/</span><span class="mi">12</span>
+for i in range(len(KSade)):
+    KSade[&quot;KA&quot;][i] = (KSade[&quot;Tammi&quot;][i]+KSade[&quot;Helmi&quot;][i]+KSade[&quot;Maalis&quot;][i]+KSade[&quot;Huhti&quot;][i]+KSade[&quot;Touko&quot;][i]
+    +KSade[&quot;Kesä&quot;][i]+KSade[&quot;Heinä&quot;][i]+KSade[&quot;Elo&quot;][i]+KSade[&quot;Syys&quot;][i]+KSade[&quot;Loka&quot;][i]
+    +KSade[&quot;Marras&quot;][i]+KSade[&quot;Joulu&quot;][i])/12
     
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">KLam</span><span class="p">)):</span>
-    <span class="n">KLam</span><span class="p">[</span><span class="s2">&quot;KA&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">KLam</span><span class="p">[</span><span class="s2">&quot;Tammi&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="n">KLam</span><span class="p">[</span><span class="s2">&quot;Helmi&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="n">KLam</span><span class="p">[</span><span class="s2">&quot;Maalis&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="n">KLam</span><span class="p">[</span><span class="s2">&quot;Huhti&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="n">KLam</span><span class="p">[</span><span class="s2">&quot;Touko&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span>
-    <span class="o">+</span><span class="n">KLam</span><span class="p">[</span><span class="s2">&quot;Kesä&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="n">KLam</span><span class="p">[</span><span class="s2">&quot;Heinä&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="n">KLam</span><span class="p">[</span><span class="s2">&quot;Elo&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="n">KLam</span><span class="p">[</span><span class="s2">&quot;Syys&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="n">KLam</span><span class="p">[</span><span class="s2">&quot;Loka&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span>
-    <span class="o">+</span><span class="n">KLam</span><span class="p">[</span><span class="s2">&quot;Marras&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="n">KLam</span><span class="p">[</span><span class="s2">&quot;Joulu&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">])</span><span class="o">/</span><span class="mi">12</span>
+for i in range(len(KLam)):
+    KLam[&quot;KA&quot;][i] = (KLam[&quot;Tammi&quot;][i]+KLam[&quot;Helmi&quot;][i]+KLam[&quot;Maalis&quot;][i]+KLam[&quot;Huhti&quot;][i]+KLam[&quot;Touko&quot;][i]
+    +KLam[&quot;Kesä&quot;][i]+KLam[&quot;Heinä&quot;][i]+KLam[&quot;Elo&quot;][i]+KLam[&quot;Syys&quot;][i]+KLam[&quot;Loka&quot;][i]
+    +KLam[&quot;Marras&quot;][i]+KLam[&quot;Joulu&quot;][i])/12
     
-<span class="c1"># Ajettuasi tämän solun, miltä data nyt näyttää? </span>
+# Ajettuasi tämän solun, miltä data nyt näyttää? 
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2089/3399210796.py:16: SettingWithCopyWarning: 
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_1984/3399210796.py:16: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame
 
 See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
   KSade[&quot;KA&quot;][i] = (KSade[&quot;Tammi&quot;][i]+KSade[&quot;Helmi&quot;][i]+KSade[&quot;Maalis&quot;][i]+KSade[&quot;Huhti&quot;][i]+KSade[&quot;Touko&quot;][i]
-/tmp/ipykernel_2089/3399210796.py:21: SettingWithCopyWarning: 
+/tmp/ipykernel_1984/3399210796.py:21: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame
 
 See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
@@ -1036,41 +1036,44 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Vilkaise tässä miltä data näyttää äskeisen ajon jäljiltä. Millaisen komennon tarvitset? Kirjoita ja aja!</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Vilkaise tässä miltä data näyttää äskeisen ajon jäljiltä. Millaisen komennon tarvitset? Kirjoita ja aja!
+
+
+
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Visualisoidaan äskeisiä kuvaajiksi.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Visualisoidaan äskeisiä kuvaajiksi.
 
-<span class="c1"># Subplot-komennot mahdollistavat usean kuvaajan rinnakkaisen esittämisen.</span>
+# Subplot-komennot mahdollistavat usean kuvaajan rinnakkaisen esittämisen.
 
-<span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+plt.subplots(figsize = (20,10))
 
-<span class="c1"># Tässä piirretään selvyyden nimissä sekä viivakuvaaja (plot) että pistekaavio (scatter), jotta</span>
-<span class="c1"># yksittäisten vuosien tulokset on helppoa erottaa.</span>
+# Tässä piirretään selvyyden nimissä sekä viivakuvaaja (plot) että pistekaavio (scatter), jotta
+# yksittäisten vuosien tulokset on helppoa erottaa.
 
-<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">211</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">KSade</span><span class="p">[</span><span class="s2">&quot;Vuosi&quot;</span><span class="p">],</span> <span class="n">KSade</span><span class="p">[</span><span class="s2">&quot;KA&quot;</span><span class="p">],</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;_nolegend_&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">KSade</span><span class="p">[</span><span class="s2">&quot;Vuosi&quot;</span><span class="p">],</span> <span class="n">KSade</span><span class="p">[</span><span class="s2">&quot;KA&quot;</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Sademäärä (mm)&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;b&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="s2">&quot;upper left&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">16</span><span class="p">)</span>
+plt.subplot(211)
+plt.plot(KSade[&quot;Vuosi&quot;], KSade[&quot;KA&quot;], alpha = 0.5, color = &quot;orange&quot;, label = &quot;_nolegend_&quot;)
+plt.scatter(KSade[&quot;Vuosi&quot;], KSade[&quot;KA&quot;], label = &quot;Sademäärä (mm)&quot;, color = &quot;b&quot;)
+plt.legend(loc = &quot;upper left&quot;, fontsize = 16)
 
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Vuosittaiset keskiarvot Kaisaniemen sääasemalta mitattuna vuosina 1845-2020 </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
+plt.title(&quot;Vuosittaiset keskiarvot Kaisaniemen sääasemalta mitattuna vuosina 1845-2020 \n&quot;, fontsize = 20)
 
-<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">212</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">KLam</span><span class="p">[</span><span class="s2">&quot;Vuosi&quot;</span><span class="p">],</span> <span class="n">KLam</span><span class="p">[</span><span class="s2">&quot;KA&quot;</span><span class="p">],</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;_nolegend_&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">KLam</span><span class="p">[</span><span class="s2">&quot;Vuosi&quot;</span><span class="p">],</span> <span class="n">KLam</span><span class="p">[</span><span class="s2">&quot;KA&quot;</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Lämpötila (°C)&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="s2">&quot;upper left&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">16</span><span class="p">)</span>
+plt.subplot(212)
+plt.plot(KLam[&quot;Vuosi&quot;], KLam[&quot;KA&quot;], alpha = 0.5, color = &quot;orange&quot;, label = &quot;_nolegend_&quot;)
+plt.scatter(KLam[&quot;Vuosi&quot;], KLam[&quot;KA&quot;], label = &quot;Lämpötila (°C)&quot;, color = &quot;r&quot;)
+plt.legend(loc = &quot;upper left&quot;, fontsize = 16)
 
 
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+plt.show()
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2089/1964338159.py:10: MatplotlibDeprecationWarning: Auto-removal of overlapping axes is deprecated since 3.6 and will be removed two minor releases later; explicitly call ax.remove() as needed.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_1984/1964338159.py:10: MatplotlibDeprecationWarning: Auto-removal of overlapping axes is deprecated since 3.6 and will be removed two minor releases later; explicitly call ax.remove() as needed.
   plt.subplot(211)
 </pre></div>
 </div>
@@ -1086,60 +1089,60 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <img src = "https://old.ilmatieteenlaitos.fi/image/image_gallery?groupId=30106&t=1353329979095&uuid=cf942d29-b79d-4836-9587-0c269451272e" align = left>
 <img src = "https://old.ilmatieteenlaitos.fi/image/image_gallery?groupId=30106&t=1353329979095&uuid=42653c45-a1e2-4fba-8eb6-ad248b65766b" align = right> <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Eritellään keskiarvot kunkin vuoden kasvukausille ja talville. Silmukointi voi viedä hetken aikaa, kun ajat solun.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Eritellään keskiarvot kunkin vuoden kasvukausille ja talville. Silmukointi voi viedä hetken aikaa, kun ajat solun.
 
-<span class="n">saK</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">KSade</span><span class="p">))</span>
-<span class="n">KSade</span><span class="p">[</span><span class="s2">&quot;KAK&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">saK</span>
+saK = np.zeros(len(KSade))
+KSade[&quot;KAK&quot;] = saK
 
-<span class="n">saT</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">KSade</span><span class="p">))</span>
-<span class="n">KSade</span><span class="p">[</span><span class="s2">&quot;KAT&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">saT</span>
+saT = np.zeros(len(KSade))
+KSade[&quot;KAT&quot;] = saT
 
-<span class="n">laK</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">KLam</span><span class="p">))</span>
-<span class="n">KLam</span><span class="p">[</span><span class="s2">&quot;KAK&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">laK</span>
+laK = np.zeros(len(KLam))
+KLam[&quot;KAK&quot;] = laK
 
-<span class="n">laT</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">KLam</span><span class="p">))</span>
-<span class="n">KLam</span><span class="p">[</span><span class="s2">&quot;KAT&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">laT</span>
+laT = np.zeros(len(KLam))
+KLam[&quot;KAT&quot;] = laT
 
-<span class="c1"># Iteroidaan kasvukausien tiedot. Jos haluat muuttaa otosta, senkus vaihdat tai lisäilet tarkasteltavia sarakkeita.</span>
-<span class="c1"># Muista kuitenkin olla tarkkana indeksin i mukanapidosta, että ohjelma ymmärtää missä kohtaa on menossa.</span>
+# Iteroidaan kasvukausien tiedot. Jos haluat muuttaa otosta, senkus vaihdat tai lisäilet tarkasteltavia sarakkeita.
+# Muista kuitenkin olla tarkkana indeksin i mukanapidosta, että ohjelma ymmärtää missä kohtaa on menossa.
 
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">KSade</span><span class="p">)):</span>
-    <span class="n">KSade</span><span class="p">[</span><span class="s2">&quot;KAK&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">KSade</span><span class="p">[</span><span class="s2">&quot;Touko&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="n">KSade</span><span class="p">[</span><span class="s2">&quot;Kesä&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="n">KSade</span><span class="p">[</span><span class="s2">&quot;Heinä&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span>
-    <span class="o">+</span><span class="n">KSade</span><span class="p">[</span><span class="s2">&quot;Elo&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="n">KSade</span><span class="p">[</span><span class="s2">&quot;Syys&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="n">KSade</span><span class="p">[</span><span class="s2">&quot;Loka&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">])</span><span class="o">/</span><span class="mi">6</span>
+for i in range(len(KSade)):
+    KSade[&quot;KAK&quot;][i] = (KSade[&quot;Touko&quot;][i]+KSade[&quot;Kesä&quot;][i]+KSade[&quot;Heinä&quot;][i]
+    +KSade[&quot;Elo&quot;][i]+KSade[&quot;Syys&quot;][i]+KSade[&quot;Loka&quot;][i])/6
     
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">KLam</span><span class="p">)):</span>
-    <span class="n">KLam</span><span class="p">[</span><span class="s2">&quot;KAK&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">KLam</span><span class="p">[</span><span class="s2">&quot;Touko&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="n">KLam</span><span class="p">[</span><span class="s2">&quot;Kesä&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="n">KLam</span><span class="p">[</span><span class="s2">&quot;Heinä&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span>
-    <span class="o">+</span><span class="n">KLam</span><span class="p">[</span><span class="s2">&quot;Elo&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="n">KLam</span><span class="p">[</span><span class="s2">&quot;Syys&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="n">KLam</span><span class="p">[</span><span class="s2">&quot;Loka&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">])</span><span class="o">/</span><span class="mi">6</span>
+for i in range(len(KLam)):
+    KLam[&quot;KAK&quot;][i] = (KLam[&quot;Touko&quot;][i]+KLam[&quot;Kesä&quot;][i]+KLam[&quot;Heinä&quot;][i]
+    +KLam[&quot;Elo&quot;][i]+KLam[&quot;Syys&quot;][i]+KLam[&quot;Loka&quot;][i])/6
     
-<span class="c1"># Iteroidaan talvitiedot.</span>
+# Iteroidaan talvitiedot.
 
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">KSade</span><span class="p">)):</span>
-    <span class="n">KSade</span><span class="p">[</span><span class="s2">&quot;KAT&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">KSade</span><span class="p">[</span><span class="s2">&quot;Tammi&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="n">KSade</span><span class="p">[</span><span class="s2">&quot;Helmi&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="n">KSade</span><span class="p">[</span><span class="s2">&quot;Maalis&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="n">KSade</span><span class="p">[</span><span class="s2">&quot;Huhti&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span>
-    <span class="o">+</span><span class="n">KSade</span><span class="p">[</span><span class="s2">&quot;Marras&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="n">KSade</span><span class="p">[</span><span class="s2">&quot;Joulu&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">])</span><span class="o">/</span><span class="mi">6</span>
+for i in range(len(KSade)):
+    KSade[&quot;KAT&quot;][i] = (KSade[&quot;Tammi&quot;][i]+KSade[&quot;Helmi&quot;][i]+KSade[&quot;Maalis&quot;][i]+KSade[&quot;Huhti&quot;][i]
+    +KSade[&quot;Marras&quot;][i]+KSade[&quot;Joulu&quot;][i])/6
     
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">KLam</span><span class="p">)):</span>
-    <span class="n">KLam</span><span class="p">[</span><span class="s2">&quot;KAT&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">KLam</span><span class="p">[</span><span class="s2">&quot;Tammi&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="n">KLam</span><span class="p">[</span><span class="s2">&quot;Helmi&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="n">KLam</span><span class="p">[</span><span class="s2">&quot;Maalis&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="n">KLam</span><span class="p">[</span><span class="s2">&quot;Huhti&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span>
-    <span class="o">+</span><span class="n">KLam</span><span class="p">[</span><span class="s2">&quot;Marras&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="n">KLam</span><span class="p">[</span><span class="s2">&quot;Joulu&quot;</span><span class="p">][</span><span class="n">i</span><span class="p">])</span><span class="o">/</span><span class="mi">6</span>
+for i in range(len(KLam)):
+    KLam[&quot;KAT&quot;][i] = (KLam[&quot;Tammi&quot;][i]+KLam[&quot;Helmi&quot;][i]+KLam[&quot;Maalis&quot;][i]+KLam[&quot;Huhti&quot;][i]
+    +KLam[&quot;Marras&quot;][i]+KLam[&quot;Joulu&quot;][i])/6
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2089/3929337303.py:19: SettingWithCopyWarning: 
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_1984/3929337303.py:19: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame
 
 See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
   KSade[&quot;KAK&quot;][i] = (KSade[&quot;Touko&quot;][i]+KSade[&quot;Kesä&quot;][i]+KSade[&quot;Heinä&quot;][i]
-/tmp/ipykernel_2089/3929337303.py:23: SettingWithCopyWarning: 
+/tmp/ipykernel_1984/3929337303.py:23: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame
 
 See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
   KLam[&quot;KAK&quot;][i] = (KLam[&quot;Touko&quot;][i]+KLam[&quot;Kesä&quot;][i]+KLam[&quot;Heinä&quot;][i]
-/tmp/ipykernel_2089/3929337303.py:29: SettingWithCopyWarning: 
+/tmp/ipykernel_1984/3929337303.py:29: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame
 
 See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
   KSade[&quot;KAT&quot;][i] = (KSade[&quot;Tammi&quot;][i]+KSade[&quot;Helmi&quot;][i]+KSade[&quot;Maalis&quot;][i]+KSade[&quot;Huhti&quot;][i]
-/tmp/ipykernel_2089/3929337303.py:33: SettingWithCopyWarning: 
+/tmp/ipykernel_1984/3929337303.py:33: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame
 
 See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy
@@ -1150,54 +1153,55 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tässä välissä kannattaa tarkastaa että uudet sarakkeet tosiaankin ovat ilmestyneet aineistoon.</span>
-<span class="c1"># Kirjoita tähän sopiva komento ja tarkista asia!</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Tässä välissä kannattaa tarkastaa että uudet sarakkeet tosiaankin ovat ilmestyneet aineistoon.
+# Kirjoita tähän sopiva komento ja tarkista asia!
+
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tehdään taas kuvaajia, nyt eritellen kaudet omikseen.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Tehdään taas kuvaajia, nyt eritellen kaudet omikseen.
 
-<span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">20</span><span class="p">))</span>
+plt.subplots(figsize = (20,20))
 
-<span class="c1"># Tässä piirretään selvyyden nimissä sekä viivakuvaaja (plot) että pistekaavio (scatter), jotta</span>
-<span class="c1"># yksittäisten vuosien tulokset on helppoa erottaa.</span>
+# Tässä piirretään selvyyden nimissä sekä viivakuvaaja (plot) että pistekaavio (scatter), jotta
+# yksittäisten vuosien tulokset on helppoa erottaa.
 
-<span class="c1"># subplot(xyz) tuottaa tulokseksi x riviä ja y saraketta sisältävän muodon, jossa vasemmalta oikealle</span>
-<span class="c1"># luettava juokseva indeksi z kertoo monesko kukin kuvaaja on. Vaihtelemalla numeroita voit vaihtaa kuvaajien paikkaa,</span>
-<span class="c1"># kokeile vaikka järjestellä niitä 2x2 ruuduksi.</span>
+# subplot(xyz) tuottaa tulokseksi x riviä ja y saraketta sisältävän muodon, jossa vasemmalta oikealle
+# luettava juokseva indeksi z kertoo monesko kukin kuvaaja on. Vaihtelemalla numeroita voit vaihtaa kuvaajien paikkaa,
+# kokeile vaikka järjestellä niitä 2x2 ruuduksi.
 
-<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">411</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">KSade</span><span class="p">[</span><span class="s2">&quot;Vuosi&quot;</span><span class="p">],</span> <span class="n">KSade</span><span class="p">[</span><span class="s2">&quot;KAK&quot;</span><span class="p">],</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;_nolegend_&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">KSade</span><span class="p">[</span><span class="s2">&quot;Vuosi&quot;</span><span class="p">],</span> <span class="n">KSade</span><span class="p">[</span><span class="s2">&quot;KAK&quot;</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Sademäärä kesällä (mm)&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;b&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="s2">&quot;upper left&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">16</span><span class="p">)</span>
+plt.subplot(411)
+plt.plot(KSade[&quot;Vuosi&quot;], KSade[&quot;KAK&quot;], alpha = 0.5, color = &quot;orange&quot;, label = &quot;_nolegend_&quot;)
+plt.scatter(KSade[&quot;Vuosi&quot;], KSade[&quot;KAK&quot;], label = &quot;Sademäärä kesällä (mm)&quot;, color = &quot;b&quot;)
+plt.legend(loc = &quot;upper left&quot;, fontsize = 16)
 
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Kausittaiset keskiarvot Kaisaniemen sääasemalta mitattuna vuosina 1845-2020 </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
+plt.title(&quot;Kausittaiset keskiarvot Kaisaniemen sääasemalta mitattuna vuosina 1845-2020 \n&quot;, fontsize = 20)
 
-<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">412</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">KSade</span><span class="p">[</span><span class="s2">&quot;Vuosi&quot;</span><span class="p">],</span> <span class="n">KSade</span><span class="p">[</span><span class="s2">&quot;KAT&quot;</span><span class="p">],</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;_nolegend_&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">KSade</span><span class="p">[</span><span class="s2">&quot;Vuosi&quot;</span><span class="p">],</span> <span class="n">KSade</span><span class="p">[</span><span class="s2">&quot;KAT&quot;</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Sademäärä talvella (mm)&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;b&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="s2">&quot;upper left&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">16</span><span class="p">)</span>
+plt.subplot(412)
+plt.plot(KSade[&quot;Vuosi&quot;], KSade[&quot;KAT&quot;], alpha = 0.5, color = &quot;orange&quot;, label = &quot;_nolegend_&quot;)
+plt.scatter(KSade[&quot;Vuosi&quot;], KSade[&quot;KAT&quot;], label = &quot;Sademäärä talvella (mm)&quot;, color = &quot;b&quot;)
+plt.legend(loc = &quot;upper left&quot;, fontsize = 16)
 
-<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">413</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">KLam</span><span class="p">[</span><span class="s2">&quot;Vuosi&quot;</span><span class="p">],</span> <span class="n">KLam</span><span class="p">[</span><span class="s2">&quot;KAK&quot;</span><span class="p">],</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;_nolegend_&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">KLam</span><span class="p">[</span><span class="s2">&quot;Vuosi&quot;</span><span class="p">],</span> <span class="n">KLam</span><span class="p">[</span><span class="s2">&quot;KAK&quot;</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Lämpötila kesällä (°C)&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="s2">&quot;upper left&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">16</span><span class="p">)</span>
+plt.subplot(413)
+plt.plot(KLam[&quot;Vuosi&quot;], KLam[&quot;KAK&quot;], alpha = 0.5, color = &quot;orange&quot;, label = &quot;_nolegend_&quot;)
+plt.scatter(KLam[&quot;Vuosi&quot;], KLam[&quot;KAK&quot;], label = &quot;Lämpötila kesällä (°C)&quot;, color = &quot;r&quot;)
+plt.legend(loc = &quot;upper left&quot;, fontsize = 16)
 
-<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">414</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">KLam</span><span class="p">[</span><span class="s2">&quot;Vuosi&quot;</span><span class="p">],</span> <span class="n">KLam</span><span class="p">[</span><span class="s2">&quot;KAT&quot;</span><span class="p">],</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;_nolegend_&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">KLam</span><span class="p">[</span><span class="s2">&quot;Vuosi&quot;</span><span class="p">],</span> <span class="n">KLam</span><span class="p">[</span><span class="s2">&quot;KAT&quot;</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Lämpötila talvella (°C)&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="s2">&quot;upper left&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">16</span><span class="p">)</span>
+plt.subplot(414)
+plt.plot(KLam[&quot;Vuosi&quot;], KLam[&quot;KAT&quot;], alpha = 0.5, color = &quot;orange&quot;, label = &quot;_nolegend_&quot;)
+plt.scatter(KLam[&quot;Vuosi&quot;], KLam[&quot;KAT&quot;], label = &quot;Lämpötila talvella (°C)&quot;, color = &quot;r&quot;)
+plt.legend(loc = &quot;upper left&quot;, fontsize = 16)
 
 
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+plt.show()
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2089/3728900651.py:12: MatplotlibDeprecationWarning: Auto-removal of overlapping axes is deprecated since 3.6 and will be removed two minor releases later; explicitly call ax.remove() as needed.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_1984/3728900651.py:12: MatplotlibDeprecationWarning: Auto-removal of overlapping axes is deprecated since 3.6 and will be removed two minor releases later; explicitly call ax.remove() as needed.
   plt.subplot(411)
 </pre></div>
 </div>
@@ -1210,14 +1214,16 @@ See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stab
 <p>Puristamalla vielä tiukemmaksi, voisi olla kiintoisaa tarkastella sydäntalvea (joulu-tammikuu) tai keskikesää (kesä-heinäkuu) erikseen. Koodaa alle moiset!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Kirjoita tähän pätkä, joka luo uudet sarakkeet muuttujiin KSade ja KLam sekä laskee niihin halutut arvot.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Kirjoita tähän pätkä, joka luo uudet sarakkeet muuttujiin KSade ja KLam sekä laskee niihin halutut arvot.
+
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Kirjoita tähän pätkä, jolla saat visualisoitua tuloksesi.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Kirjoita tähän pätkä, jolla saat visualisoitua tuloksesi.
+
 </pre></div>
 </div>
 </div>

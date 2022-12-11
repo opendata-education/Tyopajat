@@ -574,48 +574,48 @@ title="Print to PDF"
 <h3>1.3 Aineisto<a class="headerlink" href="#aineisto" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ladataan tarvittavat työkalut</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Ladataan tarvittavat työkalut
 
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> <span class="c1"># taulukoiden käsittelyyn</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> <span class="c1"># kuvaajien piirtoon</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span> <span class="c1"># luonnonvakioihin</span>
+import pandas as pd # taulukoiden käsittelyyn
+import matplotlib.pyplot as plt # kuvaajien piirtoon
+import numpy as np # luonnonvakioihin
 
-<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.size&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">25</span> <span class="c1"># yleiseen fonttikoon säätöön</span>
+plt.rcParams[&#39;font.size&#39;] = 25 # yleiseen fonttikoon säätöön
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Vuoden 2014 kokonaisaerosolimäärät ja lämpötilamittaukset Hyytiälän SMEAR II -asemalla.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Vuoden 2014 kokonaisaerosolimäärät ja lämpötilamittaukset Hyytiälän SMEAR II -asemalla.
 
-<span class="n">A_tot</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/HyyATot.csv&quot;</span><span class="p">,</span>
-                    <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Aika&quot;</span><span class="p">:[</span><span class="s2">&quot;Year&quot;</span><span class="p">,</span> <span class="s2">&quot;Month&quot;</span><span class="p">,</span> <span class="s2">&quot;Day&quot;</span><span class="p">,</span> <span class="s2">&quot;Hour&quot;</span><span class="p">]},</span> <span class="n">keep_date_col</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
-<span class="n">T1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/HyyT1.csv&quot;</span><span class="p">,</span>
-                 <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Aika&quot;</span><span class="p">:[</span><span class="s2">&quot;Year&quot;</span><span class="p">,</span> <span class="s2">&quot;Month&quot;</span><span class="p">,</span> <span class="s2">&quot;Day&quot;</span><span class="p">,</span> <span class="s2">&quot;Hour&quot;</span><span class="p">]},</span> <span class="n">keep_date_col</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+A_tot = pd.read_csv(&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/HyyATot.csv&quot;,
+                    parse_dates = {&quot;Aika&quot;:[&quot;Year&quot;, &quot;Month&quot;, &quot;Day&quot;, &quot;Hour&quot;]}, keep_date_col = True)
+T1 = pd.read_csv(&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/HyyT1.csv&quot;,
+                 parse_dates = {&quot;Aika&quot;:[&quot;Year&quot;, &quot;Month&quot;, &quot;Day&quot;, &quot;Hour&quot;]}, keep_date_col = True)
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Piirretään kuvaaja.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Piirretään kuvaaja.
 
-<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+fig = plt.figure(figsize = (30, 10))
 
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">A_tot</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">A_tot</span><span class="p">[</span><span class="s2">&quot;HYY_DMPS.tconc&quot;</span><span class="p">],</span> <span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Aerosolit&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;1/${m^3}$</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">25</span><span class="p">)</span>
+plt.plot(A_tot[&quot;Aika&quot;], A_tot[&quot;HYY_DMPS.tconc&quot;], &quot;orange&quot;, label = &quot;Aerosolit&quot;)
+plt.ylabel(&quot;1/${m^3}$\n&quot;, fontsize = 25)
 
-<span class="n">plt</span><span class="o">.</span><span class="n">twinx</span><span class="p">()</span>
+plt.twinx()
 
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">T1</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">T1</span><span class="p">[</span><span class="s2">&quot;HYY_META.T672&quot;</span><span class="p">],</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Lämpötila&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Lämpötila (°C)&quot;</span><span class="p">)</span>
+plt.plot(T1[&quot;Aika&quot;], T1[&quot;HYY_META.T672&quot;], &quot;c&quot;, label = &quot;Lämpötila&quot;)
+plt.ylabel(&quot;Lämpötila (°C)&quot;)
 
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Aerosolikonsentraatio Hyytiälän asemalla </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">30</span><span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">supxlabel</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Aika&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">25</span><span class="p">)</span>
+plt.title(&quot;Aerosolikonsentraatio Hyytiälän asemalla \n&quot;, fontsize = 30)
+fig.supxlabel(&quot;\nAika&quot;, fontsize = 25)
 
-<span class="n">fig</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="s2">&quot;upper right&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">25</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+fig.legend(loc = &quot;upper right&quot;, fontsize = 25)
+plt.show()
 </pre></div>
 </div>
 </div>
@@ -625,17 +625,17 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Äskeinen kuvaaja on tehty tunnin resoluutiolla. Entä jos katsotaan laajaa kuvaa kuukausikeskiarvoilla?</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Äskeinen kuvaaja on tehty tunnin resoluutiolla. Entä jos katsotaan laajaa kuvaa kuukausikeskiarvoilla?
 
-<span class="n">KKA</span> <span class="o">=</span> <span class="n">A_tot</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;Month&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-<span class="n">KKT</span> <span class="o">=</span> <span class="n">T1</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;Month&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+KKA = A_tot.groupby([&quot;Month&quot;]).mean()
+KKT = T1.groupby([&quot;Month&quot;]).mean()
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2008/1957816202.py:3: FutureWarning: The default value of numeric_only in DataFrameGroupBy.mean is deprecated. In a future version, numeric_only will default to False. Either specify numeric_only or select only columns which should be valid for the function.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_1905/1957816202.py:3: FutureWarning: The default value of numeric_only in DataFrameGroupBy.mean is deprecated. In a future version, numeric_only will default to False. Either specify numeric_only or select only columns which should be valid for the function.
   KKA = A_tot.groupby([&quot;Month&quot;]).mean()
-/tmp/ipykernel_2008/1957816202.py:4: FutureWarning: The default value of numeric_only in DataFrameGroupBy.mean is deprecated. In a future version, numeric_only will default to False. Either specify numeric_only or select only columns which should be valid for the function.
+/tmp/ipykernel_1905/1957816202.py:4: FutureWarning: The default value of numeric_only in DataFrameGroupBy.mean is deprecated. In a future version, numeric_only will default to False. Either specify numeric_only or select only columns which should be valid for the function.
   KKT = T1.groupby([&quot;Month&quot;]).mean()
 </pre></div>
 </div>
@@ -643,22 +643,22 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Piirretään kuvaaja.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Piirretään kuvaaja.
 
-<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+fig = plt.figure(figsize = (30, 10))
 
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">KKA</span><span class="p">[</span><span class="s2">&quot;HYY_DMPS.tconc&quot;</span><span class="p">],</span> <span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Aerosolit&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;1/${m^3}$</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">25</span><span class="p">)</span>
+plt.plot(KKA[&quot;HYY_DMPS.tconc&quot;], &quot;orange&quot;, label = &quot;Aerosolit&quot;)
+plt.ylabel(&quot;1/${m^3}$\n&quot;, fontsize = 25)
 
-<span class="n">plt</span><span class="o">.</span><span class="n">twinx</span><span class="p">()</span>
+plt.twinx()
 
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">KKT</span><span class="p">[</span><span class="s2">&quot;HYY_META.T672&quot;</span><span class="p">],</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Lämpötila&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Lämpötila (°C)&quot;</span><span class="p">)</span>
+plt.plot(KKT[&quot;HYY_META.T672&quot;], &quot;c&quot;, label = &quot;Lämpötila&quot;)
+plt.ylabel(&quot;Lämpötila (°C)&quot;)
 
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Aerosolikonsentraatio Hyytiälän asemalla (kuukausikeskiarvo) </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">30</span><span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">supxlabel</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Aika&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">25</span><span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="s2">&quot;upper right&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">25</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+plt.title(&quot;Aerosolikonsentraatio Hyytiälän asemalla (kuukausikeskiarvo) \n&quot;, fontsize = 30)
+fig.supxlabel(&quot;\nAika&quot;, fontsize = 25)
+fig.legend(loc = &quot;upper right&quot;, fontsize = 25)
+plt.show()
 </pre></div>
 </div>
 </div>
@@ -668,17 +668,17 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tai vaihtelua kellonajan mukaan? </span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Tai vaihtelua kellonajan mukaan? 
 
-<span class="n">KKAt</span> <span class="o">=</span> <span class="n">A_tot</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;Hour&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-<span class="n">KKTt</span> <span class="o">=</span> <span class="n">T1</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;Hour&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+KKAt = A_tot.groupby([&quot;Hour&quot;]).mean()
+KKTt = T1.groupby([&quot;Hour&quot;]).mean()
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2008/416854541.py:3: FutureWarning: The default value of numeric_only in DataFrameGroupBy.mean is deprecated. In a future version, numeric_only will default to False. Either specify numeric_only or select only columns which should be valid for the function.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_1905/416854541.py:3: FutureWarning: The default value of numeric_only in DataFrameGroupBy.mean is deprecated. In a future version, numeric_only will default to False. Either specify numeric_only or select only columns which should be valid for the function.
   KKAt = A_tot.groupby([&quot;Hour&quot;]).mean()
-/tmp/ipykernel_2008/416854541.py:4: FutureWarning: The default value of numeric_only in DataFrameGroupBy.mean is deprecated. In a future version, numeric_only will default to False. Either specify numeric_only or select only columns which should be valid for the function.
+/tmp/ipykernel_1905/416854541.py:4: FutureWarning: The default value of numeric_only in DataFrameGroupBy.mean is deprecated. In a future version, numeric_only will default to False. Either specify numeric_only or select only columns which should be valid for the function.
   KKTt = T1.groupby([&quot;Hour&quot;]).mean()
 </pre></div>
 </div>
@@ -686,22 +686,22 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Piirretään kuvaaja.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Piirretään kuvaaja.
 
-<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+fig = plt.figure(figsize = (30, 10))
 
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">KKAt</span><span class="p">[</span><span class="s2">&quot;HYY_DMPS.tconc&quot;</span><span class="p">],</span> <span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Aerosolit&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;1/${m^3}$</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">25</span><span class="p">)</span>
+plt.plot(KKAt[&quot;HYY_DMPS.tconc&quot;], &quot;orange&quot;, label = &quot;Aerosolit&quot;)
+plt.ylabel(&quot;1/${m^3}$\n&quot;, fontsize = 25)
 
-<span class="n">plt</span><span class="o">.</span><span class="n">twinx</span><span class="p">()</span>
+plt.twinx()
 
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">KKTt</span><span class="p">[</span><span class="s2">&quot;HYY_META.T672&quot;</span><span class="p">],</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Lämpötila&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Lämpötila (°C)&quot;</span><span class="p">)</span>
+plt.plot(KKTt[&quot;HYY_META.T672&quot;], &quot;c&quot;, label = &quot;Lämpötila&quot;)
+plt.ylabel(&quot;Lämpötila (°C)&quot;)
 
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Aerosolikonsentraatio Hyytiälän asemalla (vuorokaudenajan mukaan) </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">30</span><span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">supxlabel</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Aika&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">25</span><span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="s2">&quot;upper right&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">25</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+plt.title(&quot;Aerosolikonsentraatio Hyytiälän asemalla (vuorokaudenajan mukaan) \n&quot;, fontsize = 30)
+fig.supxlabel(&quot;\nAika&quot;, fontsize = 25)
+fig.legend(loc = &quot;upper right&quot;, fontsize = 25)
+plt.show()
 </pre></div>
 </div>
 </div>
@@ -711,7 +711,8 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Äskeinen tietysti sekoittaa vuodenaikojen keskiarvot. Lisätehtävänä voisit tehdä tähän tarkemmankin jaon.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Äskeinen tietysti sekoittaa vuodenaikojen keskiarvot. Lisätehtävänä voisit tehdä tähän tarkemmankin jaon.
+
 </pre></div>
 </div>
 </div>
@@ -726,36 +727,36 @@ title="Print to PDF"
 <h3>2.1 Aineisto<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Haetaan aineistot Ilmatieteen laitoksen sivuilta.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Haetaan aineistot Ilmatieteen laitoksen sivuilta.
 
-<span class="n">Hyv8</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Hyv812.csv&quot;</span><span class="p">,</span>
-                 <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Aika&quot;</span><span class="p">:[</span><span class="s2">&quot;Vuosi&quot;</span><span class="p">,</span> <span class="s2">&quot;Kk&quot;</span><span class="p">,</span> <span class="s2">&quot;Pv&quot;</span><span class="p">,</span> <span class="s2">&quot;Klo&quot;</span><span class="p">]},</span> <span class="n">keep_date_col</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
-<span class="n">Hyv13</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Hyv1317.csv&quot;</span><span class="p">,</span>
-                 <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Aika&quot;</span><span class="p">:[</span><span class="s2">&quot;Vuosi&quot;</span><span class="p">,</span> <span class="s2">&quot;Kk&quot;</span><span class="p">,</span> <span class="s2">&quot;Pv&quot;</span><span class="p">,</span> <span class="s2">&quot;Klo&quot;</span><span class="p">]},</span> <span class="n">keep_date_col</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
-<span class="n">Hyv18</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Hyv1822.csv&quot;</span><span class="p">,</span>
-                 <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Aika&quot;</span><span class="p">:[</span><span class="s2">&quot;Vuosi&quot;</span><span class="p">,</span> <span class="s2">&quot;Kk&quot;</span><span class="p">,</span> <span class="s2">&quot;Pv&quot;</span><span class="p">,</span> <span class="s2">&quot;Klo&quot;</span><span class="p">]},</span> <span class="n">keep_date_col</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+Hyv8 = pd.read_csv(&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Hyv812.csv&quot;,
+                 parse_dates = {&quot;Aika&quot;:[&quot;Vuosi&quot;, &quot;Kk&quot;, &quot;Pv&quot;, &quot;Klo&quot;]}, keep_date_col = True)
+Hyv13 = pd.read_csv(&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Hyv1317.csv&quot;,
+                 parse_dates = {&quot;Aika&quot;:[&quot;Vuosi&quot;, &quot;Kk&quot;, &quot;Pv&quot;, &quot;Klo&quot;]}, keep_date_col = True)
+Hyv18 = pd.read_csv(&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Hyv1822.csv&quot;,
+                 parse_dates = {&quot;Aika&quot;:[&quot;Vuosi&quot;, &quot;Kk&quot;, &quot;Pv&quot;, &quot;Klo&quot;]}, keep_date_col = True)
 
-<span class="c1"># Yhdistetään tiedot yhteen muuttujaan.</span>
+# Yhdistetään tiedot yhteen muuttujaan.
 
-<span class="n">Hyv</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">Hyv8</span><span class="p">,</span> <span class="n">Hyv13</span><span class="p">,</span> <span class="n">Hyv18</span><span class="p">])</span>
+Hyv = pd.concat([Hyv8, Hyv13, Hyv18])
 
-<span class="c1"># Taulukossa on vääriä tietotyyppejä (tekstiä numeroiden sijaan). Korjataan tilanne.</span>
+# Taulukossa on vääriä tietotyyppejä (tekstiä numeroiden sijaan). Korjataan tilanne.
 
-<span class="n">Hyv</span><span class="p">[</span><span class="s2">&quot;Vuosi&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">Hyv</span><span class="p">[</span><span class="s2">&quot;Vuosi&quot;</span><span class="p">],</span> <span class="n">errors</span> <span class="o">=</span> <span class="s2">&quot;coerce&quot;</span><span class="p">)</span>
-<span class="n">Hyv</span><span class="p">[</span><span class="s2">&quot;Kk&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">Hyv</span><span class="p">[</span><span class="s2">&quot;Kk&quot;</span><span class="p">],</span> <span class="n">errors</span> <span class="o">=</span> <span class="s2">&quot;coerce&quot;</span><span class="p">)</span>
-<span class="n">Hyv</span><span class="p">[</span><span class="s2">&quot;Pv&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">Hyv</span><span class="p">[</span><span class="s2">&quot;Pv&quot;</span><span class="p">],</span> <span class="n">errors</span> <span class="o">=</span> <span class="s2">&quot;coerce&quot;</span><span class="p">)</span>
-<span class="n">Hyv</span><span class="p">[</span><span class="s2">&quot;Hengitettävät hiukkaset (ug/m3)&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">Hyv</span><span class="p">[</span><span class="s2">&quot;Hengitettävät hiukkaset (ug/m3)&quot;</span><span class="p">],</span> <span class="n">errors</span> <span class="o">=</span> <span class="s2">&quot;coerce&quot;</span><span class="p">)</span>
-<span class="n">Hyv</span><span class="p">[</span><span class="s2">&quot;Typpidioksidi (ug/m3)&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">Hyv</span><span class="p">[</span><span class="s2">&quot;Typpidioksidi (ug/m3)&quot;</span><span class="p">],</span> <span class="n">errors</span> <span class="o">=</span> <span class="s2">&quot;coerce&quot;</span><span class="p">)</span>
-<span class="n">Hyv</span><span class="p">[</span><span class="s2">&quot;Typpimonoksidi (ug/m3)&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">Hyv</span><span class="p">[</span><span class="s2">&quot;Typpimonoksidi (ug/m3)&quot;</span><span class="p">],</span> <span class="n">errors</span> <span class="o">=</span> <span class="s2">&quot;coerce&quot;</span><span class="p">)</span>
+Hyv[&quot;Vuosi&quot;] = pd.to_numeric(Hyv[&quot;Vuosi&quot;], errors = &quot;coerce&quot;)
+Hyv[&quot;Kk&quot;] = pd.to_numeric(Hyv[&quot;Kk&quot;], errors = &quot;coerce&quot;)
+Hyv[&quot;Pv&quot;] = pd.to_numeric(Hyv[&quot;Pv&quot;], errors = &quot;coerce&quot;)
+Hyv[&quot;Hengitettävät hiukkaset (ug/m3)&quot;] = pd.to_numeric(Hyv[&quot;Hengitettävät hiukkaset (ug/m3)&quot;], errors = &quot;coerce&quot;)
+Hyv[&quot;Typpidioksidi (ug/m3)&quot;] = pd.to_numeric(Hyv[&quot;Typpidioksidi (ug/m3)&quot;], errors = &quot;coerce&quot;)
+Hyv[&quot;Typpimonoksidi (ug/m3)&quot;] = pd.to_numeric(Hyv[&quot;Typpimonoksidi (ug/m3)&quot;], errors = &quot;coerce&quot;)
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Katsotaan miltä aineisto näyttää.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Katsotaan miltä aineisto näyttää.
 
-<span class="n">Hyv</span>
+Hyv
 </pre></div>
 </div>
 </div>
@@ -1064,20 +1065,20 @@ title="Print to PDF"
 <h2>2.3 Tutkitaas itse<a class="headerlink" href="#tutkitaas-itse" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Piirretään koko aineisto kuvaajaan.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Piirretään koko aineisto kuvaajaan.
 
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+plt.figure(figsize = (30, 10))
 
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Hyv</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">Hyv</span><span class="p">[</span><span class="s2">&quot;Hengitettävät hiukkaset (ug/m3)&quot;</span><span class="p">],</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Hengitettävät hiukkaset&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Hyv</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">Hyv</span><span class="p">[</span><span class="s2">&quot;Typpidioksidi (ug/m3)&quot;</span><span class="p">],</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Typpidioksidi&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Hyv</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">Hyv</span><span class="p">[</span><span class="s2">&quot;Typpimonoksidi (ug/m3)&quot;</span><span class="p">],</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;g&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Typpimonoksidi&quot;</span><span class="p">)</span>
+plt.plot(Hyv[&quot;Aika&quot;], Hyv[&quot;Hengitettävät hiukkaset (ug/m3)&quot;], color = &quot;c&quot;, label = &quot;Hengitettävät hiukkaset&quot;)
+plt.plot(Hyv[&quot;Aika&quot;], Hyv[&quot;Typpidioksidi (ug/m3)&quot;], color = &quot;b&quot;, label = &quot;Typpidioksidi&quot;)
+plt.plot(Hyv[&quot;Aika&quot;], Hyv[&quot;Typpimonoksidi (ug/m3)&quot;], color = &quot;g&quot;, label = &quot;Typpimonoksidi&quot;)
 
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Ilmanlaatu Hyvinkään kaupungissa&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">30</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mf">1.1</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Konsentraatio ($\mu$g / m$^3$)&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">25</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Aika&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">25</span><span class="p">)</span>
+plt.title(&quot;Ilmanlaatu Hyvinkään kaupungissa&quot;, fontsize = 30, y = 1.1)
+plt.ylabel(&quot;Konsentraatio ($\mu$g / m$^3$)&quot;, fontsize = 25)
+plt.xlabel(&quot;Aika&quot;, fontsize = 25)
 
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="s2">&quot;upper right&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+plt.legend(loc = &quot;upper right&quot;)
+plt.show()
 </pre></div>
 </div>
 </div>
@@ -1088,38 +1089,38 @@ title="Print to PDF"
 <p>Tulipas huonosti luettava kuvaaja, mutta ainakin näemme miltä ajalta dataa on kerätty. Paloitellaan oikeasti mitatut vuodet (2008, 2013, 2014 ja 2018) vierekkäisiksi kuvaajiksi.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">H08</span> <span class="o">=</span> <span class="n">Hyv</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;Vuosi == 2008&quot;</span><span class="p">)</span>
-<span class="n">H13</span> <span class="o">=</span> <span class="n">Hyv</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;Vuosi == 2013&quot;</span><span class="p">)</span>
-<span class="n">H14</span> <span class="o">=</span> <span class="n">Hyv</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;Vuosi == 2014&quot;</span><span class="p">)</span>
-<span class="n">H18</span> <span class="o">=</span> <span class="n">Hyv</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;Vuosi == 2018&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>H08 = Hyv.query(&quot;Vuosi == 2008&quot;)
+H13 = Hyv.query(&quot;Vuosi == 2013&quot;)
+H14 = Hyv.query(&quot;Vuosi == 2014&quot;)
+H18 = Hyv.query(&quot;Vuosi == 2018&quot;)
 
-<span class="c1"># query on kiva työkalu, jolle voisi antaa monimutkaisempiakin ohjeita, </span>
-<span class="c1"># esim. Hyv.query(&quot;(Vuosi == 2008) and (Kk &gt; 2 and Kk &lt; 6)&quot;)</span>
+# query on kiva työkalu, jolle voisi antaa monimutkaisempiakin ohjeita, 
+# esim. Hyv.query(&quot;(Vuosi == 2008) and (Kk &gt; 2 and Kk &lt; 6)&quot;)
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">sharex</span><span class="o">=</span><span class="s1">&#39;col&#39;</span><span class="p">,</span> <span class="n">sharey</span><span class="o">=</span><span class="s1">&#39;row&#39;</span><span class="p">,</span> <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>fig, ax = plt.subplots(1, 4, sharex=&#39;col&#39;, sharey=&#39;row&#39;, figsize = (30, 10))
 
-<span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s2">&quot;Ilmanlaatu Hyvinkään kaupungissa vuosittain&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">30</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">supxlabel</span><span class="p">(</span><span class="s2">&quot;Aika&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">25</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.05</span><span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">supylabel</span><span class="p">(</span><span class="s2">&quot;Konsentraatio ($\mu$g / m$^3$)&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">25</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="mf">0.08</span><span class="p">)</span>
+fig.suptitle(&quot;Ilmanlaatu Hyvinkään kaupungissa vuosittain&quot;, fontsize = 30, y = 1)
+fig.supxlabel(&quot;Aika&quot;, fontsize = 25, y = -0.05)
+fig.supylabel(&quot;Konsentraatio ($\mu$g / m$^3$)&quot;, fontsize = 25, x = 0.08)
 
-<span class="n">H</span> <span class="o">=</span> <span class="p">[</span><span class="n">H08</span><span class="p">,</span> <span class="n">H13</span><span class="p">,</span> <span class="n">H14</span><span class="p">,</span> <span class="n">H18</span><span class="p">]</span>
+H = [H08, H13, H14, H18]
 
-<span class="c1"># Tehdään kerralla useampi kuvaaja silmukan avulla.</span>
+# Tehdään kerralla useampi kuvaaja silmukan avulla.
 
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">H</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">H</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;Hengitettävät hiukkaset (ug/m3)&quot;</span><span class="p">],</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Hengitettävät hiukkaset&quot;</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">H</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">H</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;Typpidioksidi (ug/m3)&quot;</span><span class="p">],</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span><span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Typpidioksidi&quot;</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">H</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">H</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;Typpimonoksidi (ug/m3)&quot;</span><span class="p">],</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;g&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Typpimonoksidi&quot;</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span> <span class="o">=</span> <span class="mi">30</span><span class="p">)</span>
+for i in range(4):
+    plt.subplot(1,4,i+1)
+    plt.plot(H[i][&quot;Aika&quot;], H[i][&quot;Hengitettävät hiukkaset (ug/m3)&quot;], color = &quot;c&quot;, label = &quot;Hengitettävät hiukkaset&quot;)
+    plt.plot(H[i][&quot;Aika&quot;], H[i][&quot;Typpidioksidi (ug/m3)&quot;], color = &quot;b&quot;,label = &quot;Typpidioksidi&quot;)
+    plt.plot(H[i][&quot;Aika&quot;], H[i][&quot;Typpimonoksidi (ug/m3)&quot;], color = &quot;g&quot;, label = &quot;Typpimonoksidi&quot;)
+    plt.xticks(rotation = 30)
 
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="s2">&quot;upper right&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+plt.legend(loc = &quot;upper right&quot;, fontsize = 20)
+plt.show()
 </pre></div>
 </div>
 </div>
@@ -1130,26 +1131,26 @@ title="Print to PDF"
 <p>Miten Hyvinkään mittaukset vertautuvat annettuihin rajoihin? Milloin ja miksi rajat paukkuvat eniten?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Valitaan tarkasteluun pienempi osa-alue, vaikkapa maalis-toukokuu joltakin vuodelta.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Valitaan tarkasteluun pienempi osa-alue, vaikkapa maalis-toukokuu joltakin vuodelta.
 
-<span class="c1"># Entä jos kokeilisit viivapiirron sijasta yksittäisten mittaustulosten merkkaamista?</span>
-<span class="c1"># Lisää väriparametriin vaikkapa *, v, + tai muu sopiva merkki (täysi lista googlaamalla python plot marker).</span>
+# Entä jos kokeilisit viivapiirron sijasta yksittäisten mittaustulosten merkkaamista?
+# Lisää väriparametriin vaikkapa *, v, + tai muu sopiva merkki (täysi lista googlaamalla python plot marker).
 
-<span class="n">Hm</span> <span class="o">=</span> <span class="n">Hyv</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;(Vuosi == 2018) and (Kk &gt; 2 and Kk &lt; 6)&quot;</span><span class="p">)</span>
+Hm = Hyv.query(&quot;(Vuosi == 2018) and (Kk &gt; 2 and Kk &lt; 6)&quot;)
 
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">30</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+plt.figure(figsize = (30,10))
 
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Ilmanlaatu Hyvinkään kaupungissa&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">30</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mf">1.1</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Aika&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">25</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Konsentraatio ($\mu$g / m$^3$)&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">25</span><span class="p">)</span>
+plt.title(&quot;Ilmanlaatu Hyvinkään kaupungissa&quot;, fontsize = 30, y = 1.1)
+plt.xlabel(&quot;Aika&quot;, fontsize = 25)
+plt.ylabel(&quot;Konsentraatio ($\mu$g / m$^3$)&quot;, fontsize = 25)
 
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Hm</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">Hm</span><span class="p">[</span><span class="s2">&quot;Hengitettävät hiukkaset (ug/m3)&quot;</span><span class="p">],</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Hengitettävät hiukkaset&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Hm</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">Hm</span><span class="p">[</span><span class="s2">&quot;Typpidioksidi (ug/m3)&quot;</span><span class="p">],</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span><span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Typpidioksidi&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Hm</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">Hm</span><span class="p">[</span><span class="s2">&quot;Typpimonoksidi (ug/m3)&quot;</span><span class="p">],</span> <span class="s2">&quot;g&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Typpimonoksidi&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span> <span class="o">=</span> <span class="mi">30</span><span class="p">)</span>
+plt.plot(Hm[&quot;Aika&quot;], Hm[&quot;Hengitettävät hiukkaset (ug/m3)&quot;], &quot;c&quot;, label = &quot;Hengitettävät hiukkaset&quot;)
+plt.plot(Hm[&quot;Aika&quot;], Hm[&quot;Typpidioksidi (ug/m3)&quot;], &quot;b&quot;,label = &quot;Typpidioksidi&quot;)
+plt.plot(Hm[&quot;Aika&quot;], Hm[&quot;Typpimonoksidi (ug/m3)&quot;], &quot;g&quot;, label = &quot;Typpimonoksidi&quot;)
+plt.xticks(rotation = 30)
 
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+plt.legend()
+plt.show()
 </pre></div>
 </div>
 </div>
@@ -1160,26 +1161,26 @@ title="Print to PDF"
 <p>Tarkkojen tuntimittausten ohella voisimme tietysti kaivaa aineistosta myös päiväkohtaiset keskiarvot.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Päiväkeskiarvot on helpointa toteuttaa lisäämällä aineistoon ladattaessa kelloton aikasarake.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Päiväkeskiarvot on helpointa toteuttaa lisäämällä aineistoon ladattaessa kelloton aikasarake.
 
-<span class="n">Vrk8</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Hyv812.csv&quot;</span><span class="p">,</span>
-                 <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Vrk&quot;</span><span class="p">:[</span><span class="s2">&quot;Vuosi&quot;</span><span class="p">,</span> <span class="s2">&quot;Kk&quot;</span><span class="p">,</span> <span class="s2">&quot;Pv&quot;</span><span class="p">]},</span> <span class="n">keep_date_col</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+Vrk8 = pd.read_csv(&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Hyv812.csv&quot;,
+                 parse_dates = {&quot;Vrk&quot;:[&quot;Vuosi&quot;, &quot;Kk&quot;, &quot;Pv&quot;]}, keep_date_col = True)
 
-<span class="n">Vrk8</span><span class="p">[</span><span class="s2">&quot;Vuosi&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">Vrk8</span><span class="p">[</span><span class="s2">&quot;Vuosi&quot;</span><span class="p">],</span> <span class="n">errors</span> <span class="o">=</span> <span class="s2">&quot;coerce&quot;</span><span class="p">)</span>
-<span class="n">Vrk8</span><span class="p">[</span><span class="s2">&quot;Kk&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">Vrk8</span><span class="p">[</span><span class="s2">&quot;Kk&quot;</span><span class="p">],</span> <span class="n">errors</span> <span class="o">=</span> <span class="s2">&quot;coerce&quot;</span><span class="p">)</span>
-<span class="n">Vrk8</span><span class="p">[</span><span class="s2">&quot;Pv&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">Vrk8</span><span class="p">[</span><span class="s2">&quot;Pv&quot;</span><span class="p">],</span> <span class="n">errors</span> <span class="o">=</span> <span class="s2">&quot;coerce&quot;</span><span class="p">)</span>
-<span class="n">Vrk8</span><span class="p">[</span><span class="s2">&quot;Hengitettävät hiukkaset (ug/m3)&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">Vrk8</span><span class="p">[</span><span class="s2">&quot;Hengitettävät hiukkaset (ug/m3)&quot;</span><span class="p">],</span> <span class="n">errors</span> <span class="o">=</span> <span class="s2">&quot;coerce&quot;</span><span class="p">)</span>
-<span class="n">Vrk8</span><span class="p">[</span><span class="s2">&quot;Typpidioksidi (ug/m3)&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">Vrk8</span><span class="p">[</span><span class="s2">&quot;Typpidioksidi (ug/m3)&quot;</span><span class="p">],</span> <span class="n">errors</span> <span class="o">=</span> <span class="s2">&quot;coerce&quot;</span><span class="p">)</span>
-<span class="n">Vrk8</span><span class="p">[</span><span class="s2">&quot;Typpimonoksidi (ug/m3)&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">Vrk8</span><span class="p">[</span><span class="s2">&quot;Typpimonoksidi (ug/m3)&quot;</span><span class="p">],</span> <span class="n">errors</span> <span class="o">=</span> <span class="s2">&quot;coerce&quot;</span><span class="p">)</span>
+Vrk8[&quot;Vuosi&quot;] = pd.to_numeric(Vrk8[&quot;Vuosi&quot;], errors = &quot;coerce&quot;)
+Vrk8[&quot;Kk&quot;] = pd.to_numeric(Vrk8[&quot;Kk&quot;], errors = &quot;coerce&quot;)
+Vrk8[&quot;Pv&quot;] = pd.to_numeric(Vrk8[&quot;Pv&quot;], errors = &quot;coerce&quot;)
+Vrk8[&quot;Hengitettävät hiukkaset (ug/m3)&quot;] = pd.to_numeric(Vrk8[&quot;Hengitettävät hiukkaset (ug/m3)&quot;], errors = &quot;coerce&quot;)
+Vrk8[&quot;Typpidioksidi (ug/m3)&quot;] = pd.to_numeric(Vrk8[&quot;Typpidioksidi (ug/m3)&quot;], errors = &quot;coerce&quot;)
+Vrk8[&quot;Typpimonoksidi (ug/m3)&quot;] = pd.to_numeric(Vrk8[&quot;Typpimonoksidi (ug/m3)&quot;], errors = &quot;coerce&quot;)
 
-<span class="c1"># Nyt voimme ryhmitellä groupby()-komennolla kaikki uniikit vuorokaudet ja laskea niihin liittyvät keskiarvot.</span>
+# Nyt voimme ryhmitellä groupby()-komennolla kaikki uniikit vuorokaudet ja laskea niihin liittyvät keskiarvot.
 
-<span class="n">KV</span> <span class="o">=</span> <span class="n">Vrk8</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;Vrk&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+KV = Vrk8.groupby([&quot;Vrk&quot;]).mean()
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2008/2356704137.py:15: FutureWarning: The default value of numeric_only in DataFrameGroupBy.mean is deprecated. In a future version, numeric_only will default to False. Either specify numeric_only or select only columns which should be valid for the function.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_1905/2356704137.py:15: FutureWarning: The default value of numeric_only in DataFrameGroupBy.mean is deprecated. In a future version, numeric_only will default to False. Either specify numeric_only or select only columns which should be valid for the function.
   KV = Vrk8.groupby([&quot;Vrk&quot;]).mean()
 </pre></div>
 </div>
@@ -1187,9 +1188,9 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tarkastellaan tulosta.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Tarkastellaan tulosta.
 
-<span class="n">KV</span>
+KV
 </pre></div>
 </div>
 </div>
@@ -1336,28 +1337,28 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Piirretään päiväkeskiarvot kuvaajaan</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Piirretään päiväkeskiarvot kuvaajaan
 
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">30</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+plt.figure(figsize = (30,10))
 
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">KV</span><span class="p">[</span><span class="s2">&quot;Hengitettävät hiukkaset (ug/m3)&quot;</span><span class="p">],</span> <span class="s2">&quot;cv&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Hengitettävät hiukkaset&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">KV</span><span class="p">[</span><span class="s2">&quot;Typpidioksidi (ug/m3)&quot;</span><span class="p">],</span> <span class="s2">&quot;b*&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Typpidioksidi&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">KV</span><span class="p">[</span><span class="s2">&quot;Typpimonoksidi (ug/m3)&quot;</span><span class="p">],</span><span class="s2">&quot;gs&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Typpimonoksidi&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span> <span class="o">=</span> <span class="mi">30</span><span class="p">)</span>
+plt.plot(KV[&quot;Hengitettävät hiukkaset (ug/m3)&quot;], &quot;cv&quot;, label = &quot;Hengitettävät hiukkaset&quot;)
+plt.plot(KV[&quot;Typpidioksidi (ug/m3)&quot;], &quot;b*&quot;, label = &quot;Typpidioksidi&quot;)
+plt.plot(KV[&quot;Typpimonoksidi (ug/m3)&quot;],&quot;gs&quot;, label = &quot;Typpimonoksidi&quot;)
+plt.xticks(rotation = 30)
 
-<span class="c1"># Lisätään selkeyden nimissä myös pari rajaviivaa kuvaajaan, jotta sitä on helpompaa tulkita.</span>
+# Lisätään selkeyden nimissä myös pari rajaviivaa kuvaajaan, jotta sitä on helpompaa tulkita.
 
-<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Hyvä hh&quot;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Hyvä NOx&quot;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Tyydyttävä hh&quot;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">70</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Tyydyttävä NOx&quot;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">)</span>
+plt.axhline(20, linestyle=&#39;--&#39;, label = &quot;Hyvä hh&quot;, c = &#39;r&#39;, alpha = 0.5)
+plt.axhline(40, linestyle=&#39;--&#39;, label = &quot;Hyvä NOx&quot;, c = &#39;b&#39;, alpha = 0.5)
+plt.axhline(50, linestyle=&#39;--&#39;, label = &quot;Tyydyttävä hh&quot;, c = &#39;orange&#39;, alpha = 0.5)
+plt.axhline(70, linestyle=&#39;--&#39;, label = &quot;Tyydyttävä NOx&quot;, c = &#39;y&#39;, alpha = 0.5)
 
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Ilmanlaatu Hyvinkään kaupungissa&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">30</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mf">1.1</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Aika&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">25</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Konsentraatio ($\mu$g / m$^3$)&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">25</span><span class="p">)</span>
+plt.title(&quot;Ilmanlaatu Hyvinkään kaupungissa&quot;, fontsize = 30, y = 1.1)
+plt.xlabel(&quot;Aika&quot;, fontsize = 25)
+plt.ylabel(&quot;Konsentraatio ($\mu$g / m$^3$)&quot;, fontsize = 25)
 
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+plt.legend()
+plt.show()
 </pre></div>
 </div>
 </div>
@@ -1368,15 +1369,15 @@ title="Print to PDF"
 <p>Miksi havainnot sahaavat piikkeinä ylös alas? Entä jos tarkastelisimmekin havaintoja kellonajan mukaan?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Kellonaikakohtaiset keskiarvot aiemmin jaotellusta &quot;Hm&quot;-muuttujasta.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Kellonaikakohtaiset keskiarvot aiemmin jaotellusta &quot;Hm&quot;-muuttujasta.
 
-<span class="n">KA</span> <span class="o">=</span> <span class="n">Hm</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;Klo&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-<span class="n">KA</span>
+KA = Hm.groupby([&quot;Klo&quot;]).mean()
+KA
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2008/328694438.py:3: FutureWarning: The default value of numeric_only in DataFrameGroupBy.mean is deprecated. In a future version, numeric_only will default to False. Either specify numeric_only or select only columns which should be valid for the function.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_1905/328694438.py:3: FutureWarning: The default value of numeric_only in DataFrameGroupBy.mean is deprecated. In a future version, numeric_only will default to False. Either specify numeric_only or select only columns which should be valid for the function.
   KA = Hm.groupby([&quot;Klo&quot;]).mean()
 </pre></div>
 </div>
@@ -1638,28 +1639,28 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Piirretään ajallinen jakauma keskiarvojen avulla. </span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Piirretään ajallinen jakauma keskiarvojen avulla. 
 
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">30</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+plt.figure(figsize = (30,10))
 
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">KA</span><span class="p">[</span><span class="s2">&quot;Hengitettävät hiukkaset (ug/m3)&quot;</span><span class="p">],</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Hengitettävät hiukkaset&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">KA</span><span class="p">[</span><span class="s2">&quot;Typpidioksidi (ug/m3)&quot;</span><span class="p">],</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span><span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Typpidioksidi&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">KA</span><span class="p">[</span><span class="s2">&quot;Typpimonoksidi (ug/m3)&quot;</span><span class="p">],</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;g&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Typpimonoksidi&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span> <span class="o">=</span> <span class="mi">30</span><span class="p">)</span>
+plt.plot(KA[&quot;Hengitettävät hiukkaset (ug/m3)&quot;], color = &quot;c&quot;, label = &quot;Hengitettävät hiukkaset&quot;)
+plt.plot(KA[&quot;Typpidioksidi (ug/m3)&quot;], color = &quot;b&quot;,label = &quot;Typpidioksidi&quot;)
+plt.plot(KA[&quot;Typpimonoksidi (ug/m3)&quot;], color = &quot;g&quot;, label = &quot;Typpimonoksidi&quot;)
+plt.xticks(rotation = 30)
 
-<span class="c1"># Lisätään selkeyden nimissä myös pari rajaviivaa kuvaajaan, jotta sitä on helpompaa tulkita.</span>
+# Lisätään selkeyden nimissä myös pari rajaviivaa kuvaajaan, jotta sitä on helpompaa tulkita.
 
-<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Hyvä hh&quot;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Hyvä NOx&quot;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Tyydyttävä hh&quot;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">70</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Tyydyttävä NOx&quot;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">)</span>
+plt.axhline(20, linestyle=&#39;--&#39;, label = &quot;Hyvä hh&quot;, c = &#39;r&#39;, alpha = 0.5)
+plt.axhline(40, linestyle=&#39;--&#39;, label = &quot;Hyvä NOx&quot;, c = &#39;b&#39;, alpha = 0.5)
+plt.axhline(50, linestyle=&#39;--&#39;, label = &quot;Tyydyttävä hh&quot;, c = &#39;orange&#39;, alpha = 0.5)
+plt.axhline(70, linestyle=&#39;--&#39;, label = &quot;Tyydyttävä NOx&quot;, c = &#39;y&#39;, alpha = 0.5)
 
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Ilmanlaatu Hyvinkään kaupungissa vuonna ???&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">30</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mf">1.1</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Aika&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">25</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Konsentraatio ($\mu$g / m$^3$)&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">25</span><span class="p">)</span>
+plt.title(&quot;Ilmanlaatu Hyvinkään kaupungissa vuonna ???&quot;, fontsize = 30, y = 1.1)
+plt.xlabel(&quot;Aika&quot;, fontsize = 25)
+plt.ylabel(&quot;Konsentraatio ($\mu$g / m$^3$)&quot;, fontsize = 25)
 
-<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+plt.legend()
+plt.show()
 </pre></div>
 </div>
 </div>

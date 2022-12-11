@@ -528,10 +528,10 @@ title="Print to PDF"
 <h2>2. Aineisto<a class="headerlink" href="#aineisto" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tuodaan tarvittavat työkalukirjastot.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Tuodaan tarvittavat työkalukirjastot.
 
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+import pandas as pd
+import matplotlib.pyplot as plt
 </pre></div>
 </div>
 </div>
@@ -540,64 +540,64 @@ title="Print to PDF"
 <p>Säteilyaineisto mitataan tiuhaan, joten tiedostoista tulee helposti isoja lyhyilläkin aikaväleillä. Ilmatieteen laitoksen portaali tuntuu rajoittavan lataamisen alle 20000 riviin kerrallaan, joten ladataan aineisto vuosi kerrallaan (~9000 tuntimittausta per) ja liitetään sitten yhteen isommaksi tarkastelua varten.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tuodaan haluttu säteilydata palasina.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Tuodaan haluttu säteilydata palasina.
 
-<span class="c1"># Huomaa lukukomennon sisään lisätty &#39;parse&#39;-parametri, jolla luodaan tiedostoon yhdistelmä päivämääräsarakkeista,</span>
-<span class="c1"># jolloin saadaan juoksevasti kasvava luku tulevan visualisoinnin aika-akseliksi.</span>
+# Huomaa lukukomennon sisään lisätty &#39;parse&#39;-parametri, jolla luodaan tiedostoon yhdistelmä päivämääräsarakkeista,
+# jolloin saadaan juoksevasti kasvava luku tulevan visualisoinnin aika-akseliksi.
 
-<span class="n">K20</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Kum2020.csv&quot;</span><span class="p">,</span>
-                 <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Aika&quot;</span><span class="p">:[</span><span class="s2">&quot;Vuosi&quot;</span><span class="p">,</span> <span class="s2">&quot;Kk&quot;</span><span class="p">,</span> <span class="s2">&quot;Pv&quot;</span><span class="p">,</span> <span class="s2">&quot;Klo&quot;</span><span class="p">]},</span> <span class="n">keep_date_col</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+K20 = pd.read_csv(&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Kum2020.csv&quot;,
+                 parse_dates = {&quot;Aika&quot;:[&quot;Vuosi&quot;, &quot;Kk&quot;, &quot;Pv&quot;, &quot;Klo&quot;]}, keep_date_col = True)
 
-<span class="n">K19</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Kum2019.csv&quot;</span><span class="p">,</span>
-                 <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Aika&quot;</span><span class="p">:[</span><span class="s2">&quot;Vuosi&quot;</span><span class="p">,</span> <span class="s2">&quot;Kk&quot;</span><span class="p">,</span> <span class="s2">&quot;Pv&quot;</span><span class="p">,</span> <span class="s2">&quot;Klo&quot;</span><span class="p">]},</span> <span class="n">keep_date_col</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+K19 = pd.read_csv(&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Kum2019.csv&quot;,
+                 parse_dates = {&quot;Aika&quot;:[&quot;Vuosi&quot;, &quot;Kk&quot;, &quot;Pv&quot;, &quot;Klo&quot;]}, keep_date_col = True)
 
-<span class="n">K18</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Kum2018.csv&quot;</span><span class="p">,</span>
-                 <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Aika&quot;</span><span class="p">:[</span><span class="s2">&quot;Vuosi&quot;</span><span class="p">,</span> <span class="s2">&quot;Kk&quot;</span><span class="p">,</span> <span class="s2">&quot;Pv&quot;</span><span class="p">,</span> <span class="s2">&quot;Klo&quot;</span><span class="p">]},</span> <span class="n">keep_date_col</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+K18 = pd.read_csv(&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Kum2018.csv&quot;,
+                 parse_dates = {&quot;Aika&quot;:[&quot;Vuosi&quot;, &quot;Kk&quot;, &quot;Pv&quot;, &quot;Klo&quot;]}, keep_date_col = True)
 
-<span class="n">K17</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Kum2017.csv&quot;</span><span class="p">,</span>
-                 <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Aika&quot;</span><span class="p">:[</span><span class="s2">&quot;Vuosi&quot;</span><span class="p">,</span> <span class="s2">&quot;Kk&quot;</span><span class="p">,</span> <span class="s2">&quot;Pv&quot;</span><span class="p">,</span> <span class="s2">&quot;Klo&quot;</span><span class="p">]},</span> <span class="n">keep_date_col</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+K17 = pd.read_csv(&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Kum2017.csv&quot;,
+                 parse_dates = {&quot;Aika&quot;:[&quot;Vuosi&quot;, &quot;Kk&quot;, &quot;Pv&quot;, &quot;Klo&quot;]}, keep_date_col = True)
 
-<span class="n">K16</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Kum2016.csv&quot;</span><span class="p">,</span>
-                 <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Aika&quot;</span><span class="p">:[</span><span class="s2">&quot;Vuosi&quot;</span><span class="p">,</span> <span class="s2">&quot;Kk&quot;</span><span class="p">,</span> <span class="s2">&quot;Pv&quot;</span><span class="p">,</span> <span class="s2">&quot;Klo&quot;</span><span class="p">]},</span> <span class="n">keep_date_col</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+K16 = pd.read_csv(&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Kum2016.csv&quot;,
+                 parse_dates = {&quot;Aika&quot;:[&quot;Vuosi&quot;, &quot;Kk&quot;, &quot;Pv&quot;, &quot;Klo&quot;]}, keep_date_col = True)
 
-<span class="n">K15</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Kum2015.csv&quot;</span><span class="p">,</span>
-                 <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Aika&quot;</span><span class="p">:[</span><span class="s2">&quot;Vuosi&quot;</span><span class="p">,</span> <span class="s2">&quot;Kk&quot;</span><span class="p">,</span> <span class="s2">&quot;Pv&quot;</span><span class="p">,</span> <span class="s2">&quot;Klo&quot;</span><span class="p">]},</span> <span class="n">keep_date_col</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+K15 = pd.read_csv(&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Kum2015.csv&quot;,
+                 parse_dates = {&quot;Aika&quot;:[&quot;Vuosi&quot;, &quot;Kk&quot;, &quot;Pv&quot;, &quot;Klo&quot;]}, keep_date_col = True)
 
-<span class="n">K14</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Kum2014.csv&quot;</span><span class="p">,</span>
-                 <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Aika&quot;</span><span class="p">:[</span><span class="s2">&quot;Vuosi&quot;</span><span class="p">,</span> <span class="s2">&quot;Kk&quot;</span><span class="p">,</span> <span class="s2">&quot;Pv&quot;</span><span class="p">,</span> <span class="s2">&quot;Klo&quot;</span><span class="p">]},</span> <span class="n">keep_date_col</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+K14 = pd.read_csv(&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Kum2014.csv&quot;,
+                 parse_dates = {&quot;Aika&quot;:[&quot;Vuosi&quot;, &quot;Kk&quot;, &quot;Pv&quot;, &quot;Klo&quot;]}, keep_date_col = True)
 
-<span class="n">K13</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Kum2013.csv&quot;</span><span class="p">,</span>
-                 <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Aika&quot;</span><span class="p">:[</span><span class="s2">&quot;Vuosi&quot;</span><span class="p">,</span> <span class="s2">&quot;Kk&quot;</span><span class="p">,</span> <span class="s2">&quot;Pv&quot;</span><span class="p">,</span> <span class="s2">&quot;Klo&quot;</span><span class="p">]},</span> <span class="n">keep_date_col</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+K13 = pd.read_csv(&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Kum2013.csv&quot;,
+                 parse_dates = {&quot;Aika&quot;:[&quot;Vuosi&quot;, &quot;Kk&quot;, &quot;Pv&quot;, &quot;Klo&quot;]}, keep_date_col = True)
 
-<span class="n">K12</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Kum2012.csv&quot;</span><span class="p">,</span>
-                 <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Aika&quot;</span><span class="p">:[</span><span class="s2">&quot;Vuosi&quot;</span><span class="p">,</span> <span class="s2">&quot;Kk&quot;</span><span class="p">,</span> <span class="s2">&quot;Pv&quot;</span><span class="p">,</span> <span class="s2">&quot;Klo&quot;</span><span class="p">]},</span> <span class="n">keep_date_col</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+K12 = pd.read_csv(&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Kum2012.csv&quot;,
+                 parse_dates = {&quot;Aika&quot;:[&quot;Vuosi&quot;, &quot;Kk&quot;, &quot;Pv&quot;, &quot;Klo&quot;]}, keep_date_col = True)
 
-<span class="n">K11</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Kum2011.csv&quot;</span><span class="p">,</span>
-                 <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Aika&quot;</span><span class="p">:[</span><span class="s2">&quot;Vuosi&quot;</span><span class="p">,</span> <span class="s2">&quot;Kk&quot;</span><span class="p">,</span> <span class="s2">&quot;Pv&quot;</span><span class="p">,</span> <span class="s2">&quot;Klo&quot;</span><span class="p">]},</span> <span class="n">keep_date_col</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+K11 = pd.read_csv(&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Kum2011.csv&quot;,
+                 parse_dates = {&quot;Aika&quot;:[&quot;Vuosi&quot;, &quot;Kk&quot;, &quot;Pv&quot;, &quot;Klo&quot;]}, keep_date_col = True)
 
-<span class="n">K10</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Kum2010.csv&quot;</span><span class="p">,</span>
-                 <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Aika&quot;</span><span class="p">:[</span><span class="s2">&quot;Vuosi&quot;</span><span class="p">,</span> <span class="s2">&quot;Kk&quot;</span><span class="p">,</span> <span class="s2">&quot;Pv&quot;</span><span class="p">,</span> <span class="s2">&quot;Klo&quot;</span><span class="p">]},</span> <span class="n">keep_date_col</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+K10 = pd.read_csv(&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Kum2010.csv&quot;,
+                 parse_dates = {&quot;Aika&quot;:[&quot;Vuosi&quot;, &quot;Kk&quot;, &quot;Pv&quot;, &quot;Klo&quot;]}, keep_date_col = True)
 
-<span class="n">K09</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Kum2009.csv&quot;</span><span class="p">,</span>
-                 <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Aika&quot;</span><span class="p">:[</span><span class="s2">&quot;Vuosi&quot;</span><span class="p">,</span> <span class="s2">&quot;Kk&quot;</span><span class="p">,</span> <span class="s2">&quot;Pv&quot;</span><span class="p">,</span> <span class="s2">&quot;Klo&quot;</span><span class="p">]},</span> <span class="n">keep_date_col</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+K09 = pd.read_csv(&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Kum2009.csv&quot;,
+                 parse_dates = {&quot;Aika&quot;:[&quot;Vuosi&quot;, &quot;Kk&quot;, &quot;Pv&quot;, &quot;Klo&quot;]}, keep_date_col = True)
 
-<span class="n">K08</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Kum2008.csv&quot;</span><span class="p">,</span>
-                 <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Aika&quot;</span><span class="p">:[</span><span class="s2">&quot;Vuosi&quot;</span><span class="p">,</span> <span class="s2">&quot;Kk&quot;</span><span class="p">,</span> <span class="s2">&quot;Pv&quot;</span><span class="p">,</span> <span class="s2">&quot;Klo&quot;</span><span class="p">]},</span> <span class="n">keep_date_col</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+K08 = pd.read_csv(&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Kum2008.csv&quot;,
+                 parse_dates = {&quot;Aika&quot;:[&quot;Vuosi&quot;, &quot;Kk&quot;, &quot;Pv&quot;, &quot;Klo&quot;]}, keep_date_col = True)
 
-<span class="n">K07</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Kum2007.csv&quot;</span><span class="p">,</span>
-                 <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Aika&quot;</span><span class="p">:[</span><span class="s2">&quot;Vuosi&quot;</span><span class="p">,</span> <span class="s2">&quot;Kk&quot;</span><span class="p">,</span> <span class="s2">&quot;Pv&quot;</span><span class="p">,</span> <span class="s2">&quot;Klo&quot;</span><span class="p">]},</span> <span class="n">keep_date_col</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+K07 = pd.read_csv(&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Kum2007.csv&quot;,
+                 parse_dates = {&quot;Aika&quot;:[&quot;Vuosi&quot;, &quot;Kk&quot;, &quot;Pv&quot;, &quot;Klo&quot;]}, keep_date_col = True)
 
-<span class="n">K06</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Kum2006.csv&quot;</span><span class="p">,</span>
-                 <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Aika&quot;</span><span class="p">:[</span><span class="s2">&quot;Vuosi&quot;</span><span class="p">,</span> <span class="s2">&quot;Kk&quot;</span><span class="p">,</span> <span class="s2">&quot;Pv&quot;</span><span class="p">,</span> <span class="s2">&quot;Klo&quot;</span><span class="p">]},</span> <span class="n">keep_date_col</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+K06 = pd.read_csv(&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Kum2006.csv&quot;,
+                 parse_dates = {&quot;Aika&quot;:[&quot;Vuosi&quot;, &quot;Kk&quot;, &quot;Pv&quot;, &quot;Klo&quot;]}, keep_date_col = True)
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tarkastetaan miltä vuositiedot näyttävät. Miten tiheään havainnot on kerätty?</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Tarkastetaan miltä vuositiedot näyttävät. Miten tiheään havainnot on kerätty?
 
-<span class="n">K20</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+K20.head(10)
 </pre></div>
 </div>
 </div>
@@ -824,24 +824,24 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Yhdistetään äskeiset tiedot yhdeksi pidemmäksi aikasarjaksi. &#39;Concatenate&#39; yhdistää asiat oletusarvoisesti</span>
-<span class="c1"># luetellussa järjestyksessä, joten annetaan sille vuositiedot kronologisesti.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Yhdistetään äskeiset tiedot yhdeksi pidemmäksi aikasarjaksi. &#39;Concatenate&#39; yhdistää asiat oletusarvoisesti
+# luetellussa järjestyksessä, joten annetaan sille vuositiedot kronologisesti.
 
-<span class="n">KumSat</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">K06</span><span class="p">,</span> <span class="n">K07</span><span class="p">,</span> <span class="n">K08</span><span class="p">,</span> <span class="n">K09</span><span class="p">,</span> <span class="n">K10</span><span class="p">,</span> <span class="n">K11</span><span class="p">,</span> <span class="n">K12</span><span class="p">,</span> <span class="n">K13</span><span class="p">,</span> <span class="n">K14</span><span class="p">,</span> <span class="n">K15</span><span class="p">,</span> <span class="n">K16</span><span class="p">,</span> <span class="n">K17</span><span class="p">,</span> <span class="n">K18</span><span class="p">,</span> <span class="n">K19</span><span class="p">,</span> <span class="n">K20</span><span class="p">])</span>
+KumSat = pd.concat([K06, K07, K08, K09, K10, K11, K12, K13, K14, K15, K16, K17, K18, K19, K20])
 
-<span class="c1"># Korjataan äskeisen liitoksen rivien järjestysluvut estetiikan nimissä.</span>
+# Korjataan äskeisen liitoksen rivien järjestysluvut estetiikan nimissä.
 
-<span class="n">KumSat</span> <span class="o">=</span> <span class="n">KumSat</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+KumSat = KumSat.reset_index(drop = True)
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tarkastetaan kokonaisuuden yhä näyttävän miltä kuuluukin.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Tarkastetaan kokonaisuuden yhä näyttävän miltä kuuluukin.
 
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Uudessa muuttujassa on &quot;</span> <span class="o">+</span> <span class="nb">repr</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">KumSat</span><span class="p">))</span> <span class="o">+</span> <span class="s2">&quot; riviä tietoja.&quot;</span><span class="p">)</span>
-<span class="n">KumSat</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+print(&quot;Uudessa muuttujassa on &quot; + repr(len(KumSat)) + &quot; riviä tietoja.&quot;)
+KumSat.tail(5)
 </pre></div>
 </div>
 </div>
@@ -984,15 +984,15 @@ title="Print to PDF"
 <h2>3. Analyysi<a class="headerlink" href="#analyysi" title="Permalink to this headline">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tarkastellaan miltä kokonaisuus näyttää kuvaajassa.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Tarkastellaan miltä kokonaisuus näyttää kuvaajassa.
 
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">40</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span> <span class="n">KumSat</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">KumSat</span><span class="p">[</span><span class="s2">&quot;UV-B-säteily (index)&quot;</span><span class="p">])</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;UVI 3+&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">)</span> <span class="c1"># Raja suojautumistarpeelle.</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;UVI 6+&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">)</span> <span class="c1"># Raja voimakkaalle säteilylle.</span>
+plt.figure(figsize = (40, 10))
+plt.scatter( KumSat[&quot;Aika&quot;], KumSat[&quot;UV-B-säteily (index)&quot;])
+plt.axhline(3, linestyle=&#39;--&#39;, label = &quot;UVI 3+&quot;, color=&#39;k&#39;, alpha = 0.5) # Raja suojautumistarpeelle.
+plt.axhline(6, linestyle=&#39;--&#39;, label = &quot;UVI 6+&quot;, color=&#39;k&#39;, alpha = 0.5) # Raja voimakkaalle säteilylle.
 
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;UV-B-säteilyindeksi Helsingin Kumpulassa 2006-2020 </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+plt.title(&quot;UV-B-säteilyindeksi Helsingin Kumpulassa 2006-2020 \n&quot;, fontsize = 20)
+plt.show()
 </pre></div>
 </div>
 </div>
@@ -1003,12 +1003,12 @@ title="Print to PDF"
 <p>Hyvältä näyttää, kertymän olettaisi osuvan kesäajalle ja keskelle päivää. Osuuko silmiisi poikkeavia ajankohtia joita voisi olla kiinnostavaa tarkastella lähemmin?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Vertailuksi kokonaissäteilyn vuo. Mikä ero näillä suureilla on?</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Vertailuksi kokonaissäteilyn vuo. Mikä ero näillä suureilla on?
 
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">40</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span> <span class="n">KumSat</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">KumSat</span><span class="p">[</span><span class="s2">&quot;Kokonaissäteily (W/m2)&quot;</span><span class="p">])</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Kokonaissäteily (W/m2) Helsingin Kumpulassa 2006-2020 </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+plt.figure(figsize = (40, 10))
+plt.scatter( KumSat[&quot;Aika&quot;], KumSat[&quot;Kokonaissäteily (W/m2)&quot;])
+plt.title(&quot;Kokonaissäteily (W/m2) Helsingin Kumpulassa 2006-2020 \n&quot;, fontsize = 20)
+plt.show()
 </pre></div>
 </div>
 </div>
@@ -1019,33 +1019,33 @@ title="Print to PDF"
 <p>Vuositasolla asiat ovat kohtalaisen vakaita, joten kaivaudutaan yksityiskohtaisempiin kuvauksiin vaihtelujen havainnollistamiseksi.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Yksittäisten kuukausien kohdalla.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Yksittäisten kuukausien kohdalla.
 
-<span class="c1"># Jaetaan data. Hakutermi on tässä hipsuissa, koska Kk-sarake ei ole tyypiltään numero. Tämän voisi halutessaan</span>
-<span class="c1"># korjata muuttamalla mokomat luvuiksi string-tekstin sijaan.</span>
+# Jaetaan data. Hakutermi on tässä hipsuissa, koska Kk-sarake ei ole tyypiltään numero. Tämän voisi halutessaan
+# korjata muuttamalla mokomat luvuiksi string-tekstin sijaan.
 
-<span class="n">Maa</span> <span class="o">=</span> <span class="n">K20</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;Kk == &#39;3&#39;&quot;</span><span class="p">)</span>
-<span class="n">Hei</span> <span class="o">=</span> <span class="n">K20</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;Kk == &#39;7&#39;&quot;</span><span class="p">)</span>
+Maa = K20.query(&quot;Kk == &#39;3&#39;&quot;)
+Hei = K20.query(&quot;Kk == &#39;7&#39;&quot;)
 
-<span class="c1"># Luodaan vertailuun soveltuva kuvaaja.</span>
+# Luodaan vertailuun soveltuva kuvaaja.
 
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+plt.figure(figsize = (30, 10))
 
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Maa</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">Maa</span><span class="p">[</span><span class="s2">&quot;UV-B-säteily (index)&quot;</span><span class="p">],</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;y&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">Maa</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">Maa</span><span class="p">[</span><span class="s2">&quot;UV-B-säteily (index)&quot;</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Maaliskuu&quot;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span>
+plt.plot(Maa[&quot;Aika&quot;], Maa[&quot;UV-B-säteily (index)&quot;], alpha = 0.5, c = &quot;y&quot;)
+plt.scatter(Maa[&quot;Aika&quot;], Maa[&quot;UV-B-säteily (index)&quot;], label = &quot;Maaliskuu&quot;, c = &quot;r&quot;)
 
-<span class="n">plt</span><span class="o">.</span><span class="n">twiny</span><span class="p">()</span> <span class="c1"># Lisätään toinen aika-akseli, koska käytetyt arvot eivät ole yhteneviä.</span>
+plt.twiny() # Lisätään toinen aika-akseli, koska käytetyt arvot eivät ole yhteneviä.
 
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Hei</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">Hei</span><span class="p">[</span><span class="s2">&quot;UV-B-säteily (index)&quot;</span><span class="p">],</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;b&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">Hei</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">Hei</span><span class="p">[</span><span class="s2">&quot;UV-B-säteily (index)&quot;</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Heinäkuu&quot;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;g&quot;</span><span class="p">)</span>
+plt.plot(Hei[&quot;Aika&quot;], Hei[&quot;UV-B-säteily (index)&quot;], alpha = 0.5, c = &quot;b&quot;)
+plt.scatter(Hei[&quot;Aika&quot;], Hei[&quot;UV-B-säteily (index)&quot;], label = &quot;Heinäkuu&quot;, c = &quot;g&quot;)
 
-<span class="c1"># Vaakaviiva kolmen kohdalle kuvaamaan merkittävää rajaa UV-indeksissä.</span>
+# Vaakaviiva kolmen kohdalle kuvaamaan merkittävää rajaa UV-indeksissä.
 
-<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;UVI 3+&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">)</span> 
+plt.axhline(3, linestyle=&#39;--&#39;, label = &quot;UVI 3+&quot;, color=&#39;k&#39;, alpha = 0.5) 
 
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;UV-B-säteilyindeksi Helsingin Kumpulassa 2020 </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">30</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figlegend</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="s2">&quot;center right&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">25</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+plt.title(&quot;UV-B-säteilyindeksi Helsingin Kumpulassa 2020 \n&quot;, fontsize = 30)
+plt.figlegend(loc = &quot;center right&quot;, fontsize = 25)
+plt.show()
 </pre></div>
 </div>
 </div>
@@ -1056,14 +1056,14 @@ title="Print to PDF"
 <p>Tätä näkymää voidaan nyt verrata muihin aineistoihin, kuten lämpötilaan tai pilvisyyteen kunakin päivänä.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tuodaan säätietoja samalta mittausasemalta.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Tuodaan säätietoja samalta mittausasemalta.
 
-<span class="n">Saa20</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/KumSaa2020.csv&quot;</span><span class="p">,</span>
-                 <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Aika&quot;</span><span class="p">:[</span><span class="s2">&quot;Vuosi&quot;</span><span class="p">,</span> <span class="s2">&quot;Kk&quot;</span><span class="p">,</span> <span class="s2">&quot;Pv&quot;</span><span class="p">,</span> <span class="s2">&quot;Klo&quot;</span><span class="p">]},</span> <span class="n">keep_date_col</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+Saa20 = pd.read_csv(&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/KumSaa2020.csv&quot;,
+                 parse_dates = {&quot;Aika&quot;:[&quot;Vuosi&quot;, &quot;Kk&quot;, &quot;Pv&quot;, &quot;Klo&quot;]}, keep_date_col = True)
 
-<span class="c1"># Tarkastellaan miltä data näyttää.</span>
+# Tarkastellaan miltä data näyttää.
 
-<span class="n">Saa20</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+Saa20.head()
 </pre></div>
 </div>
 </div>
@@ -1218,27 +1218,27 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Lämpötilan kanssa koko vuodelta.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Lämpötilan kanssa koko vuodelta.
 
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+plt.figure(figsize = (200, 10))
 
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">K20</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">K20</span><span class="p">[</span><span class="s2">&quot;UV-B-säteily (index)&quot;</span><span class="p">],</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;y&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">K20</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">K20</span><span class="p">[</span><span class="s2">&quot;UV-B-säteily (index)&quot;</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;UVI&quot;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span>
+plt.plot(K20[&quot;Aika&quot;], K20[&quot;UV-B-säteily (index)&quot;], alpha = 0.5, c = &quot;y&quot;)
+plt.scatter(K20[&quot;Aika&quot;], K20[&quot;UV-B-säteily (index)&quot;], label = &quot;UVI&quot;, c = &quot;r&quot;)
 
-<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;UVI 3+&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">)</span>
+plt.axhline(3, linestyle=&#39;--&#39;, label = &quot;UVI 3+&quot;, color=&#39;k&#39;, alpha = 0.5)
 
-<span class="n">plt</span><span class="o">.</span><span class="n">twinx</span><span class="p">()</span> <span class="c1"># Lisätään toinen arvoakseli, koska käytetyt arvot eivät ole yhteneviä.</span>
+plt.twinx() # Lisätään toinen arvoakseli, koska käytetyt arvot eivät ole yhteneviä.
 
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Saa20</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">Saa20</span><span class="p">[</span><span class="s2">&quot;Ilman lämpötila (degC)&quot;</span><span class="p">],</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;b&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">Saa20</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">Saa20</span><span class="p">[</span><span class="s2">&quot;Ilman lämpötila (degC)&quot;</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Tuntilämpötila&quot;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;g&quot;</span><span class="p">)</span>
+plt.plot(Saa20[&quot;Aika&quot;], Saa20[&quot;Ilman lämpötila (degC)&quot;], alpha = 0.5, c = &quot;b&quot;)
+plt.scatter(Saa20[&quot;Aika&quot;], Saa20[&quot;Ilman lämpötila (degC)&quot;], label = &quot;Tuntilämpötila&quot;, c = &quot;g&quot;)
 
-<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;0 deg C&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;pink&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">)</span>
+plt.axhline(0, linestyle=&#39;--&#39;, label = &quot;0 deg C&quot;, color=&#39;pink&#39;, alpha = 0.5)
 
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;UV-B-säteilyindeksi ja ilman lämpötila Helsingin Kumpulassa 2020 </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">30</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figlegend</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="s2">&quot;upper right&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">25</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+plt.title(&quot;UV-B-säteilyindeksi ja ilman lämpötila Helsingin Kumpulassa 2020 \n&quot;, fontsize = 30)
+plt.figlegend(loc = &quot;upper right&quot;, fontsize = 25)
+plt.show()
 
-<span class="c1"># Kuva on iso, sitä kannattaa tarkastella uudessa välilehdessä. Entä jos vaihdat alun &quot;figsize&quot; arvoja?</span>
+# Kuva on iso, sitä kannattaa tarkastella uudessa välilehdessä. Entä jos vaihdat alun &quot;figsize&quot; arvoja?
 </pre></div>
 </div>
 </div>
@@ -1248,35 +1248,35 @@ title="Print to PDF"
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Myös pilvien kanssa heinäkuulta.</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Myös pilvien kanssa heinäkuulta.
 
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">40</span><span class="p">,</span> <span class="mi">15</span><span class="p">))</span>
+plt.figure(figsize = (40, 15))
 
-<span class="n">UV</span> <span class="o">=</span> <span class="n">K20</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;Kk == &#39;7&#39;&quot;</span><span class="p">)</span>
-<span class="n">C</span> <span class="o">=</span> <span class="n">Saa20</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;Kk == &#39;7&#39;&quot;</span><span class="p">)</span>
+UV = K20.query(&quot;Kk == &#39;7&#39;&quot;)
+C = Saa20.query(&quot;Kk == &#39;7&#39;&quot;)
 
-<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+plt.subplot(2,1,1)
 
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">UV</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">UV</span><span class="p">[</span><span class="s2">&quot;UV-B-säteily (index)&quot;</span><span class="p">],</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;y&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">UV</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">UV</span><span class="p">[</span><span class="s2">&quot;UV-B-säteily (index)&quot;</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;UVI&quot;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span>
+plt.plot(UV[&quot;Aika&quot;], UV[&quot;UV-B-säteily (index)&quot;], alpha = 0.5, c = &quot;y&quot;)
+plt.scatter(UV[&quot;Aika&quot;], UV[&quot;UV-B-säteily (index)&quot;], label = &quot;UVI&quot;, c = &quot;r&quot;)
 
-<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;UVI 3+&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">)</span>
+plt.axhline(3, linestyle=&#39;--&#39;, label = &quot;UVI 3+&quot;, color=&#39;k&#39;, alpha = 0.5)
 
-<span class="n">plt</span><span class="o">.</span><span class="n">twinx</span><span class="p">()</span> <span class="c1"># Lisätään toinen arvoakseli, koska käytetyt arvot eivät ole yhteneviä.</span>
+plt.twinx() # Lisätään toinen arvoakseli, koska käytetyt arvot eivät ole yhteneviä.
 
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">C</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">C</span><span class="p">[</span><span class="s2">&quot;Ilman lämpötila (degC)&quot;</span><span class="p">],</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;b&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">C</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">C</span><span class="p">[</span><span class="s2">&quot;Ilman lämpötila (degC)&quot;</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Tuntilämpötila&quot;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;g&quot;</span><span class="p">)</span>
+plt.plot(C[&quot;Aika&quot;], C[&quot;Ilman lämpötila (degC)&quot;], alpha = 0.5, c = &quot;b&quot;)
+plt.scatter(C[&quot;Aika&quot;], C[&quot;Ilman lämpötila (degC)&quot;], label = &quot;Tuntilämpötila&quot;, c = &quot;g&quot;)
 
-<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;0 deg C&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;pink&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">)</span>
+plt.axhline(0, linestyle=&#39;--&#39;, label = &quot;0 deg C&quot;, color=&#39;pink&#39;, alpha = 0.5)
 
-<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+plt.subplot(2,1,2)
 
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">C</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">C</span><span class="p">[</span><span class="s2">&quot;Pilvien määrä (1/8)&quot;</span><span class="p">],</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">C</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">C</span><span class="p">[</span><span class="s2">&quot;Pilvien määrä (1/8)&quot;</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Pilvisyys&quot;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;blue&quot;</span><span class="p">)</span>
+plt.plot(C[&quot;Aika&quot;], C[&quot;Pilvien määrä (1/8)&quot;], alpha = 0.5, c = &quot;black&quot;)
+plt.scatter(C[&quot;Aika&quot;], C[&quot;Pilvien määrä (1/8)&quot;], label = &quot;Pilvisyys&quot;, c = &quot;blue&quot;)
 
-<span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s2">&quot;UV-B-säteilyindeksi, ilman lämpötila ja pilvisyys Helsingin Kumpulassa heinäkuussa 2020 </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">30</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figlegend</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="s2">&quot;center right&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">25</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+plt.suptitle(&quot;UV-B-säteilyindeksi, ilman lämpötila ja pilvisyys Helsingin Kumpulassa heinäkuussa 2020 \n&quot;, fontsize = 30)
+plt.figlegend(loc = &quot;center right&quot;, fontsize = 25)
+plt.show()
 </pre></div>
 </div>
 </div>
@@ -1295,21 +1295,21 @@ title="Print to PDF"
 <p>Entä jos mukaan ottaisi tuulen? Ilmankosteuden?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Joku utelias voisi myös verrata havaintoja auringon aktiivisuussykleihin jos kaipaa ylimääräistä pohdittavaa.</span>
-<span class="c1"># Lähde: WDC-SILSO, Belgian kuninkaallinen observatorio, Brysseli. https://sidc.be/silso/datafiles</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Joku utelias voisi myös verrata havaintoja auringon aktiivisuussykleihin jos kaipaa ylimääräistä pohdittavaa.
+# Lähde: WDC-SILSO, Belgian kuninkaallinen observatorio, Brysseli. https://sidc.be/silso/datafiles
 
-<span class="n">sun</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://sidc.be/silso/INFO/sndhemcsv.php&quot;</span><span class="p">,</span> <span class="n">header</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">sep</span> <span class="o">=</span> <span class="s2">&quot;;&quot;</span><span class="p">,</span>
-                  <span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Vuosi&#39;</span><span class="p">,</span> <span class="s1">&#39;Kuukausi&#39;</span><span class="p">,</span> <span class="s1">&#39;Päivä&#39;</span><span class="p">,</span> <span class="s1">&#39;Fraktio&#39;</span><span class="p">,</span> <span class="s1">&#39;$P_</span><span class="si">{tot}</span><span class="s1">$&#39;</span><span class="p">,</span> <span class="s1">&#39;$P_</span><span class="si">{poh}</span><span class="s1">$&#39;</span><span class="p">,</span> <span class="s1">&#39;$P_</span><span class="si">{et}</span><span class="s1">$&#39;</span><span class="p">,</span>
-                         <span class="s1">&#39;$\sigma_</span><span class="si">{tot}</span><span class="s1">$&#39;</span><span class="p">,</span> <span class="s1">&#39;$\sigma_</span><span class="si">{poh}</span><span class="s1">$&#39;</span><span class="p">,</span> <span class="s1">&#39;$\sigma_</span><span class="si">{et}</span><span class="s1">$&#39;</span><span class="p">,</span>
-                         <span class="s1">&#39;$N_</span><span class="si">{tot}</span><span class="s1">$&#39;</span><span class="p">,</span> <span class="s1">&#39;$N_</span><span class="si">{poh}</span><span class="s1">$&#39;</span><span class="p">,</span> <span class="s1">&#39;$N_</span><span class="si">{et}</span><span class="s1">$&#39;</span><span class="p">,</span> <span class="s1">&#39;Prov&#39;</span><span class="p">])</span>
+sun = pd.read_csv(&quot;https://sidc.be/silso/INFO/sndhemcsv.php&quot;, header = 0, sep = &quot;;&quot;,
+                  names = [&#39;Vuosi&#39;, &#39;Kuukausi&#39;, &#39;Päivä&#39;, &#39;Fraktio&#39;, &#39;$P_{tot}$&#39;, &#39;$P_{poh}$&#39;, &#39;$P_{et}$&#39;,
+                         &#39;$\sigma_{tot}$&#39;, &#39;$\sigma_{poh}$&#39;, &#39;$\sigma_{et}$&#39;,
+                         &#39;$N_{tot}$&#39;, &#39;$N_{poh}$&#39;, &#39;$N_{et}$&#39;, &#39;Prov&#39;])
 
-<span class="n">S620</span> <span class="o">=</span> <span class="n">sun</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;Vuosi &gt; 2005 &amp; Vuosi &lt; 2021&quot;</span><span class="p">)</span>
+S620 = sun.query(&quot;Vuosi &gt; 2005 &amp; Vuosi &lt; 2021&quot;)
 
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">40</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">S620</span><span class="p">[</span><span class="s2">&quot;Fraktio&quot;</span><span class="p">],</span> <span class="n">S620</span><span class="p">[</span><span class="s2">&quot;$P_</span><span class="si">{tot}</span><span class="s2">$&quot;</span><span class="p">])</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Auringonpilkkujen määrä vuosina 2006-2020 </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">30</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Lukumäärä </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">25</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+plt.figure(figsize = (40, 10))
+plt.plot(S620[&quot;Fraktio&quot;], S620[&quot;$P_{tot}$&quot;])
+plt.title(&quot;Auringonpilkkujen määrä vuosina 2006-2020 \n&quot;, fontsize = 30)
+plt.ylabel(&quot;Lukumäärä \n&quot;, fontsize = 25)
+plt.show()
 </pre></div>
 </div>
 </div>

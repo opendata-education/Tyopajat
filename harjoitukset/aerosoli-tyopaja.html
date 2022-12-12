@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>ESIMERKKI 1: Maan lämpötilapoikkeaman määritys &#8212; Työpajat</title>
+    <title>Aerosoli-työpaja &#8212; Työpajat</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -50,12 +50,12 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://opendata-education.github.io/Tyopajat/intro.html/harjoitukset/lampotila-intro.html" />
+    <link rel="canonical" href="https://opendata-education.github.io/Tyopajat/intro.html/harjoitukset/aerosoli-tyopaja.html" />
     <link rel="shortcut icon" href="../_static/logo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Visualisaatioraati" href="dataraati.html" />
-    <link rel="prev" title="Ilmastotyöpaja" href="ilmastopaja.html" />
+    <link rel="next" title="Aerosolit-työpajan datasetit ja tutkimuskysymykset" href="datasettien_esittelyt.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="aerosoli.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en">
     
@@ -170,18 +170,18 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1 current active has-children">
+ <li class="toctree-l1 has-children">
   <a class="reference internal" href="ilmastopaja.html">
    Ilmastotyöpaja
   </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
   <label for="toctree-checkbox-3">
    <i class="fas fa-chevron-down">
    </i>
   </label>
-  <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="lampotila-intro.html">
      ESIMERKKI 1: Maan lämpötilapoikkeaman määritys
     </a>
    </li>
@@ -207,8 +207,8 @@ const thebe_selector_output = ".output, .cell_output"
    </li>
   </ul>
  </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="aerosoli-tyopaja.html">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
    Aerosoli-työpaja
   </a>
  </li>
@@ -276,7 +276,7 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="https://mybinder.org/v2/gh/opendata-education/Tyopajat/main?urlpath=tree/materiaali/harjoitukset/lampotila-intro.ipynb"
+        <a href="https://mybinder.org/v2/gh/opendata-education/Tyopajat/main?urlpath=tree/materiaali/harjoitukset/aerosoli-tyopaja.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -294,7 +294,7 @@ title="Launch on Binder"
       </li>
       
       <li>
-        <a href="https://colab.research.google.com/github/opendata-education/Tyopajat/blob/main/materiaali/harjoitukset/lampotila-intro.ipynb"
+        <a href="https://colab.research.google.com/github/opendata-education/Tyopajat/blob/main/materiaali/harjoitukset/aerosoli-tyopaja.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -354,7 +354,7 @@ title="Source repository"
       </li>
       
       <li>
-        <a href="https://github.com/opendata-education/Tyopajat/issues/new?title=Issue%20on%20page%20%2Fharjoitukset/lampotila-intro.html&body=Your%20issue%20content%20here."
+        <a href="https://github.com/opendata-education/Tyopajat/issues/new?title=Issue%20on%20page%20%2Fharjoitukset/aerosoli-tyopaja.html&body=Your%20issue%20content%20here."
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -382,7 +382,7 @@ title="Open an issue"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/harjoitukset/lampotila-intro.ipynb"
+        <a href="../_sources/harjoitukset/aerosoli-tyopaja.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -442,26 +442,24 @@ title="Print to PDF"
     <nav id="bd-toc-nav" aria-label="Page">
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#miten-maapallon-lampotila-on-muuttunut-vuosien-saatossa">
-   Miten maapallon lämpötila on muuttunut vuosien saatossa?
+  <a class="reference internal nav-link" href="#tyopajan-kesto-noin-2-x-75-min">
+   (Työpajan kesto noin 2 x 75 min)
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#datasetin-kayttoonotto-ja-valmistelu">
-     Datasetin käyttöönotto ja valmistelu
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#kuvaajan-piirtaminen">
-     Kuvaajan piirtäminen
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#pohdinta">
-     Pohdinta
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#notebookien-kanssa-tutuksi">
+   1. Notebookien kanssa tutuksi
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aikataulu-ja-tehtavananto">
+   2. Aikataulu ja tehtävänanto
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#esimerkki">
+   3. Esimerkki
+  </a>
  </li>
 </ul>
 
@@ -472,7 +470,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>ESIMERKKI 1: Maan lämpötilapoikkeaman määritys</h1>
+                <h1>Aerosoli-työpaja</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -483,26 +481,24 @@ title="Print to PDF"
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#miten-maapallon-lampotila-on-muuttunut-vuosien-saatossa">
-   Miten maapallon lämpötila on muuttunut vuosien saatossa?
+  <a class="reference internal nav-link" href="#tyopajan-kesto-noin-2-x-75-min">
+   (Työpajan kesto noin 2 x 75 min)
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#datasetin-kayttoonotto-ja-valmistelu">
-     Datasetin käyttöönotto ja valmistelu
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#kuvaajan-piirtaminen">
-     Kuvaajan piirtäminen
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#pohdinta">
-     Pohdinta
-    </a>
-   </li>
-  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#notebookien-kanssa-tutuksi">
+   1. Notebookien kanssa tutuksi
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aikataulu-ja-tehtavananto">
+   2. Aikataulu ja tehtävänanto
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#esimerkki">
+   3. Esimerkki
+  </a>
  </li>
 </ul>
 
@@ -514,45 +510,111 @@ title="Print to PDF"
                 
               <div>
                 
-  <section class="tex2jax_ignore mathjax_ignore" id="esimerkki-1-maan-lampotilapoikkeaman-maaritys">
-<h1>ESIMERKKI 1: Maan lämpötilapoikkeaman määritys<a class="headerlink" href="#esimerkki-1-maan-lampotilapoikkeaman-maaritys" title="Permalink to this headline">#</a></h1>
-<p>Tervetuloa testailemaan Jupyter Notebookia. Tähän yhteen tiedostoon (eli notebookiin) on rakennettu yksi esimerkkiharjoitus. Tämä alusta on täysin interaktiivinen, joten voit siis vapaasti muokkailla kaikkea täältä löytyvää – eikä huolta, muutokset eivät näy kavereille!</p>
-<p>Nämä tiedostot rakentuvat koodisoluista sekä tekstisoluista. Yläpalkista löytyy tarvittavat työkalut, kuten:</p>
-<ul class="simple">
-<li><p>solujen lisääminen ja poistaminen</p></li>
-<li><p>solujen liikuttelu ylös ja alas</p></li>
-<li><p>solujen ajaminen (Run)</p></li>
-<li><p>ja solun tyypin määrittäminen (markdown = tekstisolu, code = koodisolu).</p></li>
-</ul>
-<p>Jos tykkäät käyttää enemmän pikakomentoja, solujen ajamiseen toimii Ctrl+Enter (Windows) tai cmd+Enter (Mac).</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="aerosoli-tyopaja">
+<h1>Aerosoli-työpaja<a class="headerlink" href="#aerosoli-tyopaja" title="Permalink to this headline">#</a></h1>
+<section id="tyopajan-kesto-noin-2-x-75-min">
+<h2>(Työpajan kesto noin 2 x 75 min)<a class="headerlink" href="#tyopajan-kesto-noin-2-x-75-min" title="Permalink to this headline">#</a></h2>
+<p>Tässä harjoituksessa hyödynnetään Python-ohjelmointia, mutta mitään taustatietoa ohjelmoinnista ei tarvita.</p>
+<p><strong>Työpajan idea</strong></p>
+<p>Tässä työpajassa tutustutaan aerosoli-tutkimukseen siten, että pienissä opiskelijaryhmissä keskitytään tarkastelemaan yhtä tutkimuskysymystä. Tavoitteena on, että opiskelijaryhmät saavat muodostettua kuvaajan, joka vastaa heidän valitsemaansa tutkimuskysymykseen. Opiskelijat voivat sen lisäksi pohtia, mistä mahdolliset muutokset ja eroavaisuudet johtuvat, sekä etsiä kevyesti tietoa asiasta kuvaajan/tutkimuksen ympärille.</p>
+<p>Opiskelija – ennen kuin aloitat itsenäisen työskentelyn ryhmäsi kanssa, varmistathan että osaat seuraavat asiat:</p>
+<ol class="simple">
+<li><p>Luoda uusia koodi- ja tekstisoluja, sekä muokata vanhoja.</p></li>
+<li><p>Ajaa koodi- ja tekstisolut.</p></li>
+<li><p>Luoda uuden tiedoston, tallentaa sen ja avata sen uudelleen.</p></li>
+</ol>
+<p>Kaikki nämä asiat käydään läpi tässä ohjeessa.</p>
+</section>
 <hr class="docutils" />
-<section id="miten-maapallon-lampotila-on-muuttunut-vuosien-saatossa">
-<h2>Miten maapallon lämpötila on muuttunut vuosien saatossa?<a class="headerlink" href="#miten-maapallon-lampotila-on-muuttunut-vuosien-saatossa" title="Permalink to this headline">#</a></h2>
-<p>Tarkastellaan kuinka Maapallon lämpötila on muuttunut viimeisen 140 vuoden aikana. Yksi keino lähestyä tätä asiaa on lämpötilapoikkeamat (temperature anomalies).</p>
-<p><code class="docutils literal notranslate"><span class="pre">Lämpötilapoikkeamalla</span> <span class="pre">voidaan</span> <span class="pre">tarkastella</span> <span class="pre">sitä,</span> <span class="pre">miten</span> <span class="pre">lämpötila</span> <span class="pre">on</span> <span class="pre">muuttunut</span> <span class="pre">johonkin</span> <span class="pre">vertailuajankohtaan</span> <span class="pre">nähden.</span> <span class="pre">Absoluuttisia</span> <span class="pre">arvoja</span> <span class="pre">ei</span> <span class="pre">siis</span> <span class="pre">tiedetä,</span> <span class="pre">mutta</span> <span class="pre">tiedetään</span> <span class="pre">muutoksen</span> <span class="pre">suuruus.</span></code></p>
-<p>Tässä tapauksessa vertailuajankohtana toimii vuodet 1951 - 1980. Näiden vuosien globaaleista lämpötilakeskiarvoista on laskettu keskiarvo, joka toimii meidän vertailuarvona. Tämän jälkeen vuodesta 1980 lähtien jokaisen kuukauden globaalia lämpötilakeskiarvoa tuohon vertailuarvoon. Tästä nähdään siis suoraan, kuinka paljon lämpötila on muuttunut vertailuajankohdan jälkeen.</p>
-<p><img alt="poikkeama" src="../_images/poikkeama.png" /></p>
+<section id="notebookien-kanssa-tutuksi">
+<h2>1. Notebookien kanssa tutuksi<a class="headerlink" href="#notebookien-kanssa-tutuksi" title="Permalink to this headline">#</a></h2>
+<p>Tässä on tilaa opiskella Notebookien perustyökalujen käyttö, eli koodi- ja tekstisolujen hallinta.</p>
 <hr class="docutils" />
-<section id="datasetin-kayttoonotto-ja-valmistelu">
-<h3>Datasetin käyttöönotto ja valmistelu<a class="headerlink" href="#datasetin-kayttoonotto-ja-valmistelu" title="Permalink to this headline">#</a></h3>
+<p>Tämä tässä on tekstisolu! Tuplaklikkaamalla pääset muokkaustilaan – voisit kokeilla kirjoittaa tähän jotakin omia höpinöitä. Ylhäällä oleva <strong>Run</strong>-painike tai Control+Enter ajaa tämän solun.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Datasettien tarkasteluun tarvitaan erilaisia työkaluja, osaa tarvitaan taulukoiden kanssa työskentelyyn ja osaa
-# kuvaajien rakentamiseen. Työkalut löytyy työkalukirjastoista, ja ladataan nyt tarvittavat kirjastot käyttöön.
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Tässä alla taas on koodisolu. Risuaidan avulla voit kirjoittaa koodisoluihin kommentteja.
+# Kokeillaan laskea jotakin! Kun olet kirjoittanut laskun alle, voit ajaa solun ja nähdä vastauksen.
 
-import pandas as pd # pandas sisältää työkalut taulukoita varten
-import matplotlib.pyplot as plt # ja matplotlib vastaavasti kuvaajia varten
+# Huomaathan, että koodisolua klikkaamalla voit saada kehykset ## vihreäksi ## – silloin kyseinen solu on valittu
+# muokattavaksi tai ajettavaksi.
+
+7+88
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>95
 </pre></div>
 </div>
 </div>
 </div>
-<p>Nyt tarvitaan jotain dataa, jotta voidaan edetä tässä tarkastelussa. Otetaan käyttöön datasetti, joka on löydetty <span class="xref myst">täältä</span>. Ladataan tiedosto tänne ja kurkataan sen sisältö.</p>
+</section>
+<hr class="docutils" />
+<section id="aikataulu-ja-tehtavananto">
+<h2>2. Aikataulu ja tehtävänanto<a class="headerlink" href="#aikataulu-ja-tehtavananto" title="Permalink to this headline">#</a></h2>
+<p><strong>2.1 AIKATAULU</strong></p>
+<p><strong>Oppitunti 1</strong></p>
+<p>15 min – Mitä ovat aerosolit?<br />
+20 min – Jupyter Notebook tutuksi, tehtävänanto ja esimerkin läpikäyminen<br />
+20 min – Ryhmiin jakautuminen ja tutkimuskysymyksen valinta<br />
+20 min – Oman työn aloitus, tavoitteena datasetin käyttöönotto omalla pohjalla</p>
+<p><strong>Oppitunti 2</strong></p>
+<p>15 min – Ohjeistus työskentelyyn<br />
+50 min – Datan valmistelu ja kuvaajan muodostaminen<br />
+05 min – Harjoituksen tallennus pdf-tiedostoksi<br />
+05 min – Työpajan lopetus</p>
+<p><strong>2.2 TYÖVAIHEET</strong></p>
+<p><img alt="tyovaiheet_kuva" src="harjoitukset/tyovaiheet_kuva.jpg" /></p>
+<p><strong>2.3 UUDEN TIEDOSTON AVAUS JA TALLENNUS</strong></p>
+<p><strong>Tehtävän avaaminen MyBinderissa</strong></p>
+<ol class="simple">
+<li><p>Klikkaa oikealla yläkulmassa olevaa rakettipainiketta –&gt; MyBinder</p></li>
+<li><p>Lataus voi kestää muutaman minuutin</p></li>
+</ol>
+<p><strong>Uusi tiedosto:</strong></p>
+<ol class="simple">
+<li><p>Avaa MyBinder</p></li>
+<li><p>File –&gt; New Notebook</p></li>
+<li><p>Muista tallentaa säännöllisesti (Save and Checkpoint)</p></li>
+</ol>
+<p><strong>Tiedoston tallennus omalle koneelle</strong></p>
+<ol class="simple">
+<li><p>File –&gt; Download as –&gt; Notebook (.ipynp)</p></li>
+</ol>
+<p><strong>Tiedoston avaus uudelleen</strong></p>
+<ol class="simple">
+<li><p>Avaa mikä tahansa Notebook MyBinderissa</p></li>
+<li><p>File –&gt; Open</p></li>
+<li><p>Upload ja valitse haluamasi tiedosto.</p></li>
+<li><p>Avaa tiedosto ja voit jatkaa muokkaamista.</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="esimerkki">
+<h2>3. Esimerkki<a class="headerlink" href="#esimerkki" title="Permalink to this headline">#</a></h2>
+<p>Käytetään esimerkkinä datasettiä, joka kertoo Maan läheisyydessä havaittujen asteroidien lukumäärät 1900-luvulta lähtien.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># lampotilat_data on nyt muuttuja, johon me tallennetaan koko datasetin sisältö sellaisenaan.
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Ladataan halutut tietokirjastot käyttöön.
 
-lampotilat_data = pd.read_csv(&#39;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/climate-change.csv&#39;) # Luetaan tiedosto ja tallennetaan se muuttujaan.
-lampotilat_data.head() # head()-käskyllä voidaan kurkata datasetin sisälle.
+# Tietokirjastot sisältävät erilaisia työkaluja, esimerkiksi taulukoiden käsittelyyn, kuvaajien piirtämiseen jne.
+# Nämä alla olevat kirjastot ovat kaikki mitä tarvitsette.
+
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Ladataan data ja tallennetaan se muuttujaan &#39;asteroidit&#39;.
+# .head()-komennolla kurkataan datasetin sisälle.
+
+asteroidit = pd.read_csv(&#39;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/near-earth-asteroids-discovered-over-time.csv&#39;)
+asteroidit.head()
 </pre></div>
 </div>
 </div>
@@ -576,216 +638,169 @@ lampotilat_data.head() # head()-käskyllä voidaan kurkata datasetin sisälle.
     <tr style="text-align: right;">
       <th></th>
       <th>Entity</th>
-      <th>Date</th>
-      <th>Combined measurements</th>
-      <th>Seasonal variation</th>
-      <th>Monthly averaged</th>
-      <th>Annual averaged</th>
-      <th>monthly_sea_surface_temperature_anomaly</th>
-      <th>Sea surface temp (lower-bound)</th>
-      <th>Sea surface temp (upper-bound)</th>
-      <th>Monthly pH measurement</th>
-      <th>Annual average</th>
-      <th>Temperature anomaly</th>
-      <th>Church &amp; White</th>
-      <th>University of Hawaii</th>
-      <th>Average</th>
-      <th>arctic_sea_ice_osisaf</th>
-      <th>Monthly averaged.1</th>
-      <th>Annual averaged.1</th>
-      <th>Monthly averaged.2</th>
-      <th>Annual averaged.2</th>
+      <th>Code</th>
+      <th>Year</th>
+      <th>smaller_than_140m</th>
+      <th>between_140m_and_1km</th>
+      <th>larger_than_1km</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>Antarctica</td>
-      <td>1992-01-01</td>
-      <td>NaN</td>
-      <td>418.310350</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
+      <td>World</td>
+      <td>OWID_WRL</td>
+      <td>1900</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>Antarctica</td>
-      <td>1992-01-31</td>
-      <td>NaN</td>
-      <td>425.377021</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
+      <td>World</td>
+      <td>OWID_WRL</td>
+      <td>1910</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>Antarctica</td>
-      <td>1992-03-01</td>
-      <td>NaN</td>
-      <td>433.552016</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
+      <td>World</td>
+      <td>OWID_WRL</td>
+      <td>1920</td>
+      <td>0</td>
+      <td>0</td>
+      <td>3</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>Antarctica</td>
-      <td>1992-04-01</td>
-      <td>NaN</td>
-      <td>424.496837</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
+      <td>World</td>
+      <td>OWID_WRL</td>
+      <td>1930</td>
+      <td>0</td>
+      <td>0</td>
+      <td>5</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>Antarctica</td>
-      <td>1992-05-01</td>
-      <td>NaN</td>
-      <td>423.362721</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
+      <td>World</td>
+      <td>OWID_WRL</td>
+      <td>1940</td>
+      <td>0</td>
+      <td>1</td>
+      <td>8</td>
     </tr>
   </tbody>
 </table>
 </div></div></div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">head()-komennon</span> <span class="pre">sulkujen</span> <span class="pre">sisälle</span> <span class="pre">voi</span> <span class="pre">laittaa</span> <span class="pre">lukuarvoja,</span> <span class="pre">jolla</span> <span class="pre">voidaan</span> <span class="pre">vaikuttaa</span> <span class="pre">siihen,</span> <span class="pre">mitä</span> <span class="pre">datasetistä</span> <span class="pre">näytetään</span> <span class="pre">tässä</span> <span class="pre">esikatselussa.</span> <span class="pre">Kokeile</span> <span class="pre">laittaa</span> <span class="pre">sinne</span> <span class="pre">vaikka</span> <span class="pre">luvut</span> <span class="pre">10</span> <span class="pre">ja</span> <span class="pre">-20.</span></code></p>
-<p>Datasetti näyttää sisältävän mittaustuloksia useista eri paikoista. Listan lopussa on myös globaalit arvot, joten keskitytään nyt niihin.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Tallennetaan lampotilat-muuttujaan datasetin globaalit arvot, eli ne rivit,
-# joissa Entity-sarakkeessa lukee &#39;World&#39;.
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Valmistellaan x-akselin tiedot, tässä tapauksessa poimitaan vuosiluvut &#39;Year&#39;-sarakkeesta muuttujaan &#39;vuodet&#39;.
+# Hakasulkeisiin tulee suoraan datatiedoston sen sarakkeen nimi, jonka tiedot haluat tallentaa käyttöön.
 
-lampotilat = lampotilat_data[(lampotilat_data[&#39;Entity&#39;]==&#39;World&#39;)]
-</pre></div>
-</div>
-</div>
-</div>
-<p><code class="docutils literal notranslate"><span class="pre">Voit</span> <span class="pre">tarkistaa</span> <span class="pre">head()-komennon</span> <span class="pre">avulla,</span> <span class="pre">miltä</span> <span class="pre">tiedot</span> <span class="pre">näyttävät</span> <span class="pre">nyt.</span> <span class="pre">Minkälaisen</span> <span class="pre">komennon</span> <span class="pre">voit</span> <span class="pre">kirjoittaa</span> <span class="pre">yllä</span> <span class="pre">olevaan</span> <span class="pre">koodisoluun?</span></code></p>
-<p>Tämä datasetti sisältää kuitenkin varsin paljon NaN-arvoja (NaN = Not a Number). Koska me ollaan nyt kiinnostuneita lämpötilapoikkeamista ja niille arvoille löytyy oma sarakkeensa (Temperature anomaly), poistetaan ne rivit, joissa kyseisen sarakkeen arvo on NaN.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>lampotilat = lampotilat.dropna(subset=[&#39;Temperature anomaly&#39;]) # Poistetaan NaN-rivit
-
-lampotilat[&#39;Date&#39;] = pd.to_datetime(lampotilat[&#39;Date&#39;]) # Muutetaan Date-sarakkeen luvut oikeasti päivämääriksi.
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<hr class="docutils" />
-<section id="kuvaajan-piirtaminen">
-<h3>Kuvaajan piirtäminen<a class="headerlink" href="#kuvaajan-piirtaminen" title="Permalink to this headline">#</a></h3>
-<p>Nyt ollaan tehty varsinaiset valmistelut datasetin osalta valmiiksi, ja päästäänkin pyörittelemään itse dataa. Valmistellaan seuraavaksi x-akselille ja y-akselille tulevat tiedot omiin muuttujiin, niin homma pysyy selkeänä. Nyt halutaan päivämäärät x-akselille ja lämpötilapoikkeamat y-akselille.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>paivamaarat = lampotilat[&#39;Date&#39;] # tallennetaan päivämäärätiedot
-
-data = lampotilat[&#39;Temperature anomaly&#39;] # tallennetaan lämpötilapoikkeamat
-</pre></div>
-</div>
-</div>
-</div>
-<p>Plottailua varten kaikki valmiina, joten lähetään piirtelemään.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>plt.figure(figsize = (20, 10)) # Määritetään kuvaajan koko. Voit vaihtaa numeroita sulkeiden sisällä.
-
-plt.plot(paivamaarat, data) # Annetaan piirrettävät tiedot plot(x,y)-komennolla.
-
-plt.title(&#39;Kuva 1: Globaali kuukausittainen lämpötilapoikkeama vuosien 1951-1980 keskiarvoon verrattuna.&#39;)
-plt.xlabel(&#39;Vuosi&#39;)
-plt.ylabel(&#39;Poikkeama [°C]&#39;)
-plt.axhline(0, color=&#39;yellow&#39;) # Selkeyden vuoksi piirretään viiva kohtaan y=0.
-           
-plt.show() # Tulostetaan kuvaaja näkyviin.
+vuodet = asteroidit[&#39;Year&#39;]
+vuodet
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/lampotila-intro_13_0.png" src="../_images/lampotila-intro_13_0.png" />
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0     1900
+1     1910
+2     1920
+3     1930
+4     1940
+5     1950
+6     1960
+7     1970
+8     1980
+9     1990
+10    2000
+11    2001
+12    2002
+13    2003
+14    2004
+15    2005
+16    2006
+17    2007
+18    2008
+19    2009
+20    2010
+21    2011
+22    2012
+23    2013
+24    2014
+25    2015
+26    2016
+27    2017
+28    2018
+29    2019
+30    2020
+31    2021
+Name: Year, dtype: int64
+</pre></div>
 </div>
 </div>
-</section>
-<hr class="docutils" />
-<section id="pohdinta">
-<h3>Pohdinta<a class="headerlink" href="#pohdinta" title="Permalink to this headline">#</a></h3>
-<p>Vaihtakaa vieruskaverisi kanssa ajatuksia tästä kuvaajasta ja harjoituksesta. Voitte käydä läpi esimerkiksi seuraavia kysymyksiä:</p>
-<ol class="simple">
-<li><p>Minkälaisia ajatuksia kuvaaja tai tämä harjoitus herättää sinussa?</p></li>
-<li><p>Minkälaisia sanoja käyttäisit tästä kuvaajasta? Onko se herättelevä, tylsä, informatiivinen, selkeä, harhaanjohtava, vai jotain muuta?</p></li>
-<li><p>Onko lämpötilapoikkeama sinun mielestäsi hyvä tapa tuoda esille ilmastonmuutosta?</p></li>
-<li><p>Jääkö tästä kuvaajasta tai harjoituksesta puuttumaan jotakin, mikä olisi sinun mielestäsi kiinnostavaa?</p></li>
-</ol>
-</section>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Valmistellaan y-akselin tiedot. Valitaan tarkasteluun pienten asteroidien lukumäärä.
+
+pienet = asteroidit[&#39;smaller_than_140m&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Muodostetaan kuvaaja plt.plot(x,y)-komennon avulla.
+
+plt.plot(vuodet, pienet)
+
+plt.title(&#39;Otsikko&#39;)
+plt.xlabel(&#39;x-akselin nimi&#39;)
+plt.ylabel(&#39;y-akselin nimi&#39;)
+
+plt.show()
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/aerosoli-tyopaja_12_0.png" src="../_images/aerosoli-tyopaja_12_0.png" />
+</div>
+</div>
+<p>Osalla teistä voi olla tarvetta piirtää kaksi viivaa samaan kuvaajaan. Tässä tapauksessa x-akselin arvot pysyvät samana, mutta tarvitaan kaksi kappaletta y-akselille valmisteltuja arvoja. Kun se on tehty, voidaan piirtää vain molemmat viivat samaan kuvaajaan tällä tavalla:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Valmistellaan toisen y-akselille tulevan muuttujan arvot
+
+isot = asteroidit[&#39;larger_than_1km&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Ja piirretään molemmat viivat. Tässä tapauksessa on tärkeää lisätä &#39;label&#39;-osio, että osataan erottaa
+# viivat toisistaan.
+
+plt.plot(vuodet, pienet, color=&#39;blue&#39;, label=&#39;Pienet&#39;)
+plt.plot(vuodet, isot, color = &#39;green&#39;, label=&#39;Isot&#39;)
+
+plt.title(&#39;Otsikko&#39;)
+plt.xlabel(&#39;x-akselin nimi&#39;)
+plt.ylabel(&#39;y-akselin nimi&#39;)
+
+plt.legend() # Tulostaa viivojen nimet
+plt.show()
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/aerosoli-tyopaja_15_0.png" src="../_images/aerosoli-tyopaja_15_0.png" />
+</div>
+</div>
 </section>
 </section>
 
@@ -816,17 +831,17 @@ plt.show() # Tulostetaan kuvaaja näkyviin.
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="ilmastopaja.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="aerosoli.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Ilmastotyöpaja</p>
+            <p class="prev-next-title">&lt;no title&gt;</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="dataraati.html" title="next page">
+    <a class='right-next' id="next-link" href="datasettien_esittelyt.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Visualisaatioraati</p>
+        <p class="prev-next-title">Aerosolit-työpajan datasetit ja tutkimuskysymykset</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

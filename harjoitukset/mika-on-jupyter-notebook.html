@@ -706,12 +706,186 @@ data.head()
 </div>
 </div>
 <div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Run</th>
+      <th>Event</th>
+      <th>pt1</th>
+      <th>eta1</th>
+      <th>phi1</th>
+      <th>pt2</th>
+      <th>eta2</th>
+      <th>phi2</th>
+      <th>M</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>199319</td>
+      <td>641436592</td>
+      <td>77.2006</td>
+      <td>0.250438</td>
+      <td>0.605505</td>
+      <td>60.1382</td>
+      <td>0.650821</td>
+      <td>-1.53900</td>
+      <td>122.797901</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>199699</td>
+      <td>336259924</td>
+      <td>64.1091</td>
+      <td>0.473667</td>
+      <td>-0.815133</td>
+      <td>58.6038</td>
+      <td>0.032018</td>
+      <td>2.58568</td>
+      <td>124.586979</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>201602</td>
+      <td>114902683</td>
+      <td>73.7489</td>
+      <td>0.800788</td>
+      <td>0.261020</td>
+      <td>55.9369</td>
+      <td>0.698872</td>
+      <td>3.03502</td>
+      <td>126.462830</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>202087</td>
+      <td>923352992</td>
+      <td>102.9550</td>
+      <td>0.979959</td>
+      <td>0.148624</td>
+      <td>76.6940</td>
+      <td>0.815527</td>
+      <td>1.67359</td>
+      <td>123.622542</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>203894</td>
+      <td>688901524</td>
+      <td>53.4409</td>
+      <td>-0.709665</td>
+      <td>1.642300</td>
+      <td>46.4314</td>
+      <td>0.945537</td>
+      <td>-2.71670</td>
+      <td>123.203887</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<p>Jos haluat poimia datasetistä jonkin tietyn muuttujan esimerkiksi kuvaajaa varten, se tapahtuu näin:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Tietyn sarakkeen poimiminen
+invariantti_massa = data[&#39;M&#39;]
+print(invariantti_massa)
+
+# Tietyn rivin poimiminen
+rivi = data.loc[1]
+print(rivi)
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    122.797901
+1    124.586979
+2    126.462830
+3    123.622542
+4    123.203887
+5    124.444405
+6    124.776915
+7    125.704971
+8    125.691479
+9    123.273271
+Name: M, dtype: float64
+Run      1.996990e+05
+Event    3.362599e+08
+pt1      6.410910e+01
+eta1     4.736670e-01
+phi1    -8.151330e-01
+pt2      5.860380e+01
+eta2     3.201850e-02
+phi2     2.585680e+00
+M        1.245870e+02
+Name: 1, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<section id="tehtava-kokeile-avata-tassa-notebookissa-jokin-toinen-cms-kokeen-datasetti">
+<h3>Tehtävä: Kokeile avata tässä notebookissa jokin toinen CMS-kokeen datasetti.<a class="headerlink" href="#tehtava-kokeile-avata-tassa-notebookissa-jokin-toinen-cms-kokeen-datasetti" title="Permalink to this headline">#</a></h3>
+</section>
+</section>
+<section id="kuvaajat">
+<h2>3. Kuvaajat<a class="headerlink" href="#kuvaajat" title="Permalink to this headline">#</a></h2>
+<p>Seuraavaksi piirrellään kuvaajia. Sitä varten tarvitaan matplotlip.pyplot -pakettia. Käytetään apuna myös numpy-pakettia, mutta koska se on tuotu meidän käyttöön jo aiemmin, niin sitä ei tarvitse tuoda uudestaan.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import matplotlib.pyplot as plt
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Piirretään kuvaaja sinifunktiosta
+
+x = np.linspace(-np.pi, np.pi)
+plt.plot(x, np.sin(x))
+plt.xlabel(&#39;Kulma [rad]&#39;)
+plt.ylabel(&#39;sin(x)&#39;)
+plt.title(&#39;Kuvaaja 1: Sinifunktio kulman funktiona&#39;)
+plt.show()
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/mika-on-jupyter-notebook_25_0.png" src="../_images/mika-on-jupyter-notebook_25_0.png" />
+</div>
+</div>
+<section id="tehtava-piirra-kuvaaja-kosinifunktiosta">
+<h3>Tehtävä: Piirrä kuvaaja kosinifunktiosta.<a class="headerlink" href="#tehtava-piirra-kuvaaja-kosinifunktiosta" title="Permalink to this headline">#</a></h3>
+<p>Seuraavaksi yhdistetään: valitaan datasetti ja poimitaan sieltä tiedot haluttua kuvaajaa varten.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>kaksi_myonia = pd.read_csv(&quot;http://opendata.cern.ch/record/303/files/dimuon.csv&quot;)
+kaksi_myonia.head()
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">8</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;http://opendata.cern.ch/record/5209/files/diphoton.csv&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">12</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">kaksi_myonia</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;http://opendata.cern.ch/record/303/files/dimuon.csv&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">kaksi_myonia</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 
 <span class="nn">File /opt/hostedtoolcache/Python/3.8.15/x64/lib/python3.8/site-packages/pandas/util/_decorators.py:211,</span> in <span class="ni">deprecate_kwarg.&lt;locals&gt;._deprecate_kwarg.&lt;locals&gt;.wrapper</span><span class="nt">(*args, **kwargs)</span>
 <span class="g g-Whitespace">    </span><span class="mi">209</span>     <span class="k">else</span><span class="p">:</span>
@@ -860,59 +1034,6 @@ data.head()
 <span class="g g-Whitespace">    </span><span class="mi">671</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_timeout_occurred</span> <span class="o">=</span> <span class="kc">True</span>
 
 <span class="ne">KeyboardInterrupt</span>: 
-</pre></div>
-</div>
-</div>
-</div>
-<p>Jos haluat poimia datasetistä jonkin tietyn muuttujan esimerkiksi kuvaajaa varten, se tapahtuu näin:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Tietyn sarakkeen poimiminen
-invariantti_massa = data[&#39;M&#39;]
-print(invariantti_massa)
-
-# Tietyn rivin poimiminen
-rivi = data.loc[1]
-print(rivi)
-</pre></div>
-</div>
-</div>
-</div>
-<section id="tehtava-kokeile-avata-tassa-notebookissa-jokin-toinen-cms-kokeen-datasetti">
-<h3>Tehtävä: Kokeile avata tässä notebookissa jokin toinen CMS-kokeen datasetti.<a class="headerlink" href="#tehtava-kokeile-avata-tassa-notebookissa-jokin-toinen-cms-kokeen-datasetti" title="Permalink to this headline">#</a></h3>
-</section>
-</section>
-<section id="kuvaajat">
-<h2>3. Kuvaajat<a class="headerlink" href="#kuvaajat" title="Permalink to this headline">#</a></h2>
-<p>Seuraavaksi piirrellään kuvaajia. Sitä varten tarvitaan matplotlip.pyplot -pakettia. Käytetään apuna myös numpy-pakettia, mutta koska se on tuotu meidän käyttöön jo aiemmin, niin sitä ei tarvitse tuoda uudestaan.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import matplotlib.pyplot as plt
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Piirretään kuvaaja sinifunktiosta
-
-x = np.linspace(-np.pi, np.pi)
-plt.plot(x, np.sin(x))
-plt.xlabel(&#39;Kulma [rad]&#39;)
-plt.ylabel(&#39;sin(x)&#39;)
-plt.title(&#39;Kuvaaja 1: Sinifunktio kulman funktiona&#39;)
-plt.show()
-</pre></div>
-</div>
-</div>
-</div>
-<section id="tehtava-piirra-kuvaaja-kosinifunktiosta">
-<h3>Tehtävä: Piirrä kuvaaja kosinifunktiosta.<a class="headerlink" href="#tehtava-piirra-kuvaaja-kosinifunktiosta" title="Permalink to this headline">#</a></h3>
-<p>Seuraavaksi yhdistetään: valitaan datasetti ja poimitaan sieltä tiedot haluttua kuvaajaa varten.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>kaksi_myonia = pd.read_csv(&quot;http://opendata.cern.ch/record/303/files/dimuon.csv&quot;)
-kaksi_myonia.head()
 </pre></div>
 </div>
 </div>

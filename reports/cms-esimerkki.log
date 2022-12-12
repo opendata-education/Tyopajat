@@ -32,7 +32,8 @@ nbclient.exceptions.CellTimeoutError: A cell timed out while it was being execut
 The message was: Cell execution timed out.
 Here is a preview of the cell contents:
 -------------------
-kaksi_myonia = pd.read_csv("http://opendata.cern.ch/record/303/files/dimuon.csv")
-kaksi_myonia.head()
+# Luetaan datatiedoston sisältö ja tallennetaan tiedot muuttujaan "kaksi_myonia"
+
+kaksi_myonia = pd.read_csv('http://opendata.cern.ch/record/545/files/Dimuon_DoubleMu.csv')
 -------------------
 

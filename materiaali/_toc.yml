@@ -20,3 +20,7 @@ chapters:
   - file: harjoitukset/UV-paja
   - file: harjoitukset/co2
   - file: harjoitukset/Pienhiukkaset
+- file: harjoitukset/aerosolit
+  sections:
+  - file: harjoitukset/aerosoli-tyopaja
+  - file: harjoitukset/datasettien_esittelyt

@@ -1,48 +1,59 @@
 
+
 <!DOCTYPE html>
 
-<html lang="en">
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>ESIMERKKI 4: Pienhiukkaset - saasteita ja aerosoleja &#8212; Työpajat</title>
-    
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -50,65 +61,95 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'harjoitukset/Pienhiukkaset';</script>
     <link rel="canonical" href="https://opendata-education.github.io/Tyopajat/intro.html/harjoitukset/Pienhiukkaset.html" />
     <link rel="shortcut icon" href="../_static/logo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Aerosoli-työpaja" href="aerosoli.html" />
     <link rel="prev" title="ESIMERKKI 3: Maapallon ilmakehä" href="co2.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-    <div class="container-fluid" id="banner"></div>
-
-    
-
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="../_static/logo.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Työpajat</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -118,547 +159,383 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="opettajakoulutus.html">
-   CERN Opettajakoulutus
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="mika-on-jupyter-notebook.html">
-     Mikä on Jupyter Notebook?
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="cms-esimerkki.html">
-     CMS ja avoin data
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Vuosirenkaat.html">
-     Niin hyvää puuta
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="esimerkit.html">
-   Lyhyet esimerkit
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Lumensyvyys.html">
-     ESIMERKKI: Lumensyvyys
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="UV.html">
-     ESIMERKKI: Ultraviolettisäteily
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="fossiiliset_ja_koulutus.html">
-     Luonnonvarojen käyttö ja tasa-arvoinen koulutus
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="ilmastopaja.html">
-   Ilmastotyöpaja
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="lampotila-intro.html">
-     ESIMERKKI 1: Maan lämpötilapoikkeaman määritys
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="dataraati.html">
-     Visualisaatioraati
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="UV-paja.html">
-     ESIMERKKI 2: Ultraviolettisäteily
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="co2.html">
-     ESIMERKKI 3: Maapallon ilmakehä
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     ESIMERKKI 4: Pienhiukkaset - saasteita ja aerosoleja
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="aerosoli.html">
-   Aerosoli-työpaja
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="aerosoli-tyopaja.html">
-     Aerosoli-työpajan ohjeet
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="datasettien_esittelyt.html">
-     Aerosoli-työpajan datasetit ja tutkimuskysymykset
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="opettajakoulutus.html">CERN Opettajakoulutus</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="mika-on-jupyter-notebook.html">Mikä on Jupyter Notebook?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms-esimerkki.html">CMS ja avoin data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Vuosirenkaat.html">Niin hyvää puuta</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="esimerkit.html">Lyhyet esimerkit</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Lumensyvyys.html">ESIMERKKI: Lumensyvyys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UV.html">ESIMERKKI: Ultraviolettisäteily</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fossiiliset_ja_koulutus.html">Luonnonvarojen käyttö ja tasa-arvoinen koulutus</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="ilmastopaja.html">Ilmastotyöpaja</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="lampotila-intro.html">ESIMERKKI 1: Maan lämpötilapoikkeaman määritys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dataraati.html">Visualisaatioraati</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UV-paja.html">ESIMERKKI 2: Ultraviolettisäteily</a></li>
+<li class="toctree-l2"><a class="reference internal" href="co2.html">ESIMERKKI 3: Maapallon ilmakehä</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">ESIMERKKI 4: Pienhiukkaset - saasteita ja aerosoleja</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="aerosoli.html">Aerosoli-työpaja</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="aerosoli-tyopaja.html">Aerosoli-työpajan ohjeet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datasettien_esittelyt.html">Aerosoli-työpajan datasetit ja tutkimuskysymykset</a></li>
+</ul>
+</li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
-          
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
 
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
 <div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
 
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/opendata-education/Tyopajat/main?urlpath=tree/materiaali/harjoitukset/Pienhiukkaset.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/opendata-education/Tyopajat/main?urlpath=tree/materiaali/harjoitukset/Pienhiukkaset.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   
     <img src="../_static/images/logo_binder.svg">
   </span>
-<span class="headerbtn__text-container">Binder</span>
+<span class="btn__text-container">Binder</span>
 </a>
-
-      </li>
+</li>
       
-      <li>
-        <a href="https://colab.research.google.com/github/opendata-education/Tyopajat/blob/main/materiaali/harjoitukset/Pienhiukkaset.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Colab"
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/opendata-education/Tyopajat/blob/main/materiaali/harjoitukset/Pienhiukkaset.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   
     <img src="../_static/images/logo_colab.png">
   </span>
-<span class="headerbtn__text-container">Colab</span>
+<span class="btn__text-container">Colab</span>
 </a>
-
-      </li>
+</li>
       
-    </ul>
-  </div>
+  </ul>
 </div>
 
-<button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/opendata-education/Tyopajat" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/opendata-education/Tyopajat/issues/new?title=Issue%20on%20page%20%2Fharjoitukset/Pienhiukkaset.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/harjoitukset/Pienhiukkaset.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/opendata-education/Tyopajat"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="headerbtn__text-container">repository</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://github.com/opendata-education/Tyopajat/issues/new?title=Issue%20on%20page%20%2Fharjoitukset/Pienhiukkaset.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="headerbtn__text-container">open issue</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../_sources/harjoitukset/Pienhiukkaset.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.ipynb</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#smear-station-for-measuring-ecosystem-atmosphere-relations">
-   1. SMEAR - Station for Measuring Ecosystem-Atmosphere Relations
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#aerosolit-mita-ja-miksi">
-     1.1 Aerosolit - mitä ja miksi?
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#pohjoinen-metsavyohyke-ja-muutoksen-vaikutukset">
-     1.2 Pohjoinen metsävyöhyke ja muutoksen vaikutukset
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#aineisto">
-     1.3 Aineisto
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#paikallistarkastelussa-hyvinkaa-kulkeeko-henki">
-   2. Paikallistarkastelussa Hyvinkää - kulkeeko henki?
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
-     2.1 Aineisto
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#hiukkasen-asiaa">
-     2.2 Hiukkasen asiaa
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tutkitaas-itse">
-   2.3 Tutkitaas itse
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>ESIMERKKI 4: Pienhiukkaset - saasteita ja aerosoleja</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#smear-station-for-measuring-ecosystem-atmosphere-relations">
-   1. SMEAR - Station for Measuring Ecosystem-Atmosphere Relations
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#aerosolit-mita-ja-miksi">
-     1.1 Aerosolit - mitä ja miksi?
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#pohjoinen-metsavyohyke-ja-muutoksen-vaikutukset">
-     1.2 Pohjoinen metsävyöhyke ja muutoksen vaikutukset
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#aineisto">
-     1.3 Aineisto
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#paikallistarkastelussa-hyvinkaa-kulkeeko-henki">
-   2. Paikallistarkastelussa Hyvinkää - kulkeeko henki?
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
-     2.1 Aineisto
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#hiukkasen-asiaa">
-     2.2 Hiukkasen asiaa
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tutkitaas-itse">
-   2.3 Tutkitaas itse
-  </a>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>ESIMERKKI 4: Pienhiukkaset - saasteita ja aerosoleja</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#smear-station-for-measuring-ecosystem-atmosphere-relations">1. SMEAR - Station for Measuring Ecosystem-Atmosphere Relations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aerosolit-mita-ja-miksi">1.1 Aerosolit - mitä ja miksi?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pohjoinen-metsavyohyke-ja-muutoksen-vaikutukset">1.2 Pohjoinen metsävyöhyke ja muutoksen vaikutukset</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aineisto">1.3 Aineisto</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#paikallistarkastelussa-hyvinkaa-kulkeeko-henki">2. Paikallistarkastelussa Hyvinkää - kulkeeko henki?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">2.1 Aineisto</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hiukkasen-asiaa">2.2 Hiukkasen asiaa</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tutkitaas-itse">2.3 Tutkitaas itse</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
-  <section class="tex2jax_ignore mathjax_ignore" id="esimerkki-4-pienhiukkaset-saasteita-ja-aerosoleja">
-<h1>ESIMERKKI 4: Pienhiukkaset - saasteita ja aerosoleja<a class="headerlink" href="#esimerkki-4-pienhiukkaset-saasteita-ja-aerosoleja" title="Permalink to this headline">#</a></h1>
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="esimerkki-4-pienhiukkaset-saasteita-ja-aerosoleja">
+<h1>ESIMERKKI 4: Pienhiukkaset - saasteita ja aerosoleja<a class="headerlink" href="#esimerkki-4-pienhiukkaset-saasteita-ja-aerosoleja" title="Permalink to this heading">#</a></h1>
 <p>Ilmakehä koostuu paljosta muustakin kuin pelkistä kaasuista ja meille eläville olennoille oleellista on, missä määrin tämä vaikuttaa eläinten ja kasvien toimintaan. Kokonaiskuvan kannalta on hyvä muistaa heti alusta alkaen, että ilmakehän monimutkaisuus tekee yksittäisten tulosten väärintulkinnasta helppoa: kun tehdään ennusteita ja tulkintoja planeetan kannalta tärkeistä toimista, pitää muistaa tarkastella niin hiukkasten syntyprosesseja, käytöstä ilmakehässä, niiden kulkeutumista tuulten mukana lämpötiloista ja kosteudesta riippuen sekä vuorovaikutuksia erilaisten ekosysteemien kanssa.</p>
 <p>Tarkastellaan seuraavaksi erinäisiä mikro- ja nanometrikokoluokassa olevia hiukkastyyppejä. Lähteinä käytämme Ilmatieteenlaitoksen ja SMEAR-asemien avoimia aineistoja.</p>
 <section id="smear-station-for-measuring-ecosystem-atmosphere-relations">
-<h2>1. SMEAR - Station for Measuring Ecosystem-Atmosphere Relations<a class="headerlink" href="#smear-station-for-measuring-ecosystem-atmosphere-relations" title="Permalink to this headline">#</a></h2>
+<h2>1. SMEAR - Station for Measuring Ecosystem-Atmosphere Relations<a class="headerlink" href="#smear-station-for-measuring-ecosystem-atmosphere-relations" title="Permalink to this heading">#</a></h2>
 <p>Torilla tavataan, Suomi on näet kansainvälinen supervalta laadukkaan ja pitkäaikaisen datankeruun suhteen kun puhutaan ilmakehän poikkitieteellisestä tutkimuksesta. Professori Markku Kulmalan ja muiden nimet keikkuvat jatkuvasti alan kärkilistoilla ja projektit puskevat ihmiskunnan ymmärrystä mm. aerosolien muodostumisesta ja käyttäytymisestä aina vain pidemmälle.</p>
 <p><a class="reference external" href="https://www.atm.helsinki.fi/SMEAR/">SMEAR-asemat</a> ovat monipuolisia koeasemia, joilla mitataan yhtäaikaisesti niin säähavaintoja, ainevirtauksia kuin laajempia ekosysteemimuutoksiakin. Erityisen tärkeitä asemat ovat aerosolien tutkimuksen kannalta, sillä näitä on perinteisesti ollut erittäin vaikeaa tarkastella luotettavilla tavoilla reaaliajassa.</p>
 <section id="aerosolit-mita-ja-miksi">
-<h3>1.1 Aerosolit - mitä ja miksi?<a class="headerlink" href="#aerosolit-mita-ja-miksi" title="Permalink to this headline">#</a></h3>
+<h3>1.1 Aerosolit - mitä ja miksi?<a class="headerlink" href="#aerosolit-mita-ja-miksi" title="Permalink to this heading">#</a></h3>
 <p>Aerosolit ovat yhdistelmä kaasua ja siihen sekoittuneita hiukkasia, joita syntyy kaikkialla. Liikenne, teollisuus, merten aallot, kasvien fotosynteesin sivutuotteet… lukematon määrä prosesseja planeetallamme aiheuttaa hiukkasten virtausta ekosysteemien ja ilmakehän välillä. Kuten Auringon toiminta on planeettamme ensisijainen energianlähde, erilaisten aerosolien vaikutus maailmamme elinkelpoisuuteen on ensisijaisen tärkeää mm. pilvien muodostumisen, veden kierron ja paikallisten ilmamassojen energiajakauman kannalta. Suoraan ilmakehään siirtyneet aineet ovat primääriaerosoleja ja siellä kaasuista kehittyneet aineet sekundaarisia aerosoleja.</p>
 <p>Merkittävät osat ilmastonmuutoskeskustelua liittyvät aerosoleihin. Nokihiutaleiden määrä imee auringonvaloa itseensä ja pitää tehokkaasti lämpöä ilmakehässä, rikkiyhdisteet tehostavat pienipisaraisten pilvien muodostumista ja heijastavat enemmän valoa pois, ilmakehä yleisesti sakenee enemmän valoa himmentäväksi ja johtaa paikallisiin nälänhätiin mutta sen siivoaminen nostaa globaalia lämpötilaa suuremman osan valosta päästessä pinnalle ja niin edelleen.</p>
 <p>Kyseessä on monimutkainen vyyhti, jonka ratkaiseminen on yhteisen selviämisemme kannalta oleellista, mutta se vaatii poliittista vastuunkantoa ja ohjausta. Tutkimuksen kannalta suunta on selvä, kuten professori Hanna Vehkamäki sanoo: “ilmakehän tutkiminen on toki tärkeää luonnon ja ihmisten hyvinvoinnin kannalta. Mutta minulle on tärkeintä saada tietää, miten molekyylit käyttäytyvät. Minun tehtäväni on yksinkertaisesti selvittää, miten luonto toimii. Siinä kaikki.” <em>-Yhdessä ilmakehässä, 2016</em></p>
 </section>
 <section id="pohjoinen-metsavyohyke-ja-muutoksen-vaikutukset">
-<h3>1.2 Pohjoinen metsävyöhyke ja muutoksen vaikutukset<a class="headerlink" href="#pohjoinen-metsavyohyke-ja-muutoksen-vaikutukset" title="Permalink to this headline">#</a></h3>
+<h3>1.2 Pohjoinen metsävyöhyke ja muutoksen vaikutukset<a class="headerlink" href="#pohjoinen-metsavyohyke-ja-muutoksen-vaikutukset" title="Permalink to this heading">#</a></h3>
 <p>Tutkimusjulkaisussa “Long-term sub-micrometer aerosol chemical composition in the boreal forest: inter- and intra-annual variability” (Heikkinen ym., 2020) todettiin SMEAR II datojen perusteella seuraavaa:</p>
 <p>“<em>During the exceptionally hot months of July of 2014 and 2018, the organic aerosol concentrations were up to 70 % higher than the 7-year July mean. The projected increase in heat wave frequency over Finland will most likely influence the loading and chemical composition of aerosol particles in the future. Our findings suggest strong influence of meteorological conditions such as radiation, ambient temperature, and wind speed and direction on aerosol chemical composition.</em>”</p>
 <p>Mitä jos tutustuisimme osaan aineistosta? Alla kuva samasta julkaisusta:</p>
 <p><img alt="aerosolit" src="https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/aerosolit.png" /></p>
 </section>
 <section id="aineisto">
-<h3>1.3 Aineisto<a class="headerlink" href="#aineisto" title="Permalink to this headline">#</a></h3>
+<h3>1.3 Aineisto<a class="headerlink" href="#aineisto" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Ladataan tarvittavat työkalut
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ladataan tarvittavat työkalut</span>
 
-import pandas as pd # taulukoiden käsittelyyn
-import matplotlib.pyplot as plt # kuvaajien piirtoon
-import numpy as np # luonnonvakioihin
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> <span class="c1"># taulukoiden käsittelyyn</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> <span class="c1"># kuvaajien piirtoon</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span> <span class="c1"># luonnonvakioihin</span>
 
-plt.rcParams[&#39;font.size&#39;] = 25 # yleiseen fonttikoon säätöön
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;font.size&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">25</span> <span class="c1"># yleiseen fonttikoon säätöön</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Vuoden 2014 kokonaisaerosolimäärät ja lämpötilamittaukset Hyytiälän SMEAR II -asemalla.
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Vuoden 2014 kokonaisaerosolimäärät ja lämpötilamittaukset Hyytiälän SMEAR II -asemalla.</span>
 
-A_tot = pd.read_csv(&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/HyyATot.csv&quot;,
-                    parse_dates = {&quot;Aika&quot;:[&quot;Year&quot;, &quot;Month&quot;, &quot;Day&quot;, &quot;Hour&quot;]}, keep_date_col = True)
-T1 = pd.read_csv(&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/HyyT1.csv&quot;,
-                 parse_dates = {&quot;Aika&quot;:[&quot;Year&quot;, &quot;Month&quot;, &quot;Day&quot;, &quot;Hour&quot;]}, keep_date_col = True)
+<span class="n">A_tot</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/HyyATot.csv&quot;</span><span class="p">,</span>
+                    <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Aika&quot;</span><span class="p">:[</span><span class="s2">&quot;Year&quot;</span><span class="p">,</span> <span class="s2">&quot;Month&quot;</span><span class="p">,</span> <span class="s2">&quot;Day&quot;</span><span class="p">,</span> <span class="s2">&quot;Hour&quot;</span><span class="p">]},</span> <span class="n">keep_date_col</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">T1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/HyyT1.csv&quot;</span><span class="p">,</span>
+                 <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Aika&quot;</span><span class="p">:[</span><span class="s2">&quot;Year&quot;</span><span class="p">,</span> <span class="s2">&quot;Month&quot;</span><span class="p">,</span> <span class="s2">&quot;Day&quot;</span><span class="p">,</span> <span class="s2">&quot;Hour&quot;</span><span class="p">]},</span> <span class="n">keep_date_col</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Piirretään kuvaaja.
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Piirretään kuvaaja.</span>
 
-fig = plt.figure(figsize = (30, 10))
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
 
-plt.plot(A_tot[&quot;Aika&quot;], A_tot[&quot;HYY_DMPS.tconc&quot;], &quot;orange&quot;, label = &quot;Aerosolit&quot;)
-plt.ylabel(&quot;1/${m^3}$\n&quot;, fontsize = 25)
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">A_tot</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">A_tot</span><span class="p">[</span><span class="s2">&quot;HYY_DMPS.tconc&quot;</span><span class="p">],</span> <span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Aerosolit&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;1/${m^3}$</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">25</span><span class="p">)</span>
 
-plt.twinx()
+<span class="n">plt</span><span class="o">.</span><span class="n">twinx</span><span class="p">()</span>
 
-plt.plot(T1[&quot;Aika&quot;], T1[&quot;HYY_META.T672&quot;], &quot;c&quot;, label = &quot;Lämpötila&quot;)
-plt.ylabel(&quot;Lämpötila (°C)&quot;)
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">T1</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">T1</span><span class="p">[</span><span class="s2">&quot;HYY_META.T672&quot;</span><span class="p">],</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Lämpötila&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Lämpötila (°C)&quot;</span><span class="p">)</span>
 
-plt.title(&quot;Aerosolikonsentraatio Hyytiälän asemalla \n&quot;, fontsize = 30)
-fig.supxlabel(&quot;\nAika&quot;, fontsize = 25)
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Aerosolikonsentraatio Hyytiälän asemalla </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">30</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">supxlabel</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Aika&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">25</span><span class="p">)</span>
 
-fig.legend(loc = &quot;upper right&quot;, fontsize = 25)
-plt.show()
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<img alt="../_images/Pienhiukkaset_8_0.png" src="../_images/Pienhiukkaset_8_0.png" />
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Äskeinen kuvaaja on tehty tunnin resoluutiolla. Entä jos katsotaan laajaa kuvaa kuukausikeskiarvoilla?
-
-KKA = A_tot.groupby([&quot;Month&quot;]).mean()
-KKT = T1.groupby([&quot;Month&quot;]).mean()
+<span class="n">fig</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="s2">&quot;upper right&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">25</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_1868/1957816202.py:3: FutureWarning: The default value of numeric_only in DataFrameGroupBy.mean is deprecated. In a future version, numeric_only will default to False. Either specify numeric_only or select only columns which should be valid for the function.
+<img alt="../_images/dcf73a72299223ffd68d0a869e4f071e4326807ed9eca02a94a0660103c6fb30.png" src="../_images/dcf73a72299223ffd68d0a869e4f071e4326807ed9eca02a94a0660103c6fb30.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Äskeinen kuvaaja on tehty tunnin resoluutiolla. Entä jos katsotaan laajaa kuvaa kuukausikeskiarvoilla?</span>
+
+<span class="n">KKA</span> <span class="o">=</span> <span class="n">A_tot</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;Month&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">KKT</span> <span class="o">=</span> <span class="n">T1</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;Month&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_1816/1957816202.py:3: FutureWarning: The default value of numeric_only in DataFrameGroupBy.mean is deprecated. In a future version, numeric_only will default to False. Either specify numeric_only or select only columns which should be valid for the function.
   KKA = A_tot.groupby([&quot;Month&quot;]).mean()
-/tmp/ipykernel_1868/1957816202.py:4: FutureWarning: The default value of numeric_only in DataFrameGroupBy.mean is deprecated. In a future version, numeric_only will default to False. Either specify numeric_only or select only columns which should be valid for the function.
+/tmp/ipykernel_1816/1957816202.py:4: FutureWarning: The default value of numeric_only in DataFrameGroupBy.mean is deprecated. In a future version, numeric_only will default to False. Either specify numeric_only or select only columns which should be valid for the function.
   KKT = T1.groupby([&quot;Month&quot;]).mean()
 </pre></div>
 </div>
@@ -666,42 +543,42 @@ KKT = T1.groupby([&quot;Month&quot;]).mean()
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Piirretään kuvaaja.
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Piirretään kuvaaja.</span>
 
-fig = plt.figure(figsize = (30, 10))
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
 
-plt.plot(KKA[&quot;HYY_DMPS.tconc&quot;], &quot;orange&quot;, label = &quot;Aerosolit&quot;)
-plt.ylabel(&quot;1/${m^3}$\n&quot;, fontsize = 25)
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">KKA</span><span class="p">[</span><span class="s2">&quot;HYY_DMPS.tconc&quot;</span><span class="p">],</span> <span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Aerosolit&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;1/${m^3}$</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">25</span><span class="p">)</span>
 
-plt.twinx()
+<span class="n">plt</span><span class="o">.</span><span class="n">twinx</span><span class="p">()</span>
 
-plt.plot(KKT[&quot;HYY_META.T672&quot;], &quot;c&quot;, label = &quot;Lämpötila&quot;)
-plt.ylabel(&quot;Lämpötila (°C)&quot;)
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">KKT</span><span class="p">[</span><span class="s2">&quot;HYY_META.T672&quot;</span><span class="p">],</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Lämpötila&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Lämpötila (°C)&quot;</span><span class="p">)</span>
 
-plt.title(&quot;Aerosolikonsentraatio Hyytiälän asemalla (kuukausikeskiarvo) \n&quot;, fontsize = 30)
-fig.supxlabel(&quot;\nAika&quot;, fontsize = 25)
-fig.legend(loc = &quot;upper right&quot;, fontsize = 25)
-plt.show()
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Aerosolikonsentraatio Hyytiälän asemalla (kuukausikeskiarvo) </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">30</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">supxlabel</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Aika&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">25</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="s2">&quot;upper right&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">25</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/Pienhiukkaset_10_0.png" src="../_images/Pienhiukkaset_10_0.png" />
+<img alt="../_images/b5940153eb2b0109c7bbbac8ac922402e447b2a96810420fd53056816ebd9a00.png" src="../_images/b5940153eb2b0109c7bbbac8ac922402e447b2a96810420fd53056816ebd9a00.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Tai vaihtelua kellonajan mukaan? 
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tai vaihtelua kellonajan mukaan? </span>
 
-KKAt = A_tot.groupby([&quot;Hour&quot;]).mean()
-KKTt = T1.groupby([&quot;Hour&quot;]).mean()
+<span class="n">KKAt</span> <span class="o">=</span> <span class="n">A_tot</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;Hour&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">KKTt</span> <span class="o">=</span> <span class="n">T1</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;Hour&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_1868/416854541.py:3: FutureWarning: The default value of numeric_only in DataFrameGroupBy.mean is deprecated. In a future version, numeric_only will default to False. Either specify numeric_only or select only columns which should be valid for the function.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_1816/416854541.py:3: FutureWarning: The default value of numeric_only in DataFrameGroupBy.mean is deprecated. In a future version, numeric_only will default to False. Either specify numeric_only or select only columns which should be valid for the function.
   KKAt = A_tot.groupby([&quot;Hour&quot;]).mean()
-/tmp/ipykernel_1868/416854541.py:4: FutureWarning: The default value of numeric_only in DataFrameGroupBy.mean is deprecated. In a future version, numeric_only will default to False. Either specify numeric_only or select only columns which should be valid for the function.
+/tmp/ipykernel_1816/416854541.py:4: FutureWarning: The default value of numeric_only in DataFrameGroupBy.mean is deprecated. In a future version, numeric_only will default to False. Either specify numeric_only or select only columns which should be valid for the function.
   KKTt = T1.groupby([&quot;Hour&quot;]).mean()
 </pre></div>
 </div>
@@ -709,33 +586,32 @@ KKTt = T1.groupby([&quot;Hour&quot;]).mean()
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Piirretään kuvaaja.
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Piirretään kuvaaja.</span>
 
-fig = plt.figure(figsize = (30, 10))
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
 
-plt.plot(KKAt[&quot;HYY_DMPS.tconc&quot;], &quot;orange&quot;, label = &quot;Aerosolit&quot;)
-plt.ylabel(&quot;1/${m^3}$\n&quot;, fontsize = 25)
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">KKAt</span><span class="p">[</span><span class="s2">&quot;HYY_DMPS.tconc&quot;</span><span class="p">],</span> <span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Aerosolit&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;1/${m^3}$</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">25</span><span class="p">)</span>
 
-plt.twinx()
+<span class="n">plt</span><span class="o">.</span><span class="n">twinx</span><span class="p">()</span>
 
-plt.plot(KKTt[&quot;HYY_META.T672&quot;], &quot;c&quot;, label = &quot;Lämpötila&quot;)
-plt.ylabel(&quot;Lämpötila (°C)&quot;)
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">KKTt</span><span class="p">[</span><span class="s2">&quot;HYY_META.T672&quot;</span><span class="p">],</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Lämpötila&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Lämpötila (°C)&quot;</span><span class="p">)</span>
 
-plt.title(&quot;Aerosolikonsentraatio Hyytiälän asemalla (vuorokaudenajan mukaan) \n&quot;, fontsize = 30)
-fig.supxlabel(&quot;\nAika&quot;, fontsize = 25)
-fig.legend(loc = &quot;upper right&quot;, fontsize = 25)
-plt.show()
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Aerosolikonsentraatio Hyytiälän asemalla (vuorokaudenajan mukaan) </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">30</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">supxlabel</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Aika&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">25</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="s2">&quot;upper right&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">25</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/Pienhiukkaset_12_0.png" src="../_images/Pienhiukkaset_12_0.png" />
+<img alt="../_images/729e0a335321979b57d08d128539df8e6760b21593aa5aec6686ecadb570848a.png" src="../_images/729e0a335321979b57d08d128539df8e6760b21593aa5aec6686ecadb570848a.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Äskeinen tietysti sekoittaa vuodenaikojen keskiarvot. Lisätehtävänä voisit tehdä tähän tarkemmankin jaon.
-
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Äskeinen tietysti sekoittaa vuodenaikojen keskiarvot. Lisätehtävänä voisit tehdä tähän tarkemmankin jaon.</span>
 </pre></div>
 </div>
 </div>
@@ -743,43 +619,43 @@ plt.show()
 </section>
 </section>
 <section id="paikallistarkastelussa-hyvinkaa-kulkeeko-henki">
-<h2>2. Paikallistarkastelussa Hyvinkää - kulkeeko henki?<a class="headerlink" href="#paikallistarkastelussa-hyvinkaa-kulkeeko-henki" title="Permalink to this headline">#</a></h2>
+<h2>2. Paikallistarkastelussa Hyvinkää - kulkeeko henki?<a class="headerlink" href="#paikallistarkastelussa-hyvinkaa-kulkeeko-henki" title="Permalink to this heading">#</a></h2>
 <p>Hyvinkään kaupunki on ollut vuodesta 2008 asti osana kansallista ilmanlaatumittausten sarjaa, joihin pääsee käsiksi Ilmatieteen laitoksen sivuilta: https://www.ilmatieteenlaitos.fi/havaintojen-lataus ja joista saa nopean visualisaation https://www.ilmatieteenlaitos.fi/ilmanlaatu avulla.</p>
 <p>Kaikilla asemilla ei mitata kaikkia suureita, joten ladataan aineistot ja katsotaan mitä siellä on tehty.</p>
 <section id="id1">
-<h3>2.1 Aineisto<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
+<h3>2.1 Aineisto<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Haetaan aineistot Ilmatieteen laitoksen sivuilta.
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Haetaan aineistot Ilmatieteen laitoksen sivuilta.</span>
 
-Hyv8 = pd.read_csv(&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Hyv812.csv&quot;,
-                 parse_dates = {&quot;Aika&quot;:[&quot;Vuosi&quot;, &quot;Kk&quot;, &quot;Pv&quot;, &quot;Klo&quot;]}, keep_date_col = True)
-Hyv13 = pd.read_csv(&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Hyv1317.csv&quot;,
-                 parse_dates = {&quot;Aika&quot;:[&quot;Vuosi&quot;, &quot;Kk&quot;, &quot;Pv&quot;, &quot;Klo&quot;]}, keep_date_col = True)
-Hyv18 = pd.read_csv(&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Hyv1822.csv&quot;,
-                 parse_dates = {&quot;Aika&quot;:[&quot;Vuosi&quot;, &quot;Kk&quot;, &quot;Pv&quot;, &quot;Klo&quot;]}, keep_date_col = True)
+<span class="n">Hyv8</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Hyv812.csv&quot;</span><span class="p">,</span>
+                 <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Aika&quot;</span><span class="p">:[</span><span class="s2">&quot;Vuosi&quot;</span><span class="p">,</span> <span class="s2">&quot;Kk&quot;</span><span class="p">,</span> <span class="s2">&quot;Pv&quot;</span><span class="p">,</span> <span class="s2">&quot;Klo&quot;</span><span class="p">]},</span> <span class="n">keep_date_col</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">Hyv13</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Hyv1317.csv&quot;</span><span class="p">,</span>
+                 <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Aika&quot;</span><span class="p">:[</span><span class="s2">&quot;Vuosi&quot;</span><span class="p">,</span> <span class="s2">&quot;Kk&quot;</span><span class="p">,</span> <span class="s2">&quot;Pv&quot;</span><span class="p">,</span> <span class="s2">&quot;Klo&quot;</span><span class="p">]},</span> <span class="n">keep_date_col</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">Hyv18</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Hyv1822.csv&quot;</span><span class="p">,</span>
+                 <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Aika&quot;</span><span class="p">:[</span><span class="s2">&quot;Vuosi&quot;</span><span class="p">,</span> <span class="s2">&quot;Kk&quot;</span><span class="p">,</span> <span class="s2">&quot;Pv&quot;</span><span class="p">,</span> <span class="s2">&quot;Klo&quot;</span><span class="p">]},</span> <span class="n">keep_date_col</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 
-# Yhdistetään tiedot yhteen muuttujaan.
+<span class="c1"># Yhdistetään tiedot yhteen muuttujaan.</span>
 
-Hyv = pd.concat([Hyv8, Hyv13, Hyv18])
+<span class="n">Hyv</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">Hyv8</span><span class="p">,</span> <span class="n">Hyv13</span><span class="p">,</span> <span class="n">Hyv18</span><span class="p">])</span>
 
-# Taulukossa on vääriä tietotyyppejä (tekstiä numeroiden sijaan). Korjataan tilanne.
+<span class="c1"># Taulukossa on vääriä tietotyyppejä (tekstiä numeroiden sijaan). Korjataan tilanne.</span>
 
-Hyv[&quot;Vuosi&quot;] = pd.to_numeric(Hyv[&quot;Vuosi&quot;], errors = &quot;coerce&quot;)
-Hyv[&quot;Kk&quot;] = pd.to_numeric(Hyv[&quot;Kk&quot;], errors = &quot;coerce&quot;)
-Hyv[&quot;Pv&quot;] = pd.to_numeric(Hyv[&quot;Pv&quot;], errors = &quot;coerce&quot;)
-Hyv[&quot;Hengitettävät hiukkaset (ug/m3)&quot;] = pd.to_numeric(Hyv[&quot;Hengitettävät hiukkaset (ug/m3)&quot;], errors = &quot;coerce&quot;)
-Hyv[&quot;Typpidioksidi (ug/m3)&quot;] = pd.to_numeric(Hyv[&quot;Typpidioksidi (ug/m3)&quot;], errors = &quot;coerce&quot;)
-Hyv[&quot;Typpimonoksidi (ug/m3)&quot;] = pd.to_numeric(Hyv[&quot;Typpimonoksidi (ug/m3)&quot;], errors = &quot;coerce&quot;)
+<span class="n">Hyv</span><span class="p">[</span><span class="s2">&quot;Vuosi&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">Hyv</span><span class="p">[</span><span class="s2">&quot;Vuosi&quot;</span><span class="p">],</span> <span class="n">errors</span> <span class="o">=</span> <span class="s2">&quot;coerce&quot;</span><span class="p">)</span>
+<span class="n">Hyv</span><span class="p">[</span><span class="s2">&quot;Kk&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">Hyv</span><span class="p">[</span><span class="s2">&quot;Kk&quot;</span><span class="p">],</span> <span class="n">errors</span> <span class="o">=</span> <span class="s2">&quot;coerce&quot;</span><span class="p">)</span>
+<span class="n">Hyv</span><span class="p">[</span><span class="s2">&quot;Pv&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">Hyv</span><span class="p">[</span><span class="s2">&quot;Pv&quot;</span><span class="p">],</span> <span class="n">errors</span> <span class="o">=</span> <span class="s2">&quot;coerce&quot;</span><span class="p">)</span>
+<span class="n">Hyv</span><span class="p">[</span><span class="s2">&quot;Hengitettävät hiukkaset (ug/m3)&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">Hyv</span><span class="p">[</span><span class="s2">&quot;Hengitettävät hiukkaset (ug/m3)&quot;</span><span class="p">],</span> <span class="n">errors</span> <span class="o">=</span> <span class="s2">&quot;coerce&quot;</span><span class="p">)</span>
+<span class="n">Hyv</span><span class="p">[</span><span class="s2">&quot;Typpidioksidi (ug/m3)&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">Hyv</span><span class="p">[</span><span class="s2">&quot;Typpidioksidi (ug/m3)&quot;</span><span class="p">],</span> <span class="n">errors</span> <span class="o">=</span> <span class="s2">&quot;coerce&quot;</span><span class="p">)</span>
+<span class="n">Hyv</span><span class="p">[</span><span class="s2">&quot;Typpimonoksidi (ug/m3)&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">Hyv</span><span class="p">[</span><span class="s2">&quot;Typpimonoksidi (ug/m3)&quot;</span><span class="p">],</span> <span class="n">errors</span> <span class="o">=</span> <span class="s2">&quot;coerce&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Katsotaan miltä aineisto näyttää.
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Katsotaan miltä aineisto näyttää.</span>
 
-Hyv
+<span class="n">Hyv</span>
 </pre></div>
 </div>
 </div>
@@ -1037,14 +913,14 @@ Hyv
 </div>
 </section>
 <section id="hiukkasen-asiaa">
-<h3>2.2 Hiukkasen asiaa<a class="headerlink" href="#hiukkasen-asiaa" title="Permalink to this headline">#</a></h3>
-<p>Asemalla mitataan siis typpiyhdisteitä (NO<span class="math notranslate nohighlight">\(_x\)</span>, tässä mono- ja dioksidi) sekä hengitettäviä hiukkasia (PM<span class="math notranslate nohighlight">\(_{10}\)</span>, particulate matter &lt; 10 <span class="math notranslate nohighlight">\(\mu m\)</span>). Näiden mukaan laskettu ilmanlaadun indeksi on dynaamisesti määritettävä suure, jota ohjaa Suomen oloihin HSY:n ja THL:n määrittämä <a class="reference external" href="https://www.ilmatieteenlaitos.fi/ilmanlaatuindeksi">taulukko</a>:</p>
-<table class="colwidths-auto table">
+<h3>2.2 Hiukkasen asiaa<a class="headerlink" href="#hiukkasen-asiaa" title="Permalink to this heading">#</a></h3>
+<p>Asemalla mitataan siis typpiyhdisteitä (NO$<em>x$, tässä mono- ja dioksidi) sekä hengitettäviä hiukkasia (PM$</em>{10}$, particulate matter &lt; 10 $\mu m$). Näiden mukaan laskettu ilmanlaadun indeksi on dynaamisesti määritettävä suure, jota ohjaa Suomen oloihin HSY:n ja THL:n määrittämä <a class="reference external" href="https://www.ilmatieteenlaitos.fi/ilmanlaatuindeksi">taulukko</a>:</p>
+<table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Indeksiluokitus</p></th>
-<th class="head"><p>SO<span class="math notranslate nohighlight">\(_2\)</span> (<span class="math notranslate nohighlight">\({\mu g} / {m^3}\)</span>)</p></th>
-<th class="head"><p>NO<span class="math notranslate nohighlight">\(_2\)</span> (<span class="math notranslate nohighlight">\({\mu g} / {m^3}\)</span>)</p></th>
-<th class="head"><p>PM<span class="math notranslate nohighlight">\(_{10}\)</span> (<span class="math notranslate nohighlight">\({\mu g} / {m^3}\)</span>)</p></th>
+<th class="head"><p>SO$_2$ (${\mu g} / {m^3}$)</p></th>
+<th class="head"><p>NO$_2$ (${\mu g} / {m^3}$)</p></th>
+<th class="head"><p>PM$_{10}$ (${\mu g} / {m^3}$)</p></th>
 </tr>
 </thead>
 <tbody>
@@ -1077,133 +953,133 @@ Hyv
 </table>
 <p><strong>Hengitettävät hiukkaset</strong></p>
 <p><img alt="PM10" src="https://www.ilmatieteenlaitos.fi/hli0qi7fbbos/3azcRrSzYFLj3nZfy295GK/063a60487fd683de0fb9947a71bbb75d/PM10_1994-2020.jpg?fm=webp" /></p>
-<p>Pääasiassa pölyä ja suoloja, mutta mukana kulkeutuu myös haitallisia raskasmetalleja ja hiilivetyjä. Sisältää myös varsinaisten pienhiukkasten PM<span class="math notranslate nohighlight">\(_{2-5}\)</span> joukon. Mikä on suurin lähde etenkin kaupungeissa?</p>
+<p>Pääasiassa pölyä ja suoloja, mutta mukana kulkeutuu myös haitallisia raskasmetalleja ja hiilivetyjä. Sisältää myös varsinaisten pienhiukkasten PM$_{2-5}$ joukon. Mikä on suurin lähde etenkin kaupungeissa?</p>
 <p><img alt="PM2-5" src="https://www.ilmatieteenlaitos.fi/hli0qi7fbbos/PCYhXRMreVEPQUktDPxXT/b28960b16838418ffbbeff290f6c3dd0/PM2.5_1998-2020.jpg?fm=webp" /></p>
-<p><strong>Typpidioksidi NO<span class="math notranslate nohighlight">\(_2\)</span></strong></p>
+<p><strong>Typpidioksidi NO$_2$</strong></p>
 <p><img alt="NOx" src="https://www.ilmatieteenlaitos.fi/hli0qi7fbbos/4uobj2kV5I6L8Fl40yS6VF/faa518e98f691744715d7f46d30626db/NO2_1994-2020.jpg?fm=webp" /></p>
 <p>Hengitystä ärsyttävä aine, joka rehevöittää ja happamoittaa ekosysteemejä. Osallistuu matalalla ilmakehässä otsonin tuotantoon. Mistä typpiyhdisteitä syntyy?</p>
 </section>
 </section>
 <section id="tutkitaas-itse">
-<h2>2.3 Tutkitaas itse<a class="headerlink" href="#tutkitaas-itse" title="Permalink to this headline">#</a></h2>
+<h2>2.3 Tutkitaas itse<a class="headerlink" href="#tutkitaas-itse" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Piirretään koko aineisto kuvaajaan.
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Piirretään koko aineisto kuvaajaan.</span>
 
-plt.figure(figsize = (30, 10))
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
 
-plt.plot(Hyv[&quot;Aika&quot;], Hyv[&quot;Hengitettävät hiukkaset (ug/m3)&quot;], color = &quot;c&quot;, label = &quot;Hengitettävät hiukkaset&quot;)
-plt.plot(Hyv[&quot;Aika&quot;], Hyv[&quot;Typpidioksidi (ug/m3)&quot;], color = &quot;b&quot;, label = &quot;Typpidioksidi&quot;)
-plt.plot(Hyv[&quot;Aika&quot;], Hyv[&quot;Typpimonoksidi (ug/m3)&quot;], color = &quot;g&quot;, label = &quot;Typpimonoksidi&quot;)
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Hyv</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">Hyv</span><span class="p">[</span><span class="s2">&quot;Hengitettävät hiukkaset (ug/m3)&quot;</span><span class="p">],</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Hengitettävät hiukkaset&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Hyv</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">Hyv</span><span class="p">[</span><span class="s2">&quot;Typpidioksidi (ug/m3)&quot;</span><span class="p">],</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Typpidioksidi&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Hyv</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">Hyv</span><span class="p">[</span><span class="s2">&quot;Typpimonoksidi (ug/m3)&quot;</span><span class="p">],</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;g&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Typpimonoksidi&quot;</span><span class="p">)</span>
 
-plt.title(&quot;Ilmanlaatu Hyvinkään kaupungissa&quot;, fontsize = 30, y = 1.1)
-plt.ylabel(&quot;Konsentraatio ($\mu$g / m$^3$)&quot;, fontsize = 25)
-plt.xlabel(&quot;Aika&quot;, fontsize = 25)
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Ilmanlaatu Hyvinkään kaupungissa&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">30</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mf">1.1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Konsentraatio ($\mu$g / m$^3$)&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">25</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Aika&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">25</span><span class="p">)</span>
 
-plt.legend(loc = &quot;upper right&quot;)
-plt.show()
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="s2">&quot;upper right&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/Pienhiukkaset_22_0.png" src="../_images/Pienhiukkaset_22_0.png" />
+<img alt="../_images/027dfef9f6bb486053c2f0c7d08aff60ec62c350f83fd344ec66040ee933dc2e.png" src="../_images/027dfef9f6bb486053c2f0c7d08aff60ec62c350f83fd344ec66040ee933dc2e.png" />
 </div>
 </div>
 <p>Tulipas huonosti luettava kuvaaja, mutta ainakin näemme miltä ajalta dataa on kerätty. Paloitellaan oikeasti mitatut vuodet (2008, 2013, 2014 ja 2018) vierekkäisiksi kuvaajiksi.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>H08 = Hyv.query(&quot;Vuosi == 2008&quot;)
-H13 = Hyv.query(&quot;Vuosi == 2013&quot;)
-H14 = Hyv.query(&quot;Vuosi == 2014&quot;)
-H18 = Hyv.query(&quot;Vuosi == 2018&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">H08</span> <span class="o">=</span> <span class="n">Hyv</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;Vuosi == 2008&quot;</span><span class="p">)</span>
+<span class="n">H13</span> <span class="o">=</span> <span class="n">Hyv</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;Vuosi == 2013&quot;</span><span class="p">)</span>
+<span class="n">H14</span> <span class="o">=</span> <span class="n">Hyv</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;Vuosi == 2014&quot;</span><span class="p">)</span>
+<span class="n">H18</span> <span class="o">=</span> <span class="n">Hyv</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;Vuosi == 2018&quot;</span><span class="p">)</span>
 
-# query on kiva työkalu, jolle voisi antaa monimutkaisempiakin ohjeita, 
-# esim. Hyv.query(&quot;(Vuosi == 2008) and (Kk &gt; 2 and Kk &lt; 6)&quot;)
+<span class="c1"># query on kiva työkalu, jolle voisi antaa monimutkaisempiakin ohjeita, </span>
+<span class="c1"># esim. Hyv.query(&quot;(Vuosi == 2008) and (Kk &gt; 2 and Kk &lt; 6)&quot;)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>fig, ax = plt.subplots(1, 4, sharex=&#39;col&#39;, sharey=&#39;row&#39;, figsize = (30, 10))
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="n">sharex</span><span class="o">=</span><span class="s1">&#39;col&#39;</span><span class="p">,</span> <span class="n">sharey</span><span class="o">=</span><span class="s1">&#39;row&#39;</span><span class="p">,</span> <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
 
-fig.suptitle(&quot;Ilmanlaatu Hyvinkään kaupungissa vuosittain&quot;, fontsize = 30, y = 1)
-fig.supxlabel(&quot;Aika&quot;, fontsize = 25, y = -0.05)
-fig.supylabel(&quot;Konsentraatio ($\mu$g / m$^3$)&quot;, fontsize = 25, x = 0.08)
+<span class="n">fig</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s2">&quot;Ilmanlaatu Hyvinkään kaupungissa vuosittain&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">30</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">supxlabel</span><span class="p">(</span><span class="s2">&quot;Aika&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">25</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="o">-</span><span class="mf">0.05</span><span class="p">)</span>
+<span class="n">fig</span><span class="o">.</span><span class="n">supylabel</span><span class="p">(</span><span class="s2">&quot;Konsentraatio ($\mu$g / m$^3$)&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">25</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="mf">0.08</span><span class="p">)</span>
 
-H = [H08, H13, H14, H18]
+<span class="n">H</span> <span class="o">=</span> <span class="p">[</span><span class="n">H08</span><span class="p">,</span> <span class="n">H13</span><span class="p">,</span> <span class="n">H14</span><span class="p">,</span> <span class="n">H18</span><span class="p">]</span>
 
-# Tehdään kerralla useampi kuvaaja silmukan avulla.
+<span class="c1"># Tehdään kerralla useampi kuvaaja silmukan avulla.</span>
 
-for i in range(4):
-    plt.subplot(1,4,i+1)
-    plt.plot(H[i][&quot;Aika&quot;], H[i][&quot;Hengitettävät hiukkaset (ug/m3)&quot;], color = &quot;c&quot;, label = &quot;Hengitettävät hiukkaset&quot;)
-    plt.plot(H[i][&quot;Aika&quot;], H[i][&quot;Typpidioksidi (ug/m3)&quot;], color = &quot;b&quot;,label = &quot;Typpidioksidi&quot;)
-    plt.plot(H[i][&quot;Aika&quot;], H[i][&quot;Typpimonoksidi (ug/m3)&quot;], color = &quot;g&quot;, label = &quot;Typpimonoksidi&quot;)
-    plt.xticks(rotation = 30)
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">H</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">H</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;Hengitettävät hiukkaset (ug/m3)&quot;</span><span class="p">],</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Hengitettävät hiukkaset&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">H</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">H</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;Typpidioksidi (ug/m3)&quot;</span><span class="p">],</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span><span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Typpidioksidi&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">H</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">H</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="s2">&quot;Typpimonoksidi (ug/m3)&quot;</span><span class="p">],</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;g&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Typpimonoksidi&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span> <span class="o">=</span> <span class="mi">30</span><span class="p">)</span>
 
-plt.legend(loc = &quot;upper right&quot;, fontsize = 20)
-plt.show()
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="s2">&quot;upper right&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/Pienhiukkaset_25_0.png" src="../_images/Pienhiukkaset_25_0.png" />
+<img alt="../_images/4060a280a824b5095f9e1e1a3d01264463416b1f4c44bcf7c3772b00460a3c14.png" src="../_images/4060a280a824b5095f9e1e1a3d01264463416b1f4c44bcf7c3772b00460a3c14.png" />
 </div>
 </div>
 <p>Miten Hyvinkään mittaukset vertautuvat annettuihin rajoihin? Milloin ja miksi rajat paukkuvat eniten?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Valitaan tarkasteluun pienempi osa-alue, vaikkapa maalis-toukokuu joltakin vuodelta.
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Valitaan tarkasteluun pienempi osa-alue, vaikkapa maalis-toukokuu joltakin vuodelta.</span>
 
-# Entä jos kokeilisit viivapiirron sijasta yksittäisten mittaustulosten merkkaamista?
-# Lisää väriparametriin vaikkapa *, v, + tai muu sopiva merkki (täysi lista googlaamalla python plot marker).
+<span class="c1"># Entä jos kokeilisit viivapiirron sijasta yksittäisten mittaustulosten merkkaamista?</span>
+<span class="c1"># Lisää väriparametriin vaikkapa *, v, + tai muu sopiva merkki (täysi lista googlaamalla python plot marker).</span>
 
-Hm = Hyv.query(&quot;(Vuosi == 2018) and (Kk &gt; 2 and Kk &lt; 6)&quot;)
+<span class="n">Hm</span> <span class="o">=</span> <span class="n">Hyv</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;(Vuosi == 2018) and (Kk &gt; 2 and Kk &lt; 6)&quot;</span><span class="p">)</span>
 
-plt.figure(figsize = (30,10))
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">30</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
 
-plt.title(&quot;Ilmanlaatu Hyvinkään kaupungissa&quot;, fontsize = 30, y = 1.1)
-plt.xlabel(&quot;Aika&quot;, fontsize = 25)
-plt.ylabel(&quot;Konsentraatio ($\mu$g / m$^3$)&quot;, fontsize = 25)
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Ilmanlaatu Hyvinkään kaupungissa&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">30</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mf">1.1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Aika&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">25</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Konsentraatio ($\mu$g / m$^3$)&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">25</span><span class="p">)</span>
 
-plt.plot(Hm[&quot;Aika&quot;], Hm[&quot;Hengitettävät hiukkaset (ug/m3)&quot;], &quot;c&quot;, label = &quot;Hengitettävät hiukkaset&quot;)
-plt.plot(Hm[&quot;Aika&quot;], Hm[&quot;Typpidioksidi (ug/m3)&quot;], &quot;b&quot;,label = &quot;Typpidioksidi&quot;)
-plt.plot(Hm[&quot;Aika&quot;], Hm[&quot;Typpimonoksidi (ug/m3)&quot;], &quot;g&quot;, label = &quot;Typpimonoksidi&quot;)
-plt.xticks(rotation = 30)
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Hm</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">Hm</span><span class="p">[</span><span class="s2">&quot;Hengitettävät hiukkaset (ug/m3)&quot;</span><span class="p">],</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Hengitettävät hiukkaset&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Hm</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">Hm</span><span class="p">[</span><span class="s2">&quot;Typpidioksidi (ug/m3)&quot;</span><span class="p">],</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span><span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Typpidioksidi&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Hm</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">Hm</span><span class="p">[</span><span class="s2">&quot;Typpimonoksidi (ug/m3)&quot;</span><span class="p">],</span> <span class="s2">&quot;g&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Typpimonoksidi&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span> <span class="o">=</span> <span class="mi">30</span><span class="p">)</span>
 
-plt.legend()
-plt.show()
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/Pienhiukkaset_27_0.png" src="../_images/Pienhiukkaset_27_0.png" />
+<img alt="../_images/ebce4aa99a72110e0ff25f6825627217f6ea88893d1c95493bb6a1671e2381b9.png" src="../_images/ebce4aa99a72110e0ff25f6825627217f6ea88893d1c95493bb6a1671e2381b9.png" />
 </div>
 </div>
 <p>Tarkkojen tuntimittausten ohella voisimme tietysti kaivaa aineistosta myös päiväkohtaiset keskiarvot.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Päiväkeskiarvot on helpointa toteuttaa lisäämällä aineistoon ladattaessa kelloton aikasarake.
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Päiväkeskiarvot on helpointa toteuttaa lisäämällä aineistoon ladattaessa kelloton aikasarake.</span>
 
-Vrk8 = pd.read_csv(&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Hyv812.csv&quot;,
-                 parse_dates = {&quot;Vrk&quot;:[&quot;Vuosi&quot;, &quot;Kk&quot;, &quot;Pv&quot;]}, keep_date_col = True)
+<span class="n">Vrk8</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Hyv812.csv&quot;</span><span class="p">,</span>
+                 <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Vrk&quot;</span><span class="p">:[</span><span class="s2">&quot;Vuosi&quot;</span><span class="p">,</span> <span class="s2">&quot;Kk&quot;</span><span class="p">,</span> <span class="s2">&quot;Pv&quot;</span><span class="p">]},</span> <span class="n">keep_date_col</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 
-Vrk8[&quot;Vuosi&quot;] = pd.to_numeric(Vrk8[&quot;Vuosi&quot;], errors = &quot;coerce&quot;)
-Vrk8[&quot;Kk&quot;] = pd.to_numeric(Vrk8[&quot;Kk&quot;], errors = &quot;coerce&quot;)
-Vrk8[&quot;Pv&quot;] = pd.to_numeric(Vrk8[&quot;Pv&quot;], errors = &quot;coerce&quot;)
-Vrk8[&quot;Hengitettävät hiukkaset (ug/m3)&quot;] = pd.to_numeric(Vrk8[&quot;Hengitettävät hiukkaset (ug/m3)&quot;], errors = &quot;coerce&quot;)
-Vrk8[&quot;Typpidioksidi (ug/m3)&quot;] = pd.to_numeric(Vrk8[&quot;Typpidioksidi (ug/m3)&quot;], errors = &quot;coerce&quot;)
-Vrk8[&quot;Typpimonoksidi (ug/m3)&quot;] = pd.to_numeric(Vrk8[&quot;Typpimonoksidi (ug/m3)&quot;], errors = &quot;coerce&quot;)
+<span class="n">Vrk8</span><span class="p">[</span><span class="s2">&quot;Vuosi&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">Vrk8</span><span class="p">[</span><span class="s2">&quot;Vuosi&quot;</span><span class="p">],</span> <span class="n">errors</span> <span class="o">=</span> <span class="s2">&quot;coerce&quot;</span><span class="p">)</span>
+<span class="n">Vrk8</span><span class="p">[</span><span class="s2">&quot;Kk&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">Vrk8</span><span class="p">[</span><span class="s2">&quot;Kk&quot;</span><span class="p">],</span> <span class="n">errors</span> <span class="o">=</span> <span class="s2">&quot;coerce&quot;</span><span class="p">)</span>
+<span class="n">Vrk8</span><span class="p">[</span><span class="s2">&quot;Pv&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">Vrk8</span><span class="p">[</span><span class="s2">&quot;Pv&quot;</span><span class="p">],</span> <span class="n">errors</span> <span class="o">=</span> <span class="s2">&quot;coerce&quot;</span><span class="p">)</span>
+<span class="n">Vrk8</span><span class="p">[</span><span class="s2">&quot;Hengitettävät hiukkaset (ug/m3)&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">Vrk8</span><span class="p">[</span><span class="s2">&quot;Hengitettävät hiukkaset (ug/m3)&quot;</span><span class="p">],</span> <span class="n">errors</span> <span class="o">=</span> <span class="s2">&quot;coerce&quot;</span><span class="p">)</span>
+<span class="n">Vrk8</span><span class="p">[</span><span class="s2">&quot;Typpidioksidi (ug/m3)&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">Vrk8</span><span class="p">[</span><span class="s2">&quot;Typpidioksidi (ug/m3)&quot;</span><span class="p">],</span> <span class="n">errors</span> <span class="o">=</span> <span class="s2">&quot;coerce&quot;</span><span class="p">)</span>
+<span class="n">Vrk8</span><span class="p">[</span><span class="s2">&quot;Typpimonoksidi (ug/m3)&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_numeric</span><span class="p">(</span><span class="n">Vrk8</span><span class="p">[</span><span class="s2">&quot;Typpimonoksidi (ug/m3)&quot;</span><span class="p">],</span> <span class="n">errors</span> <span class="o">=</span> <span class="s2">&quot;coerce&quot;</span><span class="p">)</span>
 
-# Nyt voimme ryhmitellä groupby()-komennolla kaikki uniikit vuorokaudet ja laskea niihin liittyvät keskiarvot.
+<span class="c1"># Nyt voimme ryhmitellä groupby()-komennolla kaikki uniikit vuorokaudet ja laskea niihin liittyvät keskiarvot.</span>
 
-KV = Vrk8.groupby([&quot;Vrk&quot;]).mean()
+<span class="n">KV</span> <span class="o">=</span> <span class="n">Vrk8</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;Vrk&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_1868/2356704137.py:15: FutureWarning: The default value of numeric_only in DataFrameGroupBy.mean is deprecated. In a future version, numeric_only will default to False. Either specify numeric_only or select only columns which should be valid for the function.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_1816/2356704137.py:15: FutureWarning: The default value of numeric_only in DataFrameGroupBy.mean is deprecated. In a future version, numeric_only will default to False. Either specify numeric_only or select only columns which should be valid for the function.
   KV = Vrk8.groupby([&quot;Vrk&quot;]).mean()
 </pre></div>
 </div>
@@ -1211,9 +1087,9 @@ KV = Vrk8.groupby([&quot;Vrk&quot;]).mean()
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Tarkastellaan tulosta.
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tarkastellaan tulosta.</span>
 
-KV
+<span class="n">KV</span>
 </pre></div>
 </div>
 </div>
@@ -1360,47 +1236,47 @@ KV
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Piirretään päiväkeskiarvot kuvaajaan
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Piirretään päiväkeskiarvot kuvaajaan</span>
 
-plt.figure(figsize = (30,10))
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">30</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
 
-plt.plot(KV[&quot;Hengitettävät hiukkaset (ug/m3)&quot;], &quot;cv&quot;, label = &quot;Hengitettävät hiukkaset&quot;)
-plt.plot(KV[&quot;Typpidioksidi (ug/m3)&quot;], &quot;b*&quot;, label = &quot;Typpidioksidi&quot;)
-plt.plot(KV[&quot;Typpimonoksidi (ug/m3)&quot;],&quot;gs&quot;, label = &quot;Typpimonoksidi&quot;)
-plt.xticks(rotation = 30)
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">KV</span><span class="p">[</span><span class="s2">&quot;Hengitettävät hiukkaset (ug/m3)&quot;</span><span class="p">],</span> <span class="s2">&quot;cv&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Hengitettävät hiukkaset&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">KV</span><span class="p">[</span><span class="s2">&quot;Typpidioksidi (ug/m3)&quot;</span><span class="p">],</span> <span class="s2">&quot;b*&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Typpidioksidi&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">KV</span><span class="p">[</span><span class="s2">&quot;Typpimonoksidi (ug/m3)&quot;</span><span class="p">],</span><span class="s2">&quot;gs&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Typpimonoksidi&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span> <span class="o">=</span> <span class="mi">30</span><span class="p">)</span>
 
-# Lisätään selkeyden nimissä myös pari rajaviivaa kuvaajaan, jotta sitä on helpompaa tulkita.
+<span class="c1"># Lisätään selkeyden nimissä myös pari rajaviivaa kuvaajaan, jotta sitä on helpompaa tulkita.</span>
 
-plt.axhline(20, linestyle=&#39;--&#39;, label = &quot;Hyvä hh&quot;, c = &#39;r&#39;, alpha = 0.5)
-plt.axhline(40, linestyle=&#39;--&#39;, label = &quot;Hyvä NOx&quot;, c = &#39;b&#39;, alpha = 0.5)
-plt.axhline(50, linestyle=&#39;--&#39;, label = &quot;Tyydyttävä hh&quot;, c = &#39;orange&#39;, alpha = 0.5)
-plt.axhline(70, linestyle=&#39;--&#39;, label = &quot;Tyydyttävä NOx&quot;, c = &#39;y&#39;, alpha = 0.5)
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Hyvä hh&quot;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Hyvä NOx&quot;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Tyydyttävä hh&quot;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">70</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Tyydyttävä NOx&quot;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">)</span>
 
-plt.title(&quot;Ilmanlaatu Hyvinkään kaupungissa&quot;, fontsize = 30, y = 1.1)
-plt.xlabel(&quot;Aika&quot;, fontsize = 25)
-plt.ylabel(&quot;Konsentraatio ($\mu$g / m$^3$)&quot;, fontsize = 25)
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Ilmanlaatu Hyvinkään kaupungissa&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">30</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mf">1.1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Aika&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">25</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Konsentraatio ($\mu$g / m$^3$)&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">25</span><span class="p">)</span>
 
-plt.legend()
-plt.show()
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/Pienhiukkaset_31_0.png" src="../_images/Pienhiukkaset_31_0.png" />
+<img alt="../_images/f6f726d773c5d65b7383b2a44388586af6813b7367c76f14a88bc3d56534ba16.png" src="../_images/f6f726d773c5d65b7383b2a44388586af6813b7367c76f14a88bc3d56534ba16.png" />
 </div>
 </div>
 <p>Miksi havainnot sahaavat piikkeinä ylös alas? Entä jos tarkastelisimmekin havaintoja kellonajan mukaan?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Kellonaikakohtaiset keskiarvot aiemmin jaotellusta &quot;Hm&quot;-muuttujasta.
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Kellonaikakohtaiset keskiarvot aiemmin jaotellusta &quot;Hm&quot;-muuttujasta.</span>
 
-KA = Hm.groupby([&quot;Klo&quot;]).mean()
-KA
+<span class="n">KA</span> <span class="o">=</span> <span class="n">Hm</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;Klo&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">KA</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_1868/328694438.py:3: FutureWarning: The default value of numeric_only in DataFrameGroupBy.mean is deprecated. In a future version, numeric_only will default to False. Either specify numeric_only or select only columns which should be valid for the function.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_1816/328694438.py:3: FutureWarning: The default value of numeric_only in DataFrameGroupBy.mean is deprecated. In a future version, numeric_only will default to False. Either specify numeric_only or select only columns which should be valid for the function.
   KA = Hm.groupby([&quot;Klo&quot;]).mean()
 </pre></div>
 </div>
@@ -1662,33 +1538,33 @@ KA
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Piirretään ajallinen jakauma keskiarvojen avulla. 
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Piirretään ajallinen jakauma keskiarvojen avulla. </span>
 
-plt.figure(figsize = (30,10))
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">30</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
 
-plt.plot(KA[&quot;Hengitettävät hiukkaset (ug/m3)&quot;], color = &quot;c&quot;, label = &quot;Hengitettävät hiukkaset&quot;)
-plt.plot(KA[&quot;Typpidioksidi (ug/m3)&quot;], color = &quot;b&quot;,label = &quot;Typpidioksidi&quot;)
-plt.plot(KA[&quot;Typpimonoksidi (ug/m3)&quot;], color = &quot;g&quot;, label = &quot;Typpimonoksidi&quot;)
-plt.xticks(rotation = 30)
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">KA</span><span class="p">[</span><span class="s2">&quot;Hengitettävät hiukkaset (ug/m3)&quot;</span><span class="p">],</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;c&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Hengitettävät hiukkaset&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">KA</span><span class="p">[</span><span class="s2">&quot;Typpidioksidi (ug/m3)&quot;</span><span class="p">],</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span><span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Typpidioksidi&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">KA</span><span class="p">[</span><span class="s2">&quot;Typpimonoksidi (ug/m3)&quot;</span><span class="p">],</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;g&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Typpimonoksidi&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span> <span class="o">=</span> <span class="mi">30</span><span class="p">)</span>
 
-# Lisätään selkeyden nimissä myös pari rajaviivaa kuvaajaan, jotta sitä on helpompaa tulkita.
+<span class="c1"># Lisätään selkeyden nimissä myös pari rajaviivaa kuvaajaan, jotta sitä on helpompaa tulkita.</span>
 
-plt.axhline(20, linestyle=&#39;--&#39;, label = &quot;Hyvä hh&quot;, c = &#39;r&#39;, alpha = 0.5)
-plt.axhline(40, linestyle=&#39;--&#39;, label = &quot;Hyvä NOx&quot;, c = &#39;b&#39;, alpha = 0.5)
-plt.axhline(50, linestyle=&#39;--&#39;, label = &quot;Tyydyttävä hh&quot;, c = &#39;orange&#39;, alpha = 0.5)
-plt.axhline(70, linestyle=&#39;--&#39;, label = &quot;Tyydyttävä NOx&quot;, c = &#39;y&#39;, alpha = 0.5)
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Hyvä hh&quot;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Hyvä NOx&quot;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Tyydyttävä hh&quot;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;orange&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">70</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Tyydyttävä NOx&quot;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">)</span>
 
-plt.title(&quot;Ilmanlaatu Hyvinkään kaupungissa vuonna ???&quot;, fontsize = 30, y = 1.1)
-plt.xlabel(&quot;Aika&quot;, fontsize = 25)
-plt.ylabel(&quot;Konsentraatio ($\mu$g / m$^3$)&quot;, fontsize = 25)
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Ilmanlaatu Hyvinkään kaupungissa vuonna ???&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">30</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mf">1.1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;Aika&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">25</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Konsentraatio ($\mu$g / m$^3$)&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">25</span><span class="p">)</span>
 
-plt.legend()
-plt.show()
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/Pienhiukkaset_34_0.png" src="../_images/Pienhiukkaset_34_0.png" />
+<img alt="../_images/42fe48e1b5d96df78ec071f4d757673ebc688be811254cd356c01ee0762e2b29.png" src="../_images/42fe48e1b5d96df78ec071f4d757673ebc688be811254cd356c01ee0762e2b29.png" />
 </div>
 </div>
 <p>Tuloksia voi käydä huvin vuoksi vertaamassa kansainväliseen tilaan World Air Quality Index -projektin sivuilta, vaikkapa Kiinaan tai Intiaan:</p>
@@ -1708,7 +1584,7 @@ plt.show()
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./harjoitukset"
         },
         predefinedOutput: true
@@ -1716,55 +1592,109 @@ plt.show()
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="co2.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">ESIMERKKI 3: Maapallon ilmakehä</p>
-        </div>
+
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="co2.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">ESIMERKKI 3: Maapallon ilmakehä</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="aerosoli.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="aerosoli.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Aerosoli-työpaja</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#smear-station-for-measuring-ecosystem-atmosphere-relations">1. SMEAR - Station for Measuring Ecosystem-Atmosphere Relations</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aerosolit-mita-ja-miksi">1.1 Aerosolit - mitä ja miksi?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pohjoinen-metsavyohyke-ja-muutoksen-vaikutukset">1.2 Pohjoinen metsävyöhyke ja muutoksen vaikutukset</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aineisto">1.3 Aineisto</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#paikallistarkastelussa-hyvinkaa-kulkeeko-henki">2. Paikallistarkastelussa Hyvinkää - kulkeeko henki?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">2.1 Aineisto</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hiukkasen-asiaa">2.2 Hiukkasen asiaa</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tutkitaas-itse">2.3 Tutkitaas itse</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner">
+<div class="bd-footer-content__inner container">
   
-    By HIP Education and Open Data Team<br/>
+  <div class="footer-item">
+    
+<p class="component-author">
+By HIP Education and Open Data Team
+</p>
+
+  </div>
   
-    <div class="extra_footer">
-      <div>
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <div>
 <a>Toteutettu Opetushallituksen valtionavustuksella tiedekasvatuksen edistämiseen.</a></br><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img class="license" alt="Creative Commons License" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a> Tämän sivuston materiaali on käytettävissä seuraavalla lisenssillä: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC-BY 4.0.</a>
 </div>
 
-    </div>
-</p>
-        </footer>
-    </div>
-    
 </div>
+  </div>
+  
+</div></div>
+          </footer>
+        
 
-
-      </div>
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

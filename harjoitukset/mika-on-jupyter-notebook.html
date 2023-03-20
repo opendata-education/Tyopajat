@@ -1,48 +1,59 @@
 
+
 <!DOCTYPE html>
 
-<html lang="en">
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Mikä on Jupyter Notebook? &#8212; Työpajat</title>
-    
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -50,63 +61,95 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'harjoitukset/mika-on-jupyter-notebook';</script>
     <link rel="canonical" href="https://opendata-education.github.io/Tyopajat/intro.html/harjoitukset/mika-on-jupyter-notebook.html" />
     <link rel="shortcut icon" href="../_static/logo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="CMS ja avoin data" href="cms-esimerkki.html" />
     <link rel="prev" title="CERN Opettajakoulutus" href="opettajakoulutus.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-    <div class="container-fluid" id="banner"></div>
-
-    
-
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="../_static/logo.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Työpajat</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -116,476 +159,301 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="opettajakoulutus.html">
-   CERN Opettajakoulutus
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     Mikä on Jupyter Notebook?
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="cms-esimerkki.html">
-     CMS ja avoin data
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Vuosirenkaat.html">
-     Niin hyvää puuta
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="esimerkit.html">
-   Lyhyet esimerkit
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Lumensyvyys.html">
-     ESIMERKKI: Lumensyvyys
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="UV.html">
-     ESIMERKKI: Ultraviolettisäteily
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="fossiiliset_ja_koulutus.html">
-     Luonnonvarojen käyttö ja tasa-arvoinen koulutus
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="ilmastopaja.html">
-   Ilmastotyöpaja
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="lampotila-intro.html">
-     ESIMERKKI 1: Maan lämpötilapoikkeaman määritys
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="dataraati.html">
-     Visualisaatioraati
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="UV-paja.html">
-     ESIMERKKI 2: Ultraviolettisäteily
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="co2.html">
-     ESIMERKKI 3: Maapallon ilmakehä
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Pienhiukkaset.html">
-     ESIMERKKI 4: Pienhiukkaset - saasteita ja aerosoleja
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="aerosoli.html">
-   Aerosoli-työpaja
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="aerosoli-tyopaja.html">
-     Aerosoli-työpajan ohjeet
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="datasettien_esittelyt.html">
-     Aerosoli-työpajan datasetit ja tutkimuskysymykset
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="opettajakoulutus.html">CERN Opettajakoulutus</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Mikä on Jupyter Notebook?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms-esimerkki.html">CMS ja avoin data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Vuosirenkaat.html">Niin hyvää puuta</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="esimerkit.html">Lyhyet esimerkit</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Lumensyvyys.html">ESIMERKKI: Lumensyvyys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UV.html">ESIMERKKI: Ultraviolettisäteily</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fossiiliset_ja_koulutus.html">Luonnonvarojen käyttö ja tasa-arvoinen koulutus</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="ilmastopaja.html">Ilmastotyöpaja</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="lampotila-intro.html">ESIMERKKI 1: Maan lämpötilapoikkeaman määritys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dataraati.html">Visualisaatioraati</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UV-paja.html">ESIMERKKI 2: Ultraviolettisäteily</a></li>
+<li class="toctree-l2"><a class="reference internal" href="co2.html">ESIMERKKI 3: Maapallon ilmakehä</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Pienhiukkaset.html">ESIMERKKI 4: Pienhiukkaset - saasteita ja aerosoleja</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="aerosoli.html">Aerosoli-työpaja</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="aerosoli-tyopaja.html">Aerosoli-työpajan ohjeet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datasettien_esittelyt.html">Aerosoli-työpajan datasetit ja tutkimuskysymykset</a></li>
+</ul>
+</li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
-          
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
 
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
 <div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
 
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/opendata-education/Tyopajat/main?urlpath=tree/materiaali/harjoitukset/mika-on-jupyter-notebook.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/opendata-education/Tyopajat/main?urlpath=tree/materiaali/harjoitukset/mika-on-jupyter-notebook.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   
     <img src="../_static/images/logo_binder.svg">
   </span>
-<span class="headerbtn__text-container">Binder</span>
+<span class="btn__text-container">Binder</span>
 </a>
-
-      </li>
+</li>
       
-      <li>
-        <a href="https://colab.research.google.com/github/opendata-education/Tyopajat/blob/main/materiaali/harjoitukset/mika-on-jupyter-notebook.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Colab"
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/opendata-education/Tyopajat/blob/main/materiaali/harjoitukset/mika-on-jupyter-notebook.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   
     <img src="../_static/images/logo_colab.png">
   </span>
-<span class="headerbtn__text-container">Colab</span>
+<span class="btn__text-container">Colab</span>
 </a>
-
-      </li>
+</li>
       
-    </ul>
-  </div>
+  </ul>
 </div>
 
-<button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/opendata-education/Tyopajat" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/opendata-education/Tyopajat/issues/new?title=Issue%20on%20page%20%2Fharjoitukset/mika-on-jupyter-notebook.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/harjoitukset/mika-on-jupyter-notebook.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/opendata-education/Tyopajat"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="headerbtn__text-container">repository</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://github.com/opendata-education/Tyopajat/issues/new?title=Issue%20on%20page%20%2Fharjoitukset/mika-on-jupyter-notebook.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="headerbtn__text-container">open issue</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../_sources/harjoitukset/mika-on-jupyter-notebook.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.ipynb</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tehtava-muokkaa-tata-tekstisolua-lisaa-alle-lause-jossa-kerrot-minkalainen-saa-on-tanaan">
-   Tehtävä: Muokkaa tätä tekstisolua – lisää alle lause, jossa kerrot minkälainen sää on tänään.
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tehtava-kokeile-lisata-alle-uusi-koodisolu-ja-laske-jokin-mielivaltainen-summa-muuttujaan-b">
-   Tehtävä: Kokeile lisätä alle uusi koodisolu ja laske jokin mielivaltainen summa muuttujaan b.
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#funktiokirjastot">
-   1. Funktiokirjastot
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tehtava-luo-kaksi-mielivaltaista-vektoria-muuttujiin-vek1-ja-vek2-seka-laske-niiden-vektorisumma">
-     Tehtävä: Luo kaksi mielivaltaista vektoria muuttujiin vek1 ja vek2 sekä laske niiden vektorisumma.
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#datan-lukeminen">
-   2. Datan lukeminen
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tehtava-kokeile-avata-tassa-notebookissa-jokin-toinen-cms-kokeen-datasetti">
-     Tehtävä: Kokeile avata tässä notebookissa jokin toinen CMS-kokeen datasetti.
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#kuvaajat">
-   3. Kuvaajat
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tehtava-piirra-kuvaaja-kosinifunktiosta">
-     Tehtävä: Piirrä kuvaaja kosinifunktiosta.
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tehtava-valitse-jokin-toinen-datasetti-ja-piirra-vastaava-histogrammi">
-     Tehtävä: Valitse jokin toinen datasetti ja piirrä vastaava histogrammi.
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Mikä on Jupyter Notebook?</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tehtava-muokkaa-tata-tekstisolua-lisaa-alle-lause-jossa-kerrot-minkalainen-saa-on-tanaan">
-   Tehtävä: Muokkaa tätä tekstisolua – lisää alle lause, jossa kerrot minkälainen sää on tänään.
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tehtava-kokeile-lisata-alle-uusi-koodisolu-ja-laske-jokin-mielivaltainen-summa-muuttujaan-b">
-   Tehtävä: Kokeile lisätä alle uusi koodisolu ja laske jokin mielivaltainen summa muuttujaan b.
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#funktiokirjastot">
-   1. Funktiokirjastot
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tehtava-luo-kaksi-mielivaltaista-vektoria-muuttujiin-vek1-ja-vek2-seka-laske-niiden-vektorisumma">
-     Tehtävä: Luo kaksi mielivaltaista vektoria muuttujiin vek1 ja vek2 sekä laske niiden vektorisumma.
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#datan-lukeminen">
-   2. Datan lukeminen
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tehtava-kokeile-avata-tassa-notebookissa-jokin-toinen-cms-kokeen-datasetti">
-     Tehtävä: Kokeile avata tässä notebookissa jokin toinen CMS-kokeen datasetti.
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#kuvaajat">
-   3. Kuvaajat
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tehtava-piirra-kuvaaja-kosinifunktiosta">
-     Tehtävä: Piirrä kuvaaja kosinifunktiosta.
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#tehtava-valitse-jokin-toinen-datasetti-ja-piirra-vastaava-histogrammi">
-     Tehtävä: Valitse jokin toinen datasetti ja piirrä vastaava histogrammi.
-    </a>
-   </li>
-  </ul>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Mikä on Jupyter Notebook?</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tehtava-muokkaa-tata-tekstisolua-lisaa-alle-lause-jossa-kerrot-minkalainen-saa-on-tanaan">Tehtävä: Muokkaa tätä tekstisolua – lisää alle lause, jossa kerrot minkälainen sää on tänään.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tehtava-kokeile-lisata-alle-uusi-koodisolu-ja-laske-jokin-mielivaltainen-summa-muuttujaan-b">Tehtävä: Kokeile lisätä alle uusi koodisolu ja laske jokin mielivaltainen summa muuttujaan b.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#funktiokirjastot">1. Funktiokirjastot</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tehtava-luo-kaksi-mielivaltaista-vektoria-muuttujiin-vek1-ja-vek2-seka-laske-niiden-vektorisumma">Tehtävä: Luo kaksi mielivaltaista vektoria muuttujiin vek1 ja vek2 sekä laske niiden vektorisumma.</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#datan-lukeminen">2. Datan lukeminen</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tehtava-kokeile-avata-tassa-notebookissa-jokin-toinen-cms-kokeen-datasetti">Tehtävä: Kokeile avata tässä notebookissa jokin toinen CMS-kokeen datasetti.</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kuvaajat">3. Kuvaajat</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tehtava-piirra-kuvaaja-kosinifunktiosta">Tehtävä: Piirrä kuvaaja kosinifunktiosta.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tehtava-valitse-jokin-toinen-datasetti-ja-piirra-vastaava-histogrammi">Tehtävä: Valitse jokin toinen datasetti ja piirrä vastaava histogrammi.</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
-  <section class="tex2jax_ignore mathjax_ignore" id="mika-on-jupyter-notebook">
-<h1>Mikä on Jupyter Notebook?<a class="headerlink" href="#mika-on-jupyter-notebook" title="Permalink to this headline">#</a></h1>
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="mika-on-jupyter-notebook">
+<h1>Mikä on Jupyter Notebook?<a class="headerlink" href="#mika-on-jupyter-notebook" title="Permalink to this heading">#</a></h1>
 <p>Moi! Tämä alusta tässä on Jupyter Notebook. Täällä voit samassa dokumentissa käsitellä tekstiä, koodia, yhtälöitä, kuvia sekä data-aineistoja interaktiivisesti. Näppärää! Näitä dokumentteja kutsutaan notebookeiksi.</p>
 <p>Kuten varmaan jo huomasit, tämä alusta toimii sinun internet-selaimessa. Se mahdollistaa oppilaille suunnattujen tehtävien helpon jakamisen ilman kömpelöä välivaihetta, jossa ohjelmistoja pitää ladata ja niiden opettelu vie hirveästi aikaa. Tämän alustan etuja on ehdottomasti helppokäyttöisyys.</p>
 <p>Jupyter Notebookia voi käyttää myös <em>lokaalisti</em>, eli asentamalla ohjelman omalle tietokoneelle. Silloinkin tisamalleen samanlainen alusta avautuu selaimeen, mutta voit käyttää sinun koneella olevia tiedostoja suoraan tai tallentaa keskeneräisen tiedoston omalle koneelle. Tämä on kannattavaa silloin, kun haluat luoda omia tehtäviä tai tarkastaa oppilaiden tekemiä vastauksia, jotka sisältävät koodia tai dataa. Esimerkiksi Anaconda-Navigator sisältää Jupyter Notebookin.</p>
@@ -594,11 +462,11 @@ title="Print to PDF"
 <p>Jos haluat muokata jotain yksittäistä solua, sen saa editointitilaan tuplaklikkaamalla solua. Muokatun solun voit suorittaa Run-painikkeella tai pikakomentona Control + Enter (Mac: Command + Enter).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Tältä näyttää koodisolu. Risuaidalla voit kirjoittaa koodisoluun kommentteja tai ohjeita.
-# Esimerkin vuoksi tehdään pieni laskutoimitus
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tältä näyttää koodisolu. Risuaidalla voit kirjoittaa koodisoluun kommentteja tai ohjeita.</span>
+<span class="c1"># Esimerkin vuoksi tehdään pieni laskutoimitus</span>
 
-a = 1+1 # muuttuja &#39;a&#39; sisältää nyt laskutoimituksen 1+1
-print(a) # tulostetaan muuttuja &#39;a&#39; näkyviin, jolloin nähdään laskutoimituksen lopputulos.
+<span class="n">a</span> <span class="o">=</span> <span class="mi">1</span><span class="o">+</span><span class="mi">1</span> <span class="c1"># muuttuja &#39;a&#39; sisältää nyt laskutoimituksen 1+1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="c1"># tulostetaan muuttuja &#39;a&#39; näkyviin, jolloin nähdään laskutoimituksen lopputulos.</span>
 </pre></div>
 </div>
 </div>
@@ -610,13 +478,13 @@ print(a) # tulostetaan muuttuja &#39;a&#39; näkyviin, jolloin nähdään laskut
 </div>
 <p>Ylhäällä on koodisolu, joka sisältää pienen laskutoimituksen. Voit suorittaa solun, jolloin sen alapuolelle tulostuu kaikki, mitä koodisolussa käsketään tulostaa. Jos ihan vasemmalla olevissa hakasulkeissa on <strong>In [*]</strong>, niin solun suorittaminen on vielä kesken. Suoritetun koodisolun kohdalla hakasulkeisiin tulee numero, josta näkee, missä järjestyksessä solut on suoritettu. Jos suoritit ylempänä olevan solun kerran, hakasulkeissa pitäisi olla 1, jos suoritat sen saman solun nyt toisen kerran, siihen pitäisi tulla 2.</p>
 <section id="tehtava-muokkaa-tata-tekstisolua-lisaa-alle-lause-jossa-kerrot-minkalainen-saa-on-tanaan">
-<h2>Tehtävä: Muokkaa tätä tekstisolua – lisää alle lause, jossa kerrot minkälainen sää on tänään.<a class="headerlink" href="#tehtava-muokkaa-tata-tekstisolua-lisaa-alle-lause-jossa-kerrot-minkalainen-saa-on-tanaan" title="Permalink to this headline">#</a></h2>
+<h2>Tehtävä: Muokkaa tätä tekstisolua – lisää alle lause, jossa kerrot minkälainen sää on tänään.<a class="headerlink" href="#tehtava-muokkaa-tata-tekstisolua-lisaa-alle-lause-jossa-kerrot-minkalainen-saa-on-tanaan" title="Permalink to this heading">#</a></h2>
 </section>
 <section id="tehtava-kokeile-lisata-alle-uusi-koodisolu-ja-laske-jokin-mielivaltainen-summa-muuttujaan-b">
-<h2>Tehtävä: Kokeile lisätä alle uusi koodisolu ja laske jokin mielivaltainen summa muuttujaan b.<a class="headerlink" href="#tehtava-kokeile-lisata-alle-uusi-koodisolu-ja-laske-jokin-mielivaltainen-summa-muuttujaan-b" title="Permalink to this headline">#</a></h2>
+<h2>Tehtävä: Kokeile lisätä alle uusi koodisolu ja laske jokin mielivaltainen summa muuttujaan b.<a class="headerlink" href="#tehtava-kokeile-lisata-alle-uusi-koodisolu-ja-laske-jokin-mielivaltainen-summa-muuttujaan-b" title="Permalink to this heading">#</a></h2>
 </section>
 <section id="funktiokirjastot">
-<h2>1. Funktiokirjastot<a class="headerlink" href="#funktiokirjastot" title="Permalink to this headline">#</a></h2>
+<h2>1. Funktiokirjastot<a class="headerlink" href="#funktiokirjastot" title="Permalink to this heading">#</a></h2>
 <p>Pythonia käytettäessä hyödynnetään erilaisia paketteja, joista kukin sisältää oman valikoimansa erilaisia funktioita. Meillä yleisimmin käytössä olevat paketit ovat</p>
 <ul class="simple">
 <li><p><strong>numpy</strong>, sisältää numeerisen laskennan työkaluja</p></li>
@@ -626,19 +494,19 @@ print(a) # tulostetaan muuttuja &#39;a&#39; näkyviin, jolloin nähdään laskut
 <p>Jokainen haluttu paketti voidaan tuoda erikseen käyttöön <strong>import</strong>-komennolla.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Aja tämä solu ensin
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Aja tämä solu ensin</span>
 
-import numpy as np # tuodaan numpy-paketti käyttöön ja annetaan sille lyhenne funktioiden kutsumista varten
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span> <span class="c1"># tuodaan numpy-paketti käyttöön ja annetaan sille lyhenne funktioiden kutsumista varten</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Luodaan lista [1 3 6] ja tallennetaan se muuttujaan &#39;vektori&#39;
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Luodaan lista [1 3 6] ja tallennetaan se muuttujaan &#39;vektori&#39;</span>
 
-vektori = np.array([1,3,6])
-print(vektori)
+<span class="n">vektori</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">vektori</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -651,8 +519,8 @@ print(vektori)
 <p>Array-funktion avulla voidaan rakentaa taulukoita ja listoja, jolloin sillä voidaan kuvata esimerkiksi vektoreita ja matriiseja. Se sopii myös todella hyvin mittausdatan käsittelyyn.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Lisätään jokaiseen elementtiin 2. 
-print(vektori + 2)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Lisätään jokaiseen elementtiin 2. </span>
+<span class="nb">print</span><span class="p">(</span><span class="n">vektori</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -664,8 +532,8 @@ print(vektori + 2)
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Mitä veikkaatte, jos tämän jälkeen printataan pelkkä muuttuja &#39;vektori&#39;?
-print(vektori)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Mitä veikkaatte, jos tämän jälkeen printataan pelkkä muuttuja &#39;vektori&#39;?</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">vektori</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -677,8 +545,8 @@ print(vektori)
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>vektori = vektori + 2
-print(vektori)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">vektori</span> <span class="o">=</span> <span class="n">vektori</span> <span class="o">+</span> <span class="mi">2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">vektori</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -690,15 +558,15 @@ print(vektori)
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Luodaan kaksi listaa ja testataan erilaisia summia.
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Luodaan kaksi listaa ja testataan erilaisia summia.</span>
 
-lista1 = np.array([[2,2],
-                    [1,2]])
-lista2 = np.array([[10,11],
-                   [20,21]])
-summa = lista1+lista2
-print(&quot;Listan 1 elementtien summa: &quot;, lista1.sum())
-print(&quot;Vektorisummmat: &quot;, summa)
+<span class="n">lista1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span>
+                    <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">]])</span>
+<span class="n">lista2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">10</span><span class="p">,</span><span class="mi">11</span><span class="p">],</span>
+                   <span class="p">[</span><span class="mi">20</span><span class="p">,</span><span class="mi">21</span><span class="p">]])</span>
+<span class="n">summa</span> <span class="o">=</span> <span class="n">lista1</span><span class="o">+</span><span class="n">lista2</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Listan 1 elementtien summa: &quot;</span><span class="p">,</span> <span class="n">lista1</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Vektorisummmat: &quot;</span><span class="p">,</span> <span class="n">summa</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -711,253 +579,380 @@ Vektorisummmat:  [[12 13]
 </div>
 </div>
 <section id="tehtava-luo-kaksi-mielivaltaista-vektoria-muuttujiin-vek1-ja-vek2-seka-laske-niiden-vektorisumma">
-<h3>Tehtävä: Luo kaksi mielivaltaista vektoria muuttujiin vek1 ja vek2 sekä laske niiden vektorisumma.<a class="headerlink" href="#tehtava-luo-kaksi-mielivaltaista-vektoria-muuttujiin-vek1-ja-vek2-seka-laske-niiden-vektorisumma" title="Permalink to this headline">#</a></h3>
+<h3>Tehtävä: Luo kaksi mielivaltaista vektoria muuttujiin vek1 ja vek2 sekä laske niiden vektorisumma.<a class="headerlink" href="#tehtava-luo-kaksi-mielivaltaista-vektoria-muuttujiin-vek1-ja-vek2-seka-laske-niiden-vektorisumma" title="Permalink to this heading">#</a></h3>
 </section>
 </section>
 <section id="datan-lukeminen">
-<h2>2. Datan lukeminen<a class="headerlink" href="#datan-lukeminen" title="Permalink to this headline">#</a></h2>
+<h2>2. Datan lukeminen<a class="headerlink" href="#datan-lukeminen" title="Permalink to this heading">#</a></h2>
 <p>Jupyter Notebookiin voi tuoda datasettejä suoraan avoimien linkkien kautta. Datasettien lukemista varten tarvitaan pandas-pakettia sekä <strong>read.csv()</strong>-funktiota. CSV (comma-separated values) on tiedostomuoto, jolla voidaan tallentaa yksinkertaista taulukkomuotoista tietoa tekstitiedostoon. Vastaavasti <strong>head()</strong>-komennolla voidaan kurkistaa datasetin sisälle.</p>
 <p>Kokeillaan tätä CERN:n CMS-kokeen avoimella datalla.
 http://opendata.cern.ch/</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import pandas as pd
-data = pd.read_csv(&quot;http://opendata.cern.ch/record/5209/files/diphoton.csv&quot;)
-data.head()
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;http://opendata.cern.ch/record/5209/files/diphoton.csv&quot;</span><span class="p">)</span>
+<span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">8</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;http://opendata.cern.ch/record/5209/files/diphoton.csv&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.15/x64/lib/python3.8/site-packages/pandas/util/_decorators.py:211,</span> in <span class="ni">deprecate_kwarg.&lt;locals&gt;._deprecate_kwarg.&lt;locals&gt;.wrapper</span><span class="nt">(*args, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">209</span>     <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">210</span>         <span class="n">kwargs</span><span class="p">[</span><span class="n">new_arg_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">new_arg_value</span>
-<span class="ne">--&gt; </span><span class="mi">211</span> <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
 
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.15/x64/lib/python3.8/site-packages/pandas/util/_decorators.py:331,</span> in <span class="ni">deprecate_nonkeyword_arguments.&lt;locals&gt;.decorate.&lt;locals&gt;.wrapper</span><span class="nt">(*args, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">325</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">args</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">num_allow_args</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">326</span>     <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">327</span>         <span class="n">msg</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">arguments</span><span class="o">=</span><span class="n">_format_argument_list</span><span class="p">(</span><span class="n">allow_args</span><span class="p">)),</span>
-<span class="g g-Whitespace">    </span><span class="mi">328</span>         <span class="ne">FutureWarning</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">329</span>         <span class="n">stacklevel</span><span class="o">=</span><span class="n">find_stack_level</span><span class="p">(),</span>
-<span class="g g-Whitespace">    </span><span class="mi">330</span>     <span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">331</span> <span class="k">return</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.15/x64/lib/python3.8/site-packages/pandas/io/parsers/readers.py:950,</span> in <span class="ni">read_csv</span><span class="nt">(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, squeeze, prefix, mangle_dupe_cols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, encoding_errors, dialect, error_bad_lines, warn_bad_lines, on_bad_lines, delim_whitespace, low_memory, memory_map, float_precision, storage_options)</span>
-<span class="g g-Whitespace">    </span><span class="mi">935</span> <span class="n">kwds_defaults</span> <span class="o">=</span> <span class="n">_refine_defaults_read</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">936</span>     <span class="n">dialect</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">937</span>     <span class="n">delimiter</span><span class="p">,</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">946</span>     <span class="n">defaults</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;delimiter&quot;</span><span class="p">:</span> <span class="s2">&quot;,&quot;</span><span class="p">},</span>
-<span class="g g-Whitespace">    </span><span class="mi">947</span> <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">948</span> <span class="n">kwds</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">kwds_defaults</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">950</span> <span class="k">return</span> <span class="n">_read</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="n">kwds</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.15/x64/lib/python3.8/site-packages/pandas/io/parsers/readers.py:605,</span> in <span class="ni">_read</span><span class="nt">(filepath_or_buffer, kwds)</span>
-<span class="g g-Whitespace">    </span><span class="mi">602</span> <span class="n">_validate_names</span><span class="p">(</span><span class="n">kwds</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;names&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">))</span>
-<span class="g g-Whitespace">    </span><span class="mi">604</span> <span class="c1"># Create the parser.</span>
-<span class="ne">--&gt; </span><span class="mi">605</span> <span class="n">parser</span> <span class="o">=</span> <span class="n">TextFileReader</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">607</span> <span class="k">if</span> <span class="n">chunksize</span> <span class="ow">or</span> <span class="n">iterator</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">608</span>     <span class="k">return</span> <span class="n">parser</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.15/x64/lib/python3.8/site-packages/pandas/io/parsers/readers.py:1442,</span> in <span class="ni">TextFileReader.__init__</span><span class="nt">(self, f, engine, **kwds)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1439</span>     <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kwds</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span>
-<span class="g g-Whitespace">   </span><span class="mi">1441</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span><span class="p">:</span> <span class="n">IOHandles</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
-<span class="ne">-&gt; </span><span class="mi">1442</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_engine</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">engine</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.15/x64/lib/python3.8/site-packages/pandas/io/parsers/readers.py:1735,</span> in <span class="ni">TextFileReader._make_engine</span><span class="nt">(self, f, engine)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1733</span>     <span class="k">if</span> <span class="s2">&quot;b&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">mode</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1734</span>         <span class="n">mode</span> <span class="o">+=</span> <span class="s2">&quot;b&quot;</span>
-<span class="ne">-&gt; </span><span class="mi">1735</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span> <span class="o">=</span> <span class="n">get_handle</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1736</span>     <span class="n">f</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1737</span>     <span class="n">mode</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1738</span>     <span class="n">encoding</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;encoding&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1739</span>     <span class="n">compression</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;compression&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1740</span>     <span class="n">memory_map</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;memory_map&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1741</span>     <span class="n">is_text</span><span class="o">=</span><span class="n">is_text</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1742</span>     <span class="n">errors</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;encoding_errors&quot;</span><span class="p">,</span> <span class="s2">&quot;strict&quot;</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1743</span>     <span class="n">storage_options</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;storage_options&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1744</span> <span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1745</span> <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
-<span class="g g-Whitespace">   </span><span class="mi">1746</span> <span class="n">f</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span><span class="o">.</span><span class="n">handle</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.15/x64/lib/python3.8/site-packages/pandas/io/common.py:713,</span> in <span class="ni">get_handle</span><span class="nt">(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)</span>
-<span class="g g-Whitespace">    </span><span class="mi">710</span>     <span class="n">codecs</span><span class="o">.</span><span class="n">lookup_error</span><span class="p">(</span><span class="n">errors</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">712</span> <span class="c1"># open URLs</span>
-<span class="ne">--&gt; </span><span class="mi">713</span> <span class="n">ioargs</span> <span class="o">=</span> <span class="n">_get_filepath_or_buffer</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">714</span>     <span class="n">path_or_buf</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">715</span>     <span class="n">encoding</span><span class="o">=</span><span class="n">encoding</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">716</span>     <span class="n">compression</span><span class="o">=</span><span class="n">compression</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">717</span>     <span class="n">mode</span><span class="o">=</span><span class="n">mode</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">718</span>     <span class="n">storage_options</span><span class="o">=</span><span class="n">storage_options</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">719</span> <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">721</span> <span class="n">handle</span> <span class="o">=</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">filepath_or_buffer</span>
-<span class="g g-Whitespace">    </span><span class="mi">722</span> <span class="n">handles</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">BaseBuffer</span><span class="p">]</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.15/x64/lib/python3.8/site-packages/pandas/io/common.py:363,</span> in <span class="ni">_get_filepath_or_buffer</span><span class="nt">(filepath_or_buffer, encoding, compression, mode, storage_options)</span>
-<span class="g g-Whitespace">    </span><span class="mi">361</span> <span class="c1"># assuming storage_options is to be interpreted as headers</span>
-<span class="g g-Whitespace">    </span><span class="mi">362</span> <span class="n">req_info</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="n">storage_options</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">363</span> <span class="k">with</span> <span class="n">urlopen</span><span class="p">(</span><span class="n">req_info</span><span class="p">)</span> <span class="k">as</span> <span class="n">req</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">364</span>     <span class="n">content_encoding</span> <span class="o">=</span> <span class="n">req</span><span class="o">.</span><span class="n">headers</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;Content-Encoding&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">365</span>     <span class="k">if</span> <span class="n">content_encoding</span> <span class="o">==</span> <span class="s2">&quot;gzip&quot;</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">366</span>         <span class="c1"># Override compression based on Content-Encoding header</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.15/x64/lib/python3.8/site-packages/pandas/io/common.py:265,</span> in <span class="ni">urlopen</span><span class="nt">(*args, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">259</span> <span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">260</span><span class="sd"> Lazy-import wrapper for stdlib urlopen, as that imports a big chunk of</span>
-<span class="g g-Whitespace">    </span><span class="mi">261</span><span class="sd"> the stdlib.</span>
-<span class="g g-Whitespace">    </span><span class="mi">262</span><span class="sd"> &quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">263</span> <span class="kn">import</span> <span class="nn">urllib.request</span>
-<span class="ne">--&gt; </span><span class="mi">265</span> <span class="k">return</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.15/x64/lib/python3.8/urllib/request.py:222,</span> in <span class="ni">urlopen</span><span class="nt">(url, data, timeout, cafile, capath, cadefault, context)</span>
-<span class="g g-Whitespace">    </span><span class="mi">220</span> <span class="k">else</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">221</span>     <span class="n">opener</span> <span class="o">=</span> <span class="n">_opener</span>
-<span class="ne">--&gt; </span><span class="mi">222</span> <span class="k">return</span> <span class="n">opener</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">timeout</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.15/x64/lib/python3.8/urllib/request.py:525,</span> in <span class="ni">OpenerDirector.open</span><span class="nt">(self, fullurl, data, timeout)</span>
-<span class="g g-Whitespace">    </span><span class="mi">522</span>     <span class="n">req</span> <span class="o">=</span> <span class="n">meth</span><span class="p">(</span><span class="n">req</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">524</span> <span class="n">sys</span><span class="o">.</span><span class="n">audit</span><span class="p">(</span><span class="s1">&#39;urllib.Request&#39;</span><span class="p">,</span> <span class="n">req</span><span class="o">.</span><span class="n">full_url</span><span class="p">,</span> <span class="n">req</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">req</span><span class="o">.</span><span class="n">headers</span><span class="p">,</span> <span class="n">req</span><span class="o">.</span><span class="n">get_method</span><span class="p">())</span>
-<span class="ne">--&gt; </span><span class="mi">525</span> <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_open</span><span class="p">(</span><span class="n">req</span><span class="p">,</span> <span class="n">data</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">527</span> <span class="c1"># post-process response</span>
-<span class="g g-Whitespace">    </span><span class="mi">528</span> <span class="n">meth_name</span> <span class="o">=</span> <span class="n">protocol</span><span class="o">+</span><span class="s2">&quot;_response&quot;</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.15/x64/lib/python3.8/urllib/request.py:542,</span> in <span class="ni">OpenerDirector._open</span><span class="nt">(self, req, data)</span>
-<span class="g g-Whitespace">    </span><span class="mi">539</span>     <span class="k">return</span> <span class="n">result</span>
-<span class="g g-Whitespace">    </span><span class="mi">541</span> <span class="n">protocol</span> <span class="o">=</span> <span class="n">req</span><span class="o">.</span><span class="n">type</span>
-<span class="ne">--&gt; </span><span class="mi">542</span> <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_call_chain</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">handle_open</span><span class="p">,</span> <span class="n">protocol</span><span class="p">,</span> <span class="n">protocol</span> <span class="o">+</span>
-<span class="g g-Whitespace">    </span><span class="mi">543</span>                           <span class="s1">&#39;_open&#39;</span><span class="p">,</span> <span class="n">req</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">544</span> <span class="k">if</span> <span class="n">result</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">545</span>     <span class="k">return</span> <span class="n">result</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.15/x64/lib/python3.8/urllib/request.py:502,</span> in <span class="ni">OpenerDirector._call_chain</span><span class="nt">(self, chain, kind, meth_name, *args)</span>
-<span class="g g-Whitespace">    </span><span class="mi">500</span> <span class="k">for</span> <span class="n">handler</span> <span class="ow">in</span> <span class="n">handlers</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">501</span>     <span class="n">func</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">handler</span><span class="p">,</span> <span class="n">meth_name</span><span class="p">)</span>
-<span class="ne">--&gt; </span><span class="mi">502</span>     <span class="n">result</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">503</span>     <span class="k">if</span> <span class="n">result</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">504</span>         <span class="k">return</span> <span class="n">result</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.15/x64/lib/python3.8/urllib/request.py:1383,</span> in <span class="ni">HTTPHandler.http_open</span><span class="nt">(self, req)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1382</span> <span class="k">def</span> <span class="nf">http_open</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">req</span><span class="p">):</span>
-<span class="ne">-&gt; </span><span class="mi">1383</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">do_open</span><span class="p">(</span><span class="n">http</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">HTTPConnection</span><span class="p">,</span> <span class="n">req</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.15/x64/lib/python3.8/urllib/request.py:1358,</span> in <span class="ni">AbstractHTTPHandler.do_open</span><span class="nt">(self, http_class, req, **http_conn_args)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1356</span>     <span class="k">except</span> <span class="ne">OSError</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span> <span class="c1"># timeout error</span>
-<span class="g g-Whitespace">   </span><span class="mi">1357</span>         <span class="k">raise</span> <span class="n">URLError</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">1358</span>     <span class="n">r</span> <span class="o">=</span> <span class="n">h</span><span class="o">.</span><span class="n">getresponse</span><span class="p">()</span>
-<span class="g g-Whitespace">   </span><span class="mi">1359</span> <span class="k">except</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1360</span>     <span class="n">h</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.15/x64/lib/python3.8/http/client.py:1348,</span> in <span class="ni">HTTPConnection.getresponse</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1346</span> <span class="k">try</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1347</span>     <span class="k">try</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1348</span>         <span class="n">response</span><span class="o">.</span><span class="n">begin</span><span class="p">()</span>
-<span class="g g-Whitespace">   </span><span class="mi">1349</span>     <span class="k">except</span> <span class="ne">ConnectionError</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1350</span>         <span class="bp">self</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.15/x64/lib/python3.8/http/client.py:316,</span> in <span class="ni">HTTPResponse.begin</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">314</span> <span class="c1"># read until we get a non-100 response</span>
-<span class="g g-Whitespace">    </span><span class="mi">315</span> <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">316</span>     <span class="n">version</span><span class="p">,</span> <span class="n">status</span><span class="p">,</span> <span class="n">reason</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_read_status</span><span class="p">()</span>
-<span class="g g-Whitespace">    </span><span class="mi">317</span>     <span class="k">if</span> <span class="n">status</span> <span class="o">!=</span> <span class="n">CONTINUE</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">318</span>         <span class="k">break</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.15/x64/lib/python3.8/http/client.py:277,</span> in <span class="ni">HTTPResponse._read_status</span><span class="nt">(self)</span>
-<span class="g g-Whitespace">    </span><span class="mi">276</span> <span class="k">def</span> <span class="nf">_read_status</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-<span class="ne">--&gt; </span><span class="mi">277</span>     <span class="n">line</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fp</span><span class="o">.</span><span class="n">readline</span><span class="p">(</span><span class="n">_MAXLINE</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span> <span class="s2">&quot;iso-8859-1&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">278</span>     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">line</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">_MAXLINE</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">279</span>         <span class="k">raise</span> <span class="n">LineTooLong</span><span class="p">(</span><span class="s2">&quot;status line&quot;</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.8.15/x64/lib/python3.8/socket.py:669,</span> in <span class="ni">SocketIO.readinto</span><span class="nt">(self, b)</span>
-<span class="g g-Whitespace">    </span><span class="mi">667</span> <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">668</span>     <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">669</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sock</span><span class="o">.</span><span class="n">recv_into</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">670</span>     <span class="k">except</span> <span class="n">timeout</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">671</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_timeout_occurred</span> <span class="o">=</span> <span class="kc">True</span>
-
-<span class="ne">KeyboardInterrupt</span>: 
-</pre></div>
-</div>
-</div>
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Run</th>
+      <th>Event</th>
+      <th>pt1</th>
+      <th>eta1</th>
+      <th>phi1</th>
+      <th>pt2</th>
+      <th>eta2</th>
+      <th>phi2</th>
+      <th>M</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>199319</td>
+      <td>641436592</td>
+      <td>77.2006</td>
+      <td>0.250438</td>
+      <td>0.605505</td>
+      <td>60.1382</td>
+      <td>0.650821</td>
+      <td>-1.53900</td>
+      <td>122.797901</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>199699</td>
+      <td>336259924</td>
+      <td>64.1091</td>
+      <td>0.473667</td>
+      <td>-0.815133</td>
+      <td>58.6038</td>
+      <td>0.032018</td>
+      <td>2.58568</td>
+      <td>124.586979</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>201602</td>
+      <td>114902683</td>
+      <td>73.7489</td>
+      <td>0.800788</td>
+      <td>0.261020</td>
+      <td>55.9369</td>
+      <td>0.698872</td>
+      <td>3.03502</td>
+      <td>126.462830</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>202087</td>
+      <td>923352992</td>
+      <td>102.9550</td>
+      <td>0.979959</td>
+      <td>0.148624</td>
+      <td>76.6940</td>
+      <td>0.815527</td>
+      <td>1.67359</td>
+      <td>123.622542</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>203894</td>
+      <td>688901524</td>
+      <td>53.4409</td>
+      <td>-0.709665</td>
+      <td>1.642300</td>
+      <td>46.4314</td>
+      <td>0.945537</td>
+      <td>-2.71670</td>
+      <td>123.203887</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <p>Jos haluat poimia datasetistä jonkin tietyn muuttujan esimerkiksi kuvaajaa varten, se tapahtuu näin:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Tietyn sarakkeen poimiminen
-invariantti_massa = data[&#39;M&#39;]
-print(invariantti_massa)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tietyn sarakkeen poimiminen</span>
+<span class="n">invariantti_massa</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;M&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">invariantti_massa</span><span class="p">)</span>
 
-# Tietyn rivin poimiminen
-rivi = data.loc[1]
-print(rivi)
+<span class="c1"># Tietyn rivin poimiminen</span>
+<span class="n">rivi</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">rivi</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0    122.797901
+1    124.586979
+2    126.462830
+3    123.622542
+4    123.203887
+5    124.444405
+6    124.776915
+7    125.704971
+8    125.691479
+9    123.273271
+Name: M, dtype: float64
+Run      1.996990e+05
+Event    3.362599e+08
+pt1      6.410910e+01
+eta1     4.736670e-01
+phi1    -8.151330e-01
+pt2      5.860380e+01
+eta2     3.201850e-02
+phi2     2.585680e+00
+M        1.245870e+02
+Name: 1, dtype: float64
 </pre></div>
 </div>
 </div>
 </div>
 <section id="tehtava-kokeile-avata-tassa-notebookissa-jokin-toinen-cms-kokeen-datasetti">
-<h3>Tehtävä: Kokeile avata tässä notebookissa jokin toinen CMS-kokeen datasetti.<a class="headerlink" href="#tehtava-kokeile-avata-tassa-notebookissa-jokin-toinen-cms-kokeen-datasetti" title="Permalink to this headline">#</a></h3>
+<h3>Tehtävä: Kokeile avata tässä notebookissa jokin toinen CMS-kokeen datasetti.<a class="headerlink" href="#tehtava-kokeile-avata-tassa-notebookissa-jokin-toinen-cms-kokeen-datasetti" title="Permalink to this heading">#</a></h3>
 </section>
 </section>
 <section id="kuvaajat">
-<h2>3. Kuvaajat<a class="headerlink" href="#kuvaajat" title="Permalink to this headline">#</a></h2>
+<h2>3. Kuvaajat<a class="headerlink" href="#kuvaajat" title="Permalink to this heading">#</a></h2>
 <p>Seuraavaksi piirrellään kuvaajia. Sitä varten tarvitaan matplotlip.pyplot -pakettia. Käytetään apuna myös numpy-pakettia, mutta koska se on tuotu meidän käyttöön jo aiemmin, niin sitä ei tarvitse tuoda uudestaan.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>import matplotlib.pyplot as plt
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Piirretään kuvaaja sinifunktiosta
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Piirretään kuvaaja sinifunktiosta</span>
 
-x = np.linspace(-np.pi, np.pi)
-plt.plot(x, np.sin(x))
-plt.xlabel(&#39;Kulma [rad]&#39;)
-plt.ylabel(&#39;sin(x)&#39;)
-plt.title(&#39;Kuvaaja 1: Sinifunktio kulman funktiona&#39;)
-plt.show()
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Kulma [rad]&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;sin(x)&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Kuvaaja 1: Sinifunktio kulman funktiona&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/4bcac8fbab19a88de2d57e835041745fb58c849f0dd28d68aa0317483362cf4c.png" src="../_images/4bcac8fbab19a88de2d57e835041745fb58c849f0dd28d68aa0317483362cf4c.png" />
 </div>
 </div>
 <section id="tehtava-piirra-kuvaaja-kosinifunktiosta">
-<h3>Tehtävä: Piirrä kuvaaja kosinifunktiosta.<a class="headerlink" href="#tehtava-piirra-kuvaaja-kosinifunktiosta" title="Permalink to this headline">#</a></h3>
+<h3>Tehtävä: Piirrä kuvaaja kosinifunktiosta.<a class="headerlink" href="#tehtava-piirra-kuvaaja-kosinifunktiosta" title="Permalink to this heading">#</a></h3>
 <p>Seuraavaksi yhdistetään: valitaan datasetti ja poimitaan sieltä tiedot haluttua kuvaajaa varten.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>kaksi_myonia = pd.read_csv(&quot;http://opendata.cern.ch/record/303/files/dimuon.csv&quot;)
-kaksi_myonia.head()
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">kaksi_myonia</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;http://opendata.cern.ch/record/303/files/dimuon.csv&quot;</span><span class="p">)</span>
+<span class="n">kaksi_myonia</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Type</th>
+      <th>Run</th>
+      <th>Event</th>
+      <th>E1</th>
+      <th>px1</th>
+      <th>py1</th>
+      <th>pz1</th>
+      <th>pt1</th>
+      <th>eta1</th>
+      <th>phi1</th>
+      <th>Q1</th>
+      <th>E2</th>
+      <th>px2</th>
+      <th>py2</th>
+      <th>pz2</th>
+      <th>pt2</th>
+      <th>eta2</th>
+      <th>phi2</th>
+      <th>Q2</th>
+      <th>M</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>GT</td>
+      <td>146511</td>
+      <td>25343052</td>
+      <td>7.33390</td>
+      <td>2.060420</td>
+      <td>5.88580</td>
+      <td>-3.85836</td>
+      <td>6.23602</td>
+      <td>-0.584812</td>
+      <td>1.234060</td>
+      <td>-1</td>
+      <td>5.20755</td>
+      <td>-1.55016</td>
+      <td>-1.819760</td>
+      <td>4.62525</td>
+      <td>2.39050</td>
+      <td>1.414110</td>
+      <td>-2.276360</td>
+      <td>1</td>
+      <td>11.82820</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>GG</td>
+      <td>146511</td>
+      <td>25341481</td>
+      <td>18.46720</td>
+      <td>8.033950</td>
+      <td>-3.94072</td>
+      <td>-16.15410</td>
+      <td>8.94839</td>
+      <td>-1.352990</td>
+      <td>-0.456026</td>
+      <td>-1</td>
+      <td>10.72950</td>
+      <td>6.29476</td>
+      <td>-2.524410</td>
+      <td>-8.31349</td>
+      <td>6.78208</td>
+      <td>-1.032390</td>
+      <td>-0.381397</td>
+      <td>1</td>
+      <td>2.58406</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>GG</td>
+      <td>146511</td>
+      <td>25390065</td>
+      <td>7.70222</td>
+      <td>-0.248771</td>
+      <td>4.08338</td>
+      <td>6.52511</td>
+      <td>4.09095</td>
+      <td>1.246340</td>
+      <td>1.631640</td>
+      <td>-1</td>
+      <td>6.90202</td>
+      <td>-3.02439</td>
+      <td>3.751290</td>
+      <td>4.94041</td>
+      <td>4.81862</td>
+      <td>0.899132</td>
+      <td>2.249320</td>
+      <td>1</td>
+      <td>3.11929</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>GG</td>
+      <td>146511</td>
+      <td>25391068</td>
+      <td>6.59462</td>
+      <td>5.246510</td>
+      <td>2.16082</td>
+      <td>3.35900</td>
+      <td>5.67407</td>
+      <td>0.561945</td>
+      <td>0.390686</td>
+      <td>1</td>
+      <td>7.43461</td>
+      <td>-5.06069</td>
+      <td>4.408010</td>
+      <td>3.19704</td>
+      <td>6.71127</td>
+      <td>0.459977</td>
+      <td>2.425020</td>
+      <td>-1</td>
+      <td>10.51920</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>GG</td>
+      <td>146511</td>
+      <td>25489877</td>
+      <td>45.77350</td>
+      <td>8.864420</td>
+      <td>1.28931</td>
+      <td>-44.88830</td>
+      <td>8.95770</td>
+      <td>-2.314620</td>
+      <td>0.144435</td>
+      <td>-1</td>
+      <td>9.27485</td>
+      <td>-3.64696</td>
+      <td>-0.276874</td>
+      <td>8.52260</td>
+      <td>3.65745</td>
+      <td>1.582250</td>
+      <td>-3.065820</td>
+      <td>1</td>
+      <td>40.98300</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>invariantti_massa = kaksi_myonia[&#39;M&#39;]
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">invariantti_massa</span> <span class="o">=</span> <span class="n">kaksi_myonia</span><span class="p">[</span><span class="s1">&#39;M&#39;</span><span class="p">]</span>
 
-fig = plt.figure(figsize=(15, 10))
-plt.hist(invariantti_massa , bins=300)
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">invariantti_massa</span> <span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
 
-plt.xlabel(&#39;Invariantti massa [GeV/c²]&#39;, fontsize=15)
-plt.ylabel(&#39;Tapahtumien lukumäärä&#39;, fontsize=15)
-plt.title(&#39;Kahden myonin invariantti massa&#39;, fontsize=15)
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Invariantti massa [GeV/c²]&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Tapahtumien lukumäärä&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Kahden myonin invariantti massa&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
 
-plt.show()
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/b749dbe4f23169c1fc170fc94bc61ee5707195039be2520c7049d0810beeecc3.png" src="../_images/b749dbe4f23169c1fc170fc94bc61ee5707195039be2520c7049d0810beeecc3.png" />
 </div>
 </div>
 </section>
 <section id="tehtava-valitse-jokin-toinen-datasetti-ja-piirra-vastaava-histogrammi">
-<h3>Tehtävä: Valitse jokin toinen datasetti ja piirrä vastaava histogrammi.<a class="headerlink" href="#tehtava-valitse-jokin-toinen-datasetti-ja-piirra-vastaava-histogrammi" title="Permalink to this headline">#</a></h3>
+<h3>Tehtävä: Valitse jokin toinen datasetti ja piirrä vastaava histogrammi.<a class="headerlink" href="#tehtava-valitse-jokin-toinen-datasetti-ja-piirra-vastaava-histogrammi" title="Permalink to this heading">#</a></h3>
 </section>
 </section>
 </section>
@@ -974,7 +969,7 @@ plt.show()
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./harjoitukset"
         },
         predefinedOutput: true
@@ -982,55 +977,112 @@ plt.show()
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="opettajakoulutus.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">CERN Opettajakoulutus</p>
-        </div>
+
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="opettajakoulutus.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">CERN Opettajakoulutus</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="cms-esimerkki.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="cms-esimerkki.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">CMS ja avoin data</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tehtava-muokkaa-tata-tekstisolua-lisaa-alle-lause-jossa-kerrot-minkalainen-saa-on-tanaan">Tehtävä: Muokkaa tätä tekstisolua – lisää alle lause, jossa kerrot minkälainen sää on tänään.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tehtava-kokeile-lisata-alle-uusi-koodisolu-ja-laske-jokin-mielivaltainen-summa-muuttujaan-b">Tehtävä: Kokeile lisätä alle uusi koodisolu ja laske jokin mielivaltainen summa muuttujaan b.</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#funktiokirjastot">1. Funktiokirjastot</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tehtava-luo-kaksi-mielivaltaista-vektoria-muuttujiin-vek1-ja-vek2-seka-laske-niiden-vektorisumma">Tehtävä: Luo kaksi mielivaltaista vektoria muuttujiin vek1 ja vek2 sekä laske niiden vektorisumma.</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#datan-lukeminen">2. Datan lukeminen</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tehtava-kokeile-avata-tassa-notebookissa-jokin-toinen-cms-kokeen-datasetti">Tehtävä: Kokeile avata tässä notebookissa jokin toinen CMS-kokeen datasetti.</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#kuvaajat">3. Kuvaajat</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tehtava-piirra-kuvaaja-kosinifunktiosta">Tehtävä: Piirrä kuvaaja kosinifunktiosta.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tehtava-valitse-jokin-toinen-datasetti-ja-piirra-vastaava-histogrammi">Tehtävä: Valitse jokin toinen datasetti ja piirrä vastaava histogrammi.</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner">
+<div class="bd-footer-content__inner container">
   
-    By HIP Education and Open Data Team<br/>
+  <div class="footer-item">
+    
+<p class="component-author">
+By HIP Education and Open Data Team
+</p>
+
+  </div>
   
-    <div class="extra_footer">
-      <div>
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <div>
 <a>Toteutettu Opetushallituksen valtionavustuksella tiedekasvatuksen edistämiseen.</a></br><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img class="license" alt="Creative Commons License" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a> Tämän sivuston materiaali on käytettävissä seuraavalla lisenssillä: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC-BY 4.0.</a>
 </div>
 
-    </div>
-</p>
-        </footer>
-    </div>
-    
 </div>
+  </div>
+  
+</div></div>
+          </footer>
+        
 
-
-      </div>
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

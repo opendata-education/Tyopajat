@@ -1,48 +1,59 @@
 
+
 <!DOCTYPE html>
 
-<html lang="en">
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>ESIMERKKI: Lumensyvyys &#8212; Työpajat</title>
-    
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -50,63 +61,95 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'harjoitukset/Lumensyvyys';</script>
     <link rel="canonical" href="https://opendata-education.github.io/Tyopajat/intro.html/harjoitukset/Lumensyvyys.html" />
     <link rel="shortcut icon" href="../_static/logo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="ESIMERKKI: Ultraviolettisäteily" href="UV.html" />
     <link rel="prev" title="Lyhyet esimerkit" href="esimerkit.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-    <div class="container-fluid" id="banner"></div>
-
-    
-
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="../_static/logo.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Työpajat</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -116,438 +159,296 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="opettajakoulutus.html">
-   CERN Opettajakoulutus
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="mika-on-jupyter-notebook.html">
-     Mikä on Jupyter Notebook?
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="cms-esimerkki.html">
-     CMS ja avoin data
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Vuosirenkaat.html">
-     Niin hyvää puuta
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="esimerkit.html">
-   Lyhyet esimerkit
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     ESIMERKKI: Lumensyvyys
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="UV.html">
-     ESIMERKKI: Ultraviolettisäteily
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="fossiiliset_ja_koulutus.html">
-     Luonnonvarojen käyttö ja tasa-arvoinen koulutus
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="ilmastopaja.html">
-   Ilmastotyöpaja
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="lampotila-intro.html">
-     ESIMERKKI 1: Maan lämpötilapoikkeaman määritys
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="dataraati.html">
-     Visualisaatioraati
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="UV-paja.html">
-     ESIMERKKI 2: Ultraviolettisäteily
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="co2.html">
-     ESIMERKKI 3: Maapallon ilmakehä
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Pienhiukkaset.html">
-     ESIMERKKI 4: Pienhiukkaset - saasteita ja aerosoleja
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="aerosoli.html">
-   Aerosoli-työpaja
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="aerosoli-tyopaja.html">
-     Aerosoli-työpajan ohjeet
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="datasettien_esittelyt.html">
-     Aerosoli-työpajan datasetit ja tutkimuskysymykset
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="opettajakoulutus.html">CERN Opettajakoulutus</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="mika-on-jupyter-notebook.html">Mikä on Jupyter Notebook?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms-esimerkki.html">CMS ja avoin data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Vuosirenkaat.html">Niin hyvää puuta</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="esimerkit.html">Lyhyet esimerkit</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">ESIMERKKI: Lumensyvyys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UV.html">ESIMERKKI: Ultraviolettisäteily</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fossiiliset_ja_koulutus.html">Luonnonvarojen käyttö ja tasa-arvoinen koulutus</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="ilmastopaja.html">Ilmastotyöpaja</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="lampotila-intro.html">ESIMERKKI 1: Maan lämpötilapoikkeaman määritys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dataraati.html">Visualisaatioraati</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UV-paja.html">ESIMERKKI 2: Ultraviolettisäteily</a></li>
+<li class="toctree-l2"><a class="reference internal" href="co2.html">ESIMERKKI 3: Maapallon ilmakehä</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Pienhiukkaset.html">ESIMERKKI 4: Pienhiukkaset - saasteita ja aerosoleja</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="aerosoli.html">Aerosoli-työpaja</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="aerosoli-tyopaja.html">Aerosoli-työpajan ohjeet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datasettien_esittelyt.html">Aerosoli-työpajan datasetit ja tutkimuskysymykset</a></li>
+</ul>
+</li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
-          
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
 
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
 <div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
 
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/opendata-education/Tyopajat/main?urlpath=tree/materiaali/harjoitukset/Lumensyvyys.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/opendata-education/Tyopajat/main?urlpath=tree/materiaali/harjoitukset/Lumensyvyys.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   
     <img src="../_static/images/logo_binder.svg">
   </span>
-<span class="headerbtn__text-container">Binder</span>
+<span class="btn__text-container">Binder</span>
 </a>
-
-      </li>
+</li>
       
-      <li>
-        <a href="https://colab.research.google.com/github/opendata-education/Tyopajat/blob/main/materiaali/harjoitukset/Lumensyvyys.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Colab"
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/opendata-education/Tyopajat/blob/main/materiaali/harjoitukset/Lumensyvyys.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   
     <img src="../_static/images/logo_colab.png">
   </span>
-<span class="headerbtn__text-container">Colab</span>
+<span class="btn__text-container">Colab</span>
 </a>
-
-      </li>
+</li>
       
-    </ul>
-  </div>
+  </ul>
 </div>
 
-<button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/opendata-education/Tyopajat" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/opendata-education/Tyopajat/issues/new?title=Issue%20on%20page%20%2Fharjoitukset/Lumensyvyys.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/harjoitukset/Lumensyvyys.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/opendata-education/Tyopajat"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="headerbtn__text-container">repository</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://github.com/opendata-education/Tyopajat/issues/new?title=Issue%20on%20page%20%2Fharjoitukset/Lumensyvyys.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="headerbtn__text-container">open issue</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../_sources/harjoitukset/Lumensyvyys.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.ipynb</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tyon-rakenne">
-   Työn rakenne
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tutkimuskysymys">
-   1. Tutkimuskysymys
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#aineisto">
-   2. Aineisto
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#analyysi">
-   3. Analyysi
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#arviointi">
-   4. Arviointi
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#lahteet">
-   5. Lähteet
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>ESIMERKKI: Lumensyvyys</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tyon-rakenne">
-   Työn rakenne
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tutkimuskysymys">
-   1. Tutkimuskysymys
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#aineisto">
-   2. Aineisto
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#analyysi">
-   3. Analyysi
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#arviointi">
-   4. Arviointi
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#lahteet">
-   5. Lähteet
-  </a>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>ESIMERKKI: Lumensyvyys</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tyon-rakenne">Työn rakenne</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tutkimuskysymys">1. Tutkimuskysymys</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aineisto">2. Aineisto</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analyysi">3. Analyysi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arviointi">4. Arviointi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lahteet">5. Lähteet</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
-  <section class="tex2jax_ignore mathjax_ignore" id="esimerkki-lumensyvyys">
-<h1>ESIMERKKI: Lumensyvyys<a class="headerlink" href="#esimerkki-lumensyvyys" title="Permalink to this headline">#</a></h1>
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="esimerkki-lumensyvyys">
+<h1>ESIMERKKI: Lumensyvyys<a class="headerlink" href="#esimerkki-lumensyvyys" title="Permalink to this heading">#</a></h1>
 <section id="tyon-rakenne">
-<h2>Työn rakenne<a class="headerlink" href="#tyon-rakenne" title="Permalink to this headline">#</a></h2>
+<h2>Työn rakenne<a class="headerlink" href="#tyon-rakenne" title="Permalink to this heading">#</a></h2>
 <p>Yksinkertainen projekti noudattaa yleensä simppeliä perusrakennetta:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Määritetään kiinnostuksen kohde (tutkimuskysymys)</p></li>
 <li><p>Etsitään aineistoa (datankeruu)</p></li>
 <li><p>Tarkastellaan löydöksiä (analyysi)</p></li>
@@ -556,43 +457,43 @@ title="Print to PDF"
 </ol>
 </section>
 <section id="tutkimuskysymys">
-<h2>1. Tutkimuskysymys<a class="headerlink" href="#tutkimuskysymys" title="Permalink to this headline">#</a></h2>
+<h2>1. Tutkimuskysymys<a class="headerlink" href="#tutkimuskysymys" title="Permalink to this heading">#</a></h2>
 <p>Sanotaan, että meitä kiinnostaa pohtia Espoon talvien lumisuutta tällä vuosituhannella. Onko kevät 2022 tosiaan lumisin vuosiin vai tuntuuko se vain siltä?</p>
 </section>
 <section id="aineisto">
-<h2>2. Aineisto<a class="headerlink" href="#aineisto" title="Permalink to this headline">#</a></h2>
+<h2>2. Aineisto<a class="headerlink" href="#aineisto" title="Permalink to this heading">#</a></h2>
 <p>Ilmatieteen laitokselta löytyy reaaliaikaisia mittauksia tarjoava portaali, josta voidaan kaivaa haluttujen paikkakuntien mitta-asemilta mitattuja arvoja.</p>
 <p>https://www.ilmatieteenlaitos.fi/havaintojen-lataus</p>
 <p>Tässä esimerkissä on käytetty Espoon asemia vuosilta 2000-2022. Yksikin mittaus on mittaus, mutta paremman yleiskuvan saamiseksi voi olla hyödyllistä tarkastella useamman lähiaseman aineistoja. Ilmatieteen laitoksen kartasta osuu ensimmäisenä silmään Tapiolan, Nupurin ja Nuuksion asemia, joten katsotaan mitä niistä selviää.</p>
 <p>Tiedot on noudettu palvelusta 6.3.2022</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Tuodaan tarvittavat työkalukirjastot
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tuodaan tarvittavat työkalukirjastot</span>
 
-import pandas as pd
-import matplotlib.pyplot as plt
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Huomaa lukukomennon sisään lisätty &#39;parse&#39;-parametri, jolla luodaan tiedostoon yhdistelmä päivämääräsarakkeista,
-# jolloin saadaan juoksevasti kasvava luku tulevan visualisoinnin aika-akseliksi.
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Huomaa lukukomennon sisään lisätty &#39;parse&#39;-parametri, jolla luodaan tiedostoon yhdistelmä päivämääräsarakkeista,</span>
+<span class="c1"># jolloin saadaan juoksevasti kasvava luku tulevan visualisoinnin aika-akseliksi.</span>
 
-Tapiola = pd.read_csv(&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/EspooTapiola.csv&quot;,
-                    parse_dates = {&quot;Aika&quot;:[&quot;Vuosi&quot;, &quot;Kk&quot;, &quot;Pv&quot;, &quot;Klo&quot;]}, keep_date_col = True)
-Nupuri = pd.read_csv(&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/EspooNupuri.csv&quot;,
-                    parse_dates = {&quot;Aika&quot;:[&quot;Vuosi&quot;, &quot;Kk&quot;, &quot;Pv&quot;, &quot;Klo&quot;]}, keep_date_col = True)
-Nuuksio = pd.read_csv(&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/EspooNuuksio.csv&quot;,
-                    parse_dates = {&quot;Aika&quot;:[&quot;Vuosi&quot;, &quot;Kk&quot;, &quot;Pv&quot;, &quot;Klo&quot;]}, keep_date_col = True)
+<span class="n">Tapiola</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/EspooTapiola.csv&quot;</span><span class="p">,</span>
+                    <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Aika&quot;</span><span class="p">:[</span><span class="s2">&quot;Vuosi&quot;</span><span class="p">,</span> <span class="s2">&quot;Kk&quot;</span><span class="p">,</span> <span class="s2">&quot;Pv&quot;</span><span class="p">,</span> <span class="s2">&quot;Klo&quot;</span><span class="p">]},</span> <span class="n">keep_date_col</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">Nupuri</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/EspooNupuri.csv&quot;</span><span class="p">,</span>
+                    <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Aika&quot;</span><span class="p">:[</span><span class="s2">&quot;Vuosi&quot;</span><span class="p">,</span> <span class="s2">&quot;Kk&quot;</span><span class="p">,</span> <span class="s2">&quot;Pv&quot;</span><span class="p">,</span> <span class="s2">&quot;Klo&quot;</span><span class="p">]},</span> <span class="n">keep_date_col</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">Nuuksio</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/EspooNuuksio.csv&quot;</span><span class="p">,</span>
+                    <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Aika&quot;</span><span class="p">:[</span><span class="s2">&quot;Vuosi&quot;</span><span class="p">,</span> <span class="s2">&quot;Kk&quot;</span><span class="p">,</span> <span class="s2">&quot;Pv&quot;</span><span class="p">,</span> <span class="s2">&quot;Klo&quot;</span><span class="p">]},</span> <span class="n">keep_date_col</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>Tapiola
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Tapiola</span>
 </pre></div>
 </div>
 </div>
@@ -742,7 +643,7 @@ Nuuksio = pd.read_csv(&quot;https://raw.githubusercontent.com/opendata-education
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>Nupuri
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Nupuri</span>
 </pre></div>
 </div>
 </div>
@@ -892,7 +793,7 @@ Nuuksio = pd.read_csv(&quot;https://raw.githubusercontent.com/opendata-education
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>Nuuksio
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Nuuksio</span>
 </pre></div>
 </div>
 </div>
@@ -1042,104 +943,104 @@ Nuuksio = pd.read_csv(&quot;https://raw.githubusercontent.com/opendata-education
 </div>
 </section>
 <section id="analyysi">
-<h2>3. Analyysi<a class="headerlink" href="#analyysi" title="Permalink to this headline">#</a></h2>
+<h2>3. Analyysi<a class="headerlink" href="#analyysi" title="Permalink to this heading">#</a></h2>
 <p>Kuvaajat ovat erinomainen työkalu nopeisiin arviointeihin. Otetaan ensimmäiseksi yleiskuva ajan suhteen:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>plt.figure(figsize = (30, 5))
-plt.scatter(Tapiola[&quot;Aika&quot;], Tapiola[&quot;Lumensyvyys (cm)&quot;])
-plt.title(&quot;Lumensyvyys Tapiolan mitta-asemalla (cm) \n&quot;, fontsize = 30)
-plt.show()
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">Tapiola</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">Tapiola</span><span class="p">[</span><span class="s2">&quot;Lumensyvyys (cm)&quot;</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Lumensyvyys Tapiolan mitta-asemalla (cm) </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">30</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 
-plt.figure(figsize = (30, 5))
-plt.scatter(Nupuri[&quot;Aika&quot;], Nupuri[&quot;Lumensyvyys (cm)&quot;])
-plt.title(&quot;Lumensyvyys Nupurin mitta-asemalla (cm) \n&quot;, fontsize = 30)
-plt.show()
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">Nupuri</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">Nupuri</span><span class="p">[</span><span class="s2">&quot;Lumensyvyys (cm)&quot;</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Lumensyvyys Nupurin mitta-asemalla (cm) </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">30</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 
-plt.figure(figsize = (30, 5))
-plt.scatter(Nuuksio[&quot;Aika&quot;], Nuuksio[&quot;Lumensyvyys (cm)&quot;])
-plt.title(&quot;Lumensyvyys Nuuksion mitta-asemalla (cm) \n&quot;, fontsize = 30)
-plt.show()
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">Nuuksio</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">Nuuksio</span><span class="p">[</span><span class="s2">&quot;Lumensyvyys (cm)&quot;</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Lumensyvyys Nuuksion mitta-asemalla (cm) </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">30</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/Lumensyvyys_14_0.png" src="../_images/Lumensyvyys_14_0.png" />
-<img alt="../_images/Lumensyvyys_14_1.png" src="../_images/Lumensyvyys_14_1.png" />
-<img alt="../_images/Lumensyvyys_14_2.png" src="../_images/Lumensyvyys_14_2.png" />
+<img alt="../_images/5d6ef5099b88b7aa04269ebcdb94f40cc9370dd82e490c236ce8a37942d40e8f.png" src="../_images/5d6ef5099b88b7aa04269ebcdb94f40cc9370dd82e490c236ce8a37942d40e8f.png" />
+<img alt="../_images/0582543a2f7b471a49159b4b93c71c45a1f2ab8d0d6a9cf9b92fd670a50bfad0.png" src="../_images/0582543a2f7b471a49159b4b93c71c45a1f2ab8d0d6a9cf9b92fd670a50bfad0.png" />
+<img alt="../_images/d42dba40ba7d2af6bbf75c0cc802f09424f7927a32273a2005d9e584f139fa1a.png" src="../_images/d42dba40ba7d2af6bbf75c0cc802f09424f7927a32273a2005d9e584f139fa1a.png" />
 </div>
 </div>
 <p>Tapiolan ja Nuuksion tiedot näyttävät olevan samalta ajalta, mikä helpottaa rinnakkaista vertailua:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>plt.figure(figsize = (30, 5))
-plt.scatter(Nupuri[&quot;Aika&quot;], Nupuri[&quot;Lumensyvyys (cm)&quot;], c = &quot;red&quot;, label = &quot;Nupuri&quot;)
-plt.scatter(Nuuksio[&quot;Aika&quot;], Nuuksio[&quot;Lumensyvyys (cm)&quot;], c = &quot;blue&quot;, label = &quot;Nuuksio&quot;)
-plt.scatter(Tapiola[&quot;Aika&quot;], Tapiola[&quot;Lumensyvyys (cm)&quot;], c = &quot;orange&quot;, label = &quot;Tapiola&quot;)
-plt.title(&quot;Lumensyvyys Espoon mitta-asemilla (cm) \n&quot;, fontsize = 30)
-plt.legend(fontsize = 20)
-plt.show()
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">Nupuri</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">Nupuri</span><span class="p">[</span><span class="s2">&quot;Lumensyvyys (cm)&quot;</span><span class="p">],</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Nupuri&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">Nuuksio</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">Nuuksio</span><span class="p">[</span><span class="s2">&quot;Lumensyvyys (cm)&quot;</span><span class="p">],</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Nuuksio&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">Tapiola</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">Tapiola</span><span class="p">[</span><span class="s2">&quot;Lumensyvyys (cm)&quot;</span><span class="p">],</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Tapiola&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Lumensyvyys Espoon mitta-asemilla (cm) </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">30</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/Lumensyvyys_16_0.png" src="../_images/Lumensyvyys_16_0.png" />
+<img alt="../_images/37d6d383f7e0cbe9735039822cd87099659bf251917cf2666617eb61009b1e3e.png" src="../_images/37d6d383f7e0cbe9735039822cd87099659bf251917cf2666617eb61009b1e3e.png" />
 </div>
 </div>
 <p>Aineistossa näkyy muutamia poikkeuksellisia kausia, kuten poikkeuksellisen lumettomia vuosia (2008, 2020) tai korkeita kinoksia (2010, 2022). Tarkastellaan niitä vähän lähemmin.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>Tapiola20 = Tapiola.query(&quot;Vuosi &gt;= &#39;2019&#39;&quot;)
-Nuuksio20 = Nuuksio.query(&quot;Vuosi &gt;= &#39;2019&#39;&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Tapiola20</span> <span class="o">=</span> <span class="n">Tapiola</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;Vuosi &gt;= &#39;2019&#39;&quot;</span><span class="p">)</span>
+<span class="n">Nuuksio20</span> <span class="o">=</span> <span class="n">Nuuksio</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;Vuosi &gt;= &#39;2019&#39;&quot;</span><span class="p">)</span>
 
-plt.figure(figsize = (30, 5))
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
 
-#plt.subplot(1,2,1)
-plt.scatter(Tapiola20[&quot;Aika&quot;], Tapiola20[&quot;Lumensyvyys (cm)&quot;], c = &quot;orange&quot;, label = &quot;Tapiola&quot;)
-plt.xticks(rotation = 45)
+<span class="c1">#plt.subplot(1,2,1)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">Tapiola20</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">Tapiola20</span><span class="p">[</span><span class="s2">&quot;Lumensyvyys (cm)&quot;</span><span class="p">],</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Tapiola&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span> <span class="o">=</span> <span class="mi">45</span><span class="p">)</span>
 
-#plt.subplot(1,2,2)
-plt.scatter(Nuuksio20[&quot;Aika&quot;], Nuuksio20[&quot;Lumensyvyys (cm)&quot;], c = &quot;b&quot;, alpha = 0.5, label = &quot;Nuuksio&quot;)
+<span class="c1">#plt.subplot(1,2,2)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">Nuuksio20</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">Nuuksio20</span><span class="p">[</span><span class="s2">&quot;Lumensyvyys (cm)&quot;</span><span class="p">],</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Nuuksio&quot;</span><span class="p">)</span>
 
-plt.suptitle(&quot;Lumensyvyys viime vuosina Espoon mitta-asemilla (cm) \n&quot;, fontsize = 30)
-plt.xticks(rotation = 45)
-plt.legend(fontsize = 20)
-plt.show()
+<span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s2">&quot;Lumensyvyys viime vuosina Espoon mitta-asemilla (cm) </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">30</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span> <span class="o">=</span> <span class="mi">45</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/Lumensyvyys_18_0.png" src="../_images/Lumensyvyys_18_0.png" />
+<img alt="../_images/84caad895a910b5c9af8c6e73b653780180ca52c2d358c696ca99ae3883e0663.png" src="../_images/84caad895a910b5c9af8c6e73b653780180ca52c2d358c696ca99ae3883e0663.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span>Tapiola21 = Tapiola.query(&quot;Vuosi &gt;= &#39;2021&#39;&quot;)
-Nuuksio21 = Nuuksio.query(&quot;Vuosi &gt;= &#39;2021&#39;&quot;)
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Tapiola21</span> <span class="o">=</span> <span class="n">Tapiola</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;Vuosi &gt;= &#39;2021&#39;&quot;</span><span class="p">)</span>
+<span class="n">Nuuksio21</span> <span class="o">=</span> <span class="n">Nuuksio</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;Vuosi &gt;= &#39;2021&#39;&quot;</span><span class="p">)</span>
 
-plt.figure(figsize = (15, 5))
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
 
-#plt.subplot(1,2,1)
-plt.scatter(Tapiola21[&quot;Aika&quot;], Tapiola21[&quot;Lumensyvyys (cm)&quot;], c = &quot;orange&quot;, label = &quot;Tapiola&quot;)
-plt.xticks(rotation = 45)
+<span class="c1">#plt.subplot(1,2,1)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">Tapiola21</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">Tapiola21</span><span class="p">[</span><span class="s2">&quot;Lumensyvyys (cm)&quot;</span><span class="p">],</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Tapiola&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span> <span class="o">=</span> <span class="mi">45</span><span class="p">)</span>
 
-#plt.subplot(1,2,2)
-plt.scatter(Nuuksio21[&quot;Aika&quot;], Nuuksio21[&quot;Lumensyvyys (cm)&quot;], c = &quot;b&quot;, alpha = 0.5, label = &quot;Nuuksio&quot;)
+<span class="c1">#plt.subplot(1,2,2)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">Nuuksio21</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">Nuuksio21</span><span class="p">[</span><span class="s2">&quot;Lumensyvyys (cm)&quot;</span><span class="p">],</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Nuuksio&quot;</span><span class="p">)</span>
 
-plt.suptitle(&quot;Lumensyvyys 21-22 Espoon mitta-asemilla (cm) \n&quot;, fontsize = 30)
-plt.xticks(rotation = 45)
-plt.legend(fontsize = 20)
-plt.show()
+<span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s2">&quot;Lumensyvyys 21-22 Espoon mitta-asemilla (cm) </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">30</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span> <span class="o">=</span> <span class="mi">45</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/Lumensyvyys_19_0.png" src="../_images/Lumensyvyys_19_0.png" />
+<img alt="../_images/a38ec548349d225b6f9c12cbfb1536207cd5bfbad2c4896b19cdf9436adbbea3.png" src="../_images/a38ec548349d225b6f9c12cbfb1536207cd5bfbad2c4896b19cdf9436adbbea3.png" />
 </div>
 </div>
 </section>
 <section id="arviointi">
-<h2>4. Arviointi<a class="headerlink" href="#arviointi" title="Permalink to this headline">#</a></h2>
+<h2>4. Arviointi<a class="headerlink" href="#arviointi" title="Permalink to this heading">#</a></h2>
 <p>Ilmatieteen laitoksen sivuilta saa jonkinlaista kuvaa mittausten tarkkuudesta ja asemien paikkatiedoista.</p>
 <p>Lumensyvyyden hetkelliseksi tarkkuudeksi ilmoitetaan ± 2 cm. Vuorokausiarvoja, joita tässäkin käytettiin, ei keskiarvoisteta läpi päivän vaan ne ilmoitetaan kello 8 (kesällä 9) havainnoista.</p>
 <p>Asemista kerrotaan seuraavaa.</p>
@@ -1153,7 +1054,7 @@ plt.show()
 <p>Lumiaineistot ovat näillä asemilla kuitenkin harmillisen lyhyitä. Kaivelemalla latauspalvelusta vanhempia asemia tai tekemällä johtopäätöksiä yleisten sademäärien kautta pystyisi syventämään väitteitään alueen ilmaston aikakehityksestä. Jatkopohdintana voi miettiä, miten lumettomien ja hyvin lumisten vuosien heiluminen tilastoissa liittyy yleisesti ilmastonmuutoksen tuomiin säähäiriöihin.</p>
 </section>
 <section id="lahteet">
-<h2>5. Lähteet<a class="headerlink" href="#lahteet" title="Permalink to this headline">#</a></h2>
+<h2>5. Lähteet<a class="headerlink" href="#lahteet" title="Permalink to this heading">#</a></h2>
 <p>https://www.ilmatieteenlaitos.fi/havaintojen-lataus</p>
 <p>https://www.ilmatieteenlaitos.fi/havaintoasemat</p>
 <p>https://www.ilmatieteenlaitos.fi/nuuksion-saahavaintoasema</p>
@@ -1172,7 +1073,7 @@ plt.show()
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./harjoitukset"
         },
         predefinedOutput: true
@@ -1180,55 +1081,103 @@ plt.show()
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="esimerkit.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Lyhyet esimerkit</p>
-        </div>
+
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="esimerkit.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Lyhyet esimerkit</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="UV.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="UV.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">ESIMERKKI: Ultraviolettisäteily</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tyon-rakenne">Työn rakenne</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tutkimuskysymys">1. Tutkimuskysymys</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aineisto">2. Aineisto</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analyysi">3. Analyysi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arviointi">4. Arviointi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lahteet">5. Lähteet</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner">
+<div class="bd-footer-content__inner container">
   
-    By HIP Education and Open Data Team<br/>
+  <div class="footer-item">
+    
+<p class="component-author">
+By HIP Education and Open Data Team
+</p>
+
+  </div>
   
-    <div class="extra_footer">
-      <div>
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <div>
 <a>Toteutettu Opetushallituksen valtionavustuksella tiedekasvatuksen edistämiseen.</a></br><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img class="license" alt="Creative Commons License" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a> Tämän sivuston materiaali on käytettävissä seuraavalla lisenssillä: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC-BY 4.0.</a>
 </div>
 
-    </div>
-</p>
-        </footer>
-    </div>
-    
 </div>
+  </div>
+  
+</div></div>
+          </footer>
+        
 
-
-      </div>
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

@@ -1,48 +1,59 @@
 
+
 <!DOCTYPE html>
 
-<html lang="en">
+
+<html lang="en" >
+
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>ESIMERKKI: Ultraviolettisäteily &#8212; Työpajat</title>
-    
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <link href="../_static/styles/theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
 
-    
-  <link rel="stylesheet"
-    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=12da95d707ffb74b382d" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
-    
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d" />
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
     <script src="../_static/togglebutton.js"></script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
@@ -50,63 +61,95 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'harjoitukset/UV';</script>
     <link rel="canonical" href="https://opendata-education.github.io/Tyopajat/intro.html/harjoitukset/UV.html" />
     <link rel="shortcut icon" href="../_static/logo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Luonnonvarojen käyttö ja tasa-arvoinen koulutus" href="fossiiliset_ja_koulutus.html" />
     <link rel="prev" title="ESIMERKKI: Lumensyvyys" href="Lumensyvyys.html" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en">
-    
-
-    <!-- Google Analytics -->
-    
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
-<!-- Checkboxes to toggle the left sidebar -->
-<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
-<label class="overlay overlay-navbar" for="__navigation">
-    <div class="visually-hidden">Toggle navigation sidebar</div>
-</label>
-<!-- Checkboxes to toggle the in-page toc -->
-<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
-<label class="overlay overlay-pagetoc" for="__page-toc">
-    <div class="visually-hidden">Toggle in-page Table of Contents</div>
-</label>
-<!-- Headers at the top -->
-<div class="announcement header-item noprint"></div>
-<div class="header header-item noprint"></div>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-    
-    <div class="container-fluid" id="banner"></div>
-
-    
-
-    <div class="container-xl">
-      <div class="row">
-          
-<!-- Sidebar -->
-<div class="bd-sidebar noprint" id="site-navigation">
-    <div class="bd-sidebar__content">
-        <div class="bd-sidebar__top"><div class="navbar-brand-box">
-    <a class="navbar-brand text-wrap" href="../index.html">
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
       
-        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+      <div class="bd-sidebar-primary bd-sidebar">
         
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+    
+    
       
-      
-      <img src="../_static/logo.png" class="logo" alt="logo">
-      
-      
-      <h1 class="site-logo" id="site-title">Työpajat</h1>
-      
-    </a>
-</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
-  <i class="icon fas fa-search"></i>
-  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
-    <div class="bd-toc-item active">
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
@@ -116,438 +159,296 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="opettajakoulutus.html">
-   CERN Opettajakoulutus
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="mika-on-jupyter-notebook.html">
-     Mikä on Jupyter Notebook?
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="cms-esimerkki.html">
-     CMS ja avoin data
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Vuosirenkaat.html">
-     Niin hyvää puuta
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 current active has-children">
-  <a class="reference internal" href="esimerkit.html">
-   Lyhyet esimerkit
-  </a>
-  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul class="current">
-   <li class="toctree-l2">
-    <a class="reference internal" href="Lumensyvyys.html">
-     ESIMERKKI: Lumensyvyys
-    </a>
-   </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
-     ESIMERKKI: Ultraviolettisäteily
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="fossiiliset_ja_koulutus.html">
-     Luonnonvarojen käyttö ja tasa-arvoinen koulutus
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="ilmastopaja.html">
-   Ilmastotyöpaja
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
-  <label for="toctree-checkbox-3">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="lampotila-intro.html">
-     ESIMERKKI 1: Maan lämpötilapoikkeaman määritys
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="dataraati.html">
-     Visualisaatioraati
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="UV-paja.html">
-     ESIMERKKI 2: Ultraviolettisäteily
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="co2.html">
-     ESIMERKKI 3: Maapallon ilmakehä
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Pienhiukkaset.html">
-     ESIMERKKI 4: Pienhiukkaset - saasteita ja aerosoleja
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="aerosoli.html">
-   Aerosoli-työpaja
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
-  <label for="toctree-checkbox-4">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="aerosoli-tyopaja.html">
-     Aerosoli-työpajan ohjeet
-    </a>
-   </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="datasettien_esittelyt.html">
-     Aerosoli-työpajan datasetit ja tutkimuskysymykset
-    </a>
-   </li>
-  </ul>
- </li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="opettajakoulutus.html">CERN Opettajakoulutus</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="mika-on-jupyter-notebook.html">Mikä on Jupyter Notebook?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms-esimerkki.html">CMS ja avoin data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Vuosirenkaat.html">Niin hyvää puuta</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="esimerkit.html">Lyhyet esimerkit</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Lumensyvyys.html">ESIMERKKI: Lumensyvyys</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">ESIMERKKI: Ultraviolettisäteily</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fossiiliset_ja_koulutus.html">Luonnonvarojen käyttö ja tasa-arvoinen koulutus</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="ilmastopaja.html">Ilmastotyöpaja</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="lampotila-intro.html">ESIMERKKI 1: Maan lämpötilapoikkeaman määritys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dataraati.html">Visualisaatioraati</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UV-paja.html">ESIMERKKI 2: Ultraviolettisäteily</a></li>
+<li class="toctree-l2"><a class="reference internal" href="co2.html">ESIMERKKI 3: Maapallon ilmakehä</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Pienhiukkaset.html">ESIMERKKI 4: Pienhiukkaset - saasteita ja aerosoleja</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="aerosoli.html">Aerosoli-työpaja</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="aerosoli-tyopaja.html">Aerosoli-työpajan ohjeet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datasettien_esittelyt.html">Aerosoli-työpajan datasetit ja tutkimuskysymykset</a></li>
+</ul>
+</li>
 </ul>
 
     </div>
 </nav></div>
-        <div class="bd-sidebar__bottom">
-             <!-- To handle the deprecated key -->
-            
-            <div class="navbar_extra_footer">
-            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-            </div>
-            
-        </div>
     </div>
-    <div id="rtd-footer-container"></div>
-</div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
 
 
-          
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
 
-
-          
-<!-- A tiny helper pixel to detect if we've scrolled -->
 <div class="sbt-scroll-pixel-helper"></div>
-<!-- Main content -->
-<div class="col py-0 content-container">
-    
-    <div class="header-article row sticky-top noprint">
-        
 
-
-
-<div class="col py-1 d-flex header-article-main">
-    <div class="header-article__left">
-        
-        <label for="__navigation"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="right"
-title="Toggle navigation"
->
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
   
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-bars"></i>
-  </span>
-
-</label>
-
-        
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
     </div>
-    <div class="header-article__right">
-<div class="menu-dropdown menu-dropdown-launch-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Launch interactive content">
-      <i class="fas fa-rocket"></i>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://mybinder.org/v2/gh/opendata-education/Tyopajat/main?urlpath=tree/materiaali/harjoitukset/UV.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Binder"
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/opendata-education/Tyopajat/main?urlpath=tree/materiaali/harjoitukset/UV.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   
     <img src="../_static/images/logo_binder.svg">
   </span>
-<span class="headerbtn__text-container">Binder</span>
+<span class="btn__text-container">Binder</span>
 </a>
-
-      </li>
+</li>
       
-      <li>
-        <a href="https://colab.research.google.com/github/opendata-education/Tyopajat/blob/main/materiaali/harjoitukset/UV.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Launch on Colab"
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/opendata-education/Tyopajat/blob/main/materiaali/harjoitukset/UV.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
   
     <img src="../_static/images/logo_colab.png">
   </span>
-<span class="headerbtn__text-container">Colab</span>
+<span class="btn__text-container">Colab</span>
 </a>
-
-      </li>
+</li>
       
-    </ul>
-  </div>
+  </ul>
 </div>
 
-<button onclick="toggleFullScreen()"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="bottom"
-title="Fullscreen mode"
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/opendata-education/Tyopajat" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
-<span class="headerbtn__icon-container">
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/opendata-education/Tyopajat/issues/new?title=Issue%20on%20page%20%2Fharjoitukset/UV.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/harjoitukset/UV.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
   <i class="fas fa-expand"></i>
   </span>
 
 </button>
 
-<div class="menu-dropdown menu-dropdown-repository-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Source repositories">
-      <i class="fab fa-github"></i>
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="https://github.com/opendata-education/Tyopajat"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Source repository"
->
-  
+`);
+</script>
 
-<span class="headerbtn__icon-container">
-  <i class="fab fa-github"></i>
-  </span>
-<span class="headerbtn__text-container">repository</span>
-</a>
-
-      </li>
-      
-      <li>
-        <a href="https://github.com/opendata-education/Tyopajat/issues/new?title=Issue%20on%20page%20%2Fharjoitukset/UV.html&body=Your%20issue%20content%20here."
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Open an issue"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-lightbulb"></i>
-  </span>
-<span class="headerbtn__text-container">open issue</span>
-</a>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-
-<div class="menu-dropdown menu-dropdown-download-buttons">
-  <button class="headerbtn menu-dropdown__trigger"
-      aria-label="Download this page">
-      <i class="fas fa-download"></i>
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
   </button>
-  <div class="menu-dropdown__content">
-    <ul>
-      <li>
-        <a href="../_sources/harjoitukset/UV.ipynb"
-   class="headerbtn"
-   data-toggle="tooltip"
-data-placement="left"
-title="Download source file"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file"></i>
-  </span>
-<span class="headerbtn__text-container">.ipynb</span>
-</a>
-
-      </li>
-      
-      <li>
-        
-<button onclick="printPdf(this)"
-  class="headerbtn"
-  data-toggle="tooltip"
-data-placement="left"
-title="Print to PDF"
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-file-pdf"></i>
-  </span>
-<span class="headerbtn__text-container">.pdf</span>
-</button>
-
-      </li>
-      
-    </ul>
-  </div>
-</div>
-<label for="__page-toc"
-  class="headerbtn headerbtn-page-toc"
-  
->
-  
-
-<span class="headerbtn__icon-container">
-  <i class="fas fa-list"></i>
-  </span>
-
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
 </label>
-
+</div></div>
+      
     </div>
+  
 </div>
-
-<!-- Table of contents -->
-<div class="col-md-3 bd-toc show noprint">
-    <div class="tocsection onthispage pt-5 pb-3">
-        <i class="fas fa-list"></i> Contents
-    </div>
-    <nav id="bd-toc-nav" aria-label="Page">
-        <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tyon-rakenne">
-   Työn rakenne
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tutkimuskysymys">
-   1. Tutkimuskysymys
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#aineisto">
-   2. Aineisto
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#analyysi">
-   3. Analyysi
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#arviointi">
-   4. Arviointi
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#lahteet">
-   5. Lähteet
-  </a>
- </li>
-</ul>
-
-    </nav>
 </div>
-    </div>
-    <div class="article row">
-        <div class="col pl-md-3 pl-lg-5 content-container">
-            <!-- Table of contents that is only displayed when printing the page -->
-            <div id="jb-print-docs-body" class="onlyprint">
-                <h1>ESIMERKKI: Ultraviolettisäteily</h1>
-                <!-- Table of contents -->
-                <div id="print-main-content">
-                    <div id="jb-print-toc">
-                        
-                        <div>
-                            <h2> Contents </h2>
-                        </div>
-                        <nav aria-label="Page">
-                            <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tyon-rakenne">
-   Työn rakenne
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#tutkimuskysymys">
-   1. Tutkimuskysymys
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#aineisto">
-   2. Aineisto
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#analyysi">
-   3. Analyysi
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#arviointi">
-   4. Arviointi
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#lahteet">
-   5. Lähteet
-  </a>
- </li>
-</ul>
+              
+              
 
-                        </nav>
-                    </div>
-                </div>
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>ESIMERKKI: Ultraviolettisäteily</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
             </div>
-            <main id="main-content" role="main">
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tyon-rakenne">Työn rakenne</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tutkimuskysymys">1. Tutkimuskysymys</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aineisto">2. Aineisto</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analyysi">3. Analyysi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arviointi">4. Arviointi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lahteet">5. Lähteet</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
                 
-              <div>
-                
-  <section class="tex2jax_ignore mathjax_ignore" id="esimerkki-ultraviolettisateily">
-<h1>ESIMERKKI: Ultraviolettisäteily<a class="headerlink" href="#esimerkki-ultraviolettisateily" title="Permalink to this headline">#</a></h1>
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="esimerkki-ultraviolettisateily">
+<h1>ESIMERKKI: Ultraviolettisäteily<a class="headerlink" href="#esimerkki-ultraviolettisateily" title="Permalink to this heading">#</a></h1>
 <section id="tyon-rakenne">
-<h2>Työn rakenne<a class="headerlink" href="#tyon-rakenne" title="Permalink to this headline">#</a></h2>
+<h2>Työn rakenne<a class="headerlink" href="#tyon-rakenne" title="Permalink to this heading">#</a></h2>
 <p>Yksinkertainen projekti noudattaa yleensä simppeliä perusrakennetta:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Määritetään kiinnostuksen kohde (tutkimuskysymys)</p></li>
 <li><p>Etsitään aineistoa (datankeruu)</p></li>
 <li><p>Tarkastellaan löydöksiä (analyysi)</p></li>
@@ -556,19 +457,19 @@ title="Print to PDF"
 </ol>
 </section>
 <section id="tutkimuskysymys">
-<h2>1. Tutkimuskysymys<a class="headerlink" href="#tutkimuskysymys" title="Permalink to this headline">#</a></h2>
+<h2>1. Tutkimuskysymys<a class="headerlink" href="#tutkimuskysymys" title="Permalink to this heading">#</a></h2>
 <p>Maapallon elinkelpoisuus on kiinni jatkuvasta energiavuosta, joka syntyy Auringossa ja vaeltaa avaruuden halki planeetallemme. Tuo jatkuva energian hyökyaalto koostuu kuitenkin monenlaisista aallonpituuksista ja hiukkasista, joiden suhteet eivät ole välttämättä lainkaan intuitiivisia satunnaiselle tarkastelijalle.</p>
 <p>Esimerkiksi, onko päivänvalon UV-indeksillä ja ilmaston lämpötilakäytöksellä yhteyttä toisiinsa?</p>
 <p>UV-indeksistä voi lukea lisää https://www.ilmatieteenlaitos.fi/ultraviolettisateily. Relevanttia on, että arvon ylittäessä kolme alkaa olla tarpeellista suojata ihoaan ja yli kuusi kertoo voimakkaasta säteilystä.</p>
 <img src = "https://www.ilmatieteenlaitos.fi/hli0qi7fbbos/4HZjnDD2Ar4TDPpB3hhfu9/44eb0bb8621e0a88885a6d78182f928f/_image_image_gallery_uuid_7565e106-6c2a-4d75-a272-2e903e3902d8_groupId_30106_t_1289978047690?fm=webp"></section>
 <section id="aineisto">
-<h2>2. Aineisto<a class="headerlink" href="#aineisto" title="Permalink to this headline">#</a></h2>
+<h2>2. Aineisto<a class="headerlink" href="#aineisto" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Tuodaan tarvittavat työkalukirjastot.
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tuodaan tarvittavat työkalukirjastot.</span>
 
-import pandas as pd
-import matplotlib.pyplot as plt
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 </pre></div>
 </div>
 </div>
@@ -577,64 +478,64 @@ import matplotlib.pyplot as plt
 <p>Säteilyaineisto mitataan tiuhaan, joten tiedostoista tulee helposti isoja lyhyilläkin aikaväleillä. Ilmatieteen laitoksen portaali tuntuu rajoittavan lataamisen alle 20000 riviin kerrallaan, joten ladataan aineisto vuosi kerrallaan (~9000 tuntimittausta per) ja liitetään sitten yhteen isommaksi tarkastelua varten.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Tuodaan haluttu säteilydata palasina.
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tuodaan haluttu säteilydata palasina.</span>
 
-# Huomaa lukukomennon sisään lisätty &#39;parse&#39;-parametri, jolla luodaan tiedostoon yhdistelmä päivämääräsarakkeista,
-# jolloin saadaan juoksevasti kasvava luku tulevan visualisoinnin aika-akseliksi.
+<span class="c1"># Huomaa lukukomennon sisään lisätty &#39;parse&#39;-parametri, jolla luodaan tiedostoon yhdistelmä päivämääräsarakkeista,</span>
+<span class="c1"># jolloin saadaan juoksevasti kasvava luku tulevan visualisoinnin aika-akseliksi.</span>
 
-K20 = pd.read_csv(&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Kum2020.csv&quot;,
-                 parse_dates = {&quot;Aika&quot;:[&quot;Vuosi&quot;, &quot;Kk&quot;, &quot;Pv&quot;, &quot;Klo&quot;]}, keep_date_col = True)
+<span class="n">K20</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Kum2020.csv&quot;</span><span class="p">,</span>
+                 <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Aika&quot;</span><span class="p">:[</span><span class="s2">&quot;Vuosi&quot;</span><span class="p">,</span> <span class="s2">&quot;Kk&quot;</span><span class="p">,</span> <span class="s2">&quot;Pv&quot;</span><span class="p">,</span> <span class="s2">&quot;Klo&quot;</span><span class="p">]},</span> <span class="n">keep_date_col</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 
-K19 = pd.read_csv(&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Kum2019.csv&quot;,
-                 parse_dates = {&quot;Aika&quot;:[&quot;Vuosi&quot;, &quot;Kk&quot;, &quot;Pv&quot;, &quot;Klo&quot;]}, keep_date_col = True)
+<span class="n">K19</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Kum2019.csv&quot;</span><span class="p">,</span>
+                 <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Aika&quot;</span><span class="p">:[</span><span class="s2">&quot;Vuosi&quot;</span><span class="p">,</span> <span class="s2">&quot;Kk&quot;</span><span class="p">,</span> <span class="s2">&quot;Pv&quot;</span><span class="p">,</span> <span class="s2">&quot;Klo&quot;</span><span class="p">]},</span> <span class="n">keep_date_col</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 
-K18 = pd.read_csv(&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Kum2018.csv&quot;,
-                 parse_dates = {&quot;Aika&quot;:[&quot;Vuosi&quot;, &quot;Kk&quot;, &quot;Pv&quot;, &quot;Klo&quot;]}, keep_date_col = True)
+<span class="n">K18</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Kum2018.csv&quot;</span><span class="p">,</span>
+                 <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Aika&quot;</span><span class="p">:[</span><span class="s2">&quot;Vuosi&quot;</span><span class="p">,</span> <span class="s2">&quot;Kk&quot;</span><span class="p">,</span> <span class="s2">&quot;Pv&quot;</span><span class="p">,</span> <span class="s2">&quot;Klo&quot;</span><span class="p">]},</span> <span class="n">keep_date_col</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 
-K17 = pd.read_csv(&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Kum2017.csv&quot;,
-                 parse_dates = {&quot;Aika&quot;:[&quot;Vuosi&quot;, &quot;Kk&quot;, &quot;Pv&quot;, &quot;Klo&quot;]}, keep_date_col = True)
+<span class="n">K17</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Kum2017.csv&quot;</span><span class="p">,</span>
+                 <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Aika&quot;</span><span class="p">:[</span><span class="s2">&quot;Vuosi&quot;</span><span class="p">,</span> <span class="s2">&quot;Kk&quot;</span><span class="p">,</span> <span class="s2">&quot;Pv&quot;</span><span class="p">,</span> <span class="s2">&quot;Klo&quot;</span><span class="p">]},</span> <span class="n">keep_date_col</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 
-K16 = pd.read_csv(&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Kum2016.csv&quot;,
-                 parse_dates = {&quot;Aika&quot;:[&quot;Vuosi&quot;, &quot;Kk&quot;, &quot;Pv&quot;, &quot;Klo&quot;]}, keep_date_col = True)
+<span class="n">K16</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Kum2016.csv&quot;</span><span class="p">,</span>
+                 <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Aika&quot;</span><span class="p">:[</span><span class="s2">&quot;Vuosi&quot;</span><span class="p">,</span> <span class="s2">&quot;Kk&quot;</span><span class="p">,</span> <span class="s2">&quot;Pv&quot;</span><span class="p">,</span> <span class="s2">&quot;Klo&quot;</span><span class="p">]},</span> <span class="n">keep_date_col</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 
-K15 = pd.read_csv(&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Kum2015.csv&quot;,
-                 parse_dates = {&quot;Aika&quot;:[&quot;Vuosi&quot;, &quot;Kk&quot;, &quot;Pv&quot;, &quot;Klo&quot;]}, keep_date_col = True)
+<span class="n">K15</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Kum2015.csv&quot;</span><span class="p">,</span>
+                 <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Aika&quot;</span><span class="p">:[</span><span class="s2">&quot;Vuosi&quot;</span><span class="p">,</span> <span class="s2">&quot;Kk&quot;</span><span class="p">,</span> <span class="s2">&quot;Pv&quot;</span><span class="p">,</span> <span class="s2">&quot;Klo&quot;</span><span class="p">]},</span> <span class="n">keep_date_col</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 
-K14 = pd.read_csv(&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Kum2014.csv&quot;,
-                 parse_dates = {&quot;Aika&quot;:[&quot;Vuosi&quot;, &quot;Kk&quot;, &quot;Pv&quot;, &quot;Klo&quot;]}, keep_date_col = True)
+<span class="n">K14</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Kum2014.csv&quot;</span><span class="p">,</span>
+                 <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Aika&quot;</span><span class="p">:[</span><span class="s2">&quot;Vuosi&quot;</span><span class="p">,</span> <span class="s2">&quot;Kk&quot;</span><span class="p">,</span> <span class="s2">&quot;Pv&quot;</span><span class="p">,</span> <span class="s2">&quot;Klo&quot;</span><span class="p">]},</span> <span class="n">keep_date_col</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 
-K13 = pd.read_csv(&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Kum2013.csv&quot;,
-                 parse_dates = {&quot;Aika&quot;:[&quot;Vuosi&quot;, &quot;Kk&quot;, &quot;Pv&quot;, &quot;Klo&quot;]}, keep_date_col = True)
+<span class="n">K13</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Kum2013.csv&quot;</span><span class="p">,</span>
+                 <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Aika&quot;</span><span class="p">:[</span><span class="s2">&quot;Vuosi&quot;</span><span class="p">,</span> <span class="s2">&quot;Kk&quot;</span><span class="p">,</span> <span class="s2">&quot;Pv&quot;</span><span class="p">,</span> <span class="s2">&quot;Klo&quot;</span><span class="p">]},</span> <span class="n">keep_date_col</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 
-K12 = pd.read_csv(&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Kum2012.csv&quot;,
-                 parse_dates = {&quot;Aika&quot;:[&quot;Vuosi&quot;, &quot;Kk&quot;, &quot;Pv&quot;, &quot;Klo&quot;]}, keep_date_col = True)
+<span class="n">K12</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Kum2012.csv&quot;</span><span class="p">,</span>
+                 <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Aika&quot;</span><span class="p">:[</span><span class="s2">&quot;Vuosi&quot;</span><span class="p">,</span> <span class="s2">&quot;Kk&quot;</span><span class="p">,</span> <span class="s2">&quot;Pv&quot;</span><span class="p">,</span> <span class="s2">&quot;Klo&quot;</span><span class="p">]},</span> <span class="n">keep_date_col</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 
-K11 = pd.read_csv(&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Kum2011.csv&quot;,
-                 parse_dates = {&quot;Aika&quot;:[&quot;Vuosi&quot;, &quot;Kk&quot;, &quot;Pv&quot;, &quot;Klo&quot;]}, keep_date_col = True)
+<span class="n">K11</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Kum2011.csv&quot;</span><span class="p">,</span>
+                 <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Aika&quot;</span><span class="p">:[</span><span class="s2">&quot;Vuosi&quot;</span><span class="p">,</span> <span class="s2">&quot;Kk&quot;</span><span class="p">,</span> <span class="s2">&quot;Pv&quot;</span><span class="p">,</span> <span class="s2">&quot;Klo&quot;</span><span class="p">]},</span> <span class="n">keep_date_col</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 
-K10 = pd.read_csv(&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Kum2010.csv&quot;,
-                 parse_dates = {&quot;Aika&quot;:[&quot;Vuosi&quot;, &quot;Kk&quot;, &quot;Pv&quot;, &quot;Klo&quot;]}, keep_date_col = True)
+<span class="n">K10</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Kum2010.csv&quot;</span><span class="p">,</span>
+                 <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Aika&quot;</span><span class="p">:[</span><span class="s2">&quot;Vuosi&quot;</span><span class="p">,</span> <span class="s2">&quot;Kk&quot;</span><span class="p">,</span> <span class="s2">&quot;Pv&quot;</span><span class="p">,</span> <span class="s2">&quot;Klo&quot;</span><span class="p">]},</span> <span class="n">keep_date_col</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 
-K09 = pd.read_csv(&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Kum2009.csv&quot;,
-                 parse_dates = {&quot;Aika&quot;:[&quot;Vuosi&quot;, &quot;Kk&quot;, &quot;Pv&quot;, &quot;Klo&quot;]}, keep_date_col = True)
+<span class="n">K09</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Kum2009.csv&quot;</span><span class="p">,</span>
+                 <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Aika&quot;</span><span class="p">:[</span><span class="s2">&quot;Vuosi&quot;</span><span class="p">,</span> <span class="s2">&quot;Kk&quot;</span><span class="p">,</span> <span class="s2">&quot;Pv&quot;</span><span class="p">,</span> <span class="s2">&quot;Klo&quot;</span><span class="p">]},</span> <span class="n">keep_date_col</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 
-K08 = pd.read_csv(&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Kum2008.csv&quot;,
-                 parse_dates = {&quot;Aika&quot;:[&quot;Vuosi&quot;, &quot;Kk&quot;, &quot;Pv&quot;, &quot;Klo&quot;]}, keep_date_col = True)
+<span class="n">K08</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Kum2008.csv&quot;</span><span class="p">,</span>
+                 <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Aika&quot;</span><span class="p">:[</span><span class="s2">&quot;Vuosi&quot;</span><span class="p">,</span> <span class="s2">&quot;Kk&quot;</span><span class="p">,</span> <span class="s2">&quot;Pv&quot;</span><span class="p">,</span> <span class="s2">&quot;Klo&quot;</span><span class="p">]},</span> <span class="n">keep_date_col</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 
-K07 = pd.read_csv(&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Kum2007.csv&quot;,
-                 parse_dates = {&quot;Aika&quot;:[&quot;Vuosi&quot;, &quot;Kk&quot;, &quot;Pv&quot;, &quot;Klo&quot;]}, keep_date_col = True)
+<span class="n">K07</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Kum2007.csv&quot;</span><span class="p">,</span>
+                 <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Aika&quot;</span><span class="p">:[</span><span class="s2">&quot;Vuosi&quot;</span><span class="p">,</span> <span class="s2">&quot;Kk&quot;</span><span class="p">,</span> <span class="s2">&quot;Pv&quot;</span><span class="p">,</span> <span class="s2">&quot;Klo&quot;</span><span class="p">]},</span> <span class="n">keep_date_col</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 
-K06 = pd.read_csv(&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Kum2006.csv&quot;,
-                 parse_dates = {&quot;Aika&quot;:[&quot;Vuosi&quot;, &quot;Kk&quot;, &quot;Pv&quot;, &quot;Klo&quot;]}, keep_date_col = True)
+<span class="n">K06</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/Kum2006.csv&quot;</span><span class="p">,</span>
+                 <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Aika&quot;</span><span class="p">:[</span><span class="s2">&quot;Vuosi&quot;</span><span class="p">,</span> <span class="s2">&quot;Kk&quot;</span><span class="p">,</span> <span class="s2">&quot;Pv&quot;</span><span class="p">,</span> <span class="s2">&quot;Klo&quot;</span><span class="p">]},</span> <span class="n">keep_date_col</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Tarkastetaan miltä vuositiedot näyttävät. Miten tiheään havainnot on kerätty?
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tarkastetaan miltä vuositiedot näyttävät. Miten tiheään havainnot on kerätty?</span>
 
-K20.head(10)
+<span class="n">K20</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -861,24 +762,24 @@ K20.head(10)
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Yhdistetään äskeiset tiedot yhdeksi pidemmäksi aikasarjaksi. &#39;Concatenate&#39; yhdistää asiat oletusarvoisesti
-# luetellussa järjestyksessä, joten annetaan sille vuositiedot kronologisesti.
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Yhdistetään äskeiset tiedot yhdeksi pidemmäksi aikasarjaksi. &#39;Concatenate&#39; yhdistää asiat oletusarvoisesti</span>
+<span class="c1"># luetellussa järjestyksessä, joten annetaan sille vuositiedot kronologisesti.</span>
 
-KumSat = pd.concat([K06, K07, K08, K09, K10, K11, K12, K13, K14, K15, K16, K17, K18, K19, K20])
+<span class="n">KumSat</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">K06</span><span class="p">,</span> <span class="n">K07</span><span class="p">,</span> <span class="n">K08</span><span class="p">,</span> <span class="n">K09</span><span class="p">,</span> <span class="n">K10</span><span class="p">,</span> <span class="n">K11</span><span class="p">,</span> <span class="n">K12</span><span class="p">,</span> <span class="n">K13</span><span class="p">,</span> <span class="n">K14</span><span class="p">,</span> <span class="n">K15</span><span class="p">,</span> <span class="n">K16</span><span class="p">,</span> <span class="n">K17</span><span class="p">,</span> <span class="n">K18</span><span class="p">,</span> <span class="n">K19</span><span class="p">,</span> <span class="n">K20</span><span class="p">])</span>
 
-# Korjataan äskeisen liitoksen rivien järjestysluvut estetiikan nimissä.
+<span class="c1"># Korjataan äskeisen liitoksen rivien järjestysluvut estetiikan nimissä.</span>
 
-KumSat = KumSat.reset_index(drop = True)
+<span class="n">KumSat</span> <span class="o">=</span> <span class="n">KumSat</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Tarkastetaan kokonaisuuden yhä näyttävän miltä kuuluukin.
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tarkastetaan kokonaisuuden yhä näyttävän miltä kuuluukin.</span>
 
-print(&quot;Uudessa muuttujassa on &quot; + repr(len(KumSat)) + &quot; riviä tietoja.&quot;)
-KumSat.tail(5)
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Uudessa muuttujassa on &quot;</span> <span class="o">+</span> <span class="nb">repr</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">KumSat</span><span class="p">))</span> <span class="o">+</span> <span class="s2">&quot; riviä tietoja.&quot;</span><span class="p">)</span>
+<span class="n">KumSat</span><span class="o">.</span><span class="n">tail</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -1018,89 +919,89 @@ KumSat.tail(5)
 </div>
 </section>
 <section id="analyysi">
-<h2>3. Analyysi<a class="headerlink" href="#analyysi" title="Permalink to this headline">#</a></h2>
+<h2>3. Analyysi<a class="headerlink" href="#analyysi" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Tarkastellaan miltä kokonaisuus näyttää kuvaajassa.
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tarkastellaan miltä kokonaisuus näyttää kuvaajassa.</span>
 
-plt.figure(figsize = (40, 10))
-plt.scatter( KumSat[&quot;Aika&quot;], KumSat[&quot;UV-B-säteily (index)&quot;])
-plt.axhline(3, linestyle=&#39;--&#39;, label = &quot;UVI 3+&quot;, color=&#39;k&#39;, alpha = 0.5) # Raja suojautumistarpeelle.
-plt.axhline(6, linestyle=&#39;--&#39;, label = &quot;UVI 6+&quot;, color=&#39;k&#39;, alpha = 0.5) # Raja voimakkaalle säteilylle.
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">40</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span> <span class="n">KumSat</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">KumSat</span><span class="p">[</span><span class="s2">&quot;UV-B-säteily (index)&quot;</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;UVI 3+&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">)</span> <span class="c1"># Raja suojautumistarpeelle.</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;UVI 6+&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">)</span> <span class="c1"># Raja voimakkaalle säteilylle.</span>
 
-plt.title(&quot;UV-B-säteilyindeksi Helsingin Kumpulassa 2006-2020 \n&quot;, fontsize = 20)
-plt.show()
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;UV-B-säteilyindeksi Helsingin Kumpulassa 2006-2020 </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/UV_13_0.png" src="../_images/UV_13_0.png" />
+<img alt="../_images/306d38da349cacbc521fe0b760eed66d7bd210f07f5ccbd584477bcaa93a9d32.png" src="../_images/306d38da349cacbc521fe0b760eed66d7bd210f07f5ccbd584477bcaa93a9d32.png" />
 </div>
 </div>
 <p>Hyvältä näyttää, kertymän olettaisi osuvan kesäajalle ja keskelle päivää. Osuuko silmiisi poikkeavia ajankohtia joita voisi olla kiinnostavaa tarkastella lähemmin?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Vertailuksi kokonaissäteilyn vuo. Mikä ero näillä suureilla on?
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Vertailuksi kokonaissäteilyn vuo. Mikä ero näillä suureilla on?</span>
 
-plt.figure(figsize = (40, 10))
-plt.scatter( KumSat[&quot;Aika&quot;], KumSat[&quot;Kokonaissäteily (W/m2)&quot;])
-plt.title(&quot;Kokonaissäteily (W/m2) Helsingin Kumpulassa 2006-2020 \n&quot;, fontsize = 20)
-plt.show()
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">40</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span> <span class="n">KumSat</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">KumSat</span><span class="p">[</span><span class="s2">&quot;Kokonaissäteily (W/m2)&quot;</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Kokonaissäteily (W/m2) Helsingin Kumpulassa 2006-2020 </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/UV_15_0.png" src="../_images/UV_15_0.png" />
+<img alt="../_images/77cae5e1e5aa7c5fe95fea6822e0e6f81a6da51d1d7297dac448c8e05c510090.png" src="../_images/77cae5e1e5aa7c5fe95fea6822e0e6f81a6da51d1d7297dac448c8e05c510090.png" />
 </div>
 </div>
 <p>Vuositasolla asiat ovat kohtalaisen vakaita, joten kaivaudutaan yksityiskohtaisempiin kuvauksiin vaihtelujen havainnollistamiseksi.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Yksittäisten kuukausien kohdalla.
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Yksittäisten kuukausien kohdalla.</span>
 
-# Jaetaan data. Hakutermi on tässä hipsuissa, koska Kk-sarake ei ole tyypiltään numero. Tämän voisi halutessaan
-# korjata muuttamalla mokomat luvuiksi string-tekstin sijaan.
+<span class="c1"># Jaetaan data. Hakutermi on tässä hipsuissa, koska Kk-sarake ei ole tyypiltään numero. Tämän voisi halutessaan</span>
+<span class="c1"># korjata muuttamalla mokomat luvuiksi string-tekstin sijaan.</span>
 
-Maa = K20.query(&quot;Kk == &#39;3&#39;&quot;)
-Hei = K20.query(&quot;Kk == &#39;7&#39;&quot;)
+<span class="n">Maa</span> <span class="o">=</span> <span class="n">K20</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;Kk == &#39;3&#39;&quot;</span><span class="p">)</span>
+<span class="n">Hei</span> <span class="o">=</span> <span class="n">K20</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;Kk == &#39;7&#39;&quot;</span><span class="p">)</span>
 
-# Luodaan vertailuun soveltuva kuvaaja.
+<span class="c1"># Luodaan vertailuun soveltuva kuvaaja.</span>
 
-plt.figure(figsize = (30, 10))
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
 
-plt.plot(Maa[&quot;Aika&quot;], Maa[&quot;UV-B-säteily (index)&quot;], alpha = 0.5, c = &quot;y&quot;)
-plt.scatter(Maa[&quot;Aika&quot;], Maa[&quot;UV-B-säteily (index)&quot;], label = &quot;Maaliskuu&quot;, c = &quot;r&quot;)
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Maa</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">Maa</span><span class="p">[</span><span class="s2">&quot;UV-B-säteily (index)&quot;</span><span class="p">],</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;y&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">Maa</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">Maa</span><span class="p">[</span><span class="s2">&quot;UV-B-säteily (index)&quot;</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Maaliskuu&quot;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span>
 
-plt.twiny() # Lisätään toinen aika-akseli, koska käytetyt arvot eivät ole yhteneviä.
+<span class="n">plt</span><span class="o">.</span><span class="n">twiny</span><span class="p">()</span> <span class="c1"># Lisätään toinen aika-akseli, koska käytetyt arvot eivät ole yhteneviä.</span>
 
-plt.plot(Hei[&quot;Aika&quot;], Hei[&quot;UV-B-säteily (index)&quot;], alpha = 0.5, c = &quot;b&quot;)
-plt.scatter(Hei[&quot;Aika&quot;], Hei[&quot;UV-B-säteily (index)&quot;], label = &quot;Heinäkuu&quot;, c = &quot;g&quot;)
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Hei</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">Hei</span><span class="p">[</span><span class="s2">&quot;UV-B-säteily (index)&quot;</span><span class="p">],</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">Hei</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">Hei</span><span class="p">[</span><span class="s2">&quot;UV-B-säteily (index)&quot;</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Heinäkuu&quot;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;g&quot;</span><span class="p">)</span>
 
-# Vaakaviiva kolmen kohdalle kuvaamaan merkittävää rajaa UV-indeksissä.
+<span class="c1"># Vaakaviiva kolmen kohdalle kuvaamaan merkittävää rajaa UV-indeksissä.</span>
 
-plt.axhline(3, linestyle=&#39;--&#39;, label = &quot;UVI 3+&quot;, color=&#39;k&#39;, alpha = 0.5) 
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;UVI 3+&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">)</span> 
 
-plt.title(&quot;UV-B-säteilyindeksi Helsingin Kumpulassa 2020 \n&quot;, fontsize = 30)
-plt.figlegend(loc = &quot;center right&quot;, fontsize = 25)
-plt.show()
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;UV-B-säteilyindeksi Helsingin Kumpulassa 2020 </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">30</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figlegend</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="s2">&quot;center right&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">25</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/UV_17_0.png" src="../_images/UV_17_0.png" />
+<img alt="../_images/bb48c5e0e5e83a46493cd5ceed862b26e0d8be411c5834ea75392d4ab8386749.png" src="../_images/bb48c5e0e5e83a46493cd5ceed862b26e0d8be411c5834ea75392d4ab8386749.png" />
 </div>
 </div>
 <p>Tätä näkymää voidaan nyt verrata muihin aineistoihin, kuten lämpötilaan tai pilvisyyteen kunakin päivänä.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Tuodaan säätietoja samalta mittausasemalta.
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tuodaan säätietoja samalta mittausasemalta.</span>
 
-Saa20 = pd.read_csv(&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/KumSaa2020.csv&quot;,
-                 parse_dates = {&quot;Aika&quot;:[&quot;Vuosi&quot;, &quot;Kk&quot;, &quot;Pv&quot;, &quot;Klo&quot;]}, keep_date_col = True)
+<span class="n">Saa20</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/KumSaa2020.csv&quot;</span><span class="p">,</span>
+                 <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Aika&quot;</span><span class="p">:[</span><span class="s2">&quot;Vuosi&quot;</span><span class="p">,</span> <span class="s2">&quot;Kk&quot;</span><span class="p">,</span> <span class="s2">&quot;Pv&quot;</span><span class="p">,</span> <span class="s2">&quot;Klo&quot;</span><span class="p">]},</span> <span class="n">keep_date_col</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 
-# Tarkastellaan miltä data näyttää.
+<span class="c1"># Tarkastellaan miltä data näyttää.</span>
 
-Saa20.head()
+<span class="n">Saa20</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -1255,76 +1156,76 @@ Saa20.head()
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Lämpötilan kanssa koko vuodelta.
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Lämpötilan kanssa koko vuodelta.</span>
 
-plt.figure(figsize = (200, 10))
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
 
-plt.plot(K20[&quot;Aika&quot;], K20[&quot;UV-B-säteily (index)&quot;], alpha = 0.5, c = &quot;y&quot;)
-plt.scatter(K20[&quot;Aika&quot;], K20[&quot;UV-B-säteily (index)&quot;], label = &quot;UVI&quot;, c = &quot;r&quot;)
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">K20</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">K20</span><span class="p">[</span><span class="s2">&quot;UV-B-säteily (index)&quot;</span><span class="p">],</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;y&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">K20</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">K20</span><span class="p">[</span><span class="s2">&quot;UV-B-säteily (index)&quot;</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;UVI&quot;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span>
 
-plt.axhline(3, linestyle=&#39;--&#39;, label = &quot;UVI 3+&quot;, color=&#39;k&#39;, alpha = 0.5)
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;UVI 3+&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">)</span>
 
-plt.twinx() # Lisätään toinen arvoakseli, koska käytetyt arvot eivät ole yhteneviä.
+<span class="n">plt</span><span class="o">.</span><span class="n">twinx</span><span class="p">()</span> <span class="c1"># Lisätään toinen arvoakseli, koska käytetyt arvot eivät ole yhteneviä.</span>
 
-plt.plot(Saa20[&quot;Aika&quot;], Saa20[&quot;Ilman lämpötila (degC)&quot;], alpha = 0.5, c = &quot;b&quot;)
-plt.scatter(Saa20[&quot;Aika&quot;], Saa20[&quot;Ilman lämpötila (degC)&quot;], label = &quot;Tuntilämpötila&quot;, c = &quot;g&quot;)
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Saa20</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">Saa20</span><span class="p">[</span><span class="s2">&quot;Ilman lämpötila (degC)&quot;</span><span class="p">],</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">Saa20</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">Saa20</span><span class="p">[</span><span class="s2">&quot;Ilman lämpötila (degC)&quot;</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Tuntilämpötila&quot;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;g&quot;</span><span class="p">)</span>
 
-plt.axhline(0, linestyle=&#39;--&#39;, label = &quot;0 deg C&quot;, color=&#39;pink&#39;, alpha = 0.5)
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;0 deg C&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;pink&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">)</span>
 
-plt.title(&quot;UV-B-säteilyindeksi ja ilman lämpötila Helsingin Kumpulassa 2020 \n&quot;, fontsize = 30)
-plt.figlegend(loc = &quot;upper right&quot;, fontsize = 25)
-plt.show()
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;UV-B-säteilyindeksi ja ilman lämpötila Helsingin Kumpulassa 2020 </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">30</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figlegend</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="s2">&quot;upper right&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">25</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 
-# Kuva on iso, sitä kannattaa tarkastella uudessa välilehdessä. Entä jos vaihdat alun &quot;figsize&quot; arvoja?
+<span class="c1"># Kuva on iso, sitä kannattaa tarkastella uudessa välilehdessä. Entä jos vaihdat alun &quot;figsize&quot; arvoja?</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/UV_20_0.png" src="../_images/UV_20_0.png" />
+<img alt="../_images/609e131e4fe40b381ea29e30e5c67f9eb6ae9984332d02702b5324fee9e6a386.png" src="../_images/609e131e4fe40b381ea29e30e5c67f9eb6ae9984332d02702b5324fee9e6a386.png" />
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span># Myös pilvien kanssa heinäkuulta.
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Myös pilvien kanssa heinäkuulta.</span>
 
-plt.figure(figsize = (40, 15))
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">40</span><span class="p">,</span> <span class="mi">15</span><span class="p">))</span>
 
-UV = K20.query(&quot;Kk == &#39;7&#39;&quot;)
-C = Saa20.query(&quot;Kk == &#39;7&#39;&quot;)
+<span class="n">UV</span> <span class="o">=</span> <span class="n">K20</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;Kk == &#39;7&#39;&quot;</span><span class="p">)</span>
+<span class="n">C</span> <span class="o">=</span> <span class="n">Saa20</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;Kk == &#39;7&#39;&quot;</span><span class="p">)</span>
 
-plt.subplot(2,1,1)
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
 
-plt.plot(UV[&quot;Aika&quot;], UV[&quot;UV-B-säteily (index)&quot;], alpha = 0.5, c = &quot;y&quot;)
-plt.scatter(UV[&quot;Aika&quot;], UV[&quot;UV-B-säteily (index)&quot;], label = &quot;UVI&quot;, c = &quot;r&quot;)
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">UV</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">UV</span><span class="p">[</span><span class="s2">&quot;UV-B-säteily (index)&quot;</span><span class="p">],</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;y&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">UV</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">UV</span><span class="p">[</span><span class="s2">&quot;UV-B-säteily (index)&quot;</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;UVI&quot;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;r&quot;</span><span class="p">)</span>
 
-plt.axhline(3, linestyle=&#39;--&#39;, label = &quot;UVI 3+&quot;, color=&#39;k&#39;, alpha = 0.5)
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;UVI 3+&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">)</span>
 
-plt.twinx() # Lisätään toinen arvoakseli, koska käytetyt arvot eivät ole yhteneviä.
+<span class="n">plt</span><span class="o">.</span><span class="n">twinx</span><span class="p">()</span> <span class="c1"># Lisätään toinen arvoakseli, koska käytetyt arvot eivät ole yhteneviä.</span>
 
-plt.plot(C[&quot;Aika&quot;], C[&quot;Ilman lämpötila (degC)&quot;], alpha = 0.5, c = &quot;b&quot;)
-plt.scatter(C[&quot;Aika&quot;], C[&quot;Ilman lämpötila (degC)&quot;], label = &quot;Tuntilämpötila&quot;, c = &quot;g&quot;)
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">C</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">C</span><span class="p">[</span><span class="s2">&quot;Ilman lämpötila (degC)&quot;</span><span class="p">],</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">C</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">C</span><span class="p">[</span><span class="s2">&quot;Ilman lämpötila (degC)&quot;</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Tuntilämpötila&quot;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;g&quot;</span><span class="p">)</span>
 
-plt.axhline(0, linestyle=&#39;--&#39;, label = &quot;0 deg C&quot;, color=&#39;pink&#39;, alpha = 0.5)
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">linestyle</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;0 deg C&quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;pink&#39;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">)</span>
 
-plt.subplot(2,1,2)
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
 
-plt.plot(C[&quot;Aika&quot;], C[&quot;Pilvien määrä (1/8)&quot;], alpha = 0.5, c = &quot;black&quot;)
-plt.scatter(C[&quot;Aika&quot;], C[&quot;Pilvien määrä (1/8)&quot;], label = &quot;Pilvisyys&quot;, c = &quot;blue&quot;)
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">C</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">C</span><span class="p">[</span><span class="s2">&quot;Pilvien määrä (1/8)&quot;</span><span class="p">],</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">C</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">C</span><span class="p">[</span><span class="s2">&quot;Pilvien määrä (1/8)&quot;</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Pilvisyys&quot;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;blue&quot;</span><span class="p">)</span>
 
-plt.suptitle(&quot;UV-B-säteilyindeksi, ilman lämpötila ja pilvisyys Helsingin Kumpulassa heinäkuussa 2020 \n&quot;, fontsize = 30)
-plt.figlegend(loc = &quot;center right&quot;, fontsize = 25)
-plt.show()
+<span class="n">plt</span><span class="o">.</span><span class="n">suptitle</span><span class="p">(</span><span class="s2">&quot;UV-B-säteilyindeksi, ilman lämpötila ja pilvisyys Helsingin Kumpulassa heinäkuussa 2020 </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">30</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figlegend</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="s2">&quot;center right&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">25</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/UV_21_0.png" src="../_images/UV_21_0.png" />
+<img alt="../_images/53edf9c536c79979725ba0fe10ed49bfab4e198ad2fd7133d000267468d9bae4.png" src="../_images/53edf9c536c79979725ba0fe10ed49bfab4e198ad2fd7133d000267468d9bae4.png" />
 </div>
 </div>
 <p>Voiko UVI:n ja lämpötilan välille vetää suoraa johtopäätöstä? Voiko korkeiden tai matalien UVI-päivien kohdalta todeta jotain yhteyttä lämpötilan käytökseen?</p>
 </section>
 <section id="arviointi">
-<h2>4. Arviointi<a class="headerlink" href="#arviointi" title="Permalink to this headline">#</a></h2>
+<h2>4. Arviointi<a class="headerlink" href="#arviointi" title="Permalink to this heading">#</a></h2>
 <img src = "https://www.ilmatieteenlaitos.fi/hli0qi7fbbos/24v6dH7LNiv4TCX7ugdNt8/85648414a38bb296d058128788880c67/auringonsateily_750.jpg?fm=webp">
 <p>Kumpulan säähavaintoaseman aurinkosäteilymittareita työssään.</p>
 <p>Ilmatieteen laitoksen sivuilta voi vilkaista koeasemien asetelmia. Auringon säteilyn mittaaminen on kohtalaisen suoraviivaista energian ja ajan havainnointia, mutta pilvisyyden mittauksen huomaamme jännittävän arkaaiseksi: yllä käytetty 0-8 asteikko pohjaa yksinkertaisesti visuaaliseen havaintoon siitä, miten suuri osa taivaankannesta on peitossa.</p>
@@ -1332,7 +1233,7 @@ plt.show()
 <p>Entä jos mukaan ottaisi tuulen? Ilmankosteuden?</p>
 </section>
 <section id="lahteet">
-<h2>5. Lähteet<a class="headerlink" href="#lahteet" title="Permalink to this headline">#</a></h2>
+<h2>5. Lähteet<a class="headerlink" href="#lahteet" title="Permalink to this heading">#</a></h2>
 <p>https://www.ilmatieteenlaitos.fi/havaintojen-lataus</p>
 <p>https://www.ilmatieteenlaitos.fi/ultraviolettisateily</p>
 <p>https://www.stuk.fi/aiheet/uv-sateily-aurinko-ja-solarium/auringon-ultraviolettisateily</p>
@@ -1352,7 +1253,7 @@ plt.show()
             mode: "python"
         },
         kernelOptions: {
-            kernelName: "python3",
+            name: "python3",
             path: "./harjoitukset"
         },
         predefinedOutput: true
@@ -1360,55 +1261,103 @@ plt.show()
     </script>
     <script>kernelName = 'python3'</script>
 
-              </div>
+                </article>
               
-            </main>
-            <footer class="footer-article noprint">
-                
-    <!-- Previous / next buttons -->
-<div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="Lumensyvyys.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">ESIMERKKI: Lumensyvyys</p>
-        </div>
+
+              
+              
+                <footer class="bd-footer-article">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="Lumensyvyys.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">ESIMERKKI: Lumensyvyys</p>
+      </div>
     </a>
-    <a class='right-next' id="next-link" href="fossiiliset_ja_koulutus.html" title="next page">
-    <div class="prev-next-info">
+    <a class="right-next"
+       href="fossiiliset_ja_koulutus.html"
+       title="next page">
+      <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
         <p class="prev-next-title">Luonnonvarojen käyttö ja tasa-arvoinen koulutus</p>
-    </div>
-    <i class="fas fa-angle-right"></i>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
-            </footer>
-        </div>
-    </div>
-    <div class="footer-content row">
-        <footer class="col footer"><p>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tyon-rakenne">Työn rakenne</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tutkimuskysymys">1. Tutkimuskysymys</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aineisto">2. Aineisto</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analyysi">3. Analyysi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#arviointi">4. Arviointi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lahteet">5. Lähteet</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            <div class="bd-footer-content__inner">
+<div class="bd-footer-content__inner container">
   
-    By HIP Education and Open Data Team<br/>
+  <div class="footer-item">
+    
+<p class="component-author">
+By HIP Education and Open Data Team
+</p>
+
+  </div>
   
-    <div class="extra_footer">
-      <div>
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <div>
 <a>Toteutettu Opetushallituksen valtionavustuksella tiedekasvatuksen edistämiseen.</a></br><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img class="license" alt="Creative Commons License" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a> Tämän sivuston materiaali on käytettävissä seuraavalla lisenssillä: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC-BY 4.0.</a>
 </div>
 
-    </div>
-</p>
-        </footer>
-    </div>
-    
 </div>
+  </div>
+  
+</div></div>
+          </footer>
+        
 
-
-      </div>
+      </main>
     </div>
+  </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=12da95d707ffb74b382d"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=12da95d707ffb74b382d"></script>
 
-
+  <footer class="bd-footer">
+  </footer>
   </body>
 </html>

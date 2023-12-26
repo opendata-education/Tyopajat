@@ -26,4 +26,7 @@ chapters:
   sections:
   - file: harjoitukset/aerosoli-tyopaja
   - file: harjoitukset/datasettien_esittelyt
+- file: harjoitukset/kestavyys
+  sections:
+  - file: harjoitukset/KestavyysHarjoitus
   

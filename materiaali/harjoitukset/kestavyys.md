@@ -1,1 +1,1 @@
-Fysikaalisia pohdintoja lukiotason kestävyyskursseille.
+Kestävyyskurssille

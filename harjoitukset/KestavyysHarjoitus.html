@@ -1,0 +1,1199 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>KESTÄVYYS - fysikaalisia pohdintoja ilmakehästämme &#8212; Työpajat</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
+  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'harjoitukset/KestavyysHarjoitus';</script>
+    <link rel="canonical" href="https://opendata-education.github.io/Tyopajat/intro.html/harjoitukset/KestavyysHarjoitus.html" />
+    <link rel="shortcut icon" href="../_static/logo.png"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="kestavyys.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Työpajat - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Työpajat - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Tervetuloa avoimen datan pariin
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="opettajakoulutus.html">CERN Opettajakoulutus</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="mika-on-jupyter-notebook.html">Mikä on Jupyter Notebook?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cms-esimerkki.html">CMS ja avoin data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Vuosirenkaat.html">Niin hyvää puuta</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="esimerkit.html">Lyhyet esimerkit</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="Lumensyvyys.html">ESIMERKKI: Lumensyvyys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UV.html">ESIMERKKI: Ultraviolettisäteily</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fossiiliset_ja_koulutus.html">Luonnonvarojen käyttö ja tasa-arvoinen koulutus</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Lampoanomaliat.html">ESIMERKKI: Lämpötiloista ja anomalioista</a></li>
+<li class="toctree-l2"><a class="reference internal" href="FMI_Luotaukset.html">ESIMERKKI: Ilmakehäluotaukset</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="ilmastopaja.html">Ilmastotyöpaja</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="lampotila-intro.html">ESIMERKKI 1: Maan lämpötilapoikkeaman määritys</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dataraati.html">Visualisaatioraati</a></li>
+<li class="toctree-l2"><a class="reference internal" href="UV-paja.html">ESIMERKKI 2: Ultraviolettisäteily</a></li>
+<li class="toctree-l2"><a class="reference internal" href="co2.html">ESIMERKKI 3: Maapallon ilmakehä</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Pienhiukkaset.html">ESIMERKKI 4: Pienhiukkaset - saasteita ja aerosoleja</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="aerosoli.html">Aerosoli-työpaja</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="aerosoli-tyopaja.html">Aerosoli-työpajan ohjeet</a></li>
+<li class="toctree-l2"><a class="reference internal" href="datasettien_esittelyt.html">Aerosoli-työpajan datasetit ja tutkimuskysymykset</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#"><ins> KESTÄVYYS - fysikaalisia pohdintoja ilmakehästämme </ins></a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/opendata-education/Tyopajat/main?urlpath=tree/materiaali/harjoitukset/KestavyysHarjoitus.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://colab.research.google.com/github/opendata-education/Tyopajat/blob/main/materiaali/harjoitukset/KestavyysHarjoitus.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onColab"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_colab.png">
+  </span>
+<span class="btn__text-container">Colab</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/opendata-education/Tyopajat" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/opendata-education/Tyopajat/issues/new?title=Issue%20on%20page%20%2Fharjoitukset/KestavyysHarjoitus.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/harjoitukset/KestavyysHarjoitus.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><ins> KESTÄVYYS - fysikaalisia pohdintoja ilmakehästämme </ins></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tyon-rakenne">Työn rakenne</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ins-1-tutkimuskysymyksia-ins"><ins> 1. Tutkimuskysymyksiä </ins></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ins-2-aineisto-ins"><ins> 2. Aineisto </ins></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tyokalut">2.1 Työkalut</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-hyytiala-keski-suomi">2.2 Data - Hyytiälä, Keski-Suomi</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-uto-meri-suomi">2.3 Data - Utö, Meri-Suomi</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-pallas-ja-kenttarova-pohjois-suomi">2.4 Data - Pallas ja Kenttärova, Pohjois-Suomi</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-karlsruhe-saksa">2.5 Data - Karlsruhe, Saksa</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-castelporziano-2-italia">2.6 Data - Castelporziano 2, Italia</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-izana-espanja-teneriffa">2.7 Data - Izaña, Espanja (Teneriffa)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ins-3-analyysi-ins"><ins> 3. Analyysi </ins></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vilkaisu-aineistoihin">3.1 Vilkaisu aineistoihin</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ins-4-tulokset-ja-johtopaatokset-ins"><ins> 4. Tulokset ja johtopäätökset </ins></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ins-5-lahteet-ins"><ins> 5. Lähteet </ins></a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section id="ins-kestavyys-fysikaalisia-pohdintoja-ilmakehastamme-ins">
+<h1><ins> KESTÄVYYS - fysikaalisia pohdintoja ilmakehästämme </ins><a class="headerlink" href="#ins-kestavyys-fysikaalisia-pohdintoja-ilmakehastamme-ins" title="Permalink to this heading">#</a></h1>
+<p><span style="color:red"><em>v0.1 26.12. - TÄMÄ KIRJANEN ON KESKEN JA JATKAA KEHITYSTÄÄN 2024 TAMMIKUUHUN</em></span></p>
+<section id="tyon-rakenne">
+<h2>Työn rakenne<a class="headerlink" href="#tyon-rakenne" title="Permalink to this heading">#</a></h2>
+<p>Yksinkertainen projekti noudattaa yleensä simppeliä perusrakennetta:</p>
+<ol class="arabic simple">
+<li><p>Määritetään kiinnostuksen kohde (tutkimuskysymys)</p></li>
+<li><p>Etsitään aineistoa (datankeruu)</p></li>
+<li><p>Tarkastellaan löydöksiä (analyysi)</p></li>
+<li><p>Arvioidaan, kritisoidaan (tulokset ja johtopäätökset)</p></li>
+<li><p>Selitetään tarpeen mukaan käytetyt aineistot (lähteet)</p></li>
+</ol>
+</section>
+<section id="ins-1-tutkimuskysymyksia-ins">
+<h2><ins> 1. Tutkimuskysymyksiä </ins><a class="headerlink" href="#ins-1-tutkimuskysymyksia-ins" title="Permalink to this heading">#</a></h2>
+<p>Ilmastonmuutoksen ymmärtäminen ja seuraaminen vaatii maailmanlaajuista verkostoa. Kansalliset säähavaintoasemat, tutkimuslaitokset, yliopistot ja monet muut instituutit ympäri planeettaa tarjoavat kattavan valikoiman jatkuvasti päivittyviä havaintoja käyttöömme.</p>
+<p>Valitaan aluksi mitä suureita aiomme tarkastella. Lämpötila, hiilidioksidin ja metaanin määrä ilmassa, kasvuston hiilensidonta ja -vapautus, sade ja tuulet ja niin edelleen.</p>
+<p><strong>Miten valitut suureet käyttäytyvät ajan mukaan? Millaista vaihtelua niissä esiintyy? Miten mittauspaikan sijainti vaikuttaa tuloksiin?</strong></p>
+</section>
+<section id="ins-2-aineisto-ins">
+<h2><ins> 2. Aineisto </ins><a class="headerlink" href="#ins-2-aineisto-ins" title="Permalink to this heading">#</a></h2>
+<p>Otetaan pohjaksi hiilen kiertoon keskittyvän <a class="reference external" href="https://www.icos-cp.eu/about/icos-in-nutshell">ICOS-projektin</a> aineistoja. Tämän monikansallisen yhteisponnistuksen sivuilta löytyy korkealaatuisia mittauksia yhteisessä ja täten näppärästi vertailtavassa muodossa.</p>
+<img src = "https://www.icos-cp.eu/sites/default/files/2020-04/ICOS%20RI_logo_rgb.png">
+<p><strong>HUOM!</strong> Aineistoissa on kymmeniä tai satoja tuhansia rivejä havaintoja ja paljon erilaisia kryptisesti nimettyjä sarakkeita, joihin asemien mittaukset on tallennettu. Kunkin aineiston kohdalla on linkki portaalin sivulle, josta voi katsoa niin kutsutusta <em>metadatasta</em> mitä kunkin sarakkeen nimi tarkoittaa. Tutkimustyössä erilaisten selitteiden ja viitteiden tekeminen on tärkeää epäselvyyksien välttämiseksi.</p>
+<section id="tyokalut">
+<h3>2.1 Työkalut<a class="headerlink" href="#tyokalut" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tuodaan tarvittavat työkalukirjastot.</span>
+
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> 
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="data-hyytiala-keski-suomi">
+<h3>2.2 Data - Hyytiälä, Keski-Suomi<a class="headerlink" href="#data-hyytiala-keski-suomi" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Metaanikonsentraatio</span>
+<span class="c1"># Hyytiälä 67.2 m CH4 2016-12-13–2023-03-31</span>
+<span class="c1"># https://meta.icos-cp.eu/objects/XRJWd0QZw0wKGjXZnspH20t5</span>
+
+<span class="n">HyyCH4</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/HyyCH4.csv&quot;</span><span class="p">,</span>
+                     <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;TIMESTAMP&quot;</span><span class="p">])</span>
+
+<span class="c1"># Hiilidioksidikonsentraatio</span>
+<span class="c1"># Hyytiälä 67.2 m CO2 2016-12-13–2023-03-31</span>
+<span class="c1"># https://meta.icos-cp.eu/objects/9Y6WV_HjpEVbbc-lq_FE9qV8</span>
+
+<span class="n">HyyCO2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/HyyCO2.csv&quot;</span><span class="p">,</span>
+                     <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;TIMESTAMP&quot;</span><span class="p">])</span>
+
+<span class="c1"># Säätiedot</span>
+<span class="c1"># Hyytiälä 67.2 m ICOS ATC Meteo 2017-12-31–2022-12-31</span>
+<span class="c1"># https://meta.icos-cp.eu/objects/zdx_A4ariX25X6Pu8DUG_vE1</span>
+
+<span class="n">HyyMeteo</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/HyyMeteo.csv&quot;</span><span class="p">,</span>
+                       <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;TIMESTAMP&quot;</span><span class="p">])</span>
+
+<span class="c1"># Virtaukset</span>
+<span class="c1"># Hyytiälän FLUXNET-arkisto 1996-2020</span>
+<span class="c1"># https://meta.icos-cp.eu/objects/4F2-9d7QV9A0SlL2pIaRxsJP</span>
+
+<span class="n">HyyGPP</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/HyyFluxGPP.csv&quot;</span><span class="p">,</span>
+                     <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;TIMESTAMP&quot;</span><span class="p">])</span>
+<span class="n">HyyNEE</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/HyyFluxNEE.csv&quot;</span><span class="p">,</span>
+                     <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;TIMESTAMP&quot;</span><span class="p">])</span> <span class="c1"># tässä mukana myös lämpötila</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="data-uto-meri-suomi">
+<h3>2.3 Data - Utö, Meri-Suomi<a class="headerlink" href="#data-uto-meri-suomi" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Metaanikonsentraatio</span>
+<span class="c1"># Atmospheric CH4 product, Utö - Baltic sea (57.0 m) 2012-03-23–2023-03-31</span>
+<span class="c1"># https://meta.icos-cp.eu/objects/0QpkTakURubEz9vnSxkAIL3j</span>
+
+<span class="n">UtCH4</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/UtCH4.csv&quot;</span><span class="p">,</span>
+                    <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;TIMESTAMP&quot;</span><span class="p">])</span>
+
+<span class="c1"># Hiilidioksidikonsentraatio</span>
+<span class="c1"># Atmospheric CO2 product, Utö - Baltic sea (57.0 m) 2012-03-23–2023-03-31</span>
+<span class="c1"># https://meta.icos-cp.eu/objects/Gfcb8rZBPxZQNJgm7qiwAcYz</span>
+
+<span class="n">UtCO2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/UtCO2.csv&quot;</span><span class="p">,</span>
+                    <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;TIMESTAMP&quot;</span><span class="p">])</span>
+
+<span class="c1"># Säätiedot</span>
+<span class="c1"># Utö 58 m ICOS ATC Meteo 2018-12-12–2023-03-31</span>
+<span class="c1"># https://meta.icos-cp.eu/objects/Q9In1Q-KI-HrxDHlrHytOCOd</span>
+
+<span class="n">UtMeteo</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/UtMeteo.csv&quot;</span><span class="p">,</span>
+                      <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;TIMESTAMP&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="data-pallas-ja-kenttarova-pohjois-suomi">
+<h3>2.4 Data - Pallas ja Kenttärova, Pohjois-Suomi<a class="headerlink" href="#data-pallas-ja-kenttarova-pohjois-suomi" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Atmospheric CH4 product, Pallas (12.0 m)</span>
+<span class="c1"># 2004-02-11–2023-03-31</span>
+<span class="c1"># https://meta.icos-cp.eu/objects/ATqgqugIHsWAIXKZgEq2QkKz</span>
+
+<span class="n">PalCH4</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/PalCH4.csv&quot;</span><span class="p">,</span>
+                     <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;TIMESTAMP&quot;</span><span class="p">])</span>
+
+<span class="c1"># Atmospheric CO2 product, Pallas (12.0 m)</span>
+<span class="c1"># 1998-07-01–2023-03-31</span>
+<span class="c1"># https://meta.icos-cp.eu/objects/sp32Z270ruWRU847KagynNOK</span>
+
+<span class="n">PalCO2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/PalCO2.csv&quot;</span><span class="p">,</span>
+                     <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;TIMESTAMP&quot;</span><span class="p">])</span>
+
+<span class="c1"># Fluxnet Product, Kenttarova</span>
+<span class="c1"># 2017-12-31–2020-12-31</span>
+<span class="c1"># https://meta.icos-cp.eu/objects/vXcr9a7FPpBA3_Tg5X2gT1xo</span>
+
+<span class="n">KenFlux1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/KenFlux1.csv&quot;</span><span class="p">,</span>
+                       <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;TIMESTAMP&quot;</span><span class="p">])</span>
+
+<span class="c1"># ETC L2 Fluxnet (half-hourly), Kenttarova</span>
+<span class="c1"># 2019-12-31–2022-12-31</span>
+<span class="c1"># https://meta.icos-cp.eu/objects/aqULa_iF0GDVTc4_AUb7h-nN</span>
+
+<span class="n">KenFlux2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/KenFlux2.csv&quot;</span><span class="p">,</span>
+                       <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;TIMESTAMP&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_1963/2414738136.py:19: DtypeWarning: Columns (7,11,13,25) have mixed types. Specify dtype option on import or set low_memory=False.
+  KenFlux1 = pd.read_csv(&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/KenFlux1.csv&quot;,
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="data-karlsruhe-saksa">
+<h3>2.5 Data - Karlsruhe, Saksa<a class="headerlink" href="#data-karlsruhe-saksa" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Metaanikonsentraatio</span>
+<span class="c1"># Karlsruhe 60 m CH4 2016-12-16–2023-03-31</span>
+<span class="c1"># https://meta.icos-cp.eu/objects/lO1I16P7gM7zloZbzWLSur02</span>
+
+<span class="n">KarlCH4</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/KarlCH4.csv&quot;</span><span class="p">,</span>
+                      <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;TIMESTAMP&quot;</span><span class="p">])</span>
+
+<span class="c1"># Hiilidioksidikonsentraatio</span>
+<span class="c1"># Karlsruhe 60 m CO2 2016-12-16–2023-03-31</span>
+<span class="c1"># https://meta.icos-cp.eu/objects/vXTxJscV4CHFfaljH9KQ5pty</span>
+
+<span class="n">KarlCO2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/KarlCO2.csv&quot;</span><span class="p">,</span>
+                      <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;TIMESTAMP&quot;</span><span class="p">])</span>
+
+<span class="c1"># Säätiedot</span>
+<span class="c1"># Karlsruhe 60 m ICOS ATC Meteo 2019-08-01–2023-03-31</span>
+<span class="c1"># https://meta.icos-cp.eu/objects/rJGDmG0anqNeRrPyLBuog258</span>
+
+<span class="n">KarlMeteo</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/KarlMeteo.csv&quot;</span><span class="p">,</span>
+                        <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;TIMESTAMP&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="data-castelporziano-2-italia">
+<h3>2.6 Data - Castelporziano 2, Italia<a class="headerlink" href="#data-castelporziano-2-italia" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Virtaukset</span>
+<span class="c1"># Castelporziano ETC L2 Fluxnet 2020-12-31–2023-10-31</span>
+<span class="c1"># https://meta.icos-cp.eu/objects/DZcO_1NvbH4wRqTcxnNVKd47</span>
+
+<span class="n">CasFlux</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/CasFlux.csv&quot;</span><span class="p">,</span>
+                      <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;TIMESTAMP&quot;</span><span class="p">])</span>
+
+<span class="c1"># Säätiedot</span>
+<span class="c1"># Castelporziano ETC L2 Meteo 2020-12-31–2023-10-31</span>
+<span class="c1"># https://meta.icos-cp.eu/objects/b9jFmI9WtonRGMRRsWOeBQK9</span>
+
+<span class="n">CasMeteo</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/CasMeteo.csv&quot;</span><span class="p">,</span>
+                       <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;TIMESTAMP&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_1963/3475241156.py:5: DtypeWarning: Columns (11,13,25) have mixed types. Specify dtype option on import or set low_memory=False.
+  CasFlux = pd.read_csv(&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/CasFlux.csv&quot;,
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="data-izana-espanja-teneriffa">
+<h3>2.7 Data - Izaña, Espanja (Teneriffa)<a class="headerlink" href="#data-izana-espanja-teneriffa" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Metaanikonsentraatio</span>
+<span class="c1"># Atmospheric CH4 product, Izaña (29.0 m) 1984-01-01–2023-03-31</span>
+<span class="c1"># https://meta.icos-cp.eu/objects/j_qLA35m18_V9HXmKXNTtV1d</span>
+
+<span class="n">IzaCH4</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/IzaCH4.csv&quot;</span><span class="p">,</span>
+                     <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;TIMESTAMP&quot;</span><span class="p">])</span>
+
+<span class="c1"># Hiilidioksidikonsentraatio</span>
+<span class="c1"># Atmospheric CO2 product, Izaña (29.0 m) 2007-01-19–2023-03-31</span>
+<span class="c1"># https://meta.icos-cp.eu/objects/pinswiNsT4yB9YSX5O-TlAYD</span>
+
+<span class="n">IzaCO2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/IzaCO2.csv&quot;</span><span class="p">,</span>
+                     <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;TIMESTAMP&quot;</span><span class="p">])</span>
+
+<span class="c1"># Säähavainnot</span>
+<span class="c1"># 1996-01-01-2023-12-21</span>
+<span class="c1"># https://meteostat.net/en/station/60010</span>
+<span class="c1"># (eri kohteesta haettu, koska ICOS-ajan tiedot ovat vielä hyvin lyhyet vaikka sääasemalla onkin pitkä historia)</span>
+
+<span class="n">IzaMet</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/IzaMet.csv&quot;</span><span class="p">,</span>
+                     <span class="n">parse_dates</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="ins-3-analyysi-ins">
+<h2><ins> 3. Analyysi </ins><a class="headerlink" href="#ins-3-analyysi-ins" title="Permalink to this heading">#</a></h2>
+<p>Lähdetään tarkastelemaan mitä aineistoissa on. Alla oleva esimerkki on tehty Hyytiälän havainnoista, mutta samoilla käskyillä pystyt tarkastelemaan muitakin asemia vaihtamalla sisään toisennimisiä muuttujia.</p>
+<section id="vilkaisu-aineistoihin">
+<h3>3.1 Vilkaisu aineistoihin<a class="headerlink" href="#vilkaisu-aineistoihin" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Katsotaan miltä muuttujiin tallennettu kama näyttää. </span>
+
+<span class="n">HyyCO2</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Flag</th>
+      <th>NbPoints</th>
+      <th>Stdev</th>
+      <th>TIMESTAMP</th>
+      <th>co2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>N</td>
+      <td>0</td>
+      <td>-9.990</td>
+      <td>2016-12-13 00:00:00</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>N</td>
+      <td>0</td>
+      <td>-9.990</td>
+      <td>2016-12-13 01:00:00</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>N</td>
+      <td>0</td>
+      <td>-9.990</td>
+      <td>2016-12-13 02:00:00</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>N</td>
+      <td>0</td>
+      <td>-9.990</td>
+      <td>2016-12-13 03:00:00</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>O</td>
+      <td>4</td>
+      <td>0.011</td>
+      <td>2016-12-13 04:00:00</td>
+      <td>411.701996</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>55182</th>
+      <td>O</td>
+      <td>20</td>
+      <td>0.172</td>
+      <td>2023-03-31 19:00:00</td>
+      <td>428.299011</td>
+    </tr>
+    <tr>
+      <th>55183</th>
+      <td>O</td>
+      <td>20</td>
+      <td>0.062</td>
+      <td>2023-03-31 20:00:00</td>
+      <td>427.690002</td>
+    </tr>
+    <tr>
+      <th>55184</th>
+      <td>O</td>
+      <td>20</td>
+      <td>0.014</td>
+      <td>2023-03-31 21:00:00</td>
+      <td>427.572998</td>
+    </tr>
+    <tr>
+      <th>55185</th>
+      <td>O</td>
+      <td>10</td>
+      <td>0.022</td>
+      <td>2023-03-31 22:00:00</td>
+      <td>427.911987</td>
+    </tr>
+    <tr>
+      <th>55186</th>
+      <td>O</td>
+      <td>20</td>
+      <td>0.039</td>
+      <td>2023-03-31 23:00:00</td>
+      <td>428.066986</td>
+    </tr>
+  </tbody>
+</table>
+<p>55187 rows × 5 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tehdään mahdollisimman yksinkertainen kuvaaja yhden sarakkeen tiedoista.</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">HyyCO2</span><span class="p">[</span><span class="s2">&quot;TIMESTAMP&quot;</span><span class="p">],</span> <span class="n">HyyCO2</span><span class="p">[</span><span class="s2">&quot;co2&quot;</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/ac4fe63f7b815cbc3a7ceb176c5674fde282a517cf58843727ecccb52816540b.png" src="../_images/ac4fe63f7b815cbc3a7ceb176c5674fde282a517cf58843727ecccb52816540b.png" />
+</div>
+</div>
+<p>Onko kuvaajassa havaittavissa toistuvia kuvioita? Mistä on kyse?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Lisätään muotoilutermejä.</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">HyyCO2</span><span class="p">[</span><span class="s2">&quot;TIMESTAMP&quot;</span><span class="p">],</span> <span class="n">HyyCO2</span><span class="p">[</span><span class="s2">&quot;co2&quot;</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;CO2&quot;</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s2">&quot;green&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Hiilidioksidikonsentraatio ilmassa (µmol mol-1) </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> Aika (vuosi)&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;CO2-fraktio ilmakehässä Hyytiälän SMEAR-asemalla 2017-2023 </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="s2">&quot;upper left&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/c32e269655fbf760f72022533b4c6213b2e209c4a75f1870b99d9ea7356a32ab.png" src="../_images/c32e269655fbf760f72022533b4c6213b2e209c4a75f1870b99d9ea7356a32ab.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Laitetaan useampi suure näkyviin samaan aikaan.</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">layout</span> <span class="o">=</span> <span class="s2">&quot;constrained&quot;</span><span class="p">,</span> <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">311</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">HyyCO2</span><span class="p">[</span><span class="s2">&quot;TIMESTAMP&quot;</span><span class="p">],</span> <span class="n">HyyCO2</span><span class="p">[</span><span class="s2">&quot;co2&quot;</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;CO2&quot;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;g&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Konsentraatio ilmassa (µmol mol-1) </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="s2">&quot;upper left&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Molekyylifraktiot ilmakehässä Hyytiälän SMEAR-asemalla 2017-2023 </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">312</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">HyyCH4</span><span class="p">[</span><span class="s2">&quot;TIMESTAMP&quot;</span><span class="p">],</span> <span class="n">HyyCH4</span><span class="p">[</span><span class="s2">&quot;ch4&quot;</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;CH4&quot;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;b&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Konsentraatio ilmassa (nmol mol-1) </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="s2">&quot;upper left&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">313</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">HyyMeteo</span><span class="p">[</span><span class="s2">&quot;TIMESTAMP&quot;</span><span class="p">],</span> <span class="n">HyyMeteo</span><span class="p">[</span><span class="s2">&quot;AT&quot;</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Lämpötila&quot;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;cyan&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Ilman lämpötila (°C) </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="s2">&quot;upper left&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> Aika (vuosi)&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_1963/4259008251.py:5: MatplotlibDeprecationWarning: Auto-removal of overlapping axes is deprecated since 3.6 and will be removed two minor releases later; explicitly call ax.remove() as needed.
+  plt.subplot(311)
+</pre></div>
+</div>
+<img alt="../_images/39378bc8a18b1a7b168db1b71b6ef20c272e1edd643b07a19a90b51fb57717c6.png" src="../_images/39378bc8a18b1a7b168db1b71b6ef20c272e1edd643b07a19a90b51fb57717c6.png" />
+</div>
+</div>
+<p>Riippuvatko kuvaajien suureet toisistaan? Onko niissä havaittavia yhteneväisyyksiä tai poikkeavuuksia?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Toistetaan äskeinen myös kasvuston toiminnalle hieman pidemmältä ajalta. Lisätään nollaviiva selkeyttämään.</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">layout</span> <span class="o">=</span> <span class="s2">&quot;constrained&quot;</span><span class="p">,</span> <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">311</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">HyyNEE</span><span class="p">[</span><span class="s2">&quot;TIMESTAMP&quot;</span><span class="p">],</span> <span class="n">HyyNEE</span><span class="p">[</span><span class="s2">&quot;NEE_VUT_REF&quot;</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;NEE&quot;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;g&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s1">&#39;dashed&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Ekosysteemin nettovaihtovuo (µmol m-2 s-1) </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="s2">&quot;upper left&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Metsän hiilenkierto Hyytiälän SMEAR-asemalla 1996-2020 </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">312</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">HyyGPP</span><span class="p">[</span><span class="s2">&quot;TIMESTAMP&quot;</span><span class="p">],</span> <span class="n">HyyGPP</span><span class="p">[</span><span class="s2">&quot;GPP_DT_VUT_REF&quot;</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;GPP DT&quot;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">HyyGPP</span><span class="p">[</span><span class="s2">&quot;TIMESTAMP&quot;</span><span class="p">],</span> <span class="n">HyyGPP</span><span class="p">[</span><span class="s2">&quot;GPP_NT_VUT_REF&quot;</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;GPP NT&quot;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s1">&#39;dashed&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;CO2 bruttotuotto (µmol m-2 s-1) </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="s2">&quot;upper left&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">313</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">HyyNEE</span><span class="p">[</span><span class="s2">&quot;TIMESTAMP&quot;</span><span class="p">],</span> <span class="n">HyyNEE</span><span class="p">[</span><span class="s2">&quot;TA_F&quot;</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Lämpötila&quot;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;cyan&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s1">&#39;dashed&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Ilman lämpötila (°C) </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="s2">&quot;upper left&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> Aika (vuosi)&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_1963/2445544882.py:5: MatplotlibDeprecationWarning: Auto-removal of overlapping axes is deprecated since 3.6 and will be removed two minor releases later; explicitly call ax.remove() as needed.
+  plt.subplot(311)
+</pre></div>
+</div>
+<img alt="../_images/d3b414a23603917d3bce02a9c2bdba8de2ab6de3156a3962ef4421b943a9cbce.png" src="../_images/d3b414a23603917d3bce02a9c2bdba8de2ab6de3156a3962ef4421b943a9cbce.png" />
+</div>
+</div>
+<p>Näkyykö pitkässä sarjassa vaihtelua vuosien tai vuodenaikojen välillä?</p>
+<p>Kuvaajia tarkasteltaessa on hyvä huomioida mittausten määrä ja tiheys. Yllä olevat tiedot on kerätty automaattisesti tunneittain tai tiheämmin, mikä saattaa välillä johtaa hankaluuksiin kuvaajien lukemisessa piirtotiheyden vuoksi. Selkeyden nimissä on usein tarpeen jaotella, luokitella tai muutoin muokata alkuperäistä dataa sekä eristää sieltä nousevia tilastollisia muuttujia.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Muokataan olemassaolevaa muuttujaa siten, että erotetaan tallennetusta aikaleimasta päivät, kellonajat sun muut omiksi</span>
+<span class="c1"># sarakkeikseen. Tällöin on helpompaa leikellä aineistosta palasia, kuten &quot;vain kesäkuukaudet&quot; tai vastaavat.</span>
+
+<span class="c1"># Esimerkiksi hiilidioksiditaulukkomme ensimmäisten kymmenen rivin sisältö oli:</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;HyyCO2 aluksi: &quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">HyyCO2</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+
+<span class="c1"># Lisätään sarakkeet kaivamalla aikaleimasta tiedot kullekin riville.</span>
+
+<span class="n">HyyCO2</span><span class="p">[</span><span class="s1">&#39;PVM&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">HyyCO2</span><span class="p">[</span><span class="s1">&#39;TIMESTAMP&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">date</span>
+<span class="n">HyyCO2</span><span class="p">[</span><span class="s1">&#39;VUO&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">HyyCO2</span><span class="p">[</span><span class="s1">&#39;TIMESTAMP&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">year</span>
+<span class="n">HyyCO2</span><span class="p">[</span><span class="s1">&#39;KK&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">HyyCO2</span><span class="p">[</span><span class="s1">&#39;TIMESTAMP&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">month</span>
+<span class="n">HyyCO2</span><span class="p">[</span><span class="s1">&#39;VRK&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">HyyCO2</span><span class="p">[</span><span class="s1">&#39;TIMESTAMP&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">day</span>
+<span class="n">HyyCO2</span><span class="p">[</span><span class="s1">&#39;TUN&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">HyyCO2</span><span class="p">[</span><span class="s1">&#39;TIMESTAMP&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">hour</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;HyyCO2 pienen muokkauksen jälkeen: &quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">HyyCO2</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>HyyCO2 aluksi: 
+  Flag  NbPoints  Stdev           TIMESTAMP         co2
+0    N         0 -9.990 2016-12-13 00:00:00         NaN
+1    N         0 -9.990 2016-12-13 01:00:00         NaN
+2    N         0 -9.990 2016-12-13 02:00:00         NaN
+3    N         0 -9.990 2016-12-13 03:00:00         NaN
+4    O         4  0.011 2016-12-13 04:00:00  411.701996
+5    O        20  0.185 2016-12-13 05:00:00  411.799988
+6    O        10  2.023 2016-12-13 06:00:00  414.533997
+7    O        20  0.222 2016-12-13 07:00:00  416.558014
+8    O        20  0.338 2016-12-13 08:00:00  416.367004
+9    O        20  0.401 2016-12-13 09:00:00  417.058990
+HyyCO2 pienen muokkauksen jälkeen: 
+  Flag  NbPoints  Stdev           TIMESTAMP         co2         PVM   VUO  KK  \
+0    N         0 -9.990 2016-12-13 00:00:00         NaN  2016-12-13  2016  12   
+1    N         0 -9.990 2016-12-13 01:00:00         NaN  2016-12-13  2016  12   
+2    N         0 -9.990 2016-12-13 02:00:00         NaN  2016-12-13  2016  12   
+3    N         0 -9.990 2016-12-13 03:00:00         NaN  2016-12-13  2016  12   
+4    O         4  0.011 2016-12-13 04:00:00  411.701996  2016-12-13  2016  12   
+5    O        20  0.185 2016-12-13 05:00:00  411.799988  2016-12-13  2016  12   
+6    O        10  2.023 2016-12-13 06:00:00  414.533997  2016-12-13  2016  12   
+7    O        20  0.222 2016-12-13 07:00:00  416.558014  2016-12-13  2016  12   
+8    O        20  0.338 2016-12-13 08:00:00  416.367004  2016-12-13  2016  12   
+9    O        20  0.401 2016-12-13 09:00:00  417.058990  2016-12-13  2016  12   
+
+   VRK  TUN  
+0   13    0  
+1   13    1  
+2   13    2  
+3   13    3  
+4   13    4  
+5   13    5  
+6   13    6  
+7   13    7  
+8   13    8  
+9   13    9  
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Kokeillaan kuukausikeskiarvojen laskemista.</span>
+
+<span class="n">KA</span> <span class="o">=</span> <span class="n">HyyCO2</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;KK&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">numeric_only</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">KA</span><span class="p">[</span><span class="s2">&quot;co2&quot;</span><span class="p">])</span>
+
+<span class="n">k</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;tammi&quot;</span><span class="p">,</span> <span class="s2">&quot;helmi&quot;</span><span class="p">,</span> <span class="s2">&quot;maalis&quot;</span><span class="p">,</span> <span class="s2">&quot;huhti&quot;</span><span class="p">,</span> <span class="s2">&quot;touko&quot;</span><span class="p">,</span> <span class="s2">&quot;kesä&quot;</span><span class="p">,</span> <span class="s2">&quot;heinä&quot;</span><span class="p">,</span> <span class="s2">&quot;elo&quot;</span><span class="p">,</span> <span class="s2">&quot;syys&quot;</span><span class="p">,</span> <span class="s2">&quot;loka&quot;</span><span class="p">,</span> <span class="s2">&quot;marras&quot;</span><span class="p">,</span> <span class="s2">&quot;joulu&quot;</span><span class="p">]</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">KA</span><span class="p">[</span><span class="s2">&quot;co2&quot;</span><span class="p">],</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;y&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">KA</span><span class="p">[</span><span class="s2">&quot;co2&quot;</span><span class="p">],</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;CO2&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Konsentraatio ilmassa (µmol mol-1) </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> Aika (kuukausi)&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Hiilidioksidifraktio ilmakehässä Hyytiälän SMEAR-asemalla, kuukausikeskiarvo 2017-2023 </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="s2">&quot;center right&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>KK
+1     423.198319
+2     423.515493
+3     421.977163
+4     419.385665
+5     416.916250
+6     410.259946
+7     405.291253
+8     405.807815
+9     410.800205
+10    417.163443
+11    422.484851
+12    423.381851
+Name: co2, dtype: float64
+</pre></div>
+</div>
+<img alt="../_images/c315cf30f14ed2174b491c1b8af96a104ee2202f41cecfdba8b73df5d65991c1.png" src="../_images/c315cf30f14ed2174b491c1b8af96a104ee2202f41cecfdba8b73df5d65991c1.png" />
+</div>
+</div>
+<p>Miltä keskiarvoistettu kuvaaja näyttää alkuperäisiin havaintoihin verrattuna?</p>
+</section>
+</section>
+<section id="ins-4-tulokset-ja-johtopaatokset-ins">
+<h2><ins> 4. Tulokset ja johtopäätökset </ins><a class="headerlink" href="#ins-4-tulokset-ja-johtopaatokset-ins" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="ins-5-lahteet-ins">
+<h2><ins> 5. Lähteet </ins><a class="headerlink" href="#ins-5-lahteet-ins" title="Permalink to this heading">#</a></h2>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./harjoitukset"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="kestavyys.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">&lt;no title&gt;</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tyon-rakenne">Työn rakenne</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ins-1-tutkimuskysymyksia-ins"><ins> 1. Tutkimuskysymyksiä </ins></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ins-2-aineisto-ins"><ins> 2. Aineisto </ins></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tyokalut">2.1 Työkalut</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-hyytiala-keski-suomi">2.2 Data - Hyytiälä, Keski-Suomi</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-uto-meri-suomi">2.3 Data - Utö, Meri-Suomi</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-pallas-ja-kenttarova-pohjois-suomi">2.4 Data - Pallas ja Kenttärova, Pohjois-Suomi</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-karlsruhe-saksa">2.5 Data - Karlsruhe, Saksa</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-castelporziano-2-italia">2.6 Data - Castelporziano 2, Italia</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-izana-espanja-teneriffa">2.7 Data - Izaña, Espanja (Teneriffa)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ins-3-analyysi-ins"><ins> 3. Analyysi </ins></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vilkaisu-aineistoihin">3.1 Vilkaisu aineistoihin</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ins-4-tulokset-ja-johtopaatokset-ins"><ins> 4. Tulokset ja johtopäätökset </ins></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ins-5-lahteet-ins"><ins> 5. Lähteet </ins></a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By HIP Education and Open Data Team
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <div>
+<a>Toteutettu Opetushallituksen valtionavustuksella tiedekasvatuksen edistämiseen.</a></br><a href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img class="license" alt="Creative Commons License" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a> Tämän sivuston materiaali on käytettävissä seuraavalla lisenssillä: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC-BY 4.0.</a>
+</div>
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -459,6 +459,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#yksityiskohtaisempi-vilkaisu">3.2 Yksityiskohtaisempi vilkaisu</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aineiston-ymmartaminen-vaatii-sen-muokkaamista">3.3. Aineiston ymmärtäminen vaatii sen muokkaamista</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#yhteyksien-loytaminen-vaatii-useiden-suureiden-ja-aineistojen-vertailua">3.4 Yhteyksien löytäminen vaatii useiden suureiden ja aineistojen vertailua</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vertailu-eri-asemien-valilla-kertoo-paikallisista-eroista">3.5 Vertailu eri asemien välillä kertoo paikallisista eroista</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ins-4-tulokset-ja-johtopaatokset-ins"><ins> 4. Tulokset ja johtopäätökset </ins></a></li>
@@ -615,7 +616,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_1963/2414738136.py:19: DtypeWarning: Columns (7,11,13,25) have mixed types. Specify dtype option on import or set low_memory=False.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2007/2414738136.py:19: DtypeWarning: Columns (7,11,13,25) have mixed types. Specify dtype option on import or set low_memory=False.
   KenFlux1 = pd.read_csv(&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/KenFlux1.csv&quot;,
 </pre></div>
 </div>
@@ -672,7 +673,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_1963/3475241156.py:5: DtypeWarning: Columns (11,13,25) have mixed types. Specify dtype option on import or set low_memory=False.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2007/3475241156.py:5: DtypeWarning: Columns (11,13,25) have mixed types. Specify dtype option on import or set low_memory=False.
   CasFlux = pd.read_csv(&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/CasFlux.csv&quot;,
 </pre></div>
 </div>
@@ -885,18 +886,18 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Laitetaan useampi suure näkyviin samaan aikaan.</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">layout</span> <span class="o">=</span> <span class="s2">&quot;constrained&quot;</span><span class="p">,</span> <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">311</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">HyyCO2</span><span class="p">[</span><span class="s2">&quot;TIMESTAMP&quot;</span><span class="p">],</span> <span class="n">HyyCO2</span><span class="p">[</span><span class="s2">&quot;co2&quot;</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;CO2&quot;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;g&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Konsentraatio ilmassa (µmol mol-1) </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Konsentraatio ilmassa </span><span class="se">\n</span><span class="s2"> (µmol mol-1) </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="s2">&quot;upper left&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Molekyylifraktiot ilmakehässä Hyytiälän SMEAR-asemalla 2017-2023 </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">312</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">HyyCH4</span><span class="p">[</span><span class="s2">&quot;TIMESTAMP&quot;</span><span class="p">],</span> <span class="n">HyyCH4</span><span class="p">[</span><span class="s2">&quot;ch4&quot;</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;CH4&quot;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;b&quot;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Konsentraatio ilmassa (nmol mol-1) </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Konsentraatio ilmassa </span><span class="se">\n</span><span class="s2"> (nmol mol-1) </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="s2">&quot;upper left&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">313</span><span class="p">)</span>
@@ -910,11 +911,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_1963/4259008251.py:5: MatplotlibDeprecationWarning: Auto-removal of overlapping axes is deprecated since 3.6 and will be removed two minor releases later; explicitly call ax.remove() as needed.
-  plt.subplot(311)
-</pre></div>
-</div>
-<img alt="../_images/39378bc8a18b1a7b168db1b71b6ef20c272e1edd643b07a19a90b51fb57717c6.png" src="../_images/39378bc8a18b1a7b168db1b71b6ef20c272e1edd643b07a19a90b51fb57717c6.png" />
+<img alt="../_images/1d1fe452b1234f74a22c22d6d169c6e4053a9907b9b7b69bddbd492fb00e63f4.png" src="../_images/1d1fe452b1234f74a22c22d6d169c6e4053a9907b9b7b69bddbd492fb00e63f4.png" />
 </div>
 </div>
 <p>Riippuvatko kuvaajien suureet toisistaan? Onko niissä havaittavia yhteneväisyyksiä tai poikkeavuuksia?</p>
@@ -922,12 +919,12 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Toistetaan äskeinen myös kasvuston toiminnalle hieman pidemmältä ajalta. Lisätään nollaviiva selkeyttämään.</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">layout</span> <span class="o">=</span> <span class="s2">&quot;constrained&quot;</span><span class="p">,</span> <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">311</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">HyyNEE</span><span class="p">[</span><span class="s2">&quot;TIMESTAMP&quot;</span><span class="p">],</span> <span class="n">HyyNEE</span><span class="p">[</span><span class="s2">&quot;NEE_VUT_REF&quot;</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;NEE&quot;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;g&quot;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s1">&#39;dashed&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Ekosysteemin nettovaihtovuo (µmol m-2 s-1) </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Ekosysteemin nettovaihtovuo </span><span class="se">\n</span><span class="s2"> (µmol m-2 s-1) </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="s2">&quot;upper left&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Metsän hiilenkierto Hyytiälän SMEAR-asemalla 1996-2020 </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
@@ -936,7 +933,7 @@ document.write(`
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">HyyGPP</span><span class="p">[</span><span class="s2">&quot;TIMESTAMP&quot;</span><span class="p">],</span> <span class="n">HyyGPP</span><span class="p">[</span><span class="s2">&quot;GPP_DT_VUT_REF&quot;</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;GPP DT&quot;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">HyyGPP</span><span class="p">[</span><span class="s2">&quot;TIMESTAMP&quot;</span><span class="p">],</span> <span class="n">HyyGPP</span><span class="p">[</span><span class="s2">&quot;GPP_NT_VUT_REF&quot;</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;GPP NT&quot;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;orange&quot;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s1">&#39;dashed&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;CO2 bruttotuotto (µmol m-2 s-1) </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;CO2 bruttotuotto </span><span class="se">\n</span><span class="s2"> (µmol m-2 s-1) </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="s2">&quot;upper left&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
 
 <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">313</span><span class="p">)</span>
@@ -951,11 +948,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_1963/2445544882.py:5: MatplotlibDeprecationWarning: Auto-removal of overlapping axes is deprecated since 3.6 and will be removed two minor releases later; explicitly call ax.remove() as needed.
-  plt.subplot(311)
-</pre></div>
-</div>
-<img alt="../_images/d3b414a23603917d3bce02a9c2bdba8de2ab6de3156a3962ef4421b943a9cbce.png" src="../_images/d3b414a23603917d3bce02a9c2bdba8de2ab6de3156a3962ef4421b943a9cbce.png" />
+<img alt="../_images/6f7cf666b914f59b603c191a108d1cbd9e9afa002193d494619077b1bab00219.png" src="../_images/6f7cf666b914f59b603c191a108d1cbd9e9afa002193d494619077b1bab00219.png" />
 </div>
 </div>
 <p>Näkyykö pitkässä sarjassa vaihtelua vuosien tai vuodenaikojen välillä?</p>
@@ -1128,9 +1121,49 @@ Name: co2, dtype: float64
 <h3>3.4 Yhteyksien löytäminen vaatii useiden suureiden ja aineistojen vertailua<a class="headerlink" href="#yhteyksien-loytaminen-vaatii-useiden-suureiden-ja-aineistojen-vertailua" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Päivittäiset CO2-tasot, lämpötilat, sademäärä, säteily, GPP?</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Päivittäiset CO2-tasot, lämpötilat, sademäärä, lyhytaaltosäteily, GPP?</span>
 </pre></div>
 </div>
+</div>
+</div>
+</section>
+<section id="vertailu-eri-asemien-valilla-kertoo-paikallisista-eroista">
+<h3>3.5 Vertailu eri asemien välillä kertoo paikallisista eroista<a class="headerlink" href="#vertailu-eri-asemien-valilla-kertoo-paikallisista-eroista" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Esimerkkinä Hyytiälä v. Izana</span>
+
+<span class="n">ala</span> <span class="o">=</span> <span class="s2">&quot;2016-01-01&quot;</span>
+<span class="n">yla</span> <span class="o">=</span> <span class="s2">&quot;2024-01-01&quot;</span>
+
+<span class="n">ala</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">ala</span><span class="p">)</span>
+<span class="n">yla</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">yla</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+
+<span class="n">ax1</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">211</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">HyyCO2</span><span class="p">[</span><span class="s2">&quot;TIMESTAMP&quot;</span><span class="p">],</span> <span class="n">HyyCO2</span><span class="p">[</span><span class="s2">&quot;co2&quot;</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Hyytiälä&quot;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;g&quot;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">IzaCO2</span><span class="p">[</span><span class="s2">&quot;TIMESTAMP&quot;</span><span class="p">],</span> <span class="n">IzaCO2</span><span class="p">[</span><span class="s2">&quot;co2&quot;</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Izana&quot;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Konsentraatio ilmassa </span><span class="se">\n</span><span class="s2"> (µmol mol-1) </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="s2">&quot;upper left&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlim</span><span class="p">(</span><span class="n">ala</span><span class="p">,</span> <span class="n">yla</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;CO2-pitoisuudet ja lämpötilat mitta-asemien ilmatilassa </span><span class="si">{</span><span class="n">ala</span><span class="si">}</span><span class="s2"> - </span><span class="si">{</span><span class="n">yla</span><span class="si">}</span><span class="s2"> </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">212</span><span class="p">,</span> <span class="n">sharex</span> <span class="o">=</span> <span class="n">ax1</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">HyyMeteo</span><span class="p">[</span><span class="s2">&quot;TIMESTAMP&quot;</span><span class="p">],</span> <span class="n">HyyMeteo</span><span class="p">[</span><span class="s2">&quot;AT&quot;</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Hyytiälä&quot;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;cyan&quot;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.7</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">IzaMet</span><span class="p">[</span><span class="s2">&quot;date&quot;</span><span class="p">],</span> <span class="n">IzaMet</span><span class="p">[</span><span class="s2">&quot;tavg&quot;</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Izana&quot;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s1">&#39;dashed&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Ilman lämpötila (°C) </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="s2">&quot;upper left&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> Aika (vuosi)&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/d84714dd013d55e0327bd493166c5aeb622478d37b6a799d4055bc0fba8e92d9.png" src="../_images/d84714dd013d55e0327bd493166c5aeb622478d37b6a799d4055bc0fba8e92d9.png" />
 </div>
 </div>
 </section>
@@ -1214,6 +1247,7 @@ Name: co2, dtype: float64
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#yksityiskohtaisempi-vilkaisu">3.2 Yksityiskohtaisempi vilkaisu</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aineiston-ymmartaminen-vaatii-sen-muokkaamista">3.3. Aineiston ymmärtäminen vaatii sen muokkaamista</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#yhteyksien-loytaminen-vaatii-useiden-suureiden-ja-aineistojen-vertailua">3.4 Yhteyksien löytäminen vaatii useiden suureiden ja aineistojen vertailua</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vertailu-eri-asemien-valilla-kertoo-paikallisista-eroista">3.5 Vertailu eri asemien välillä kertoo paikallisista eroista</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ins-4-tulokset-ja-johtopaatokset-ins"><ins> 4. Tulokset ja johtopäätökset </ins></a></li>

@@ -456,6 +456,9 @@ document.write(`
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ins-3-analyysi-ins"><ins> 3. Analyysi </ins></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vilkaisu-aineistoihin">3.1 Vilkaisu aineistoihin</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#yksityiskohtaisempi-vilkaisu">3.2 Yksityiskohtaisempi vilkaisu</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aineiston-ymmartaminen-vaatii-sen-muokkaamista">3.3. Aineiston ymmärtäminen vaatii sen muokkaamista</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#yhteyksien-loytaminen-vaatii-useiden-suureiden-ja-aineistojen-vertailua">3.4 Yhteyksien löytäminen vaatii useiden suureiden ja aineistojen vertailua</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ins-4-tulokset-ja-johtopaatokset-ins"><ins> 4. Tulokset ja johtopäätökset </ins></a></li>
@@ -473,7 +476,7 @@ document.write(`
                   
   <section id="ins-kestavyys-fysikaalisia-pohdintoja-ilmakehastamme-ins">
 <h1><ins> KESTÄVYYS - fysikaalisia pohdintoja ilmakehästämme </ins><a class="headerlink" href="#ins-kestavyys-fysikaalisia-pohdintoja-ilmakehastamme-ins" title="Permalink to this heading">#</a></h1>
-<p><span style="color:red"><em>v0.1 26.12. - TÄMÄ KIRJANEN ON KESKEN JA JATKAA KEHITYSTÄÄN 2024 TAMMIKUUHUN</em></span></p>
+<p><span style="color:red"><em>v0.2 28.12. - TÄMÄ KIRJANEN ON KESKEN JA JATKAA KEHITYSTÄÄN 2024 TAMMIKUUHUN</em></span></p>
 <section id="tyon-rakenne">
 <h2>Työn rakenne<a class="headerlink" href="#tyon-rakenne" title="Permalink to this heading">#</a></h2>
 <p>Yksinkertainen projekti noudattaa yleensä simppeliä perusrakennetta:</p>
@@ -854,6 +857,9 @@ document.write(`
 </div>
 </div>
 <p>Onko kuvaajassa havaittavissa toistuvia kuvioita? Mistä on kyse?</p>
+</section>
+<section id="yksityiskohtaisempi-vilkaisu">
+<h3>3.2 Yksityiskohtaisempi vilkaisu<a class="headerlink" href="#yksityiskohtaisempi-vilkaisu" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Lisätään muotoilutermejä.</span>
@@ -953,6 +959,9 @@ document.write(`
 </div>
 </div>
 <p>Näkyykö pitkässä sarjassa vaihtelua vuosien tai vuodenaikojen välillä?</p>
+</section>
+<section id="aineiston-ymmartaminen-vaatii-sen-muokkaamista">
+<h3>3.3. Aineiston ymmärtäminen vaatii sen muokkaamista<a class="headerlink" href="#aineiston-ymmartaminen-vaatii-sen-muokkaamista" title="Permalink to this heading">#</a></h3>
 <p>Kuvaajia tarkasteltaessa on hyvä huomioida mittausten määrä ja tiheys. Yllä olevat tiedot on kerätty automaattisesti tunneittain tai tiheämmin, mikä saattaa välillä johtaa hankaluuksiin kuvaajien lukemisessa piirtotiheyden vuoksi. Selkeyden nimissä on usein tarpeen jaotella, luokitella tai muutoin muokata alkuperäistä dataa sekä eristää sieltä nousevia tilastollisia muuttujia.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -966,6 +975,7 @@ document.write(`
 <span class="c1"># Lisätään sarakkeet kaivamalla aikaleimasta tiedot kullekin riville.</span>
 
 <span class="n">HyyCO2</span><span class="p">[</span><span class="s1">&#39;PVM&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">HyyCO2</span><span class="p">[</span><span class="s1">&#39;TIMESTAMP&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">date</span>
+<span class="n">HyyCO2</span><span class="p">[</span><span class="s1">&#39;PVM&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">HyyCO2</span><span class="p">[</span><span class="s1">&#39;PVM&#39;</span><span class="p">])</span>                <span class="c1"># Tässä korjataan date-tyyppi erilaiseksi aikaleimaksi.</span>
 <span class="n">HyyCO2</span><span class="p">[</span><span class="s1">&#39;VUO&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">HyyCO2</span><span class="p">[</span><span class="s1">&#39;TIMESTAMP&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">year</span>
 <span class="n">HyyCO2</span><span class="p">[</span><span class="s1">&#39;KK&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">HyyCO2</span><span class="p">[</span><span class="s1">&#39;TIMESTAMP&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">month</span>
 <span class="n">HyyCO2</span><span class="p">[</span><span class="s1">&#39;VRK&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">HyyCO2</span><span class="p">[</span><span class="s1">&#39;TIMESTAMP&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">day</span>
@@ -990,17 +1000,17 @@ document.write(`
 8    O        20  0.338 2016-12-13 08:00:00  416.367004
 9    O        20  0.401 2016-12-13 09:00:00  417.058990
 HyyCO2 pienen muokkauksen jälkeen: 
-  Flag  NbPoints  Stdev           TIMESTAMP         co2         PVM   VUO  KK  \
-0    N         0 -9.990 2016-12-13 00:00:00         NaN  2016-12-13  2016  12   
-1    N         0 -9.990 2016-12-13 01:00:00         NaN  2016-12-13  2016  12   
-2    N         0 -9.990 2016-12-13 02:00:00         NaN  2016-12-13  2016  12   
-3    N         0 -9.990 2016-12-13 03:00:00         NaN  2016-12-13  2016  12   
-4    O         4  0.011 2016-12-13 04:00:00  411.701996  2016-12-13  2016  12   
-5    O        20  0.185 2016-12-13 05:00:00  411.799988  2016-12-13  2016  12   
-6    O        10  2.023 2016-12-13 06:00:00  414.533997  2016-12-13  2016  12   
-7    O        20  0.222 2016-12-13 07:00:00  416.558014  2016-12-13  2016  12   
-8    O        20  0.338 2016-12-13 08:00:00  416.367004  2016-12-13  2016  12   
-9    O        20  0.401 2016-12-13 09:00:00  417.058990  2016-12-13  2016  12   
+  Flag  NbPoints  Stdev           TIMESTAMP         co2        PVM   VUO  KK  \
+0    N         0 -9.990 2016-12-13 00:00:00         NaN 2016-12-13  2016  12   
+1    N         0 -9.990 2016-12-13 01:00:00         NaN 2016-12-13  2016  12   
+2    N         0 -9.990 2016-12-13 02:00:00         NaN 2016-12-13  2016  12   
+3    N         0 -9.990 2016-12-13 03:00:00         NaN 2016-12-13  2016  12   
+4    O         4  0.011 2016-12-13 04:00:00  411.701996 2016-12-13  2016  12   
+5    O        20  0.185 2016-12-13 05:00:00  411.799988 2016-12-13  2016  12   
+6    O        10  2.023 2016-12-13 06:00:00  414.533997 2016-12-13  2016  12   
+7    O        20  0.222 2016-12-13 07:00:00  416.558014 2016-12-13  2016  12   
+8    O        20  0.338 2016-12-13 08:00:00  416.367004 2016-12-13  2016  12   
+9    O        20  0.401 2016-12-13 09:00:00  417.058990 2016-12-13  2016  12   
 
    VRK  TUN  
 0   13    0  
@@ -1061,6 +1071,68 @@ Name: co2, dtype: float64
 </div>
 </div>
 <p>Miltä keskiarvoistettu kuvaaja näyttää alkuperäisiin havaintoihin verrattuna?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Pitkästä aineistosta voidaan havaita vuodenaikaisvaihtelua.</span>
+<span class="c1"># Entäs lyhyemmällä ajalla, kuten yksittäisen vuorokauden aikana?</span>
+
+<span class="n">d</span> <span class="o">=</span> <span class="s1">&#39;2017-07-06&#39;</span>
+<span class="n">pvm</span> <span class="o">=</span> <span class="n">HyyCO2</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;PVM == @d&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pvm</span><span class="p">[</span><span class="s2">&quot;TIMESTAMP&quot;</span><span class="p">],</span> <span class="n">pvm</span><span class="p">[</span><span class="s2">&quot;co2&quot;</span><span class="p">],</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;y&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">pvm</span><span class="p">[</span><span class="s2">&quot;TIMESTAMP&quot;</span><span class="p">],</span> <span class="n">pvm</span><span class="p">[</span><span class="s2">&quot;co2&quot;</span><span class="p">],</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;CO2&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Konsentraatio ilmassa (µmol mol-1) </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> Aika (h)&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hiilidioksidifraktio ilmakehässä Hyytiälän SMEAR-asemalla, </span><span class="si">{</span><span class="n">d</span><span class="si">}</span><span class="s2"> </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="s2">&quot;center right&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/ce1f5e6aab09e245ba8d20f2fbc1d30c38b9c6699770ed835b029450f2fb9125.png" src="../_images/ce1f5e6aab09e245ba8d20f2fbc1d30c38b9c6699770ed835b029450f2fb9125.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tai tiettyjen päivämäärien välillä?</span>
+<span class="c1"># Kokeile vaihtaa päivämääriä vaikkapa kahden päivän, viikon tai kuukauden ajalle.</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="s1">&#39;2017-07-07&#39;</span>
+<span class="n">b</span> <span class="o">=</span> <span class="s1">&#39;2017-07-09&#39;</span>
+<span class="n">vali</span> <span class="o">=</span> <span class="n">HyyCO2</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;PVM &gt;= @a &amp; PVM &lt; @b&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">vali</span><span class="p">[</span><span class="s2">&quot;TIMESTAMP&quot;</span><span class="p">],</span> <span class="n">vali</span><span class="p">[</span><span class="s2">&quot;co2&quot;</span><span class="p">],</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;y&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">vali</span><span class="p">[</span><span class="s2">&quot;TIMESTAMP&quot;</span><span class="p">],</span> <span class="n">vali</span><span class="p">[</span><span class="s2">&quot;co2&quot;</span><span class="p">],</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;CO2&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Konsentraatio ilmassa (µmol mol-1) </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> Aika (h)&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hiilidioksidifraktio ilmakehässä Hyytiälän SMEAR-asemalla, </span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s2"> ja </span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s2"> välillä </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="s2">&quot;center right&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/09c79558279e775a11f2cdd66122a8f53a06035ed6cd62f592a1b54d010b12ee.png" src="../_images/09c79558279e775a11f2cdd66122a8f53a06035ed6cd62f592a1b54d010b12ee.png" />
+</div>
+</div>
+<p>Millaisia eroja löydät päivien välillä saman vuodenajan sisällä? Muuttuvatko päivävaihteluiden arvot tai muodot vuodenaikojen välillä?</p>
+</section>
+<section id="yhteyksien-loytaminen-vaatii-useiden-suureiden-ja-aineistojen-vertailua">
+<h3>3.4 Yhteyksien löytäminen vaatii useiden suureiden ja aineistojen vertailua<a class="headerlink" href="#yhteyksien-loytaminen-vaatii-useiden-suureiden-ja-aineistojen-vertailua" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Päivittäiset CO2-tasot, lämpötilat, sademäärä, säteily, GPP?</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 </section>
 <section id="ins-4-tulokset-ja-johtopaatokset-ins">
@@ -1139,6 +1211,9 @@ Name: co2, dtype: float64
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ins-3-analyysi-ins"><ins> 3. Analyysi </ins></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vilkaisu-aineistoihin">3.1 Vilkaisu aineistoihin</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#yksityiskohtaisempi-vilkaisu">3.2 Yksityiskohtaisempi vilkaisu</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#aineiston-ymmartaminen-vaatii-sen-muokkaamista">3.3. Aineiston ymmärtäminen vaatii sen muokkaamista</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#yhteyksien-loytaminen-vaatii-useiden-suureiden-ja-aineistojen-vertailua">3.4 Yhteyksien löytäminen vaatii useiden suureiden ja aineistojen vertailua</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ins-4-tulokset-ja-johtopaatokset-ins"><ins> 4. Tulokset ja johtopäätökset </ins></a></li>

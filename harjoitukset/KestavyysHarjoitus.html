@@ -616,7 +616,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2007/2414738136.py:19: DtypeWarning: Columns (7,11,13,25) have mixed types. Specify dtype option on import or set low_memory=False.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_1893/2414738136.py:19: DtypeWarning: Columns (7,11,13,25) have mixed types. Specify dtype option on import or set low_memory=False.
   KenFlux1 = pd.read_csv(&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/KenFlux1.csv&quot;,
 </pre></div>
 </div>
@@ -673,7 +673,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2007/3475241156.py:5: DtypeWarning: Columns (11,13,25) have mixed types. Specify dtype option on import or set low_memory=False.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_1893/3475241156.py:5: DtypeWarning: Columns (11,13,25) have mixed types. Specify dtype option on import or set low_memory=False.
   CasFlux = pd.read_csv(&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/CasFlux.csv&quot;,
 </pre></div>
 </div>
@@ -1164,6 +1164,60 @@ Name: co2, dtype: float64
 </div>
 <div class="cell_output docutils container">
 <img alt="../_images/d84714dd013d55e0327bd493166c5aeb622478d37b6a799d4055bc0fba8e92d9.png" src="../_images/d84714dd013d55e0327bd493166c5aeb622478d37b6a799d4055bc0fba8e92d9.png" />
+</div>
+</div>
+<p>Miten Suomen ja Kanariansaarten havainnot eroavat toisistaan? Onko aineistoissa havaittavissa hetkellisiä poikkeamia? Onko lämpötiloissa syytä huomioida ero sillä, että Izañan arvot ovat päiväkohtaisia keskiarvoja?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Sovitetaan ylösalas sahaaviin havaintoihin yleiskuvaa tasoittava trendiviivakin.</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+
+<span class="c1"># Havainnot</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">HyyCO2</span><span class="p">[</span><span class="s2">&quot;TIMESTAMP&quot;</span><span class="p">],</span> <span class="n">HyyCO2</span><span class="p">[</span><span class="s2">&quot;co2&quot;</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Hyytiälä&quot;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;g&quot;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">IzaCO2</span><span class="p">[</span><span class="s2">&quot;TIMESTAMP&quot;</span><span class="p">],</span> <span class="n">IzaCO2</span><span class="p">[</span><span class="s2">&quot;co2&quot;</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Izana&quot;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;b&quot;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">)</span>
+
+<span class="c1"># Hyytiälän trendi</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">HyyCO2</span><span class="p">[</span><span class="s1">&#39;TIMESTAMP&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">HyyCO2</span><span class="p">[</span><span class="s2">&quot;co2&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">y</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">y</span><span class="p">)]</span> <span class="o">=</span> <span class="n">y</span><span class="p">[</span><span class="o">~</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">y</span><span class="p">)]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+<span class="n">z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">poly1d</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">HyyCO2</span><span class="p">[</span><span class="s1">&#39;TIMESTAMP&#39;</span><span class="p">],</span> <span class="n">p</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;black&quot;</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s2">&quot;dashed&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Hyytiälä&quot;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.7</span><span class="p">)</span>
+
+<span class="c1"># Izañan trendi</span>
+
+<span class="n">q</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">IzaCO2</span><span class="p">[</span><span class="s1">&#39;TIMESTAMP&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">size</span><span class="p">)</span>
+<span class="n">w</span> <span class="o">=</span> <span class="n">IzaCO2</span><span class="p">[</span><span class="s2">&quot;co2&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">w</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">w</span><span class="p">)]</span> <span class="o">=</span> <span class="n">w</span><span class="p">[</span><span class="o">~</span><span class="n">np</span><span class="o">.</span><span class="n">isnan</span><span class="p">(</span><span class="n">w</span><span class="p">)]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+<span class="n">v</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">pf</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">poly1d</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">IzaCO2</span><span class="p">[</span><span class="s1">&#39;TIMESTAMP&#39;</span><span class="p">],</span> <span class="n">pf</span><span class="p">(</span><span class="n">q</span><span class="p">),</span> <span class="s2">&quot;r--&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Izana&quot;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.7</span><span class="p">)</span>
+
+<span class="c1"># Selitteet</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> Aika (vuosi)&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Konsentraatio ilmassa (µmol mol-1) </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">loc</span> <span class="o">=</span> <span class="s2">&quot;upper left&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;CO2-pitoisuuksien trendi mitta-asemilla 2008-2023 </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hyytiälän trendiviivan yhtälö: y = </span><span class="si">{</span><span class="n">z</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">*x + </span><span class="si">{</span><span class="n">z</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Izañan trendiviivan yhtälö: y = </span><span class="si">{</span><span class="n">v</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2">*x + </span><span class="si">{</span><span class="n">v</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/0dd7b796aeeaa2dbf21930a2aae1033dc548b02592a46cc3d5233838ce9f462d.png" src="../_images/0dd7b796aeeaa2dbf21930a2aae1033dc548b02592a46cc3d5233838ce9f462d.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hyytiälän trendiviivan yhtälö: y = 0.000265559521964558*x + 409.66596100363256
+Izañan trendiviivan yhtälö: y = 0.0002577758260034958*x + 382.6098250512164
+</pre></div>
+</div>
 </div>
 </div>
 </section>

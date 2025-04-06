@@ -28,6 +28,7 @@ chapters:
   - file: harjoitukset/datasettien_esittelyt
 - file: harjoitukset/kestavyys
   sections:
+  - file: harjoitukset/ICOSdemo
   - file: harjoitukset/KestavyysHarjoitus
   - file: harjoitukset/SustainabilityEnglish
   

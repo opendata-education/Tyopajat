@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Mikä on Jupyter Notebook? &#8212; Työpajat</title>
   
@@ -15,56 +14,52 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'harjoitukset/mika-on-jupyter-notebook';</script>
     <link rel="canonical" href="https://opendata-education.github.io/Tyopajat/intro.html/harjoitukset/mika-on-jupyter-notebook.html" />
-    <link rel="shortcut icon" href="../_static/logo.png"/>
+    <link rel="icon" href="../_static/logo.png"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="CMS ja avoin data" href="cms-esimerkki.html" />
@@ -78,28 +73,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -121,12 +111,20 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -142,6 +140,8 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
 
+  
+    
   
 
 <a class="navbar-brand logo" href="../intro.html">
@@ -160,7 +160,18 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -171,33 +182,34 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="opettajakoulutus.html">CERN Opettajakoulutus</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="opettajakoulutus.html">CERN Opettajakoulutus</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2 current active"><a class="current reference internal" href="#">Mikä on Jupyter Notebook?</a></li>
 <li class="toctree-l2"><a class="reference internal" href="cms-esimerkki.html">CMS ja avoin data</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Vuosirenkaat.html">Niin hyvää puuta</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="esimerkit.html">Lyhyet esimerkit</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="esimerkit.html">Lyhyet esimerkit</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="Lumensyvyys.html">ESIMERKKI: Lumensyvyys</a></li>
 <li class="toctree-l2"><a class="reference internal" href="UV.html">ESIMERKKI: Ultraviolettisäteily</a></li>
 <li class="toctree-l2"><a class="reference internal" href="fossiiliset_ja_koulutus.html">Luonnonvarojen käyttö ja tasa-arvoinen koulutus</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Lampoanomaliat.html">ESIMERKKI: Lämpötiloista ja anomalioista</a></li>
 <li class="toctree-l2"><a class="reference internal" href="FMI_Luotaukset.html">ESIMERKKI: Ilmakehäluotaukset</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="ilmastopaja.html">Ilmastotyöpaja</a><input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-3"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="ilmastopaja.html">Ilmastotyöpaja</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="lampotila-intro.html">ESIMERKKI 1: Maan lämpötilapoikkeaman määritys</a></li>
 <li class="toctree-l2"><a class="reference internal" href="dataraati.html">Visualisaatioraati</a></li>
 <li class="toctree-l2"><a class="reference internal" href="UV-paja.html">ESIMERKKI 2: Ultraviolettisäteily</a></li>
 <li class="toctree-l2"><a class="reference internal" href="co2.html">ESIMERKKI 3: Maapallon ilmakehä</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Pienhiukkaset.html">ESIMERKKI 4: Pienhiukkaset - saasteita ja aerosoleja</a></li>
 </ul>
-</li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="aerosoli.html">Aerosoli-työpaja</a><input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-4"><i class="fa-solid fa-chevron-down"></i></label><ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="aerosoli.html">Aerosoli-työpaja</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="aerosoli-tyopaja.html">Aerosoli-työpajan ohjeet</a></li>
 <li class="toctree-l2"><a class="reference internal" href="datasettien_esittelyt.html">Aerosoli-työpajan datasetit ja tutkimuskysymykset</a></li>
 </ul>
-</li>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="ICOSdemo.html">Informaatiota ilmakehästä</a></li>
 <li class="toctree-l1"><a class="reference internal" href="KestavyysHarjoitus.html"><ins> KESTÄVYYS - fysikaalisia pohdintoja ilmakehästämme </ins></a></li>
 <li class="toctree-l1"><a class="reference internal" href="SustainabilityEnglish.html"><ins> SUSTAINABILITY - physical musings on the atmosphere </ins></a></li>
 </ul>
@@ -215,7 +227,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -224,14 +236,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -256,14 +268,14 @@ const thebe_selector_output = ".output, .cell_output"
       
       <li><a href="https://mybinder.org/v2/gh/opendata-education/Tyopajat/main?urlpath=tree/materiaali/harjoitukset/mika-on-jupyter-notebook.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
-   title="Launch onBinder"
+   title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
 <span class="btn__icon-container">
   
-    <img src="../_static/images/logo_binder.svg">
+    <img alt="Binder logo" src="../_static/images/logo_binder.svg">
   </span>
 <span class="btn__text-container">Binder</span>
 </a>
@@ -274,14 +286,14 @@ const thebe_selector_output = ".output, .cell_output"
       
       <li><a href="https://colab.research.google.com/github/opendata-education/Tyopajat/blob/main/materiaali/harjoitukset/mika-on-jupyter-notebook.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
-   title="Launch onColab"
+   title="Launch on Colab"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
 <span class="btn__icon-container">
   
-    <img src="../_static/images/logo_colab.png">
+    <img alt="Colab logo" src="../_static/images/logo_colab.png">
   </span>
 <span class="btn__text-container">Colab</span>
 </a>
@@ -405,10 +417,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
@@ -416,14 +428,14 @@ document.write(`
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -468,10 +480,10 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section id="mika-on-jupyter-notebook">
-<h1>Mikä on Jupyter Notebook?<a class="headerlink" href="#mika-on-jupyter-notebook" title="Permalink to this heading">#</a></h1>
+<h1>Mikä on Jupyter Notebook?<a class="headerlink" href="#mika-on-jupyter-notebook" title="Link to this heading">#</a></h1>
 <p>Moi! Tämä alusta tässä on Jupyter Notebook. Täällä voit samassa dokumentissa käsitellä tekstiä, koodia, yhtälöitä, kuvia sekä data-aineistoja interaktiivisesti. Näppärää! Näitä dokumentteja kutsutaan notebookeiksi.</p>
 <p>Kuten varmaan jo huomasit, tämä alusta toimii sinun internet-selaimessa. Se mahdollistaa oppilaille suunnattujen tehtävien helpon jakamisen ilman kömpelöä välivaihetta, jossa ohjelmistoja pitää ladata ja niiden opettelu vie hirveästi aikaa. Tämän alustan etuja on ehdottomasti helppokäyttöisyys.</p>
 <p>Jupyter Notebookia voi käyttää myös <em>lokaalisti</em>, eli asentamalla ohjelman omalle tietokoneelle. Silloinkin tisamalleen samanlainen alusta avautuu selaimeen, mutta voit käyttää sinun koneella olevia tiedostoja suoraan tai tallentaa keskeneräisen tiedoston omalle koneelle. Tämä on kannattavaa silloin, kun haluat luoda omia tehtäviä tai tarkastaa oppilaiden tekemiä vastauksia, jotka sisältävät koodia tai dataa. Esimerkiksi Anaconda-Navigator sisältää Jupyter Notebookin.</p>
@@ -496,13 +508,13 @@ document.write(`
 </div>
 <p>Ylhäällä on koodisolu, joka sisältää pienen laskutoimituksen. Voit suorittaa solun, jolloin sen alapuolelle tulostuu kaikki, mitä koodisolussa käsketään tulostaa. Jos ihan vasemmalla olevissa hakasulkeissa on <strong>In [*]</strong>, niin solun suorittaminen on vielä kesken. Suoritetun koodisolun kohdalla hakasulkeisiin tulee numero, josta näkee, missä järjestyksessä solut on suoritettu. Jos suoritit ylempänä olevan solun kerran, hakasulkeissa pitäisi olla 1, jos suoritat sen saman solun nyt toisen kerran, siihen pitäisi tulla 2.</p>
 <section id="tehtava-muokkaa-tata-tekstisolua-lisaa-alle-lause-jossa-kerrot-minkalainen-saa-on-tanaan">
-<h2>Tehtävä: Muokkaa tätä tekstisolua – lisää alle lause, jossa kerrot minkälainen sää on tänään.<a class="headerlink" href="#tehtava-muokkaa-tata-tekstisolua-lisaa-alle-lause-jossa-kerrot-minkalainen-saa-on-tanaan" title="Permalink to this heading">#</a></h2>
+<h2>Tehtävä: Muokkaa tätä tekstisolua – lisää alle lause, jossa kerrot minkälainen sää on tänään.<a class="headerlink" href="#tehtava-muokkaa-tata-tekstisolua-lisaa-alle-lause-jossa-kerrot-minkalainen-saa-on-tanaan" title="Link to this heading">#</a></h2>
 </section>
 <section id="tehtava-kokeile-lisata-alle-uusi-koodisolu-ja-laske-jokin-mielivaltainen-summa-muuttujaan-b">
-<h2>Tehtävä: Kokeile lisätä alle uusi koodisolu ja laske jokin mielivaltainen summa muuttujaan b.<a class="headerlink" href="#tehtava-kokeile-lisata-alle-uusi-koodisolu-ja-laske-jokin-mielivaltainen-summa-muuttujaan-b" title="Permalink to this heading">#</a></h2>
+<h2>Tehtävä: Kokeile lisätä alle uusi koodisolu ja laske jokin mielivaltainen summa muuttujaan b.<a class="headerlink" href="#tehtava-kokeile-lisata-alle-uusi-koodisolu-ja-laske-jokin-mielivaltainen-summa-muuttujaan-b" title="Link to this heading">#</a></h2>
 </section>
 <section id="funktiokirjastot">
-<h2>1. Funktiokirjastot<a class="headerlink" href="#funktiokirjastot" title="Permalink to this heading">#</a></h2>
+<h2>1. Funktiokirjastot<a class="headerlink" href="#funktiokirjastot" title="Link to this heading">#</a></h2>
 <p>Pythonia käytettäessä hyödynnetään erilaisia paketteja, joista kukin sisältää oman valikoimansa erilaisia funktioita. Meillä yleisimmin käytössä olevat paketit ovat</p>
 <ul class="simple">
 <li><p><strong>numpy</strong>, sisältää numeerisen laskennan työkaluja</p></li>
@@ -514,7 +526,7 @@ document.write(`
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Aja tämä solu ensin</span>
 
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span> <span class="c1"># tuodaan numpy-paketti käyttöön ja annetaan sille lyhenne funktioiden kutsumista varten</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span> <span class="c1"># tuodaan numpy-paketti käyttöön ja annetaan sille lyhenne funktioiden kutsumista varten</span>
 </pre></div>
 </div>
 </div>
@@ -597,17 +609,17 @@ Vektorisummmat:  [[12 13]
 </div>
 </div>
 <section id="tehtava-luo-kaksi-mielivaltaista-vektoria-muuttujiin-vek1-ja-vek2-seka-laske-niiden-vektorisumma">
-<h3>Tehtävä: Luo kaksi mielivaltaista vektoria muuttujiin vek1 ja vek2 sekä laske niiden vektorisumma.<a class="headerlink" href="#tehtava-luo-kaksi-mielivaltaista-vektoria-muuttujiin-vek1-ja-vek2-seka-laske-niiden-vektorisumma" title="Permalink to this heading">#</a></h3>
+<h3>Tehtävä: Luo kaksi mielivaltaista vektoria muuttujiin vek1 ja vek2 sekä laske niiden vektorisumma.<a class="headerlink" href="#tehtava-luo-kaksi-mielivaltaista-vektoria-muuttujiin-vek1-ja-vek2-seka-laske-niiden-vektorisumma" title="Link to this heading">#</a></h3>
 </section>
 </section>
 <section id="datan-lukeminen">
-<h2>2. Datan lukeminen<a class="headerlink" href="#datan-lukeminen" title="Permalink to this heading">#</a></h2>
+<h2>2. Datan lukeminen<a class="headerlink" href="#datan-lukeminen" title="Link to this heading">#</a></h2>
 <p>Jupyter Notebookiin voi tuoda datasettejä suoraan avoimien linkkien kautta. Datasettien lukemista varten tarvitaan pandas-pakettia sekä <strong>read.csv()</strong>-funktiota. CSV (comma-separated values) on tiedostomuoto, jolla voidaan tallentaa yksinkertaista taulukkomuotoista tietoa tekstitiedostoon. Vastaavasti <strong>head()</strong>-komennolla voidaan kurkistaa datasetin sisälle.</p>
 <p>Kokeillaan tätä CERN:n CMS-kokeen avoimella datalla.
 http://opendata.cern.ch/</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;http://opendata.cern.ch/record/5209/files/diphoton.csv&quot;</span><span class="p">)</span>
 <span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
@@ -748,15 +760,15 @@ Name: 1, dtype: float64
 </div>
 </div>
 <section id="tehtava-kokeile-avata-tassa-notebookissa-jokin-toinen-cms-kokeen-datasetti">
-<h3>Tehtävä: Kokeile avata tässä notebookissa jokin toinen CMS-kokeen datasetti.<a class="headerlink" href="#tehtava-kokeile-avata-tassa-notebookissa-jokin-toinen-cms-kokeen-datasetti" title="Permalink to this heading">#</a></h3>
+<h3>Tehtävä: Kokeile avata tässä notebookissa jokin toinen CMS-kokeen datasetti.<a class="headerlink" href="#tehtava-kokeile-avata-tassa-notebookissa-jokin-toinen-cms-kokeen-datasetti" title="Link to this heading">#</a></h3>
 </section>
 </section>
 <section id="kuvaajat">
-<h2>3. Kuvaajat<a class="headerlink" href="#kuvaajat" title="Permalink to this heading">#</a></h2>
+<h2>3. Kuvaajat<a class="headerlink" href="#kuvaajat" title="Link to this heading">#</a></h2>
 <p>Seuraavaksi piirrellään kuvaajia. Sitä varten tarvitaan matplotlip.pyplot -pakettia. Käytetään apuna myös numpy-pakettia, mutta koska se on tuotu meidän käyttöön jo aiemmin, niin sitä ei tarvitse tuoda uudestaan.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 </pre></div>
 </div>
 </div>
@@ -775,11 +787,11 @@ Name: 1, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/ca7900144c2e09fff0b7b27f0eadbbf3ba67e91240264213253731cc353d4be7.png" src="../_images/ca7900144c2e09fff0b7b27f0eadbbf3ba67e91240264213253731cc353d4be7.png" />
+<img alt="../_images/fd13cd6df0c5c32844608ba5eb833c2cfbd241c93c304628aa8ae0e9748421a0.png" src="../_images/fd13cd6df0c5c32844608ba5eb833c2cfbd241c93c304628aa8ae0e9748421a0.png" />
 </div>
 </div>
 <section id="tehtava-piirra-kuvaaja-kosinifunktiosta">
-<h3>Tehtävä: Piirrä kuvaaja kosinifunktiosta.<a class="headerlink" href="#tehtava-piirra-kuvaaja-kosinifunktiosta" title="Permalink to this heading">#</a></h3>
+<h3>Tehtävä: Piirrä kuvaaja kosinifunktiosta.<a class="headerlink" href="#tehtava-piirra-kuvaaja-kosinifunktiosta" title="Link to this heading">#</a></h3>
 <p>Seuraavaksi yhdistetään: valitaan datasetti ja poimitaan sieltä tiedot haluttua kuvaajaa varten.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -965,12 +977,12 @@ Name: 1, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/8cc63efe10a202bb7f8fce7d8acb2e7d331f25d0ed6a229ec61fd60c75cbd4d4.png" src="../_images/8cc63efe10a202bb7f8fce7d8acb2e7d331f25d0ed6a229ec61fd60c75cbd4d4.png" />
+<img alt="../_images/29146979e7e7062357b9c759f4c5a4178572a8b320d03100b404f228fb14cb0b.png" src="../_images/29146979e7e7062357b9c759f4c5a4178572a8b320d03100b404f228fb14cb0b.png" />
 </div>
 </div>
 </section>
 <section id="tehtava-valitse-jokin-toinen-datasetti-ja-piirra-vastaava-histogrammi">
-<h3>Tehtävä: Valitse jokin toinen datasetti ja piirrä vastaava histogrammi.<a class="headerlink" href="#tehtava-valitse-jokin-toinen-datasetti-ja-piirra-vastaava-histogrammi" title="Permalink to this heading">#</a></h3>
+<h3>Tehtävä: Valitse jokin toinen datasetti ja piirrä vastaava histogrammi.<a class="headerlink" href="#tehtava-valitse-jokin-toinen-datasetti-ja-piirra-vastaava-histogrammi" title="Link to this heading">#</a></h3>
 </section>
 </section>
 </section>
@@ -1002,7 +1014,7 @@ Name: 1, dtype: float64
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
     <a class="left-prev"
@@ -1031,6 +1043,7 @@ Name: 1, dtype: float64
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -1100,8 +1113,8 @@ By HIP Education and Open Data Team
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

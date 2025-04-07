@@ -209,9 +209,12 @@
 <li class="toctree-l2"><a class="reference internal" href="datasettien_esittelyt.html">Aerosoli-työpajan datasetit ja tutkimuskysymykset</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="ICOSdemo.html">Informaatiota ilmakehästä</a></li>
-<li class="toctree-l1"><a class="reference internal" href="KestavyysHarjoitus.html"><ins> KESTÄVYYS - fysikaalisia pohdintoja ilmakehästämme </ins></a></li>
-<li class="toctree-l1"><a class="reference internal" href="SustainabilityEnglish.html"><ins> SUSTAINABILITY - physical musings on the atmosphere </ins></a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="kestavyys.html">Kestävyyskurssille</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="ICOSdemo.html">Informaatiota ilmakehästä</a></li>
+<li class="toctree-l2"><a class="reference internal" href="KestavyysHarjoitus.html"><ins> KESTÄVYYS - fysikaalisia pohdintoja ilmakehästämme </ins></a></li>
+<li class="toctree-l2"><a class="reference internal" href="SustainabilityEnglish.html"><ins> SUSTAINABILITY - physical musings on the atmosphere </ins></a></li>
+</ul>
+</details></li>
 </ul>
 
     </div>
@@ -498,18 +501,16 @@ document.write(`
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> done
 ?25hRequirement already satisfied: numpy in /opt/hostedtoolcache/Python/3.13.2/x64/lib/python3.13/site-packages (from fmiopendata) (2.2.4)
 Requirement already satisfied: requests in /opt/hostedtoolcache/Python/3.13.2/x64/lib/python3.13/site-packages (from fmiopendata) (2.32.3)
+Collecting defusedxml (from fmiopendata)
+  Downloading defusedxml-0.7.1-py2.py3-none-any.whl.metadata (32 kB)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting defusedxml (from fmiopendata)
-  Downloading defusedxml-0.7.1-py2.py3-none-any.whl.metadata (32 kB)
-Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in /opt/hostedtoolcache/Python/3.13.2/x64/lib/python3.13/site-packages (from requests-&gt;fmiopendata) (3.4.1)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in /opt/hostedtoolcache/Python/3.13.2/x64/lib/python3.13/site-packages (from requests-&gt;fmiopendata) (3.4.1)
 Requirement already satisfied: idna&lt;4,&gt;=2.5 in /opt/hostedtoolcache/Python/3.13.2/x64/lib/python3.13/site-packages (from requests-&gt;fmiopendata) (3.10)
 Requirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in /opt/hostedtoolcache/Python/3.13.2/x64/lib/python3.13/site-packages (from requests-&gt;fmiopendata) (2.3.0)
 Requirement already satisfied: certifi&gt;=2017.4.17 in /opt/hostedtoolcache/Python/3.13.2/x64/lib/python3.13/site-packages (from requests-&gt;fmiopendata) (2025.1.31)
 Downloading defusedxml-0.7.1-py2.py3-none-any.whl (25 kB)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Building wheels for collected packages: fmiopendata
+Building wheels for collected packages: fmiopendata
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Building wheel for fmiopendata (setup.py) ... ?25l-
@@ -519,7 +520,7 @@ Downloading defusedxml-0.7.1-py2.py3-none-any.whl (25 kB)
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> done
-?25h  Created wheel for fmiopendata: filename=fmiopendata-0.4.3-py3-none-any.whl size=30958 sha256=f37d0fa2b6cd404625f04d2e2ce570e9445e79846877d82f8bd91ff6d6237925
+?25h  Created wheel for fmiopendata: filename=fmiopendata-0.4.3-py3-none-any.whl size=30958 sha256=f48293df5772f6ea451cb814650e33d413e56c1c013fbee41788813ac0ecf9b2
   Stored in directory: /home/runner/.cache/pip/wheels/8b/08/38/ca3e95e1d2083a04c6c4147e4d76c62b4d3b5f75dcb7edb285
 Successfully built fmiopendata
 </pre></div>
@@ -575,7 +576,7 @@ Successfully built fmiopendata
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1906
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3221
 </pre></div>
 </div>
 </div>
@@ -619,7 +620,7 @@ Successfully built fmiopendata
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/f9ba0462fc4d42f759eba1d888a430c71dc00b9ea0ddd41f812a50f4ab2b46f0.png" src="../_images/f9ba0462fc4d42f759eba1d888a430c71dc00b9ea0ddd41f812a50f4ab2b46f0.png" />
+<img alt="../_images/2d9a9c9f253909791ed0b90f4fe4f47a50d670747166502f304c292e6461e739.png" src="../_images/2d9a9c9f253909791ed0b90f4fe4f47a50d670747166502f304c292e6461e739.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -648,7 +649,7 @@ Successfully built fmiopendata
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3179
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2178
 </pre></div>
 </div>
 </div>
@@ -692,7 +693,7 @@ Successfully built fmiopendata
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/33eb0515bec81298521d832ec391caffa518215fb957cf42b7a4d128dff9d0ee.png" src="../_images/33eb0515bec81298521d832ec391caffa518215fb957cf42b7a4d128dff9d0ee.png" />
+<img alt="../_images/8133dff23a448998c4ae3fc6970f5b85863422174fa2e733719e164071972a6c.png" src="../_images/8133dff23a448998c4ae3fc6970f5b85863422174fa2e733719e164071972a6c.png" />
 </div>
 </div>
 </section>

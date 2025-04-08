@@ -633,7 +633,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2008/2414738136.py:19: DtypeWarning: Columns (7,11,13,25) have mixed types. Specify dtype option on import or set low_memory=False.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2075/2414738136.py:19: DtypeWarning: Columns (7,11,13,25) have mixed types. Specify dtype option on import or set low_memory=False.
   KenFlux1 = pd.read_csv(&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/KenFlux1.csv&quot;,
 </pre></div>
 </div>
@@ -690,7 +690,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2008/3475241156.py:5: DtypeWarning: Columns (11,13,25) have mixed types. Specify dtype option on import or set low_memory=False.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2075/3475241156.py:5: DtypeWarning: Columns (11,13,25) have mixed types. Specify dtype option on import or set low_memory=False.
   CasFlux = pd.read_csv(&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/CasFlux.csv&quot;,
 </pre></div>
 </div>
@@ -760,8 +760,6 @@ document.write(`
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Flag</th>
-      <th>NbPoints</th>
       <th>Stdev</th>
       <th>TIMESTAMP</th>
       <th>co2</th>
@@ -770,95 +768,73 @@ document.write(`
   <tbody>
     <tr>
       <th>0</th>
-      <td>N</td>
-      <td>0</td>
       <td>-9.990</td>
       <td>2016-12-13 00:00:00</td>
       <td>NaN</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>N</td>
-      <td>0</td>
       <td>-9.990</td>
       <td>2016-12-13 01:00:00</td>
       <td>NaN</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>N</td>
-      <td>0</td>
       <td>-9.990</td>
       <td>2016-12-13 02:00:00</td>
       <td>NaN</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>N</td>
-      <td>0</td>
       <td>-9.990</td>
       <td>2016-12-13 03:00:00</td>
       <td>NaN</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>O</td>
-      <td>4</td>
       <td>0.011</td>
       <td>2016-12-13 04:00:00</td>
-      <td>411.701996</td>
+      <td>411.702</td>
     </tr>
     <tr>
       <th>...</th>
       <td>...</td>
       <td>...</td>
       <td>...</td>
-      <td>...</td>
-      <td>...</td>
     </tr>
     <tr>
-      <th>55182</th>
-      <td>O</td>
-      <td>20</td>
-      <td>0.172</td>
-      <td>2023-03-31 19:00:00</td>
-      <td>428.299011</td>
+      <th>63966</th>
+      <td>0.238</td>
+      <td>2024-03-31 19:00:00</td>
+      <td>425.800</td>
     </tr>
     <tr>
-      <th>55183</th>
-      <td>O</td>
-      <td>20</td>
-      <td>0.062</td>
-      <td>2023-03-31 20:00:00</td>
-      <td>427.690002</td>
+      <th>63967</th>
+      <td>0.101</td>
+      <td>2024-03-31 20:00:00</td>
+      <td>426.426</td>
     </tr>
     <tr>
-      <th>55184</th>
-      <td>O</td>
-      <td>20</td>
-      <td>0.014</td>
-      <td>2023-03-31 21:00:00</td>
-      <td>427.572998</td>
+      <th>63968</th>
+      <td>0.264</td>
+      <td>2024-03-31 21:00:00</td>
+      <td>426.438</td>
     </tr>
     <tr>
-      <th>55185</th>
-      <td>O</td>
-      <td>10</td>
-      <td>0.022</td>
-      <td>2023-03-31 22:00:00</td>
-      <td>427.911987</td>
+      <th>63969</th>
+      <td>0.614</td>
+      <td>2024-03-31 22:00:00</td>
+      <td>427.758</td>
     </tr>
     <tr>
-      <th>55186</th>
-      <td>O</td>
-      <td>20</td>
-      <td>0.039</td>
-      <td>2023-03-31 23:00:00</td>
-      <td>428.066986</td>
+      <th>63970</th>
+      <td>0.375</td>
+      <td>2024-03-31 23:00:00</td>
+      <td>428.537</td>
     </tr>
   </tbody>
 </table>
-<p>55187 rows × 5 columns</p>
+<p>63971 rows × 3 columns</p>
 </div></div></div>
 </div>
 <div class="cell docutils container">
@@ -871,7 +847,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/fbd05dd1e29998033affc95d2f0f679d2370eeafa4e246a81be65d6ead04487f.png" src="../_images/fbd05dd1e29998033affc95d2f0f679d2370eeafa4e246a81be65d6ead04487f.png" />
+<img alt="../_images/e55a7613eba59dea61a664991aab616fbb5c410f564922d9b194132511aa41b9.png" src="../_images/e55a7613eba59dea61a664991aab616fbb5c410f564922d9b194132511aa41b9.png" />
 </div>
 </div>
 <p>Onko kuvaajassa havaittavissa toistuvia kuvioita? Mistä on kyse?</p>
@@ -896,7 +872,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/b79494e2f83e1d4307760a4f57460aedfb074cdf494a99c22d4166a1332b6079.png" src="../_images/b79494e2f83e1d4307760a4f57460aedfb074cdf494a99c22d4166a1332b6079.png" />
+<img alt="../_images/964f2652e2f2662ee2f45315eaa2614b4620c2c29d01589257bb764dae0fd16a.png" src="../_images/964f2652e2f2662ee2f45315eaa2614b4620c2c29d01589257bb764dae0fd16a.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -928,7 +904,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/9c347800e3e9d86652b42a7ce5b02516c314f28c90fdcabb056567303e43aaf8.png" src="../_images/9c347800e3e9d86652b42a7ce5b02516c314f28c90fdcabb056567303e43aaf8.png" />
+<img alt="../_images/bcd146c10050d77d790322dbdfea4cb11823a0748ede62f42cfe0ee6b9522d94.png" src="../_images/bcd146c10050d77d790322dbdfea4cb11823a0748ede62f42cfe0ee6b9522d94.png" />
 </div>
 </div>
 <p>Riippuvatko kuvaajien suureet toisistaan? Onko niissä havaittavia yhteneväisyyksiä tai poikkeavuuksia?</p>
@@ -998,41 +974,29 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>HyyCO2 aluksi: 
-  Flag  NbPoints  Stdev           TIMESTAMP         co2
-0    N         0 -9.990 2016-12-13 00:00:00         NaN
-1    N         0 -9.990 2016-12-13 01:00:00         NaN
-2    N         0 -9.990 2016-12-13 02:00:00         NaN
-3    N         0 -9.990 2016-12-13 03:00:00         NaN
-4    O         4  0.011 2016-12-13 04:00:00  411.701996
-5    O        20  0.185 2016-12-13 05:00:00  411.799988
-6    O        10  2.023 2016-12-13 06:00:00  414.533997
-7    O        20  0.222 2016-12-13 07:00:00  416.558014
-8    O        20  0.338 2016-12-13 08:00:00  416.367004
-9    O        20  0.401 2016-12-13 09:00:00  417.058990
+   Stdev           TIMESTAMP      co2
+0 -9.990 2016-12-13 00:00:00      NaN
+1 -9.990 2016-12-13 01:00:00      NaN
+2 -9.990 2016-12-13 02:00:00      NaN
+3 -9.990 2016-12-13 03:00:00      NaN
+4  0.011 2016-12-13 04:00:00  411.702
+5  0.185 2016-12-13 05:00:00  411.800
+6  2.023 2016-12-13 06:00:00  414.534
+7  0.222 2016-12-13 07:00:00  416.558
+8  0.338 2016-12-13 08:00:00  416.367
+9  0.401 2016-12-13 09:00:00  417.059
 HyyCO2 pienen muokkauksen jälkeen: 
-  Flag  NbPoints  Stdev           TIMESTAMP         co2        PVM   VUO  KK  \
-0    N         0 -9.990 2016-12-13 00:00:00         NaN 2016-12-13  2016  12   
-1    N         0 -9.990 2016-12-13 01:00:00         NaN 2016-12-13  2016  12   
-2    N         0 -9.990 2016-12-13 02:00:00         NaN 2016-12-13  2016  12   
-3    N         0 -9.990 2016-12-13 03:00:00         NaN 2016-12-13  2016  12   
-4    O         4  0.011 2016-12-13 04:00:00  411.701996 2016-12-13  2016  12   
-5    O        20  0.185 2016-12-13 05:00:00  411.799988 2016-12-13  2016  12   
-6    O        10  2.023 2016-12-13 06:00:00  414.533997 2016-12-13  2016  12   
-7    O        20  0.222 2016-12-13 07:00:00  416.558014 2016-12-13  2016  12   
-8    O        20  0.338 2016-12-13 08:00:00  416.367004 2016-12-13  2016  12   
-9    O        20  0.401 2016-12-13 09:00:00  417.058990 2016-12-13  2016  12   
-
-   VRK  TUN  
-0   13    0  
-1   13    1  
-2   13    2  
-3   13    3  
-4   13    4  
-5   13    5  
-6   13    6  
-7   13    7  
-8   13    8  
-9   13    9  
+   Stdev           TIMESTAMP      co2        PVM   VUO  KK  VRK  TUN
+0 -9.990 2016-12-13 00:00:00      NaN 2016-12-13  2016  12   13    0
+1 -9.990 2016-12-13 01:00:00      NaN 2016-12-13  2016  12   13    1
+2 -9.990 2016-12-13 02:00:00      NaN 2016-12-13  2016  12   13    2
+3 -9.990 2016-12-13 03:00:00      NaN 2016-12-13  2016  12   13    3
+4  0.011 2016-12-13 04:00:00  411.702 2016-12-13  2016  12   13    4
+5  0.185 2016-12-13 05:00:00  411.800 2016-12-13  2016  12   13    5
+6  2.023 2016-12-13 06:00:00  414.534 2016-12-13  2016  12   13    6
+7  0.222 2016-12-13 07:00:00  416.558 2016-12-13  2016  12   13    7
+8  0.338 2016-12-13 08:00:00  416.367 2016-12-13  2016  12   13    8
+9  0.401 2016-12-13 09:00:00  417.059 2016-12-13  2016  12   13    9
 </pre></div>
 </div>
 </div>
@@ -1062,22 +1026,22 @@ HyyCO2 pienen muokkauksen jälkeen:
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>KK
-1     423.198319
-2     423.515493
-3     421.977163
-4     419.385665
-5     416.916250
-6     410.259946
-7     405.291253
-8     405.807815
-9     410.800205
-10    417.163443
-11    422.484851
-12    423.381851
+1     424.377297
+2     424.810247
+3     423.362963
+4     420.545571
+5     417.881080
+6     411.357302
+7     406.461138
+8     407.401265
+9     412.127879
+10    417.971593
+11    424.054693
+12    425.309426
 Name: co2, dtype: float64
 </pre></div>
 </div>
-<img alt="../_images/b748cb544f892d8c83a22a9ab08b0cf2ae1ee99f2dafd4dd73ec044e9911a670.png" src="../_images/b748cb544f892d8c83a22a9ab08b0cf2ae1ee99f2dafd4dd73ec044e9911a670.png" />
+<img alt="../_images/8f026401248b0ee5bcf6bce7febca34f7e21aa669e42d2acc3772cd8c57d59ee.png" src="../_images/8f026401248b0ee5bcf6bce7febca34f7e21aa669e42d2acc3772cd8c57d59ee.png" />
 </div>
 </div>
 <p>Miltä keskiarvoistettu kuvaaja näyttää alkuperäisiin havaintoihin verrattuna?</p>
@@ -1103,11 +1067,11 @@ Name: co2, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2008/3974219115.py:5: FutureWarning: The behavior of &#39;isin&#39; with dtype=datetime64[ns] and castable values (e.g. strings) is deprecated. In a future version, these will not be considered matching by isin. Explicitly cast to the appropriate dtype before calling isin instead.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2075/3974219115.py:5: FutureWarning: The behavior of &#39;isin&#39; with dtype=datetime64[ns] and castable values (e.g. strings) is deprecated. In a future version, these will not be considered matching by isin. Explicitly cast to the appropriate dtype before calling isin instead.
   pvm = HyyCO2.query(&quot;PVM == @d&quot;)
 </pre></div>
 </div>
-<img alt="../_images/cd9ef82ad0a9d1a02728234821740044ce01ba17c5d48e5f82eda04e2306e165.png" src="../_images/cd9ef82ad0a9d1a02728234821740044ce01ba17c5d48e5f82eda04e2306e165.png" />
+<img alt="../_images/538ae1caf76baec4ee4adcde99bb31f3a65f68a91e8de2635683211b2de87490.png" src="../_images/538ae1caf76baec4ee4adcde99bb31f3a65f68a91e8de2635683211b2de87490.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1133,7 +1097,7 @@ Name: co2, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/4e29e04974d346d06c12593de4327cc7dc7b69ff2f3f0a53e9df5a7189d60ddf.png" src="../_images/4e29e04974d346d06c12593de4327cc7dc7b69ff2f3f0a53e9df5a7189d60ddf.png" />
+<img alt="../_images/bed5178e51c7625f0fd970c054b5e073b60c00470492b30df4064ce1befb2bf0.png" src="../_images/bed5178e51c7625f0fd970c054b5e073b60c00470492b30df4064ce1befb2bf0.png" />
 </div>
 </div>
 <p>Millaisia eroja löydät päivien välillä saman vuodenajan sisällä? Muuttuvatko päivävaihteluiden arvot tai muodot vuodenaikojen välillä?</p>
@@ -1184,7 +1148,7 @@ Name: co2, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/cbfa8775603374d88acedfb0375697882248beec5cf24e82610c3eb951cfb33e.png" src="../_images/cbfa8775603374d88acedfb0375697882248beec5cf24e82610c3eb951cfb33e.png" />
+<img alt="../_images/7191efe8aa4cd6d2d1d5726a98303e21ed627115e1e82494c772484aeb96beda.png" src="../_images/7191efe8aa4cd6d2d1d5726a98303e21ed627115e1e82494c772484aeb96beda.png" />
 </div>
 </div>
 <p>Miten Suomen ja Kanariansaarten havainnot eroavat toisistaan? Onko aineistoissa havaittavissa hetkellisiä poikkeamia? Onko lämpötiloissa syytä huomioida ero sillä, että Izañan arvot ovat päiväkohtaisia keskiarvoja?</p>
@@ -1234,8 +1198,8 @@ Name: co2, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/ac7aae7d8c23b794b8f7779939acb305fdd87c77bbf2b4689d83852d35260da3.png" src="../_images/ac7aae7d8c23b794b8f7779939acb305fdd87c77bbf2b4689d83852d35260da3.png" />
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hyytiälän trendiviivan yhtälö: y = 0.000265559521964558*x + 409.66596100363256
+<img alt="../_images/5fb5be975c86b165faa7d7900527c3777f76cd315c3203f9c3dda67e69b76b79.png" src="../_images/5fb5be975c86b165faa7d7900527c3777f76cd315c3203f9c3dda67e69b76b79.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hyytiälän trendiviivan yhtälö: y = 0.0002745232373427903*x + 409.4827833577826
 Izañan trendiviivan yhtälö: y = 0.0002577758260034958*x + 382.6098250512164
 </pre></div>
 </div>

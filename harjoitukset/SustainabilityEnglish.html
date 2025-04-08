@@ -632,7 +632,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2108/2414738136.py:19: DtypeWarning: Columns (7,11,13,25) have mixed types. Specify dtype option on import or set low_memory=False.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2177/2414738136.py:19: DtypeWarning: Columns (7,11,13,25) have mixed types. Specify dtype option on import or set low_memory=False.
   KenFlux1 = pd.read_csv(&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/KenFlux1.csv&quot;,
 </pre></div>
 </div>
@@ -689,7 +689,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2108/2867836255.py:5: DtypeWarning: Columns (11,13,25) have mixed types. Specify dtype option on import or set low_memory=False.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2177/2867836255.py:5: DtypeWarning: Columns (11,13,25) have mixed types. Specify dtype option on import or set low_memory=False.
   CasFlux = pd.read_csv(&quot;https://raw.githubusercontent.com/opendata-education/Tyopajat/main/materiaali/data/CasFlux.csv&quot;,
 </pre></div>
 </div>
@@ -760,8 +760,6 @@ document.write(`
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>Flag</th>
-      <th>NbPoints</th>
       <th>Stdev</th>
       <th>TIMESTAMP</th>
       <th>co2</th>
@@ -770,95 +768,73 @@ document.write(`
   <tbody>
     <tr>
       <th>0</th>
-      <td>N</td>
-      <td>0</td>
       <td>-9.990</td>
       <td>2016-12-13 00:00:00</td>
       <td>NaN</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>N</td>
-      <td>0</td>
       <td>-9.990</td>
       <td>2016-12-13 01:00:00</td>
       <td>NaN</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>N</td>
-      <td>0</td>
       <td>-9.990</td>
       <td>2016-12-13 02:00:00</td>
       <td>NaN</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>N</td>
-      <td>0</td>
       <td>-9.990</td>
       <td>2016-12-13 03:00:00</td>
       <td>NaN</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>O</td>
-      <td>4</td>
       <td>0.011</td>
       <td>2016-12-13 04:00:00</td>
-      <td>411.701996</td>
+      <td>411.702</td>
     </tr>
     <tr>
       <th>...</th>
       <td>...</td>
       <td>...</td>
       <td>...</td>
-      <td>...</td>
-      <td>...</td>
     </tr>
     <tr>
-      <th>55182</th>
-      <td>O</td>
-      <td>20</td>
-      <td>0.172</td>
-      <td>2023-03-31 19:00:00</td>
-      <td>428.299011</td>
+      <th>63966</th>
+      <td>0.238</td>
+      <td>2024-03-31 19:00:00</td>
+      <td>425.800</td>
     </tr>
     <tr>
-      <th>55183</th>
-      <td>O</td>
-      <td>20</td>
-      <td>0.062</td>
-      <td>2023-03-31 20:00:00</td>
-      <td>427.690002</td>
+      <th>63967</th>
+      <td>0.101</td>
+      <td>2024-03-31 20:00:00</td>
+      <td>426.426</td>
     </tr>
     <tr>
-      <th>55184</th>
-      <td>O</td>
-      <td>20</td>
-      <td>0.014</td>
-      <td>2023-03-31 21:00:00</td>
-      <td>427.572998</td>
+      <th>63968</th>
+      <td>0.264</td>
+      <td>2024-03-31 21:00:00</td>
+      <td>426.438</td>
     </tr>
     <tr>
-      <th>55185</th>
-      <td>O</td>
-      <td>10</td>
-      <td>0.022</td>
-      <td>2023-03-31 22:00:00</td>
-      <td>427.911987</td>
+      <th>63969</th>
+      <td>0.614</td>
+      <td>2024-03-31 22:00:00</td>
+      <td>427.758</td>
     </tr>
     <tr>
-      <th>55186</th>
-      <td>O</td>
-      <td>20</td>
-      <td>0.039</td>
-      <td>2023-03-31 23:00:00</td>
-      <td>428.066986</td>
+      <th>63970</th>
+      <td>0.375</td>
+      <td>2024-03-31 23:00:00</td>
+      <td>428.537</td>
     </tr>
   </tbody>
 </table>
-<p>55187 rows × 5 columns</p>
+<p>63971 rows × 3 columns</p>
 </div></div></div>
 </div>
 <div class="cell docutils container">
@@ -871,7 +847,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/fbd05dd1e29998033affc95d2f0f679d2370eeafa4e246a81be65d6ead04487f.png" src="../_images/fbd05dd1e29998033affc95d2f0f679d2370eeafa4e246a81be65d6ead04487f.png" />
+<img alt="../_images/e55a7613eba59dea61a664991aab616fbb5c410f564922d9b194132511aa41b9.png" src="../_images/e55a7613eba59dea61a664991aab616fbb5c410f564922d9b194132511aa41b9.png" />
 </div>
 </div>
 <p>Are there any repeating patterns you can discern in the graph? What is happening?</p>
@@ -896,7 +872,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/b1bf2cb66f4b3d3ee1dd3a6f00ff6baa034f06df2fa87fb9984bfcb62465d687.png" src="../_images/b1bf2cb66f4b3d3ee1dd3a6f00ff6baa034f06df2fa87fb9984bfcb62465d687.png" />
+<img alt="../_images/ca23a194125ccc2a9f5ee535e08f2903d0182adf91df80b0c51fd19c1d99709a.png" src="../_images/ca23a194125ccc2a9f5ee535e08f2903d0182adf91df80b0c51fd19c1d99709a.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -928,7 +904,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/3e62333864aff390baae1d74aba01aa7933778e984cc122ffeb714bc2b471ec5.png" src="../_images/3e62333864aff390baae1d74aba01aa7933778e984cc122ffeb714bc2b471ec5.png" />
+<img alt="../_images/07c226f66c42f3181a863b484e48bdcb1ca7ca7c100f63ab369cfa51ecdb7063.png" src="../_images/07c226f66c42f3181a863b484e48bdcb1ca7ca7c100f63ab369cfa51ecdb7063.png" />
 </div>
 </div>
 <p>Are the quantities in the graphs dependent on each other? Do they exhibit any similarities or deviations from each other?</p>
@@ -999,41 +975,29 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>HyyCO2 in the beginning: 
-  Flag  NbPoints  Stdev           TIMESTAMP         co2
-0    N         0 -9.990 2016-12-13 00:00:00         NaN
-1    N         0 -9.990 2016-12-13 01:00:00         NaN
-2    N         0 -9.990 2016-12-13 02:00:00         NaN
-3    N         0 -9.990 2016-12-13 03:00:00         NaN
-4    O         4  0.011 2016-12-13 04:00:00  411.701996
-5    O        20  0.185 2016-12-13 05:00:00  411.799988
-6    O        10  2.023 2016-12-13 06:00:00  414.533997
-7    O        20  0.222 2016-12-13 07:00:00  416.558014
-8    O        20  0.338 2016-12-13 08:00:00  416.367004
-9    O        20  0.401 2016-12-13 09:00:00  417.058990
+   Stdev           TIMESTAMP      co2
+0 -9.990 2016-12-13 00:00:00      NaN
+1 -9.990 2016-12-13 01:00:00      NaN
+2 -9.990 2016-12-13 02:00:00      NaN
+3 -9.990 2016-12-13 03:00:00      NaN
+4  0.011 2016-12-13 04:00:00  411.702
+5  0.185 2016-12-13 05:00:00  411.800
+6  2.023 2016-12-13 06:00:00  414.534
+7  0.222 2016-12-13 07:00:00  416.558
+8  0.338 2016-12-13 08:00:00  416.367
+9  0.401 2016-12-13 09:00:00  417.059
 HyyCO2 after a small edit: 
-  Flag  NbPoints  Stdev           TIMESTAMP         co2       DATE    YY  MM  \
-0    N         0 -9.990 2016-12-13 00:00:00         NaN 2016-12-13  2016  12   
-1    N         0 -9.990 2016-12-13 01:00:00         NaN 2016-12-13  2016  12   
-2    N         0 -9.990 2016-12-13 02:00:00         NaN 2016-12-13  2016  12   
-3    N         0 -9.990 2016-12-13 03:00:00         NaN 2016-12-13  2016  12   
-4    O         4  0.011 2016-12-13 04:00:00  411.701996 2016-12-13  2016  12   
-5    O        20  0.185 2016-12-13 05:00:00  411.799988 2016-12-13  2016  12   
-6    O        10  2.023 2016-12-13 06:00:00  414.533997 2016-12-13  2016  12   
-7    O        20  0.222 2016-12-13 07:00:00  416.558014 2016-12-13  2016  12   
-8    O        20  0.338 2016-12-13 08:00:00  416.367004 2016-12-13  2016  12   
-9    O        20  0.401 2016-12-13 09:00:00  417.058990 2016-12-13  2016  12   
-
-   DD  HH  
-0  13   0  
-1  13   1  
-2  13   2  
-3  13   3  
-4  13   4  
-5  13   5  
-6  13   6  
-7  13   7  
-8  13   8  
-9  13   9  
+   Stdev           TIMESTAMP      co2       DATE    YY  MM  DD  HH
+0 -9.990 2016-12-13 00:00:00      NaN 2016-12-13  2016  12  13   0
+1 -9.990 2016-12-13 01:00:00      NaN 2016-12-13  2016  12  13   1
+2 -9.990 2016-12-13 02:00:00      NaN 2016-12-13  2016  12  13   2
+3 -9.990 2016-12-13 03:00:00      NaN 2016-12-13  2016  12  13   3
+4  0.011 2016-12-13 04:00:00  411.702 2016-12-13  2016  12  13   4
+5  0.185 2016-12-13 05:00:00  411.800 2016-12-13  2016  12  13   5
+6  2.023 2016-12-13 06:00:00  414.534 2016-12-13  2016  12  13   6
+7  0.222 2016-12-13 07:00:00  416.558 2016-12-13  2016  12  13   7
+8  0.338 2016-12-13 08:00:00  416.367 2016-12-13  2016  12  13   8
+9  0.401 2016-12-13 09:00:00  417.059 2016-12-13  2016  12  13   9
 </pre></div>
 </div>
 </div>
@@ -1063,22 +1027,22 @@ HyyCO2 after a small edit:
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>MM
-1     423.198319
-2     423.515493
-3     421.977163
-4     419.385665
-5     416.916250
-6     410.259946
-7     405.291253
-8     405.807815
-9     410.800205
-10    417.163443
-11    422.484851
-12    423.381851
+1     424.377297
+2     424.810247
+3     423.362963
+4     420.545571
+5     417.881080
+6     411.357302
+7     406.461138
+8     407.401265
+9     412.127879
+10    417.971593
+11    424.054693
+12    425.309426
 Name: co2, dtype: float64
 </pre></div>
 </div>
-<img alt="../_images/e6cfea72bcac5a115bfad546e15376b7c8207c96360cc6df5def4c67a839d556.png" src="../_images/e6cfea72bcac5a115bfad546e15376b7c8207c96360cc6df5def4c67a839d556.png" />
+<img alt="../_images/1c8053932cd96db3ce633fb600bebced90012212006aebcfd0af88d1c1089f6b.png" src="../_images/1c8053932cd96db3ce633fb600bebced90012212006aebcfd0af88d1c1089f6b.png" />
 </div>
 </div>
 <p>How does the averaged graph look compared to the original observations?</p>
@@ -1104,11 +1068,11 @@ Name: co2, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2108/4083719619.py:5: FutureWarning: The behavior of &#39;isin&#39; with dtype=datetime64[ns] and castable values (e.g. strings) is deprecated. In a future version, these will not be considered matching by isin. Explicitly cast to the appropriate dtype before calling isin instead.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2177/4083719619.py:5: FutureWarning: The behavior of &#39;isin&#39; with dtype=datetime64[ns] and castable values (e.g. strings) is deprecated. In a future version, these will not be considered matching by isin. Explicitly cast to the appropriate dtype before calling isin instead.
   dat = HyyCO2.query(&quot;DATE == @d&quot;)
 </pre></div>
 </div>
-<img alt="../_images/d0ea8ed8687dbfb8b43d7525b7b837b8ab9a8ec2f6d1203c514a5f8e37d26486.png" src="../_images/d0ea8ed8687dbfb8b43d7525b7b837b8ab9a8ec2f6d1203c514a5f8e37d26486.png" />
+<img alt="../_images/93667a8fa2ddf590fd90cf6ebd42b9704e53743237ad32ff32847199ca516f93.png" src="../_images/93667a8fa2ddf590fd90cf6ebd42b9704e53743237ad32ff32847199ca516f93.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1134,7 +1098,7 @@ Name: co2, dtype: float64
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/506446ff806114a1b496e7564cfc6f252cbcd3e9df6a363c9ab59cc9c9d28b73.png" src="../_images/506446ff806114a1b496e7564cfc6f252cbcd3e9df6a363c9ab59cc9c9d28b73.png" />
+<img alt="../_images/3247af429c5397ea2ed78918a6cf6212ac3003e279a61e3c53ce4e6f724f34d5.png" src="../_images/3247af429c5397ea2ed78918a6cf6212ac3003e279a61e3c53ce4e6f724f34d5.png" />
 </div>
 </div>
 <p>What kind of differences can you find between days within the same season?
@@ -1193,7 +1157,7 @@ Do the shapes or sizes of daily variation change between seasons?</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/2c8fd95fa59855fcaa6d505289ea9c86d0cc796555495faf8968f6f9b7f5152a.png" src="../_images/2c8fd95fa59855fcaa6d505289ea9c86d0cc796555495faf8968f6f9b7f5152a.png" />
+<img alt="../_images/6ae1fbe7e1735b24b221bf67fa212323ae5fe64fdb8640fba36f6aa3045bf2f2.png" src="../_images/6ae1fbe7e1735b24b221bf67fa212323ae5fe64fdb8640fba36f6aa3045bf2f2.png" />
 </div>
 </div>
 <p>How do the observations in Finland and at the Canary Islands differ? Do they contain momentary deviations? Does it make a difference, that the temperature values in the Izaña data are daily averages?</p>
@@ -1243,8 +1207,8 @@ Do the shapes or sizes of daily variation change between seasons?</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/185f55deef50bdd9874866bfb42301621bfd2726b33fc6f4e3faa8decaee4264.png" src="../_images/185f55deef50bdd9874866bfb42301621bfd2726b33fc6f4e3faa8decaee4264.png" />
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hyytiälä&#39;s trendline equation: y = 0.000265559521964558*x + 409.66596100363256
+<img alt="../_images/bb3945742531a266b1acf02c29c087399f9888b4280f4b31b635d13b07698773.png" src="../_images/bb3945742531a266b1acf02c29c087399f9888b4280f4b31b635d13b07698773.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Hyytiälä&#39;s trendline equation: y = 0.0002745232373427903*x + 409.4827833577826
 Izaña&#39;s trendline equation: y = 0.0002577758260034958*x + 382.6098250512164
 </pre></div>
 </div>

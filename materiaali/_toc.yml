@@ -15,6 +15,7 @@ chapters:
   - file: harjoitukset/fossiiliset_ja_koulutus
   - file: harjoitukset/Lampoanomaliat
   - file: harjoitukset/FMI_Luotaukset
+  - file: harjoitukset/Talous
 - file: harjoitukset/ilmastopaja
   sections:
   - file: harjoitukset/lampotila-intro

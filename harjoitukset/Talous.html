@@ -487,6 +487,34 @@ document.write(`
 <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="c1"># Jotkut Pythonin versiot eivät oletusarvoisesti tue pandaksen kautta Excel-tiedostojen lukemista. Alla oleva käsky auttaa virheilmoituksiin.</span>
+<span class="o">%</span><span class="k">pip</span> install openpyxl
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting openpyxl
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Downloading openpyxl-3.1.5-py2.py3-none-any.whl.metadata (2.5 kB)
+Collecting et-xmlfile (from openpyxl)
+  Downloading et_xmlfile-2.0.0-py3-none-any.whl.metadata (2.7 kB)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading openpyxl-3.1.5-py2.py3-none-any.whl (250 kB)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading et_xmlfile-2.0.0-py3-none-any.whl (18 kB)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: et-xmlfile, openpyxl
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Successfully installed et-xmlfile-2.0.0 openpyxl-3.1.5
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Note: you may need to restart the kernel to use updated packages.
 </pre></div>
 </div>
 </div>
@@ -506,85 +534,8 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="nn">File /opt/hostedtoolcache/Python/3.13.3/x64/lib/python3.13/site-packages/pandas/compat/_optional.py:135,</span> in <span class="ni">import_optional_dependency</span><span class="nt">(name, extra, errors, min_version)</span>
-<span class="g g-Whitespace">    </span><span class="mi">134</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">135</span>     <span class="n">module</span> <span class="o">=</span> <span class="n">importlib</span><span class="o">.</span><span class="n">import_module</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">136</span> <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.13.3/x64/lib/python3.13/importlib/__init__.py:88,</span> in <span class="ni">import_module</span><span class="nt">(name, package)</span>
-<span class="g g-Whitespace">     </span><span class="mi">87</span>         <span class="n">level</span> <span class="o">+=</span> <span class="mi">1</span>
-<span class="ne">---&gt; </span><span class="mi">88</span> <span class="k">return</span> <span class="n">_bootstrap</span><span class="o">.</span><span class="n">_gcd_import</span><span class="p">(</span><span class="n">name</span><span class="p">[</span><span class="n">level</span><span class="p">:],</span> <span class="n">package</span><span class="p">,</span> <span class="n">level</span><span class="p">)</span>
-
-<span class="nn">File &lt;frozen importlib._bootstrap&gt;:1387,</span> in <span class="ni">_gcd_import</span><span class="nt">(name, package, level)</span>
-
-<span class="nn">File &lt;frozen importlib._bootstrap&gt;:1360,</span> in <span class="ni">_find_and_load</span><span class="nt">(name, import_)</span>
-
-<span class="nn">File &lt;frozen importlib._bootstrap&gt;:1324,</span> in <span class="ni">_find_and_load_unlocked</span><span class="nt">(name, import_)</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;openpyxl&#39;
-
-<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
-
-<span class="ne">ImportError</span><span class="g g-Whitespace">                               </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">6</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Haetaan tarkasteltavia tietoja.</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1"># Tässä on käytetty Kauppalehden listaa Helsingin pörssistä, jonka on tuottanut Alma Talent Tietopalvelut.</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># Esimerkkiaineisto on haettu 21.4.2025.</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># https://www.kauppalehti.fi/porssi/indeksit/omxhpi</span>
-<span class="ne">----&gt; </span><span class="mi">6</span> <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_excel</span><span class="p">(</span><span class="s2">&quot;https://github.com/opendata-education/Tyopajat/raw/refs/heads/main/materiaali/data/AFAGR_financialstmt.xlsx&quot;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.13.3/x64/lib/python3.13/site-packages/pandas/io/excel/_base.py:495,</span> in <span class="ni">read_excel</span><span class="nt">(io, sheet_name, header, names, index_col, usecols, dtype, engine, converters, true_values, false_values, skiprows, nrows, na_values, keep_default_na, na_filter, verbose, parse_dates, date_parser, date_format, thousands, decimal, comment, skipfooter, storage_options, dtype_backend, engine_kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">493</span> <span class="k">if</span> <span class="ow">not</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">io</span><span class="p">,</span> <span class="n">ExcelFile</span><span class="p">):</span>
-<span class="g g-Whitespace">    </span><span class="mi">494</span>     <span class="n">should_close</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="ne">--&gt; </span><span class="mi">495</span>     <span class="n">io</span> <span class="o">=</span> <span class="n">ExcelFile</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">496</span>         <span class="n">io</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">497</span>         <span class="n">storage_options</span><span class="o">=</span><span class="n">storage_options</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">498</span>         <span class="n">engine</span><span class="o">=</span><span class="n">engine</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">499</span>         <span class="n">engine_kwargs</span><span class="o">=</span><span class="n">engine_kwargs</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">500</span>     <span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">501</span> <span class="k">elif</span> <span class="n">engine</span> <span class="ow">and</span> <span class="n">engine</span> <span class="o">!=</span> <span class="n">io</span><span class="o">.</span><span class="n">engine</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">502</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">503</span>         <span class="s2">&quot;Engine should not be specified when passing &quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">504</span>         <span class="s2">&quot;an ExcelFile - ExcelFile already has the engine set&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">505</span>     <span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.13.3/x64/lib/python3.13/site-packages/pandas/io/excel/_base.py:1567,</span> in <span class="ni">ExcelFile.__init__</span><span class="nt">(self, path_or_buffer, engine, storage_options, engine_kwargs)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1564</span> <span class="bp">self</span><span class="o">.</span><span class="n">engine</span> <span class="o">=</span> <span class="n">engine</span>
-<span class="g g-Whitespace">   </span><span class="mi">1565</span> <span class="bp">self</span><span class="o">.</span><span class="n">storage_options</span> <span class="o">=</span> <span class="n">storage_options</span>
-<span class="ne">-&gt; </span><span class="mi">1567</span> <span class="bp">self</span><span class="o">.</span><span class="n">_reader</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engines</span><span class="p">[</span><span class="n">engine</span><span class="p">](</span>
-<span class="g g-Whitespace">   </span><span class="mi">1568</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_io</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1569</span>     <span class="n">storage_options</span><span class="o">=</span><span class="n">storage_options</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1570</span>     <span class="n">engine_kwargs</span><span class="o">=</span><span class="n">engine_kwargs</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1571</span> <span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.13.3/x64/lib/python3.13/site-packages/pandas/io/excel/_openpyxl.py:552,</span> in <span class="ni">OpenpyxlReader.__init__</span><span class="nt">(self, filepath_or_buffer, storage_options, engine_kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">534</span> <span class="nd">@doc</span><span class="p">(</span><span class="n">storage_options</span><span class="o">=</span><span class="n">_shared_docs</span><span class="p">[</span><span class="s2">&quot;storage_options&quot;</span><span class="p">])</span>
-<span class="g g-Whitespace">    </span><span class="mi">535</span> <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">536</span>     <span class="bp">self</span><span class="p">,</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>    <span class="mi">539</span>     <span class="n">engine_kwargs</span><span class="p">:</span> <span class="nb">dict</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">540</span> <span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">541</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">542</span><span class="sd">     Reader using openpyxl engine.</span>
-<span class="g g-Whitespace">    </span><span class="mi">543</span><span class="sd"> </span>
-<span class="sd">   (...)    550         Arbitrary keyword arguments passed to excel engine.</span>
-<span class="g g-Whitespace">    </span><span class="mi">551</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="ne">--&gt; </span><span class="mi">552</span>     <span class="n">import_optional_dependency</span><span class="p">(</span><span class="s2">&quot;openpyxl&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">553</span>     <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">554</span>         <span class="n">filepath_or_buffer</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">555</span>         <span class="n">storage_options</span><span class="o">=</span><span class="n">storage_options</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">556</span>         <span class="n">engine_kwargs</span><span class="o">=</span><span class="n">engine_kwargs</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">557</span>     <span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.13.3/x64/lib/python3.13/site-packages/pandas/compat/_optional.py:138,</span> in <span class="ni">import_optional_dependency</span><span class="nt">(name, extra, errors, min_version)</span>
-<span class="g g-Whitespace">    </span><span class="mi">136</span> <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">137</span>     <span class="k">if</span> <span class="n">errors</span> <span class="o">==</span> <span class="s2">&quot;raise&quot;</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">138</span>         <span class="k">raise</span> <span class="ne">ImportError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">139</span>     <span class="k">return</span> <span class="kc">None</span>
-<span class="g g-Whitespace">    </span><span class="mi">141</span> <span class="c1"># Handle submodules: if we have submodule, grab parent module from sys.modules</span>
-
-<span class="ne">ImportError</span>: Missing optional dependency &#39;openpyxl&#39;.  Use pip or conda to install openpyxl.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/opt/hostedtoolcache/Python/3.13.3/x64/lib/python3.13/site-packages/openpyxl/styles/stylesheet.py:237: UserWarning: Workbook contains no default style, apply openpyxl&#39;s default
+  warn(&quot;Workbook contains no default style, apply openpyxl&#39;s default&quot;)
 </pre></div>
 </div>
 </div>
@@ -597,16 +548,671 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Vilkaistaan aineistoon.</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">data</span>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<span class="ne">NameError</span>: name &#39;data&#39; is not defined
-</pre></div>
-</div>
-</div>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Afarak Group Oyj</th>
+      <th>12/2015</th>
+      <th>12/2016</th>
+      <th>12/2017</th>
+      <th>12/2018</th>
+      <th>12/2019</th>
+      <th>12/2020</th>
+      <th>12/2021</th>
+      <th>12/2022</th>
+      <th>12/2023</th>
+      <th>12/2024</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Sijoittajan tunnuslukuja</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Markkina-arvo (P)</td>
+      <td>103.52</td>
+      <td>202.25</td>
+      <td>220.73</td>
+      <td>189.94</td>
+      <td>126.33</td>
+      <td>54.94</td>
+      <td>34.49</td>
+      <td>91.00</td>
+      <td>104.20</td>
+      <td>80.34</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Tasesubstanssi ilman väh.os. (B)</td>
+      <td>167.36</td>
+      <td>172.04</td>
+      <td>171.40</td>
+      <td>150.48</td>
+      <td>67.31</td>
+      <td>27.54</td>
+      <td>44.24</td>
+      <td>105.71</td>
+      <td>106.05</td>
+      <td>112.05</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Yritysarvo (EV)</td>
+      <td>98.98</td>
+      <td>196.39</td>
+      <td>221.97</td>
+      <td>202.24</td>
+      <td>181.45</td>
+      <td>103.16</td>
+      <td>66.72</td>
+      <td>80.78</td>
+      <td>89.25</td>
+      <td>79.00</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Tulos (E)</td>
+      <td>8.07</td>
+      <td>-2.48</td>
+      <td>4.74</td>
+      <td>-11.51</td>
+      <td>-4.76</td>
+      <td>-2.23</td>
+      <td>-2.20</td>
+      <td>44.83</td>
+      <td>9.45</td>
+      <td>-7.57</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>P/B-luku</td>
+      <td>0.62</td>
+      <td>1.18</td>
+      <td>1.29</td>
+      <td>1.26</td>
+      <td>1.88</td>
+      <td>2.00</td>
+      <td>0.78</td>
+      <td>0.86</td>
+      <td>0.98</td>
+      <td>0.72</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>P/S-luku</td>
+      <td>0.55</td>
+      <td>1.32</td>
+      <td>1.11</td>
+      <td>0.98</td>
+      <td>1.29</td>
+      <td>0.92</td>
+      <td>0.43</td>
+      <td>0.46</td>
+      <td>0.68</td>
+      <td>0.63</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>P/E-luku</td>
+      <td>12.83</td>
+      <td>-81.69</td>
+      <td>46.55</td>
+      <td>-16.50</td>
+      <td>-26.52</td>
+      <td>-24.64</td>
+      <td>-15.66</td>
+      <td>2.03</td>
+      <td>11.03</td>
+      <td>-10.61</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>EV/EBIT-luku</td>
+      <td>10.01</td>
+      <td>-194.45</td>
+      <td>19.47</td>
+      <td>-26.79</td>
+      <td>-20.05</td>
+      <td>-15.45</td>
+      <td>17.31</td>
+      <td>1.55</td>
+      <td>5.94</td>
+      <td>-541.12</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Tulos/osake (EPS), euroa</td>
+      <td>0.03</td>
+      <td>-0.01</td>
+      <td>0.02</td>
+      <td>-0.04</td>
+      <td>-0.02</td>
+      <td>-0.01</td>
+      <td>-0.01</td>
+      <td>0.18</td>
+      <td>0.36</td>
+      <td>-0.03</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>Tulorahoitus/osake (CPS), euroa</td>
+      <td>0.06</td>
+      <td>0.01</td>
+      <td>0.05</td>
+      <td>-0.02</td>
+      <td>-0.01</td>
+      <td>-0.01</td>
+      <td>0.00</td>
+      <td>0.18</td>
+      <td>0.44</td>
+      <td>-0.02</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>Oma pääoma/osake, euroa</td>
+      <td>0.65</td>
+      <td>0.66</td>
+      <td>0.66</td>
+      <td>0.58</td>
+      <td>0.28</td>
+      <td>0.12</td>
+      <td>0.18</td>
+      <td>0.41</td>
+      <td>0.41</td>
+      <td>0.43</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>Osinko/kokonaistulos, %</td>
+      <td>58.46</td>
+      <td>999.90</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>Maksuvalmius</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>Quick Ratio</td>
+      <td>1.80</td>
+      <td>1.72</td>
+      <td>1.74</td>
+      <td>1.12</td>
+      <td>0.46</td>
+      <td>0.50</td>
+      <td>0.94</td>
+      <td>1.91</td>
+      <td>1.73</td>
+      <td>1.62</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>Current Ratio</td>
+      <td>3.14</td>
+      <td>3.50</td>
+      <td>3.19</td>
+      <td>2.18</td>
+      <td>0.88</td>
+      <td>0.92</td>
+      <td>1.25</td>
+      <td>3.07</td>
+      <td>2.96</td>
+      <td>3.24</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>Likvidit varat</td>
+      <td>19.64</td>
+      <td>9.65</td>
+      <td>10.70</td>
+      <td>12.13</td>
+      <td>5.39</td>
+      <td>1.10</td>
+      <td>6.29</td>
+      <td>12.42</td>
+      <td>18.03</td>
+      <td>3.95</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>Toiminnan laajuus</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>Liikevaihto</td>
+      <td>187.71</td>
+      <td>153.57</td>
+      <td>198.81</td>
+      <td>194.01</td>
+      <td>97.89</td>
+      <td>59.81</td>
+      <td>80.26</td>
+      <td>198.69</td>
+      <td>153.66</td>
+      <td>128.64</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>Liikevaihdon muutos, %</td>
+      <td>8.71</td>
+      <td>-18.19</td>
+      <td>29.46</td>
+      <td>-2.41</td>
+      <td>-49.54</td>
+      <td>-38.91</td>
+      <td>34.20</td>
+      <td>147.57</td>
+      <td>-22.67</td>
+      <td>-16.28</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>Ulkomaantoiminta, %</td>
+      <td>96.96</td>
+      <td>97.01</td>
+      <td>96.80</td>
+      <td>96.94</td>
+      <td>100.00</td>
+      <td>99.17</td>
+      <td>99.85</td>
+      <td>100.00</td>
+      <td>100.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>Oikaistun taseen loppusumma</td>
+      <td>267.00</td>
+      <td>260.24</td>
+      <td>259.94</td>
+      <td>258.61</td>
+      <td>231.12</td>
+      <td>142.59</td>
+      <td>146.35</td>
+      <td>159.76</td>
+      <td>162.34</td>
+      <td>161.60</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>Investoinnit</td>
+      <td>7.99</td>
+      <td>2.80</td>
+      <td>7.70</td>
+      <td>7.70</td>
+      <td>4.62</td>
+      <td>1.16</td>
+      <td>0.84</td>
+      <td>2.12</td>
+      <td>2.97</td>
+      <td>5.80</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>Investointiaste, %</td>
+      <td>4.26</td>
+      <td>1.82</td>
+      <td>3.87</td>
+      <td>3.97</td>
+      <td>4.71</td>
+      <td>1.93</td>
+      <td>1.04</td>
+      <td>1.07</td>
+      <td>1.93</td>
+      <td>4.51</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>Henkilöstö keskimäärin</td>
+      <td>742.00</td>
+      <td>779.00</td>
+      <td>915.00</td>
+      <td>932.00</td>
+      <td>1022.00</td>
+      <td>747.00</td>
+      <td>567.00</td>
+      <td>545.00</td>
+      <td>599.00</td>
+      <td>594.00</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>Kannattavuus</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>Käyttökate</td>
+      <td>17.19</td>
+      <td>5.48</td>
+      <td>17.97</td>
+      <td>-1.02</td>
+      <td>-5.43</td>
+      <td>-4.05</td>
+      <td>5.94</td>
+      <td>53.75</td>
+      <td>16.59</td>
+      <td>2.61</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>Liiketulos</td>
+      <td>9.89</td>
+      <td>-1.01</td>
+      <td>11.40</td>
+      <td>-7.55</td>
+      <td>-9.05</td>
+      <td>-6.68</td>
+      <td>3.85</td>
+      <td>52.29</td>
+      <td>15.03</td>
+      <td>-0.15</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>Nettotulos</td>
+      <td>7.76</td>
+      <td>-2.80</td>
+      <td>5.19</td>
+      <td>-12.04</td>
+      <td>-6.07</td>
+      <td>-6.13</td>
+      <td>-2.36</td>
+      <td>44.71</td>
+      <td>10.00</td>
+      <td>-7.22</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>Kokonaistulos</td>
+      <td>8.54</td>
+      <td>-0.94</td>
+      <td>6.71</td>
+      <td>-18.58</td>
+      <td>-58.88</td>
+      <td>-21.57</td>
+      <td>9.01</td>
+      <td>47.60</td>
+      <td>10.00</td>
+      <td>-7.22</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>Sijoitetun pääoman tuotto, %</td>
+      <td>5.92</td>
+      <td>-0.02</td>
+      <td>6.85</td>
+      <td>-3.76</td>
+      <td>-1.11</td>
+      <td>-6.16</td>
+      <td>13.14</td>
+      <td>59.84</td>
+      <td>14.66</td>
+      <td>-0.13</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>Oman pääoman tuotto, %</td>
+      <td>4.39</td>
+      <td>-1.61</td>
+      <td>2.98</td>
+      <td>-7.45</td>
+      <td>-5.38</td>
+      <td>-11.75</td>
+      <td>-6.44</td>
+      <td>60.33</td>
+      <td>9.50</td>
+      <td>-6.63</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>Kokonaispääoman tuotto, %</td>
+      <td>4.04</td>
+      <td>-0.01</td>
+      <td>4.79</td>
+      <td>-2.61</td>
+      <td>-0.70</td>
+      <td>-3.53</td>
+      <td>7.32</td>
+      <td>36.94</td>
+      <td>9.82</td>
+      <td>-0.09</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>Vakavaraisuus</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>34</th>
+      <td>Omavaraisuusaste, %</td>
+      <td>64.15</td>
+      <td>67.75</td>
+      <td>66.31</td>
+      <td>58.33</td>
+      <td>32.25</td>
+      <td>20.90</td>
+      <td>29.68</td>
+      <td>65.59</td>
+      <td>65.14</td>
+      <td>69.35</td>
+    </tr>
+    <tr>
+      <th>35</th>
+      <td>Nettovelkaantumisaste, %</td>
+      <td>-2.65</td>
+      <td>-3.32</td>
+      <td>0.72</td>
+      <td>8.15</td>
+      <td>73.95</td>
+      <td>161.77</td>
+      <td>74.18</td>
+      <td>-9.76</td>
+      <td>-14.13</td>
+      <td>-1.19</td>
+    </tr>
+    <tr>
+      <th>36</th>
+      <td>Korollinen nettovelka</td>
+      <td>-4.54</td>
+      <td>-5.86</td>
+      <td>1.24</td>
+      <td>12.30</td>
+      <td>55.12</td>
+      <td>48.22</td>
+      <td>32.22</td>
+      <td>-10.22</td>
+      <td>-14.95</td>
+      <td>-1.34</td>
+    </tr>
+    <tr>
+      <th>37</th>
+      <td>Nettorah.kulut/liikevaihto, %</td>
+      <td>1.79</td>
+      <td>1.39</td>
+      <td>3.60</td>
+      <td>2.29</td>
+      <td>3.86</td>
+      <td>7.12</td>
+      <td>4.91</td>
+      <td>1.56</td>
+      <td>2.00</td>
+      <td>4.00</td>
+    </tr>
+    <tr>
+      <th>38</th>
+      <td>Nettorah.kulut/käyttökate, %</td>
+      <td>19.59</td>
+      <td>38.83</td>
+      <td>39.83</td>
+      <td>999.90</td>
+      <td>999.90</td>
+      <td>999.90</td>
+      <td>66.40</td>
+      <td>5.78</td>
+      <td>18.48</td>
+      <td>197.58</td>
+    </tr>
+    <tr>
+      <th>39</th>
+      <td>Vieraan pääoman tak.maksuaika</td>
+      <td>-0.30</td>
+      <td>-1.59</td>
+      <td>0.11</td>
+      <td>999.90</td>
+      <td>999.90</td>
+      <td>999.90</td>
+      <td>999.90</td>
+      <td>-0.22</td>
+      <td>-1.29</td>
+      <td>-999.90</td>
+    </tr>
+    <tr>
+      <th>40</th>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>41</th>
+      <td>© Alma Talent Tietopalvelut</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>42</th>
+      <td>Tiedot on tarkoitettu käytettäväksi vain asiak...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>43</th>
+      <td>Tietojen osittainenkin jälleenlevittäminen ja ...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>44</th>
+      <td>Tietojen käytöstä mahdollisissa tutkimusprojek...</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -615,19 +1221,6 @@ document.write(`
 
 <span class="c1"># Siistitään samalla nimisaraketta hieman</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Afarak Group Oyj&quot;</span><span class="p">:</span> <span class="s2">&quot;Afarak_Group_Oyj&quot;</span><span class="p">})</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Huomataan, että tiedoston lopussa on turhia osasia. Poistetaan ne rivi-indeksien avulla.</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="mi">40</span><span class="p">,</span> <span class="mi">41</span><span class="p">,</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">43</span><span class="p">,</span> <span class="mi">44</span><span class="p">])</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># Siistitään samalla nimisaraketta hieman</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;Afarak Group Oyj&quot;</span><span class="p">:</span> <span class="s2">&quot;Afarak_Group_Oyj&quot;</span><span class="p">})</span>
-
-<span class="ne">NameError</span>: name &#39;data&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -640,16 +1233,601 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Tarkastetaan, että tulos näyttää oikealta.</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">data</span>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
 
-<span class="ne">NameError</span>: name &#39;data&#39; is not defined
-</pre></div>
-</div>
-</div>
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Afarak_Group_Oyj</th>
+      <th>12/2015</th>
+      <th>12/2016</th>
+      <th>12/2017</th>
+      <th>12/2018</th>
+      <th>12/2019</th>
+      <th>12/2020</th>
+      <th>12/2021</th>
+      <th>12/2022</th>
+      <th>12/2023</th>
+      <th>12/2024</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Sijoittajan tunnuslukuja</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Markkina-arvo (P)</td>
+      <td>103.52</td>
+      <td>202.25</td>
+      <td>220.73</td>
+      <td>189.94</td>
+      <td>126.33</td>
+      <td>54.94</td>
+      <td>34.49</td>
+      <td>91.00</td>
+      <td>104.20</td>
+      <td>80.34</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Tasesubstanssi ilman väh.os. (B)</td>
+      <td>167.36</td>
+      <td>172.04</td>
+      <td>171.40</td>
+      <td>150.48</td>
+      <td>67.31</td>
+      <td>27.54</td>
+      <td>44.24</td>
+      <td>105.71</td>
+      <td>106.05</td>
+      <td>112.05</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Yritysarvo (EV)</td>
+      <td>98.98</td>
+      <td>196.39</td>
+      <td>221.97</td>
+      <td>202.24</td>
+      <td>181.45</td>
+      <td>103.16</td>
+      <td>66.72</td>
+      <td>80.78</td>
+      <td>89.25</td>
+      <td>79.00</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Tulos (E)</td>
+      <td>8.07</td>
+      <td>-2.48</td>
+      <td>4.74</td>
+      <td>-11.51</td>
+      <td>-4.76</td>
+      <td>-2.23</td>
+      <td>-2.20</td>
+      <td>44.83</td>
+      <td>9.45</td>
+      <td>-7.57</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>P/B-luku</td>
+      <td>0.62</td>
+      <td>1.18</td>
+      <td>1.29</td>
+      <td>1.26</td>
+      <td>1.88</td>
+      <td>2.00</td>
+      <td>0.78</td>
+      <td>0.86</td>
+      <td>0.98</td>
+      <td>0.72</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>P/S-luku</td>
+      <td>0.55</td>
+      <td>1.32</td>
+      <td>1.11</td>
+      <td>0.98</td>
+      <td>1.29</td>
+      <td>0.92</td>
+      <td>0.43</td>
+      <td>0.46</td>
+      <td>0.68</td>
+      <td>0.63</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>P/E-luku</td>
+      <td>12.83</td>
+      <td>-81.69</td>
+      <td>46.55</td>
+      <td>-16.50</td>
+      <td>-26.52</td>
+      <td>-24.64</td>
+      <td>-15.66</td>
+      <td>2.03</td>
+      <td>11.03</td>
+      <td>-10.61</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>EV/EBIT-luku</td>
+      <td>10.01</td>
+      <td>-194.45</td>
+      <td>19.47</td>
+      <td>-26.79</td>
+      <td>-20.05</td>
+      <td>-15.45</td>
+      <td>17.31</td>
+      <td>1.55</td>
+      <td>5.94</td>
+      <td>-541.12</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>Tulos/osake (EPS), euroa</td>
+      <td>0.03</td>
+      <td>-0.01</td>
+      <td>0.02</td>
+      <td>-0.04</td>
+      <td>-0.02</td>
+      <td>-0.01</td>
+      <td>-0.01</td>
+      <td>0.18</td>
+      <td>0.36</td>
+      <td>-0.03</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>Tulorahoitus/osake (CPS), euroa</td>
+      <td>0.06</td>
+      <td>0.01</td>
+      <td>0.05</td>
+      <td>-0.02</td>
+      <td>-0.01</td>
+      <td>-0.01</td>
+      <td>0.00</td>
+      <td>0.18</td>
+      <td>0.44</td>
+      <td>-0.02</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>Oma pääoma/osake, euroa</td>
+      <td>0.65</td>
+      <td>0.66</td>
+      <td>0.66</td>
+      <td>0.58</td>
+      <td>0.28</td>
+      <td>0.12</td>
+      <td>0.18</td>
+      <td>0.41</td>
+      <td>0.41</td>
+      <td>0.43</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>Osinko/kokonaistulos, %</td>
+      <td>58.46</td>
+      <td>999.90</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>Maksuvalmius</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>Quick Ratio</td>
+      <td>1.80</td>
+      <td>1.72</td>
+      <td>1.74</td>
+      <td>1.12</td>
+      <td>0.46</td>
+      <td>0.50</td>
+      <td>0.94</td>
+      <td>1.91</td>
+      <td>1.73</td>
+      <td>1.62</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>Current Ratio</td>
+      <td>3.14</td>
+      <td>3.50</td>
+      <td>3.19</td>
+      <td>2.18</td>
+      <td>0.88</td>
+      <td>0.92</td>
+      <td>1.25</td>
+      <td>3.07</td>
+      <td>2.96</td>
+      <td>3.24</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>Likvidit varat</td>
+      <td>19.64</td>
+      <td>9.65</td>
+      <td>10.70</td>
+      <td>12.13</td>
+      <td>5.39</td>
+      <td>1.10</td>
+      <td>6.29</td>
+      <td>12.42</td>
+      <td>18.03</td>
+      <td>3.95</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>Toiminnan laajuus</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>Liikevaihto</td>
+      <td>187.71</td>
+      <td>153.57</td>
+      <td>198.81</td>
+      <td>194.01</td>
+      <td>97.89</td>
+      <td>59.81</td>
+      <td>80.26</td>
+      <td>198.69</td>
+      <td>153.66</td>
+      <td>128.64</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>Liikevaihdon muutos, %</td>
+      <td>8.71</td>
+      <td>-18.19</td>
+      <td>29.46</td>
+      <td>-2.41</td>
+      <td>-49.54</td>
+      <td>-38.91</td>
+      <td>34.20</td>
+      <td>147.57</td>
+      <td>-22.67</td>
+      <td>-16.28</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>Ulkomaantoiminta, %</td>
+      <td>96.96</td>
+      <td>97.01</td>
+      <td>96.80</td>
+      <td>96.94</td>
+      <td>100.00</td>
+      <td>99.17</td>
+      <td>99.85</td>
+      <td>100.00</td>
+      <td>100.00</td>
+      <td>0.00</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>Oikaistun taseen loppusumma</td>
+      <td>267.00</td>
+      <td>260.24</td>
+      <td>259.94</td>
+      <td>258.61</td>
+      <td>231.12</td>
+      <td>142.59</td>
+      <td>146.35</td>
+      <td>159.76</td>
+      <td>162.34</td>
+      <td>161.60</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>Investoinnit</td>
+      <td>7.99</td>
+      <td>2.80</td>
+      <td>7.70</td>
+      <td>7.70</td>
+      <td>4.62</td>
+      <td>1.16</td>
+      <td>0.84</td>
+      <td>2.12</td>
+      <td>2.97</td>
+      <td>5.80</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>Investointiaste, %</td>
+      <td>4.26</td>
+      <td>1.82</td>
+      <td>3.87</td>
+      <td>3.97</td>
+      <td>4.71</td>
+      <td>1.93</td>
+      <td>1.04</td>
+      <td>1.07</td>
+      <td>1.93</td>
+      <td>4.51</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>Henkilöstö keskimäärin</td>
+      <td>742.00</td>
+      <td>779.00</td>
+      <td>915.00</td>
+      <td>932.00</td>
+      <td>1022.00</td>
+      <td>747.00</td>
+      <td>567.00</td>
+      <td>545.00</td>
+      <td>599.00</td>
+      <td>594.00</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>Kannattavuus</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>Käyttökate</td>
+      <td>17.19</td>
+      <td>5.48</td>
+      <td>17.97</td>
+      <td>-1.02</td>
+      <td>-5.43</td>
+      <td>-4.05</td>
+      <td>5.94</td>
+      <td>53.75</td>
+      <td>16.59</td>
+      <td>2.61</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>Liiketulos</td>
+      <td>9.89</td>
+      <td>-1.01</td>
+      <td>11.40</td>
+      <td>-7.55</td>
+      <td>-9.05</td>
+      <td>-6.68</td>
+      <td>3.85</td>
+      <td>52.29</td>
+      <td>15.03</td>
+      <td>-0.15</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>Nettotulos</td>
+      <td>7.76</td>
+      <td>-2.80</td>
+      <td>5.19</td>
+      <td>-12.04</td>
+      <td>-6.07</td>
+      <td>-6.13</td>
+      <td>-2.36</td>
+      <td>44.71</td>
+      <td>10.00</td>
+      <td>-7.22</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>Kokonaistulos</td>
+      <td>8.54</td>
+      <td>-0.94</td>
+      <td>6.71</td>
+      <td>-18.58</td>
+      <td>-58.88</td>
+      <td>-21.57</td>
+      <td>9.01</td>
+      <td>47.60</td>
+      <td>10.00</td>
+      <td>-7.22</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>Sijoitetun pääoman tuotto, %</td>
+      <td>5.92</td>
+      <td>-0.02</td>
+      <td>6.85</td>
+      <td>-3.76</td>
+      <td>-1.11</td>
+      <td>-6.16</td>
+      <td>13.14</td>
+      <td>59.84</td>
+      <td>14.66</td>
+      <td>-0.13</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>Oman pääoman tuotto, %</td>
+      <td>4.39</td>
+      <td>-1.61</td>
+      <td>2.98</td>
+      <td>-7.45</td>
+      <td>-5.38</td>
+      <td>-11.75</td>
+      <td>-6.44</td>
+      <td>60.33</td>
+      <td>9.50</td>
+      <td>-6.63</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>Kokonaispääoman tuotto, %</td>
+      <td>4.04</td>
+      <td>-0.01</td>
+      <td>4.79</td>
+      <td>-2.61</td>
+      <td>-0.70</td>
+      <td>-3.53</td>
+      <td>7.32</td>
+      <td>36.94</td>
+      <td>9.82</td>
+      <td>-0.09</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>Vakavaraisuus</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>34</th>
+      <td>Omavaraisuusaste, %</td>
+      <td>64.15</td>
+      <td>67.75</td>
+      <td>66.31</td>
+      <td>58.33</td>
+      <td>32.25</td>
+      <td>20.90</td>
+      <td>29.68</td>
+      <td>65.59</td>
+      <td>65.14</td>
+      <td>69.35</td>
+    </tr>
+    <tr>
+      <th>35</th>
+      <td>Nettovelkaantumisaste, %</td>
+      <td>-2.65</td>
+      <td>-3.32</td>
+      <td>0.72</td>
+      <td>8.15</td>
+      <td>73.95</td>
+      <td>161.77</td>
+      <td>74.18</td>
+      <td>-9.76</td>
+      <td>-14.13</td>
+      <td>-1.19</td>
+    </tr>
+    <tr>
+      <th>36</th>
+      <td>Korollinen nettovelka</td>
+      <td>-4.54</td>
+      <td>-5.86</td>
+      <td>1.24</td>
+      <td>12.30</td>
+      <td>55.12</td>
+      <td>48.22</td>
+      <td>32.22</td>
+      <td>-10.22</td>
+      <td>-14.95</td>
+      <td>-1.34</td>
+    </tr>
+    <tr>
+      <th>37</th>
+      <td>Nettorah.kulut/liikevaihto, %</td>
+      <td>1.79</td>
+      <td>1.39</td>
+      <td>3.60</td>
+      <td>2.29</td>
+      <td>3.86</td>
+      <td>7.12</td>
+      <td>4.91</td>
+      <td>1.56</td>
+      <td>2.00</td>
+      <td>4.00</td>
+    </tr>
+    <tr>
+      <th>38</th>
+      <td>Nettorah.kulut/käyttökate, %</td>
+      <td>19.59</td>
+      <td>38.83</td>
+      <td>39.83</td>
+      <td>999.90</td>
+      <td>999.90</td>
+      <td>999.90</td>
+      <td>66.40</td>
+      <td>5.78</td>
+      <td>18.48</td>
+      <td>197.58</td>
+    </tr>
+    <tr>
+      <th>39</th>
+      <td>Vieraan pääoman tak.maksuaika</td>
+      <td>-0.30</td>
+      <td>-1.59</td>
+      <td>0.11</td>
+      <td>999.90</td>
+      <td>999.90</td>
+      <td>999.90</td>
+      <td>999.90</td>
+      <td>-0.22</td>
+      <td>-1.29</td>
+      <td>-999.90</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
 </div>
 </section>
 <section id="analyysi">
@@ -680,18 +1858,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="n">line</span> <span class="mi">5</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">ehto</span> <span class="o">=</span> <span class="s2">&quot;Nettovelkaantumisaste, %&quot;</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># Kyseisen rivin aineistot halutaan y-akselille, joten tehdään niistä lista.</span>
-<span class="ne">----&gt; </span><span class="mi">5</span> <span class="n">pysty</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;Afarak_Group_Oyj == @ehto&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">pysty</span> <span class="o">=</span> <span class="n">pysty</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">:]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="c1"># Käytetään vaaka-akselina sarakeotsikoiden päiväyksiä.</span>
-
-<span class="ne">NameError</span>: name &#39;data&#39; is not defined
-</pre></div>
-</div>
+<img alt="../_images/f1a0f8479cf0b1984c386434f96968903f9b9f643b1f2e1014b52fbec92258d9.png" src="../_images/f1a0f8479cf0b1984c386434f96968903f9b9f643b1f2e1014b52fbec92258d9.png" />
 </div>
 </div>
 <p>Tyypillisesti meitä kiinnostaa erilaisten keskiarvojen tai poikkeamien laskeskelu. Yksi tapa tehdä näin on käyttää numpy-kirjaston mean()-käskyä, joka soveltuu lista-tyyppisten muuttujien käsittelyyn.</p>
@@ -702,12 +1869,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Keskiarvo muuttujalle </span><span class="si">{</span><span class="n">ehto</span><span class="si">}</span><span class="s2"> on : &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">pysty</span><span class="p">)))</span>
-
-<span class="ne">NameError</span>: name &#39;pysty&#39; is not defined
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Keskiarvo muuttujalle Nettovelkaantumisaste, % on : 28.772000000000002
 </pre></div>
 </div>
 </div>
@@ -755,18 +1917,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">8</span><span class="p">],</span> <span class="n">line</span> <span class="mi">6</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">ehto2</span> <span class="o">=</span> <span class="s2">&quot;EV/EBIT-luku&quot;</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1"># Kyseisten rivien aineistot halutaan y-akselille, joten tehdään niistä listat.</span>
-<span class="ne">----&gt; </span><span class="mi">6</span> <span class="n">y1</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;Afarak_Group_Oyj == @ehto1&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">y1</span> <span class="o">=</span> <span class="n">y1</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">:]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="n">y2</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;Afarak_Group_Oyj == @ehto2&#39;</span><span class="p">)</span>
-
-<span class="ne">NameError</span>: name &#39;data&#39; is not defined
-</pre></div>
-</div>
+<img alt="../_images/d4d7f4c0f584251008d027d71d5514ad75cd45115a0f22b786bef46cd7faa34c.png" src="../_images/d4d7f4c0f584251008d027d71d5514ad75cd45115a0f22b786bef46cd7faa34c.png" />
 </div>
 </div>
 <p>Ylläolevasta kuvasta voi miettiä miten hyvä työkalu koko kymmenvuotisen kauden keskiarvo on kuvaamaan yrityksen yleistä tilaa tai muutosta. Tähän tarkoitukseen voisi käyttää jotakin sopivampaa, kuten trendiviivaa.</p>
@@ -796,21 +1947,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">9</span><span class="p">],</span> <span class="n">line</span> <span class="mi">5</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># Aineisto y2.</span>
-<span class="ne">----&gt; </span><span class="mi">5</span> <span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">vaaka</span><span class="p">,</span> <span class="n">y2</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;navy&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ehto2</span><span class="si">}</span><span class="s2">, keskiarvo </span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">KA2</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="c1"># Trendi.</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">vaaka</span><span class="p">))</span>
-
-<span class="ne">NameError</span>: name &#39;vaaka&#39; is not defined
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 1000x500 with 0 Axes&gt;
-</pre></div>
-</div>
+<img alt="../_images/cb29b47427e46d5630a49e4bfa5303f26931da0b27b8bbdc50b4e8804632f051.png" src="../_images/cb29b47427e46d5630a49e4bfa5303f26931da0b27b8bbdc50b4e8804632f051.png" />
 </div>
 </div>
 </section>

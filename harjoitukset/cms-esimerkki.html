@@ -502,6 +502,92 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">IncompleteRead</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">2</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Luetaan datatiedoston sisältö ja tallennetaan tiedot muuttujaan &quot;kaksi_myonia&quot;</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">kaksi_myonia</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;http://opendata.cern.ch/record/545/files/Dimuon_DoubleMu.csv&#39;</span><span class="p">)</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.13.3/x64/lib/python3.13/site-packages/pandas/io/parsers/readers.py:1026,</span> in <span class="ni">read_csv</span><span class="nt">(filepath_or_buffer, sep, delimiter, header, names, index_col, usecols, dtype, engine, converters, true_values, false_values, skipinitialspace, skiprows, skipfooter, nrows, na_values, keep_default_na, na_filter, verbose, skip_blank_lines, parse_dates, infer_datetime_format, keep_date_col, date_parser, date_format, dayfirst, cache_dates, iterator, chunksize, compression, thousands, decimal, lineterminator, quotechar, quoting, doublequote, escapechar, comment, encoding, encoding_errors, dialect, on_bad_lines, delim_whitespace, low_memory, memory_map, float_precision, storage_options, dtype_backend)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1013</span> <span class="n">kwds_defaults</span> <span class="o">=</span> <span class="n">_refine_defaults_read</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1014</span>     <span class="n">dialect</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1015</span>     <span class="n">delimiter</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>   <span class="mi">1022</span>     <span class="n">dtype_backend</span><span class="o">=</span><span class="n">dtype_backend</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1023</span> <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1024</span> <span class="n">kwds</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">kwds_defaults</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">1026</span> <span class="k">return</span> <span class="n">_read</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="n">kwds</span><span class="p">)</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.13.3/x64/lib/python3.13/site-packages/pandas/io/parsers/readers.py:620,</span> in <span class="ni">_read</span><span class="nt">(filepath_or_buffer, kwds)</span>
+<span class="g g-Whitespace">    </span><span class="mi">617</span> <span class="n">_validate_names</span><span class="p">(</span><span class="n">kwds</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;names&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">))</span>
+<span class="g g-Whitespace">    </span><span class="mi">619</span> <span class="c1"># Create the parser.</span>
+<span class="ne">--&gt; </span><span class="mi">620</span> <span class="n">parser</span> <span class="o">=</span> <span class="n">TextFileReader</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">622</span> <span class="k">if</span> <span class="n">chunksize</span> <span class="ow">or</span> <span class="n">iterator</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">623</span>     <span class="k">return</span> <span class="n">parser</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.13.3/x64/lib/python3.13/site-packages/pandas/io/parsers/readers.py:1620,</span> in <span class="ni">TextFileReader.__init__</span><span class="nt">(self, f, engine, **kwds)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1617</span>     <span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">kwds</span><span class="p">[</span><span class="s2">&quot;has_index_names&quot;</span><span class="p">]</span>
+<span class="g g-Whitespace">   </span><span class="mi">1619</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span><span class="p">:</span> <span class="n">IOHandles</span> <span class="o">|</span> <span class="kc">None</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="ne">-&gt; </span><span class="mi">1620</span> <span class="bp">self</span><span class="o">.</span><span class="n">_engine</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_engine</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">engine</span><span class="p">)</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.13.3/x64/lib/python3.13/site-packages/pandas/io/parsers/readers.py:1880,</span> in <span class="ni">TextFileReader._make_engine</span><span class="nt">(self, f, engine)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1878</span>     <span class="k">if</span> <span class="s2">&quot;b&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">mode</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1879</span>         <span class="n">mode</span> <span class="o">+=</span> <span class="s2">&quot;b&quot;</span>
+<span class="ne">-&gt; </span><span class="mi">1880</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span> <span class="o">=</span> <span class="n">get_handle</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1881</span>     <span class="n">f</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1882</span>     <span class="n">mode</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1883</span>     <span class="n">encoding</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;encoding&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1884</span>     <span class="n">compression</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;compression&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1885</span>     <span class="n">memory_map</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;memory_map&quot;</span><span class="p">,</span> <span class="kc">False</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1886</span>     <span class="n">is_text</span><span class="o">=</span><span class="n">is_text</span><span class="p">,</span>
+<span class="g g-Whitespace">   </span><span class="mi">1887</span>     <span class="n">errors</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;encoding_errors&quot;</span><span class="p">,</span> <span class="s2">&quot;strict&quot;</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1888</span>     <span class="n">storage_options</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">options</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;storage_options&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">),</span>
+<span class="g g-Whitespace">   </span><span class="mi">1889</span> <span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1890</span> <span class="k">assert</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span>
+<span class="g g-Whitespace">   </span><span class="mi">1891</span> <span class="n">f</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">handles</span><span class="o">.</span><span class="n">handle</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.13.3/x64/lib/python3.13/site-packages/pandas/io/common.py:728,</span> in <span class="ni">get_handle</span><span class="nt">(path_or_buf, mode, encoding, compression, memory_map, is_text, errors, storage_options)</span>
+<span class="g g-Whitespace">    </span><span class="mi">725</span>     <span class="n">codecs</span><span class="o">.</span><span class="n">lookup_error</span><span class="p">(</span><span class="n">errors</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">727</span> <span class="c1"># open URLs</span>
+<span class="ne">--&gt; </span><span class="mi">728</span> <span class="n">ioargs</span> <span class="o">=</span> <span class="n">_get_filepath_or_buffer</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">729</span>     <span class="n">path_or_buf</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">730</span>     <span class="n">encoding</span><span class="o">=</span><span class="n">encoding</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">731</span>     <span class="n">compression</span><span class="o">=</span><span class="n">compression</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">732</span>     <span class="n">mode</span><span class="o">=</span><span class="n">mode</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">733</span>     <span class="n">storage_options</span><span class="o">=</span><span class="n">storage_options</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">734</span> <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">736</span> <span class="n">handle</span> <span class="o">=</span> <span class="n">ioargs</span><span class="o">.</span><span class="n">filepath_or_buffer</span>
+<span class="g g-Whitespace">    </span><span class="mi">737</span> <span class="n">handles</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="n">BaseBuffer</span><span class="p">]</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.13.3/x64/lib/python3.13/site-packages/pandas/io/common.py:389,</span> in <span class="ni">_get_filepath_or_buffer</span><span class="nt">(filepath_or_buffer, encoding, compression, mode, storage_options)</span>
+<span class="g g-Whitespace">    </span><span class="mi">386</span>         <span class="k">if</span> <span class="n">content_encoding</span> <span class="o">==</span> <span class="s2">&quot;gzip&quot;</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">387</span>             <span class="c1"># Override compression based on Content-Encoding header</span>
+<span class="g g-Whitespace">    </span><span class="mi">388</span>             <span class="n">compression</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;method&quot;</span><span class="p">:</span> <span class="s2">&quot;gzip&quot;</span><span class="p">}</span>
+<span class="ne">--&gt; </span><span class="mi">389</span>         <span class="n">reader</span> <span class="o">=</span> <span class="n">BytesIO</span><span class="p">(</span><span class="n">req</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+<span class="g g-Whitespace">    </span><span class="mi">390</span>     <span class="k">return</span> <span class="n">IOArgs</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">391</span>         <span class="n">filepath_or_buffer</span><span class="o">=</span><span class="n">reader</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">392</span>         <span class="n">encoding</span><span class="o">=</span><span class="n">encoding</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>    <span class="mi">395</span>         <span class="n">mode</span><span class="o">=</span><span class="n">fsspec_mode</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">396</span>     <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">398</span> <span class="k">if</span> <span class="n">is_fsspec_url</span><span class="p">(</span><span class="n">filepath_or_buffer</span><span class="p">):</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.13.3/x64/lib/python3.13/http/client.py:495,</span> in <span class="ni">HTTPResponse.read</span><span class="nt">(self, amt)</span>
+<span class="g g-Whitespace">    </span><span class="mi">493</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">494</span>     <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">495</span>         <span class="n">s</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_safe_read</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">length</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">496</span>     <span class="k">except</span> <span class="n">IncompleteRead</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">497</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_close_conn</span><span class="p">()</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.13.3/x64/lib/python3.13/http/client.py:644,</span> in <span class="ni">HTTPResponse._safe_read</span><span class="nt">(self, amt)</span>
+<span class="g g-Whitespace">    </span><span class="mi">642</span> <span class="n">data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fp</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">amt</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">643</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">amt</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">644</span>     <span class="k">raise</span> <span class="n">IncompleteRead</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">amt</span><span class="o">-</span><span class="nb">len</span><span class="p">(</span><span class="n">data</span><span class="p">))</span>
+<span class="g g-Whitespace">    </span><span class="mi">645</span> <span class="k">return</span> <span class="n">data</span>
+
+<span class="ne">IncompleteRead</span>: IncompleteRead(13925193 bytes read, 10647 more expected)
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -512,172 +598,16 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Tarkastellaan miltä data näyttää</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">kaksi_myonia</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>Run</th>
-      <th>Event</th>
-      <th>type1</th>
-      <th>E1</th>
-      <th>px1</th>
-      <th>py1</th>
-      <th>pz1</th>
-      <th>pt1</th>
-      <th>eta1</th>
-      <th>phi1</th>
-      <th>...</th>
-      <th>type2</th>
-      <th>E2</th>
-      <th>px2</th>
-      <th>py2</th>
-      <th>pz2</th>
-      <th>pt2</th>
-      <th>eta2</th>
-      <th>phi2</th>
-      <th>Q2</th>
-      <th>M</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>165617</td>
-      <td>74601703</td>
-      <td>G</td>
-      <td>9.6987</td>
-      <td>-9.5104</td>
-      <td>0.3662</td>
-      <td>1.8633</td>
-      <td>9.5175</td>
-      <td>0.1945</td>
-      <td>3.1031</td>
-      <td>...</td>
-      <td>G</td>
-      <td>9.7633</td>
-      <td>7.3277</td>
-      <td>-1.1524</td>
-      <td>6.3473</td>
-      <td>7.4178</td>
-      <td>0.7756</td>
-      <td>-0.1560</td>
-      <td>1</td>
-      <td>17.4922</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>165617</td>
-      <td>75100943</td>
-      <td>G</td>
-      <td>6.2039</td>
-      <td>-4.2666</td>
-      <td>0.4565</td>
-      <td>-4.4793</td>
-      <td>4.2910</td>
-      <td>-0.9121</td>
-      <td>3.0350</td>
-      <td>...</td>
-      <td>G</td>
-      <td>9.6690</td>
-      <td>7.2740</td>
-      <td>-2.8211</td>
-      <td>-5.7104</td>
-      <td>7.8019</td>
-      <td>-0.6786</td>
-      <td>-0.3700</td>
-      <td>1</td>
-      <td>11.5534</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>165617</td>
-      <td>75587682</td>
-      <td>G</td>
-      <td>19.2892</td>
-      <td>-4.2121</td>
-      <td>-0.6516</td>
-      <td>18.8121</td>
-      <td>4.2622</td>
-      <td>2.1905</td>
-      <td>-2.9881</td>
-      <td>...</td>
-      <td>G</td>
-      <td>9.8244</td>
-      <td>4.3439</td>
-      <td>-0.4735</td>
-      <td>8.7985</td>
-      <td>4.3697</td>
-      <td>1.4497</td>
-      <td>-0.1086</td>
-      <td>1</td>
-      <td>9.1636</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>165617</td>
-      <td>75660978</td>
-      <td>G</td>
-      <td>7.0427</td>
-      <td>-6.3268</td>
-      <td>-0.2685</td>
-      <td>3.0802</td>
-      <td>6.3325</td>
-      <td>0.4690</td>
-      <td>-3.0992</td>
-      <td>...</td>
-      <td>G</td>
-      <td>5.5857</td>
-      <td>4.4748</td>
-      <td>0.8489</td>
-      <td>-3.2319</td>
-      <td>4.5546</td>
-      <td>-0.6605</td>
-      <td>0.1875</td>
-      <td>1</td>
-      <td>12.4774</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>165617</td>
-      <td>75947690</td>
-      <td>G</td>
-      <td>7.2751</td>
-      <td>0.1030</td>
-      <td>-5.5331</td>
-      <td>-4.7212</td>
-      <td>5.5340</td>
-      <td>-0.7736</td>
-      <td>-1.5522</td>
-      <td>...</td>
-      <td>G</td>
-      <td>7.3181</td>
-      <td>-0.3988</td>
-      <td>6.9408</td>
-      <td>2.2825</td>
-      <td>6.9523</td>
-      <td>0.3227</td>
-      <td>1.6282</td>
-      <td>1</td>
-      <td>14.3159</td>
-    </tr>
-  </tbody>
-</table>
-<p>5 rows × 21 columns</p>
-</div></div></div>
+<span class="ne">NameError</span>: name &#39;kaksi_myonia&#39; is not defined
+</pre></div>
+</div>
+</div>
 </div>
 <p>Datatiedostotta näyttäisi olevan paljon tietoa. Jokainen rivi vastaa yhtä törmäystapahtumaa, jossa on havaittu kaksi myonia. Rivillä on aina mittausdataa molemmista havaitusta myonista. Esimerkiksi <em>E</em> tarkoittaa myonin energiaa ja <em>p</em> liikemäärää. Viimeinen sarake <em>M</em> viittaa myoneiden <em>invarianttiin massaan</em>, jota tarkastellaan pian enemmän.</p>
 <div class="cell docutils container">
@@ -689,7 +619,13 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>100000
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Katsotaan vielä, kuinka monta riviä dataa tiedostossa on</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="nb">len</span><span class="p">(</span><span class="n">kaksi_myonia</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;kaksi_myonia&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -724,7 +660,19 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/3819070a9046db2061f8dc53c148f5ce731901cead082a7a7b25b2c906090af0.png" src="../_images/3819070a9046db2061f8dc53c148f5ce731901cead082a7a7b25b2c906090af0.png" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">line</span> <span class="mi">4</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Invariantti massa voitaisiin laskea ylläolevan kaavan avulla.</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1"># Se löytyy kuitenkin valmiiksi laskettuna jo datasetin viimeisestä sarakkeesta &quot;M&quot;, joten käytetään sitä.</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># Tallennetaan invarianttien massojen sarake omaan muuttujaan</span>
+<span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">invariantti_massa</span> <span class="o">=</span> <span class="n">kaksi_myonia</span><span class="p">[</span><span class="s1">&#39;M&#39;</span><span class="p">]</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="c1"># Piirretään histogrammi kahden myonin invarianteista massoista 300 pylväällä</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+
+<span class="ne">NameError</span>: name &#39;kaksi_myonia&#39; is not defined
+</pre></div>
+</div>
 </div>
 </div>
 <p>Huomataan, että muutamilla invariantin massan arvoilla histogrammiin syntyy piikki. Nämä piikit vastaavat emohiukkasten massaa, joista kaksi myonia ovat peräisin. Tutkitaan tarkemmin histogrammin väliä 80 GeV - 100 GeV.</p>
@@ -745,7 +693,21 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/3d8ff7a61aebc7f4fcb2b8b817c8b62e962ac65dd88bce9444e0eb66a0c3236e.png" src="../_images/3d8ff7a61aebc7f4fcb2b8b817c8b62e962ac65dd88bce9444e0eb66a0c3236e.png" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Piirretään histogrammi kahden myonin invarianteista massoista 100 pylväällä välillä 80 GeV - 100 GeV</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">invariantti_massa</span> <span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="nb">range</span><span class="o">=</span><span class="p">(</span><span class="mi">80</span><span class="p">,</span><span class="mi">100</span><span class="p">))</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1"># Näillä riveillä määritellään otsikko sekä akseleiden tekstit.</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Invariantti massa [GeV/c²]&#39;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;invariantti_massa&#39; is not defined
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;Figure size 1500x1000 with 0 Axes&gt;
+</pre></div>
+</div>
 </div>
 </div>
 <p>Huomataan, että datasta erottuu selkeä piikki noin 91 GeV kohdalla. Tämä johtuu siitä, taustatapahtumissa syntyvien kahden myonin lisäksi syntyy paljon sellaisia tapahtumia, joissa myonien invariantti massa on lähellä 91 GeV:iä. Tämä tarkoittaa sitä, että myonit ovat peräisin johtain hiukkasesta, jonka massa on 91 GeV. Tämä hiukkanen tunnetaan nimellä Z-bosoni.</p>

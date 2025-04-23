@@ -18,6 +18,7 @@ chapters:
   - file: harjoitukset/FMI_Luotaukset
   - file: harjoitukset/Talous
   - file: harjoitukset/Julkistalous
+  - file: harjoitukset/Perameri
 - file: harjoitukset/ilmastopaja
   sections:
   - file: harjoitukset/lampotila-intro

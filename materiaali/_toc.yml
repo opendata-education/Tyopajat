@@ -19,6 +19,7 @@ chapters:
   - file: harjoitukset/Talous
   - file: harjoitukset/Julkistalous
   - file: harjoitukset/Perameri
+  - file: harjoitukset/Auringonpilkut
 - file: harjoitukset/ilmastopaja
   sections:
   - file: harjoitukset/lampotila-intro

@@ -495,16 +495,7 @@ document.write(`
 <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 
 <span class="c1"># Jotkut Pythonin versiot eivät oletusarvoisesti tue pandaksen kautta Excel-tiedostojen lukemista. Alla oleva käsky auttaa virheilmoituksiin.</span>
-<span class="o">%</span><span class="k">pip</span> install openpyxl
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: openpyxl in /opt/hostedtoolcache/Python/3.13.3/x64/lib/python3.13/site-packages (3.1.5)
-Requirement already satisfied: et-xmlfile in /opt/hostedtoolcache/Python/3.13.3/x64/lib/python3.13/site-packages (from openpyxl) (2.0.0)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Note: you may need to restart the kernel to use updated packages.
+<span class="c1">#%pip install openpyxl</span>
 </pre></div>
 </div>
 </div>
@@ -1952,6 +1943,35 @@ Niiden aineistoista voisi kysyä esimerkiksi seuraavia:</p>
 <li><p>Sijoitetun pääoman tuotto, viiden ja 10 vuoden keskiarvo.</p></li>
 <li><p>Nettovelkaantumisaste yleisesti.</p></li>
 </ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Keskimääräinen vuosikasvu</span>
+
+<span class="c1"># Valitaan suure</span>
+<span class="n">ehto</span> <span class="o">=</span> <span class="s2">&quot;Liikevaihto&quot;</span>
+
+<span class="c1"># Otetaan kyseinen rivi</span>
+<span class="n">rivi</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;Afarak_Group_Oyj == @ehto&#39;</span><span class="p">)</span>
+<span class="n">rivi</span> <span class="o">=</span> <span class="n">rivi</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">:]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">rivi</span><span class="p">)</span>
+
+<span class="c1"># Jos kasvu on matemaattisesti</span>
+<span class="c1"># (lähtöarvo) * (kasvuprosentti)**(vuosien määrä) = (loppuarvo), niin</span>
+<span class="c1"># (kasvuprosentti) = (vuosien juuri[(loppuarvo / lähtöarvo)])</span>
+<span class="n">vuodet</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">rivi</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span>
+<span class="n">kasvu</span> <span class="o">=</span> <span class="p">(</span><span class="n">rivi</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="n">rivi</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">**</span><span class="p">(</span><span class="mf">1.0</span><span class="o">/</span><span class="n">vuodet</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Keskimääräinen vuosikasvukerroin </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">rivi</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="si">}</span><span class="s2"> vuoden yli on ollut </span><span class="si">{</span><span class="n">kasvu</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[np.float64(187.71), np.float64(153.57), np.float64(198.81), np.float64(194.01), np.float64(97.89), np.float64(59.81), np.float64(80.26), np.float64(198.69), np.float64(153.66), np.float64(128.64)]
+Keskimääräinen vuosikasvukerroin 9 vuoden yli on ollut 0.9588825215596776.
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 </section>
 

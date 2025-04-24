@@ -823,13 +823,15 @@ Täten keskiarvon suhdeluku ei tosiaankaan ole noin puolet ja puolet, vaan isomp
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting openpyxl
-  Downloading openpyxl-3.1.5-py2.py3-none-any.whl.metadata (2.5 kB)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting et-xmlfile (from openpyxl)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Downloading openpyxl-3.1.5-py2.py3-none-any.whl.metadata (2.5 kB)
+Collecting et-xmlfile (from openpyxl)
   Downloading et_xmlfile-2.0.0-py3-none-any.whl.metadata (2.7 kB)
 Downloading openpyxl-3.1.5-py2.py3-none-any.whl (250 kB)
-Downloading et_xmlfile-2.0.0-py3-none-any.whl (18 kB)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading et_xmlfile-2.0.0-py3-none-any.whl (18 kB)
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: et-xmlfile, openpyxl
@@ -1105,6 +1107,564 @@ Osto on rekisteröity kategoriaan &#39;KUNTARAHOITUS OY:LTÄ&#39;.
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Koodaile tänne!</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Jako tietyn kuukauden mukaan</span>
+
+<span class="n">ehto</span> <span class="o">=</span> <span class="mf">202310.0</span>
+<span class="n">jako</span> <span class="o">=</span> <span class="n">kokkola</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;Jakso == @ehto&quot;</span><span class="p">)</span>
+<span class="n">jako</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Kuntanumero</th>
+      <th>Kunta</th>
+      <th>Y-tunnus</th>
+      <th>Tili</th>
+      <th>Tili(T)</th>
+      <th>Tapahtumanumero</th>
+      <th>Reskontranro</th>
+      <th>Reskontranro(T)</th>
+      <th>Y-tunnus.1</th>
+      <th>Maatunnus</th>
+      <th>Jakso</th>
+      <th>Summa</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>289</th>
+      <td>272.0</td>
+      <td>Kokkola</td>
+      <td>0179377-8</td>
+      <td>1808.0</td>
+      <td>PALAUTUSKELPOISET</td>
+      <td>200490641.0</td>
+      <td>211944.0</td>
+      <td>NSA Invest Oy</td>
+      <td>MISSING</td>
+      <td>FI</td>
+      <td>202310.0</td>
+      <td>176.75</td>
+    </tr>
+    <tr>
+      <th>290</th>
+      <td>272.0</td>
+      <td>Kokkola</td>
+      <td>0179377-8</td>
+      <td>4820.0</td>
+      <td>HUONEISTOJEN VUOKRAT</td>
+      <td>200490641.0</td>
+      <td>211944.0</td>
+      <td>NSA Invest Oy</td>
+      <td>MISSING</td>
+      <td>FI</td>
+      <td>202310.0</td>
+      <td>736.45</td>
+    </tr>
+    <tr>
+      <th>315</th>
+      <td>272.0</td>
+      <td>Kokkola</td>
+      <td>0179377-8</td>
+      <td>1808.0</td>
+      <td>PALAUTUSKELPOISET</td>
+      <td>200490654.0</td>
+      <td>211944.0</td>
+      <td>NSA Invest Oy</td>
+      <td>MISSING</td>
+      <td>FI</td>
+      <td>202310.0</td>
+      <td>23.20</td>
+    </tr>
+    <tr>
+      <th>316</th>
+      <td>272.0</td>
+      <td>Kokkola</td>
+      <td>0179377-8</td>
+      <td>4820.0</td>
+      <td>HUONEISTOJEN VUOKRAT</td>
+      <td>200490654.0</td>
+      <td>211944.0</td>
+      <td>NSA Invest Oy</td>
+      <td>MISSING</td>
+      <td>FI</td>
+      <td>202310.0</td>
+      <td>96.65</td>
+    </tr>
+    <tr>
+      <th>335</th>
+      <td>272.0</td>
+      <td>Kokkola</td>
+      <td>0179377-8</td>
+      <td>1808.0</td>
+      <td>PALAUTUSKELPOISET</td>
+      <td>200490664.0</td>
+      <td>211944.0</td>
+      <td>NSA Invest Oy</td>
+      <td>MISSING</td>
+      <td>FI</td>
+      <td>202310.0</td>
+      <td>51.88</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>116611</th>
+      <td>272.0</td>
+      <td>Kokkola</td>
+      <td>0179377-8</td>
+      <td>4510.0</td>
+      <td>KIRJALLISUUS</td>
+      <td>200538856.0</td>
+      <td>201245.0</td>
+      <td>Funtor Oy</td>
+      <td>2225674-4</td>
+      <td>FI</td>
+      <td>202310.0</td>
+      <td>29.82</td>
+    </tr>
+    <tr>
+      <th>116616</th>
+      <td>272.0</td>
+      <td>Kokkola</td>
+      <td>0179377-8</td>
+      <td>1808.0</td>
+      <td>PALAUTUSKELPOISET</td>
+      <td>200538858.0</td>
+      <td>201245.0</td>
+      <td>Funtor Oy</td>
+      <td>2225674-4</td>
+      <td>FI</td>
+      <td>202310.0</td>
+      <td>5.90</td>
+    </tr>
+    <tr>
+      <th>116617</th>
+      <td>272.0</td>
+      <td>Kokkola</td>
+      <td>0179377-8</td>
+      <td>4510.0</td>
+      <td>KIRJALLISUUS</td>
+      <td>200538858.0</td>
+      <td>201245.0</td>
+      <td>Funtor Oy</td>
+      <td>2225674-4</td>
+      <td>FI</td>
+      <td>202310.0</td>
+      <td>58.99</td>
+    </tr>
+    <tr>
+      <th>116932</th>
+      <td>272.0</td>
+      <td>Kokkola</td>
+      <td>0179377-8</td>
+      <td>1808.0</td>
+      <td>PALAUTUSKELPOISET</td>
+      <td>200538987.0</td>
+      <td>200429.0</td>
+      <td>CGI Suomi Oy</td>
+      <td>0357502-9</td>
+      <td>FI</td>
+      <td>202310.0</td>
+      <td>217.85</td>
+    </tr>
+    <tr>
+      <th>116933</th>
+      <td>272.0</td>
+      <td>Kokkola</td>
+      <td>0179377-8</td>
+      <td>4360.0</td>
+      <td>POSTI- JA TELEPALVELUT</td>
+      <td>200538987.0</td>
+      <td>200429.0</td>
+      <td>CGI Suomi Oy</td>
+      <td>0357502-9</td>
+      <td>FI</td>
+      <td>202310.0</td>
+      <td>907.70</td>
+    </tr>
+  </tbody>
+</table>
+<p>14185 rows × 12 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Toistosilmukka, jolla voidaan tutkia eri ostokategorioita</span>
+
+<span class="c1"># Tässä eritellään erilaiset kategoriat</span>
+<span class="n">kategoriat</span> <span class="o">=</span> <span class="n">kokkola</span><span class="p">[</span><span class="s2">&quot;Tili(T)&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+
+<span class="c1"># Tässä toistetaan käskyt jokaiselle kategorialle</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">kategoriat</span><span class="p">:</span>
+    <span class="n">ala</span> <span class="o">=</span> <span class="n">kokkola</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;`Tili(T)` == @x&quot;</span><span class="p">)</span>
+    <span class="n">summa</span> <span class="o">=</span> <span class="n">ala</span><span class="p">[</span><span class="s2">&quot;Summa&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+    <span class="n">maksi</span> <span class="o">=</span> <span class="n">ala</span><span class="p">[</span><span class="s2">&quot;Summa&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s2"> ostojen summa oli </span><span class="si">{</span><span class="n">summa</span><span class="si">}</span><span class="s2"> euroa. Kallein yksittäinen ostos oli </span><span class="si">{</span><span class="n">maksi</span><span class="si">}</span><span class="s2"> euroa. </span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PALAUTUSKELPOISET ostojen summa oli 13224251.530000001 euroa. Kallein yksittäinen ostos oli 158354.66 euroa. 
+
+RAKENNUSMATERIAALI ostojen summa oli 1428409.99 euroa. Kallein yksittäinen ostos oli 100000.0 euroa. 
+
+MUUT VUOKRAT ostojen summa oli 1668565.7699999998 euroa. Kallein yksittäinen ostos oli 367462.5 euroa. 
+
+HUONEISTOJEN VUOKRAT ostojen summa oli 4763374.529999999 euroa. Kallein yksittäinen ostos oli 177224.85 euroa. 
+
+VAKUUTUKSET ostojen summa oli 185019.31 euroa. Kallein yksittäinen ostos oli 21194.09 euroa. 
+
+LAKISÄÄTEINEN TAPATURMAVAKUUTUS ostojen summa oli 256695.0 euroa. Kallein yksittäinen ostos oli 254361.51 euroa. 
+
+KOULUTUSMATKAT ostojen summa oli 26411.510000000002 euroa. Kallein yksittäinen ostos oli 2352.31 euroa. 
+
+PUHDISTUSAINEET JA TARVIKKEET ostojen summa oli 284381.3 euroa. Kallein yksittäinen ostos oli 4982.18 euroa. 
+
+TOIMISTO- JA ASIANTUNTIJAPALVELUT ostojen summa oli 5484250.88 euroa. Kallein yksittäinen ostos oli 110814.62 euroa. 
+
+RAKENNUSTEN VUOKRAT ostojen summa oli 547621.26 euroa. Kallein yksittäinen ostos oli 23920.85 euroa. 
+
+SEKALAISET MENOT ostojen summa oli 4656.39 euroa. Kallein yksittäinen ostos oli 2628.65 euroa. 
+
+KONEIDEN JA LAITTEIDEN VUOKRAT ostojen summa oli 2155159.75 euroa. Kallein yksittäinen ostos oli 240106.45 euroa. 
+
+TIETOTEKNIIKKA ULKOINEN ostojen summa oli 2320766.0700000003 euroa. Kallein yksittäinen ostos oli 243235.76 euroa. 
+
+MUU KALUSTO ostojen summa oli 772449.5999999999 euroa. Kallein yksittäinen ostos oli 53400.5 euroa. 
+
+ELINTARVIKKEET ostojen summa oli 2877234.49 euroa. Kallein yksittäinen ostos oli 8631.04 euroa. 
+
+KIRJALLISUUS ostojen summa oli 1512228.24 euroa. Kallein yksittäinen ostos oli 117596.65 euroa. 
+
+VARASTO OSTOT ostojen summa oli 449015.92999999993 euroa. Kallein yksittäinen ostos oli 29126.01 euroa. 
+
+MUUT JÄSENMAKSUT ostojen summa oli 1035571.03 euroa. Kallein yksittäinen ostos oli 287300.78 euroa. 
+
+OS YHTEISTOIMINTAKUSTANNUKSIIN ostojen summa oli 1050633.6400000001 euroa. Kallein yksittäinen ostos oli 287300.78 euroa. 
+
+RAVITSEMIS- JA MAJOITUSPALVELUT ostojen summa oli 300786.19999999995 euroa. Kallein yksittäinen ostos oli 4692.1 euroa. 
+
+TOIMISTOTARVIKKEET ostojen summa oli 458101.47000000003 euroa. Kallein yksittäinen ostos oli 10480.0 euroa. 
+
+POSTI- JA TELEPALVELUT ostojen summa oli 534057.38 euroa. Kallein yksittäinen ostos oli 25704.12 euroa. 
+
+SIIRTOSAAMISET (selvitettävät) ostojen summa oli 15188.53 euroa. Kallein yksittäinen ostos oli 15188.53 euroa. 
+
+VARTIOINTI ostojen summa oli 78180.74 euroa. Kallein yksittäinen ostos oli 2250.0 euroa. 
+
+MATKUSTUS-, KULJETUSPALVELUT ostojen summa oli 4064071.7300000004 euroa. Kallein yksittäinen ostos oli 54927.99 euroa. 
+
+MARKKINOINTIKULUT ostojen summa oli 472421.29 euroa. Kallein yksittäinen ostos oli 132935.0 euroa. 
+
+MUUT VÄLILLISET VEROT ostojen summa oli 4256.91 euroa. Kallein yksittäinen ostos oli 509.47 euroa. 
+
+SIIVOUS- JA PUHTAANAPITOPALVELUT ostojen summa oli 695342.84 euroa. Kallein yksittäinen ostos oli 50422.04 euroa. 
+
+HUOMIONOSOITUKSET JA MERKKIPÄIVÄT ostojen summa oli 58947.1 euroa. Kallein yksittäinen ostos oli 3750.0 euroa. 
+
+VESI ostojen summa oli 382039.82 euroa. Kallein yksittäinen ostos oli 39402.0 euroa. 
+
+KONEIDEN JA KALUSTON TARVIKKEET ostojen summa oli 571704.3700000001 euroa. Kallein yksittäinen ostos oli 39706.18 euroa. 
+
+LABORATORIOPALVELUT ostojen summa oli 13030.960000000001 euroa. Kallein yksittäinen ostos oli 1995.0 euroa. 
+
+MUUT TARVIKKEET ostojen summa oli 524480.91 euroa. Kallein yksittäinen ostos oli 25000.0 euroa. 
+
+KONEET(matkapuh.laskukon.ym pienkoneet) ostojen summa oli 480860.69999999995 euroa. Kallein yksittäinen ostos oli 40411.8 euroa. 
+
+ALV 5% LASKENNALLINEN P 205 ostojen summa oli 332741.07999999996 euroa. Kallein yksittäinen ostos oli 16544.85 euroa. 
+
+PALVELUSETELI ostojen summa oli 1493409.25 euroa. Kallein yksittäinen ostos oli 44384.93 euroa. 
+
+ALUEIDEN KUNNOSSAPITO ostojen summa oli 1851405.1600000001 euroa. Kallein yksittäinen ostos oli 73502.09 euroa. 
+
+KONEIDEN JA KALUSTON KUNNOSSAPITO ostojen summa oli 448912.76 euroa. Kallein yksittäinen ostos oli 19090.2 euroa. 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>VÄHENNYSKELPOISET ostojen summa oli 2695.2400000000002 euroa. Kallein yksittäinen ostos oli 566.13 euroa. 
+
+TARVIKEOSTOT VARASTOON ostojen summa oli 268.95 euroa. Kallein yksittäinen ostos oli 268.95 euroa. 
+
+OPETUSPALVELUT ostojen summa oli 355986.22 euroa. Kallein yksittäinen ostos oli 24720.0 euroa. 
+
+AJONEUVO- JA KÄYTTÖVOIMAVERO ostojen summa oli 25824.000000000004 euroa. Kallein yksittäinen ostos oli 819.84 euroa. 
+
+VESILAITOS/TEKN.VIRASTO OSTO ostojen summa oli 312480.28 euroa. Kallein yksittäinen ostos oli 16866.66 euroa. 
+
+RAKENNUSTEN KUNNOSSAPITO ostojen summa oli 771617.53 euroa. Kallein yksittäinen ostos oli 20000.0 euroa. 
+
+LASTEN,NUORTEN JA PERHEIDEN HYVINVOINTIRAHASTO ostojen summa oli 30278.61 euroa. Kallein yksittäinen ostos oli 2984.0 euroa. 
+
+MUU KIINTEISTÖMATERIAALI ostojen summa oli 699873.4199999999 euroa. Kallein yksittäinen ostos oli 46332.65 euroa. 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>SÄHKÖ ostojen summa oli 3119017.3 euroa. Kallein yksittäinen ostos oli 79218.04 euroa. 
+
+LÄMMITYSKUSTANNUKSET ostojen summa oli 2828165.3200000003 euroa. Kallein yksittäinen ostos oli 158103.57 euroa. 
+
+KIINT. RAK. KUNNOSSAPITOPALVELUT ostojen summa oli 1051412.17 euroa. Kallein yksittäinen ostos oli 60750.0 euroa. 
+
+LAINASAAMISET SATAMA OY ostojen summa oli 2000000.0 euroa. Kallein yksittäinen ostos oli 2000000.0 euroa. 
+
+VAATTEISTO ostojen summa oli 178238.88 euroa. Kallein yksittäinen ostos oli 3828.75 euroa. 
+
+SÄHKÖKUNNOSSAPITO ostojen summa oli 461899.26 euroa. Kallein yksittäinen ostos oli 46978.94 euroa. 
+
+PESULAPALVELUT ostojen summa oli 362252.93 euroa. Kallein yksittäinen ostos oli 3292.45 euroa. 
+
+TYÖKALU- YM KULUKORVAUKSET ostojen summa oli 6957.450000000001 euroa. Kallein yksittäinen ostos oli 463.1 euroa. 
+
+PAINATUKSET JA ILMOITUKSET ostojen summa oli 196173.65999999997 euroa. Kallein yksittäinen ostos oli 7908.64 euroa. 
+
+KULTTUURIPALVELUT ostojen summa oli 168555.15 euroa. Kallein yksittäinen ostos oli 58000.0 euroa. 
+
+JÄSENMAKS KESKUSJÄRJESTÖILLE ostojen summa oli 133012.64 euroa. Kallein yksittäinen ostos oli 100721.64 euroa. 
+
+AV KOTITALOUKSILLE ostojen summa oli 3456584.59 euroa. Kallein yksittäinen ostos oli 332417.93 euroa. 
+
+TIEMAKSUT ostojen summa oli 6466.48 euroa. Kallein yksittäinen ostos oli 1690.95 euroa. 
+
+HOITOTARVIKKEET ostojen summa oli 14584.590000000002 euroa. Kallein yksittäinen ostos oli 1841.45 euroa. 
+
+POLTTO- JA VOITELUAINEET ostojen summa oli 164294.53999999998 euroa. Kallein yksittäinen ostos oli 5140.39 euroa. 
+
+RUOKAPALVELUT ostojen summa oli 690.8599999999999 euroa. Kallein yksittäinen ostos oli 307.02 euroa. 
+
+PALVELUOSTOT MUILTA ostojen summa oli 161524.59 euroa. Kallein yksittäinen ostos oli 12313.7 euroa. 
+
+MUUT TUOTOT ostojen summa oli 48090.509999999995 euroa. Kallein yksittäinen ostos oli 24956.0 euroa. 
+
+LVIS-KUNNOSSAPITO ostojen summa oli 623659.5900000001 euroa. Kallein yksittäinen ostos oli 70000.0 euroa. 
+
+KOULUTUKSEEN LIITTYVÄT MAJOITUS- JA RAVITSEMISPALVELUT ostojen summa oli 95825.15000000001 euroa. Kallein yksittäinen ostos oli 3726.88 euroa. 
+
+URAKAT/INVESTOINNIT ostojen summa oli 14104374.29 euroa. Kallein yksittäinen ostos oli 659811.09 euroa. 
+
+VAPAA-AJAN PALVELUT ostojen summa oli 294034.56000000006 euroa. Kallein yksittäinen ostos oli 32746.36 euroa. 
+
+ATERIAPALVELUT ostojen summa oli 147172.49 euroa. Kallein yksittäinen ostos oli 16456.0 euroa. 
+
+TAKUUMAKSUT ostojen summa oli 24500.0 euroa. Kallein yksittäinen ostos oli 10000.0 euroa. 
+
+KÄYTTÖOMAISUUDEN OSTO ostojen summa oli 895532.1900000001 euroa. Kallein yksittäinen ostos oli 650000.0 euroa. 
+
+LÄÄKKEET ostojen summa oli 4386.459999999999 euroa. Kallein yksittäinen ostos oli 1665.0 euroa. 
+
+AUTOKATSASTUS JA REKISTERÖINTI ostojen summa oli 5755.0 euroa. Kallein yksittäinen ostos oli 486.44 euroa. 
+
+KORVAUKSET KARJANOMISTAJILLE ostojen summa oli 65911.67 euroa. Kallein yksittäinen ostos oli 1904.62 euroa. 
+
+ÖLJYN OSTOT ostojen summa oli 18039.08 euroa. Kallein yksittäinen ostos oli 3608.78 euroa. 
+
+MUUT SIIRTOVELAT ostojen summa oli 6277517.239999999 euroa. Kallein yksittäinen ostos oli 5955612.18 euroa. 
+
+SEKALAISET PALVELUT ostojen summa oli 11754.27 euroa. Kallein yksittäinen ostos oli 4800.0 euroa. 
+
+ISÄNNÖINTIPALVELUT ostojen summa oli 94526.59999999999 euroa. Kallein yksittäinen ostos oli 11611.76 euroa. 
+
+TALONMIESPALVELUT ostojen summa oli 172756.39 euroa. Kallein yksittäinen ostos oli 15482.34 euroa. 
+
+PALKKA/ASIANTUNTIJAPALKKIOT ostojen summa oli 5278.07 euroa. Kallein yksittäinen ostos oli 2500.0 euroa. 
+
+OMAN AUTON KÄYTTÖKORVAUS ostojen summa oli 2401.7099999999996 euroa. Kallein yksittäinen ostos oli 506.68 euroa. 
+
+ELÄINTENHOITOKULUT ostojen summa oli 54134.93 euroa. Kallein yksittäinen ostos oli 4768.23 euroa. 
+
+KOKOUSPALKKIOT ostojen summa oli 56.410000000000004 euroa. Kallein yksittäinen ostos oli 21.75 euroa. 
+
+KOULUMATKATUKI ostojen summa oli 923.5 euroa. Kallein yksittäinen ostos oli 479.0 euroa. 
+
+AKTIVOIDUT PALVELUT ostojen summa oli 798.75 euroa. Kallein yksittäinen ostos oli 66.01 euroa. 
+
+VALTIOLTA ostojen summa oli 50821.14 euroa. Kallein yksittäinen ostos oli 36157.0 euroa. 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>VUOKRAENNAKOT ostojen summa oli 649325.1299999999 euroa. Kallein yksittäinen ostos oli 61935.54 euroa. 
+
+APUVÄLINEET/LÄÄKINNÄLLINEN KUNTOUTUS ostojen summa oli 141.77 euroa. Kallein yksittäinen ostos oli 127.4 euroa. 
+
+SOSIAALI-, TERVEYSPALVELUT ostojen summa oli 2038077.48 euroa. Kallein yksittäinen ostos oli 264577.89 euroa. 
+
+MUUT HENKILÖSTÖPALVELUT ostojen summa oli 10511.85 euroa. Kallein yksittäinen ostos oli 758.56 euroa. 
+
+LABORATORIOTARVIKKEET ostojen summa oli 5369.99 euroa. Kallein yksittäinen ostos oli 2328.17 euroa. 
+
+ALUEIDEN KUNNOSSAPITO/PUUTARHA ostojen summa oli 16590.0 euroa. Kallein yksittäinen ostos oli 11445.0 euroa. 
+
+MUUT KIINTEISTÖPALVELUT ostojen summa oli 28318.260000000002 euroa. Kallein yksittäinen ostos oli 5455.0 euroa. 
+
+MYYNTIRESKONTRAN SELVITTELYTILI ostojen summa oli 23372.14 euroa. Kallein yksittäinen ostos oli 5958.44 euroa. 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>ULKOMAISILTA RAHOITUS- JA VAK.LAITOKSIL ostojen summa oli 1158500.0 euroa. Kallein yksittäinen ostos oli 1158500.0 euroa. 
+
+ULKOMAISILTA RAHOITUS- JA VAK.LAIT ostojen summa oli 1158500.0 euroa. Kallein yksittäinen ostos oli 1158500.0 euroa. 
+
+PALVELUOSTOT KUNNILTA ostojen summa oli 242552.82999999996 euroa. Kallein yksittäinen ostos oli 19112.62 euroa. 
+
+SEKALAISET TULOT ostojen summa oli 4.0 euroa. Kallein yksittäinen ostos oli 4.0 euroa. 
+
+MUUT SIIRTOSAAMISET ostojen summa oli 36045.9 euroa. Kallein yksittäinen ostos oli 10104.59 euroa. 
+
+KP YMP.TERVEYDENHUOLTO ostojen summa oli 36594.57 euroa. Kallein yksittäinen ostos oli 27781.94 euroa. 
+
+MUUT RAHOITUSKULUT_ ostojen summa oli 1246.2200000000003 euroa. Kallein yksittäinen ostos oli 750.0 euroa. 
+
+PALVELUOSTOT KUNTAYHTYMILTÄ ostojen summa oli 146223.09 euroa. Kallein yksittäinen ostos oli 24637.89 euroa. 
+
+ELINTARVIKEVALVONNAN MAKSUT ostojen summa oli 333.89 euroa. Kallein yksittäinen ostos oli 103.49 euroa. 
+
+PALVELUOSTOT VALTIOLTA ostojen summa oli 27964.26 euroa. Kallein yksittäinen ostos oli 3631.81 euroa. 
+
+KOULUTUSKORVAUKSET OPPISOP ostojen summa oli 375.0 euroa. Kallein yksittäinen ostos oli 375.0 euroa. 
+
+KUNTARAHOITUS OY:LTÄ ostojen summa oli 30621462.0 euroa. Kallein yksittäinen ostos oli 8910000.0 euroa. 
+
+KURSSIMAKSUT ostojen summa oli 27.0 euroa. Kallein yksittäinen ostos oli 27.0 euroa. 
+
+VIITESUORITUKSET ostojen summa oli 2845.6400000000003 euroa. Kallein yksittäinen ostos oli 1049.44 euroa. 
+
+VETERAANIJALKAHOITO ostojen summa oli -1243.68 euroa. Kallein yksittäinen ostos oli -1243.68 euroa. 
+
+SAIRAUSVAKUUTUSKORVAUKSET ostojen summa oli 3294.2999999999997 euroa. Kallein yksittäinen ostos oli 2428.72 euroa. 
+
+VAHTIMESTARIPALVELUT ostojen summa oli 200.97 euroa. Kallein yksittäinen ostos oli 120.97 euroa. 
+
+TILINTARKASTUSPALVELUT ostojen summa oli 39417.0 euroa. Kallein yksittäinen ostos oli 11764.5 euroa. 
+
+TAPATURMAKORVAUKSET ostojen summa oli 433.35 euroa. Kallein yksittäinen ostos oli 311.44 euroa. 
+
+MUUT VÄLITTÖMÄT VEROT ostojen summa oli 576.08 euroa. Kallein yksittäinen ostos oli 358.68 euroa. 
+
+JÄTEVESI ostojen summa oli 417.69 euroa. Kallein yksittäinen ostos oli 127.28 euroa. 
+
+ALUSTAVA OSTOLASKUJEN TILI ostojen summa oli 22575.71 euroa. Kallein yksittäinen ostos oli 21063.07 euroa. 
+
+VAHINKOTAP. OMAVASTUUT/VAHINKOTAP.KORV. ostojen summa oli 2910.73 euroa. Kallein yksittäinen ostos oli 2518.06 euroa. 
+
+MÖKKIVUOKRAT KELOVALTA ostojen summa oli 7676.0 euroa. Kallein yksittäinen ostos oli 2859.5 euroa. 
+
+A HONGELLIN KIRJASTORAHASTO ostojen summa oli 263.84000000000003 euroa. Kallein yksittäinen ostos oli 124.28 euroa. 
+
+OS  HALLINNON MEN ostojen summa oli 5.05 euroa. Kallein yksittäinen ostos oli 5.05 euroa. 
+
+SEKALAISET MYYNTITULOT ostojen summa oli 2005.0599999999997 euroa. Kallein yksittäinen ostos oli 217.66 euroa. 
+
+VEROLLISET MATKAKORVAUKSET ostojen summa oli 273.0 euroa. Kallein yksittäinen ostos oli 273.0 euroa. 
+
+MUUT KONEET JA KALUSTO ostojen summa oli 556.6800000000001 euroa. Kallein yksittäinen ostos oli 447.0 euroa. 
+
+MAANMITTAUSMAKSUT ostojen summa oli 9241.02 euroa. Kallein yksittäinen ostos oli 5706.5 euroa. 
+
+LIITTYMISMAKSUT/KOM HANKINTA ostojen summa oli 4403.23 euroa. Kallein yksittäinen ostos oli 3153.23 euroa. 
+
+APURAHAT ostojen summa oli 100.0 euroa. Kallein yksittäinen ostos oli 100.0 euroa. 
+
+JOH KORTIN RAHASTO ostojen summa oli 257.0 euroa. Kallein yksittäinen ostos oli 257.0 euroa. 
+
+KIVINIITYN LUIKION STIP RAHASTO ostojen summa oli 18.0 euroa. Kallein yksittäinen ostos oli 18.0 euroa. 
+
+LÄNSIP YLÄAST JA YHT LUKIO STIP RAH ostojen summa oli 62.0 euroa. Kallein yksittäinen ostos oli 62.0 euroa. 
+
+STIPENDIT ostojen summa oli 200.0 euroa. Kallein yksittäinen ostos oli 200.0 euroa. 
+
+ROOSIN JA LUOMALAN RAHASTO ostojen summa oli 1750.0 euroa. Kallein yksittäinen ostos oli 500.0 euroa. 
+
+HJALMAR PEDERIN RAHASTO ostojen summa oli 3500.0 euroa. Kallein yksittäinen ostos oli 2000.0 euroa. 
+
+ASIAKASPALV OSTOT/K-PSHP ostojen summa oli 162.9 euroa. Kallein yksittäinen ostos oli 101.61 euroa. 
+
+TYÖSUHTEISET ostojen summa oli 177.06 euroa. Kallein yksittäinen ostos oli 177.06 euroa. 
+
+KOKOELMAT ostojen summa oli 4355.0 euroa. Kallein yksittäinen ostos oli 3300.0 euroa. 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>PESULATULOT ostojen summa oli 63.51 euroa. Kallein yksittäinen ostos oli 63.51 euroa. 
+
+EDUSTUS ostojen summa oli 882.3600000000001 euroa. Kallein yksittäinen ostos oli 561.29 euroa. 
+
+ERILLISKORVAUKSET ostojen summa oli 740.0 euroa. Kallein yksittäinen ostos oli 600.0 euroa. 
+
+KP ALUEPELASTUS ostojen summa oli 1030724.3699999999 euroa. Kallein yksittäinen ostos oli 391967.17 euroa. 
+
+MURSKESORAVARASTO ostojen summa oli 8088.59 euroa. Kallein yksittäinen ostos oli 8088.59 euroa. 
+
+JÄTEHUOLTOPALVELUT ostojen summa oli 39730.469999999994 euroa. Kallein yksittäinen ostos oli 10418.54 euroa. 
+
+MAA- JA VESIALUEIDEN VUOKRAT ostojen summa oli 3096.0 euroa. Kallein yksittäinen ostos oli 3096.0 euroa. 
+
+KIINTEISTÖVEROT ostojen summa oli 217308.55 euroa. Kallein yksittäinen ostos oli 48874.15 euroa. 
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>MAJOITUKSEEN LIITTYVÄ AAMIAINEN ostojen summa oli 4967.3099999999995 euroa. Kallein yksittäinen ostos oli 2191.8 euroa. 
+
+MUSEOKORTTI VÄLITYSTILI ostojen summa oli 1051.0 euroa. Kallein yksittäinen ostos oli 905.5 euroa. 
+
+MUUT MAKSUT ostojen summa oli 8.68 euroa. Kallein yksittäinen ostos oli 5.61 euroa. 
+
+TILOJEN KÄYTTÖKORVAUKSET ostojen summa oli 11.8 euroa. Kallein yksittäinen ostos oli 11.8 euroa. 
+
+MUUT KULUKORVAUKSET ostojen summa oli 162.45 euroa. Kallein yksittäinen ostos oli 156.0 euroa. 
+
+TIETOTEKNIIKKAPALVELUT SISÄINEN ostojen summa oli 4819.0 euroa. Kallein yksittäinen ostos oli 4819.0 euroa. 
+
+KUNTOUTTAVA TYÖTOIMINTA ostojen summa oli 2625.0 euroa. Kallein yksittäinen ostos oli 280.0 euroa. 
+
+TYÖLL/OSITTAIN KORVATTAVAT ostojen summa oli 140.0 euroa. Kallein yksittäinen ostos oli 70.0 euroa. 
+
+MUUT SISÄISET PALVELUT ostojen summa oli 98.38999999999999 euroa. Kallein yksittäinen ostos oli 64.52 euroa. 
+
+MUUT HENKILÖSTÖMENOJEN KORJAUSERÄT ostojen summa oli 175.0 euroa. Kallein yksittäinen ostos oli 70.0 euroa. 
+
+TORI- JA MUUT MYYNTIPAIKKAVUOKRAT ostojen summa oli 10450.0 euroa. Kallein yksittäinen ostos oli 10450.0 euroa. 
+
+MUUT VUOKRATUOTOT ostojen summa oli 347.2 euroa. Kallein yksittäinen ostos oli 347.2 euroa. 
+
+PAINOTUOTTEIDEN MYYNTI (poistuva) ostojen summa oli 49.75 euroa. Kallein yksittäinen ostos oli 49.75 euroa. 
+
+AKTIA 405594-21338 TALOUSYKSIKKÖ ostojen summa oli 67.98 euroa. Kallein yksittäinen ostos oli 60.0 euroa. 
+
+LAINASAAMISET TYTÄRYHTEISÖILTÄ ostojen summa oli 167100.0 euroa. Kallein yksittäinen ostos oli 167100.0 euroa. 
+
+nan ostojen summa oli 0.0 euroa. Kallein yksittäinen ostos oli nan euroa. 
 </pre></div>
 </div>
 </div>

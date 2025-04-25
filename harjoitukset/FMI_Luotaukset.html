@@ -512,9 +512,7 @@ Requirement already satisfied: requests in /opt/hostedtoolcache/Python/3.13.3/x6
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting defusedxml (from fmiopendata)
   Downloading defusedxml-0.7.1-py2.py3-none-any.whl.metadata (32 kB)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in /opt/hostedtoolcache/Python/3.13.3/x64/lib/python3.13/site-packages (from requests-&gt;fmiopendata) (3.4.1)
+Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in /opt/hostedtoolcache/Python/3.13.3/x64/lib/python3.13/site-packages (from requests-&gt;fmiopendata) (3.4.1)
 Requirement already satisfied: idna&lt;4,&gt;=2.5 in /opt/hostedtoolcache/Python/3.13.3/x64/lib/python3.13/site-packages (from requests-&gt;fmiopendata) (3.10)
 Requirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in /opt/hostedtoolcache/Python/3.13.3/x64/lib/python3.13/site-packages (from requests-&gt;fmiopendata) (2.4.0)
 Requirement already satisfied: certifi&gt;=2017.4.17 in /opt/hostedtoolcache/Python/3.13.3/x64/lib/python3.13/site-packages (from requests-&gt;fmiopendata) (2025.1.31)
@@ -529,7 +527,7 @@ Building wheels for collected packages: fmiopendata
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> done
-?25h  Created wheel for fmiopendata: filename=fmiopendata-0.4.3-py3-none-any.whl size=30959 sha256=faa0568379e389df48024f691efa33a73108a52a0c25a6a7f058a2c7b209f3f4
+?25h  Created wheel for fmiopendata: filename=fmiopendata-0.4.3-py3-none-any.whl size=30959 sha256=1fd11ed6cd90561abbc50dfd8ba30bfb6f715497533a27245db9ee5166473f81
   Stored in directory: /home/runner/.cache/pip/wheels/8b/08/38/ca3e95e1d2083a04c6c4147e4d76c62b4d3b5f75dcb7edb285
 Successfully built fmiopendata
 </pre></div>
@@ -585,7 +583,7 @@ Successfully built fmiopendata
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1572
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2487
 </pre></div>
 </div>
 </div>
@@ -629,47 +627,7 @@ Successfully built fmiopendata
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">line</span> <span class="mi">9</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Paine (hPa)&quot;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="n">color</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">lampotila0</span><span class="p">,</span> <span class="n">paine0</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Lämpötila&quot;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="n">color</span><span class="p">)</span>         <span class="c1"># Piirretään (T, p)</span>
-<span class="ne">----&gt; </span><span class="mi">9</span> <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kastepiste0</span><span class="p">,</span> <span class="n">paine0</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Kastepiste&quot;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;cyan&quot;</span><span class="p">)</span>       <span class="c1"># Piirretään (Td, p)</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span> <span class="o">=</span> <span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="n">labelcolor</span> <span class="o">=</span> <span class="n">color</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span> <span class="c1"># Käännetään skaala ja luodaan toinen y-akseli (myös ax.set_ylim(alaraja, yläraja) toimii)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.13.3/x64/lib/python3.13/site-packages/matplotlib/axes/_axes.py:1777,</span> in <span class="ni">Axes.plot</span><span class="nt">(self, scalex, scaley, data, *args, **kwargs)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1534</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1535</span><span class="sd"> Plot y versus x as lines and/or markers.</span>
-<span class="g g-Whitespace">   </span><span class="mi">1536</span><span class="sd"> </span>
-<span class="sd">   (...)   1774 (``&#39;green&#39;``) or hex strings (``&#39;#008000&#39;``).</span>
-<span class="g g-Whitespace">   </span><span class="mi">1775</span><span class="sd"> &quot;&quot;&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1776</span> <span class="n">kwargs</span> <span class="o">=</span> <span class="n">cbook</span><span class="o">.</span><span class="n">normalize_kwargs</span><span class="p">(</span><span class="n">kwargs</span><span class="p">,</span> <span class="n">mlines</span><span class="o">.</span><span class="n">Line2D</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">1777</span> <span class="n">lines</span> <span class="o">=</span> <span class="p">[</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">_get_lines</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)]</span>
-<span class="g g-Whitespace">   </span><span class="mi">1778</span> <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="n">lines</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">1779</span>     <span class="bp">self</span><span class="o">.</span><span class="n">add_line</span><span class="p">(</span><span class="n">line</span><span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.13.3/x64/lib/python3.13/site-packages/matplotlib/axes/_base.py:297,</span> in <span class="ni">_process_plot_var_args.__call__</span><span class="nt">(self, axes, data, return_kwargs, *args, **kwargs)</span>
-<span class="g g-Whitespace">    </span><span class="mi">295</span>     <span class="n">this</span> <span class="o">+=</span> <span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span>
-<span class="g g-Whitespace">    </span><span class="mi">296</span>     <span class="n">args</span> <span class="o">=</span> <span class="n">args</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
-<span class="ne">--&gt; </span><span class="mi">297</span> <span class="k">yield from</span> <span class="bp">self</span><span class="o">.</span><span class="n">_plot_args</span><span class="p">(</span>
-<span class="g g-Whitespace">    </span><span class="mi">298</span>     <span class="n">axes</span><span class="p">,</span> <span class="n">this</span><span class="p">,</span> <span class="n">kwargs</span><span class="p">,</span> <span class="n">ambiguous_fmt_datakey</span><span class="o">=</span><span class="n">ambiguous_fmt_datakey</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">299</span>     <span class="n">return_kwargs</span><span class="o">=</span><span class="n">return_kwargs</span>
-<span class="g g-Whitespace">    </span><span class="mi">300</span> <span class="p">)</span>
-
-<span class="nn">File /opt/hostedtoolcache/Python/3.13.3/x64/lib/python3.13/site-packages/matplotlib/axes/_base.py:494,</span> in <span class="ni">_process_plot_var_args._plot_args</span><span class="nt">(self, axes, tup, kwargs, return_kwargs, ambiguous_fmt_datakey)</span>
-<span class="g g-Whitespace">    </span><span class="mi">491</span>     <span class="n">axes</span><span class="o">.</span><span class="n">yaxis</span><span class="o">.</span><span class="n">update_units</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">493</span> <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="n">y</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]:</span>
-<span class="ne">--&gt; </span><span class="mi">494</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;x and y must have same first dimension, but &quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">495</span>                      <span class="sa">f</span><span class="s2">&quot;have shapes </span><span class="si">{</span><span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2"> and </span><span class="si">{</span><span class="n">y</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">496</span> <span class="k">if</span> <span class="n">x</span><span class="o">.</span><span class="n">ndim</span> <span class="o">&gt;</span> <span class="mi">2</span> <span class="ow">or</span> <span class="n">y</span><span class="o">.</span><span class="n">ndim</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">:</span>
-<span class="g g-Whitespace">    </span><span class="mi">497</span>     <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;x and y can be no greater than 2D, but have &quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">498</span>                      <span class="sa">f</span><span class="s2">&quot;shapes </span><span class="si">{</span><span class="n">x</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2"> and </span><span class="si">{</span><span class="n">y</span><span class="o">.</span><span class="n">shape</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-
-<span class="ne">ValueError</span>: x and y must have same first dimension, but have shapes (1571,) and (1572,)
-</pre></div>
-</div>
-<img alt="../_images/e82bd5ff2a8a24f00e79aedc5384d8c1e5aca00b33f1e888d52f899b91d875dc.png" src="../_images/e82bd5ff2a8a24f00e79aedc5384d8c1e5aca00b33f1e888d52f899b91d875dc.png" />
+<img alt="../_images/7993a1677c7d909e52900c3a94dcda7c4e6854d20efbfe5058eb6716e79eafba.png" src="../_images/7993a1677c7d909e52900c3a94dcda7c4e6854d20efbfe5058eb6716e79eafba.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -698,7 +656,7 @@ Successfully built fmiopendata
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2980
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2332
 </pre></div>
 </div>
 </div>
@@ -742,7 +700,7 @@ Successfully built fmiopendata
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/c79f553e6f1a206588746d85bb750409f4b819a84e60d9c585c5f602fabc085d.png" src="../_images/c79f553e6f1a206588746d85bb750409f4b819a84e60d9c585c5f602fabc085d.png" />
+<img alt="../_images/4ff8769e0fd4fdb5dc1a83ce3bf3e0c5655fbe0d19b059b6d52a498df0932676.png" src="../_images/4ff8769e0fd4fdb5dc1a83ce3bf3e0c5655fbe0d19b059b6d52a498df0932676.png" />
 </div>
 </div>
 </section>

@@ -495,16 +495,7 @@ document.write(`
 <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 
 <span class="c1"># Jotkut Pythonin versiot eivät oletusarvoisesti tue pandaksen kautta Excel-tiedostojen lukemista. Alla oleva käsky auttaa virheilmoituksiin.</span>
-<span class="o">%</span><span class="k">pip</span> install openpyxl
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: openpyxl in /opt/hostedtoolcache/Python/3.13.3/x64/lib/python3.13/site-packages (3.1.5)
-Requirement already satisfied: et-xmlfile in /opt/hostedtoolcache/Python/3.13.3/x64/lib/python3.13/site-packages (from openpyxl) (2.0.0)
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Note: you may need to restart the kernel to use updated packages.
+<span class="c1">#%pip install openpyxl</span>
 </pre></div>
 </div>
 </div>
@@ -1977,6 +1968,62 @@ Niiden aineistoista voisi kysyä esimerkiksi seuraavia:</p>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[np.float64(187.71), np.float64(153.57), np.float64(198.81), np.float64(194.01), np.float64(97.89), np.float64(59.81), np.float64(80.26), np.float64(198.69), np.float64(153.66), np.float64(128.64)]
 Keskimääräinen vuosikasvukerroin 9 vuoden yli on ollut 0.9588825215596776.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Jos odotettavissa on negatiivisia suhteita, voidaan kirjoittaa sille poikkeusviesti.</span>
+
+<span class="c1"># Valitaan suureet</span>
+<span class="n">ehto1</span> <span class="o">=</span> <span class="s2">&quot;P/E-luku&quot;</span>
+<span class="n">ehto2</span> <span class="o">=</span> <span class="s2">&quot;Tulos (E)&quot;</span>
+
+<span class="c1"># Otetaan kyseinen rivi</span>
+<span class="n">rivi1</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;Afarak_Group_Oyj == @ehto1&#39;</span><span class="p">)</span>
+<span class="n">rivi1</span> <span class="o">=</span> <span class="n">rivi1</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">:]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+
+<span class="n">rivi2</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s1">&#39;Afarak_Group_Oyj == @ehto&#39;</span><span class="p">)</span>
+<span class="n">rivi2</span> <span class="o">=</span> <span class="n">rivi2</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">:]</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ehto1</span><span class="si">}</span><span class="s2"> on </span><span class="si">{</span><span class="n">rivi1</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">ehto2</span><span class="si">}</span><span class="s2"> on </span><span class="si">{</span><span class="n">rivi2</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Jos kasvu on matemaattisesti</span>
+<span class="c1"># (lähtöarvo) * (kasvuprosentti)**(vuosien määrä) = (loppuarvo), niin</span>
+<span class="c1"># (kasvuprosentti) = (vuosien juuri[(loppuarvo / lähtöarvo)])</span>
+<span class="n">vuodet</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">rivi2</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span>
+<span class="n">suhde</span> <span class="o">=</span> <span class="p">(</span><span class="n">rivi2</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">/</span> <span class="n">rivi2</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+<span class="k">if</span> <span class="n">suhde</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="n">kasvu</span> <span class="o">=</span> <span class="n">suhde</span><span class="o">**</span><span class="p">(</span><span class="mf">1.0</span><span class="o">/</span><span class="n">vuodet</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">kasvu</span> <span class="o">=</span> <span class="s2">&quot;laskukelvoton&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Keskimääräinen vuosikasvukerroin suureelle </span><span class="si">{</span><span class="n">ehto2</span><span class="si">}</span><span class="s2"> </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">rivi2</span><span class="p">)</span><span class="o">-</span><span class="mi">1</span><span class="si">}</span><span class="s2"> vuoden yli on ollut </span><span class="si">{</span><span class="n">kasvu</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+
+<span class="c1"># Lasketaan PEG</span>
+
+<span class="n">PEG</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">rivi1</span><span class="p">):</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="n">rivi</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">/</span><span class="p">(</span><span class="n">rivi2</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">]</span><span class="o">/</span><span class="n">rivi2</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="o">-</span><span class="mi">9999</span>
+    <span class="n">PEG</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+    <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;PEG on </span><span class="si">{</span><span class="n">PEG</span><span class="si">}</span><span class="s2">. Jos listassa on arvo -9999, arvoa ei voitu laskea.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>P/E-luku on [np.float64(12.83), np.float64(-81.69), np.float64(46.55), np.float64(-16.5), np.float64(-26.52), np.float64(-24.64), np.float64(-15.66), np.float64(2.03), np.float64(11.03), np.float64(-10.61)]
+Tulos (E) on [np.float64(187.71), np.float64(153.57), np.float64(198.81), np.float64(194.01), np.float64(97.89), np.float64(59.81), np.float64(80.26), np.float64(198.69), np.float64(153.66), np.float64(128.64)]
+Keskimääräinen vuosikasvukerroin suureelle Tulos (E) 9 vuoden yli on ollut 0.9588825215596776.
+PEG on [np.float64(229.43963078726316), np.float64(118.6245405160706), np.float64(203.7287567651152), np.float64(384.5120042905302), np.float64(160.21488212673466), np.float64(44.570596810366304), np.float64(32.42069354270472), np.float64(256.91602303787585), np.float64(183.54629664179106), -9999]. Jos listassa on arvo -9999, arvoa ei voitu laskea.
 </pre></div>
 </div>
 </div>

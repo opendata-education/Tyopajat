@@ -469,7 +469,14 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tyokalut">1. Työkalut</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aineistot">2. Aineistot</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aineiston-korjaus">3. Aineiston korjaus</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analyysia">4. Analyysiä</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analyysia">4. Analyysiä</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vedenkorkeus">4.1 Vedenkorkeus</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#veden-lampotilat">4.2 Veden lämpötilat</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ilman-lampotilat">4.3 Ilman lämpötilat</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tuuli">4.4 Tuuli</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sade-ja-lumi">4.5 Sade ja lumi</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -536,33 +543,33 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2160/2975525808.py:9: FutureWarning: The &#39;keep_date_col&#39; keyword in pd.read_csv is deprecated and will be removed in a future version. Explicitly remove unwanted columns after parsing instead.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2146/2975525808.py:9: FutureWarning: The &#39;keep_date_col&#39; keyword in pd.read_csv is deprecated and will be removed in a future version. Explicitly remove unwanted columns after parsing instead.
   leppa11 = pd.read_csv(&quot;https://github.com/opendata-education/Tyopajat/raw/refs/heads/main/materiaali/data/Pietarsaari_Leppaluoto11.csv&quot;, sep = &quot;,&quot;,
-/tmp/ipykernel_2160/2975525808.py:9: FutureWarning: Support for nested sequences for &#39;parse_dates&#39; in pd.read_csv is deprecated. Combine the desired columns with pd.to_datetime after parsing instead.
+/tmp/ipykernel_2146/2975525808.py:9: FutureWarning: Support for nested sequences for &#39;parse_dates&#39; in pd.read_csv is deprecated. Combine the desired columns with pd.to_datetime after parsing instead.
   leppa11 = pd.read_csv(&quot;https://github.com/opendata-education/Tyopajat/raw/refs/heads/main/materiaali/data/Pietarsaari_Leppaluoto11.csv&quot;, sep = &quot;,&quot;,
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2160/2975525808.py:11: FutureWarning: The &#39;keep_date_col&#39; keyword in pd.read_csv is deprecated and will be removed in a future version. Explicitly remove unwanted columns after parsing instead.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2146/2975525808.py:11: FutureWarning: The &#39;keep_date_col&#39; keyword in pd.read_csv is deprecated and will be removed in a future version. Explicitly remove unwanted columns after parsing instead.
   leppa01 = pd.read_csv(&quot;https://github.com/opendata-education/Tyopajat/raw/refs/heads/main/materiaali/data/Pietarsaari_Leppaluoto01.csv&quot;, sep = &quot;,&quot;,
-/tmp/ipykernel_2160/2975525808.py:11: FutureWarning: Support for nested sequences for &#39;parse_dates&#39; in pd.read_csv is deprecated. Combine the desired columns with pd.to_datetime after parsing instead.
+/tmp/ipykernel_2146/2975525808.py:11: FutureWarning: Support for nested sequences for &#39;parse_dates&#39; in pd.read_csv is deprecated. Combine the desired columns with pd.to_datetime after parsing instead.
   leppa01 = pd.read_csv(&quot;https://github.com/opendata-education/Tyopajat/raw/refs/heads/main/materiaali/data/Pietarsaari_Leppaluoto01.csv&quot;, sep = &quot;,&quot;,
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2160/2975525808.py:13: FutureWarning: The &#39;keep_date_col&#39; keyword in pd.read_csv is deprecated and will be removed in a future version. Explicitly remove unwanted columns after parsing instead.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2146/2975525808.py:13: FutureWarning: The &#39;keep_date_col&#39; keyword in pd.read_csv is deprecated and will be removed in a future version. Explicitly remove unwanted columns after parsing instead.
   leppa91 = pd.read_csv(&quot;https://github.com/opendata-education/Tyopajat/raw/refs/heads/main/materiaali/data/Pietarsaari_Leppaluoto91.csv&quot;, sep = &quot;,&quot;,
-/tmp/ipykernel_2160/2975525808.py:13: FutureWarning: Support for nested sequences for &#39;parse_dates&#39; in pd.read_csv is deprecated. Combine the desired columns with pd.to_datetime after parsing instead.
+/tmp/ipykernel_2146/2975525808.py:13: FutureWarning: Support for nested sequences for &#39;parse_dates&#39; in pd.read_csv is deprecated. Combine the desired columns with pd.to_datetime after parsing instead.
   leppa91 = pd.read_csv(&quot;https://github.com/opendata-education/Tyopajat/raw/refs/heads/main/materiaali/data/Pietarsaari_Leppaluoto91.csv&quot;, sep = &quot;,&quot;,
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2160/2975525808.py:15: FutureWarning: The &#39;keep_date_col&#39; keyword in pd.read_csv is deprecated and will be removed in a future version. Explicitly remove unwanted columns after parsing instead.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2146/2975525808.py:15: FutureWarning: The &#39;keep_date_col&#39; keyword in pd.read_csv is deprecated and will be removed in a future version. Explicitly remove unwanted columns after parsing instead.
   leppa81 = pd.read_csv(&quot;https://github.com/opendata-education/Tyopajat/raw/refs/heads/main/materiaali/data/Pietarsaari_Leppaluoto81.csv&quot;, sep = &quot;,&quot;,
-/tmp/ipykernel_2160/2975525808.py:15: FutureWarning: Support for nested sequences for &#39;parse_dates&#39; in pd.read_csv is deprecated. Combine the desired columns with pd.to_datetime after parsing instead.
+/tmp/ipykernel_2146/2975525808.py:15: FutureWarning: Support for nested sequences for &#39;parse_dates&#39; in pd.read_csv is deprecated. Combine the desired columns with pd.to_datetime after parsing instead.
   leppa81 = pd.read_csv(&quot;https://github.com/opendata-education/Tyopajat/raw/refs/heads/main/materiaali/data/Pietarsaari_Leppaluoto81.csv&quot;, sep = &quot;,&quot;,
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2160/2975525808.py:17: FutureWarning: The &#39;keep_date_col&#39; keyword in pd.read_csv is deprecated and will be removed in a future version. Explicitly remove unwanted columns after parsing instead.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2146/2975525808.py:17: FutureWarning: The &#39;keep_date_col&#39; keyword in pd.read_csv is deprecated and will be removed in a future version. Explicitly remove unwanted columns after parsing instead.
   leppa71 = pd.read_csv(&quot;https://github.com/opendata-education/Tyopajat/raw/refs/heads/main/materiaali/data/Pietarsaari_Leppaluoto71.csv&quot;, sep = &quot;,&quot;,
-/tmp/ipykernel_2160/2975525808.py:17: FutureWarning: Support for nested sequences for &#39;parse_dates&#39; in pd.read_csv is deprecated. Combine the desired columns with pd.to_datetime after parsing instead.
+/tmp/ipykernel_2146/2975525808.py:17: FutureWarning: Support for nested sequences for &#39;parse_dates&#39; in pd.read_csv is deprecated. Combine the desired columns with pd.to_datetime after parsing instead.
   leppa71 = pd.read_csv(&quot;https://github.com/opendata-education/Tyopajat/raw/refs/heads/main/materiaali/data/Pietarsaari_Leppaluoto71.csv&quot;, sep = &quot;,&quot;,
 </pre></div>
 </div>
@@ -582,15 +589,15 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2160/34637790.py:5: FutureWarning: The &#39;keep_date_col&#39; keyword in pd.read_csv is deprecated and will be removed in a future version. Explicitly remove unwanted columns after parsing instead.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2146/34637790.py:5: FutureWarning: The &#39;keep_date_col&#39; keyword in pd.read_csv is deprecated and will be removed in a future version. Explicitly remove unwanted columns after parsing instead.
   per = pd.read_csv(&quot;https://github.com/opendata-education/Tyopajat/raw/refs/heads/main/materiaali/data/Perameri_aaltopoiju1224.csv&quot;, sep = &quot;,&quot;,
-/tmp/ipykernel_2160/34637790.py:5: FutureWarning: Support for nested sequences for &#39;parse_dates&#39; in pd.read_csv is deprecated. Combine the desired columns with pd.to_datetime after parsing instead.
+/tmp/ipykernel_2146/34637790.py:5: FutureWarning: Support for nested sequences for &#39;parse_dates&#39; in pd.read_csv is deprecated. Combine the desired columns with pd.to_datetime after parsing instead.
   per = pd.read_csv(&quot;https://github.com/opendata-education/Tyopajat/raw/refs/heads/main/materiaali/data/Perameri_aaltopoiju1224.csv&quot;, sep = &quot;,&quot;,
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2160/34637790.py:7: FutureWarning: The &#39;keep_date_col&#39; keyword in pd.read_csv is deprecated and will be removed in a future version. Explicitly remove unwanted columns after parsing instead.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2146/34637790.py:7: FutureWarning: The &#39;keep_date_col&#39; keyword in pd.read_csv is deprecated and will be removed in a future version. Explicitly remove unwanted columns after parsing instead.
   maak = pd.read_csv(&quot;https://github.com/opendata-education/Tyopajat/raw/refs/heads/main/materiaali/data/Kalajoki_Maakalla1224.csv&quot;, sep = &quot;,&quot;,
-/tmp/ipykernel_2160/34637790.py:7: FutureWarning: Support for nested sequences for &#39;parse_dates&#39; in pd.read_csv is deprecated. Combine the desired columns with pd.to_datetime after parsing instead.
+/tmp/ipykernel_2146/34637790.py:7: FutureWarning: Support for nested sequences for &#39;parse_dates&#39; in pd.read_csv is deprecated. Combine the desired columns with pd.to_datetime after parsing instead.
   maak = pd.read_csv(&quot;https://github.com/opendata-education/Tyopajat/raw/refs/heads/main/materiaali/data/Kalajoki_Maakalla1224.csv&quot;, sep = &quot;,&quot;,
 </pre></div>
 </div>
@@ -620,21 +627,21 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2160/3837091871.py:5: FutureWarning: The &#39;keep_date_col&#39; keyword in pd.read_csv is deprecated and will be removed in a future version. Explicitly remove unwanted columns after parsing instead.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2146/3837091871.py:5: FutureWarning: The &#39;keep_date_col&#39; keyword in pd.read_csv is deprecated and will be removed in a future version. Explicitly remove unwanted columns after parsing instead.
   tank90 = pd.read_csv(&quot;https://github.com/opendata-education/Tyopajat/raw/refs/heads/main/materiaali/data/Kokkola_Tankar90.csv&quot;, sep = &quot;,&quot;,
-/tmp/ipykernel_2160/3837091871.py:5: FutureWarning: Support for nested sequences for &#39;parse_dates&#39; in pd.read_csv is deprecated. Combine the desired columns with pd.to_datetime after parsing instead.
+/tmp/ipykernel_2146/3837091871.py:5: FutureWarning: Support for nested sequences for &#39;parse_dates&#39; in pd.read_csv is deprecated. Combine the desired columns with pd.to_datetime after parsing instead.
   tank90 = pd.read_csv(&quot;https://github.com/opendata-education/Tyopajat/raw/refs/heads/main/materiaali/data/Kokkola_Tankar90.csv&quot;, sep = &quot;,&quot;,
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2160/3837091871.py:7: FutureWarning: The &#39;keep_date_col&#39; keyword in pd.read_csv is deprecated and will be removed in a future version. Explicitly remove unwanted columns after parsing instead.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2146/3837091871.py:7: FutureWarning: The &#39;keep_date_col&#39; keyword in pd.read_csv is deprecated and will be removed in a future version. Explicitly remove unwanted columns after parsing instead.
   tank00 = pd.read_csv(&quot;https://github.com/opendata-education/Tyopajat/raw/refs/heads/main/materiaali/data/Kokkola_Tankar00.csv&quot;, sep = &quot;,&quot;,
-/tmp/ipykernel_2160/3837091871.py:7: FutureWarning: Support for nested sequences for &#39;parse_dates&#39; in pd.read_csv is deprecated. Combine the desired columns with pd.to_datetime after parsing instead.
+/tmp/ipykernel_2146/3837091871.py:7: FutureWarning: Support for nested sequences for &#39;parse_dates&#39; in pd.read_csv is deprecated. Combine the desired columns with pd.to_datetime after parsing instead.
   tank00 = pd.read_csv(&quot;https://github.com/opendata-education/Tyopajat/raw/refs/heads/main/materiaali/data/Kokkola_Tankar00.csv&quot;, sep = &quot;,&quot;,
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2160/3837091871.py:9: FutureWarning: The &#39;keep_date_col&#39; keyword in pd.read_csv is deprecated and will be removed in a future version. Explicitly remove unwanted columns after parsing instead.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2146/3837091871.py:9: FutureWarning: The &#39;keep_date_col&#39; keyword in pd.read_csv is deprecated and will be removed in a future version. Explicitly remove unwanted columns after parsing instead.
   tank10 = pd.read_csv(&quot;https://github.com/opendata-education/Tyopajat/raw/refs/heads/main/materiaali/data/Kokkola_Tankar10.csv&quot;, sep = &quot;,&quot;, decimal = &quot;,&quot;,
-/tmp/ipykernel_2160/3837091871.py:9: FutureWarning: Support for nested sequences for &#39;parse_dates&#39; in pd.read_csv is deprecated. Combine the desired columns with pd.to_datetime after parsing instead.
+/tmp/ipykernel_2146/3837091871.py:9: FutureWarning: Support for nested sequences for &#39;parse_dates&#39; in pd.read_csv is deprecated. Combine the desired columns with pd.to_datetime after parsing instead.
   tank10 = pd.read_csv(&quot;https://github.com/opendata-education/Tyopajat/raw/refs/heads/main/materiaali/data/Kokkola_Tankar10.csv&quot;, sep = &quot;,&quot;, decimal = &quot;,&quot;,
 </pre></div>
 </div>
@@ -656,21 +663,21 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2160/1939484206.py:5: FutureWarning: The &#39;keep_date_col&#39; keyword in pd.read_csv is deprecated and will be removed in a future version. Explicitly remove unwanted columns after parsing instead.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2146/1939484206.py:5: FutureWarning: The &#39;keep_date_col&#39; keyword in pd.read_csv is deprecated and will be removed in a future version. Explicitly remove unwanted columns after parsing instead.
   lento = pd.read_csv(&quot;https://github.com/opendata-education/Tyopajat/raw/refs/heads/main/materiaali/data/Kruunupyy_Kokkola-Pietarsaari_lentoasema71.csv&quot;, sep = &quot;,&quot;,
-/tmp/ipykernel_2160/1939484206.py:5: FutureWarning: Support for nested sequences for &#39;parse_dates&#39; in pd.read_csv is deprecated. Combine the desired columns with pd.to_datetime after parsing instead.
+/tmp/ipykernel_2146/1939484206.py:5: FutureWarning: Support for nested sequences for &#39;parse_dates&#39; in pd.read_csv is deprecated. Combine the desired columns with pd.to_datetime after parsing instead.
   lento = pd.read_csv(&quot;https://github.com/opendata-education/Tyopajat/raw/refs/heads/main/materiaali/data/Kruunupyy_Kokkola-Pietarsaari_lentoasema71.csv&quot;, sep = &quot;,&quot;,
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2160/1939484206.py:7: FutureWarning: The &#39;keep_date_col&#39; keyword in pd.read_csv is deprecated and will be removed in a future version. Explicitly remove unwanted columns after parsing instead.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2146/1939484206.py:7: FutureWarning: The &#39;keep_date_col&#39; keyword in pd.read_csv is deprecated and will be removed in a future version. Explicitly remove unwanted columns after parsing instead.
   sant = pd.read_csv(&quot;https://github.com/opendata-education/Tyopajat/raw/refs/heads/main/materiaali/data/Kokkola_Santahaka08.csv&quot;, sep = &quot;,&quot;,
-/tmp/ipykernel_2160/1939484206.py:7: FutureWarning: Support for nested sequences for &#39;parse_dates&#39; in pd.read_csv is deprecated. Combine the desired columns with pd.to_datetime after parsing instead.
+/tmp/ipykernel_2146/1939484206.py:7: FutureWarning: Support for nested sequences for &#39;parse_dates&#39; in pd.read_csv is deprecated. Combine the desired columns with pd.to_datetime after parsing instead.
   sant = pd.read_csv(&quot;https://github.com/opendata-education/Tyopajat/raw/refs/heads/main/materiaali/data/Kokkola_Santahaka08.csv&quot;, sep = &quot;,&quot;,
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2160/1939484206.py:9: FutureWarning: The &#39;keep_date_col&#39; keyword in pd.read_csv is deprecated and will be removed in a future version. Explicitly remove unwanted columns after parsing instead.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2146/1939484206.py:9: FutureWarning: The &#39;keep_date_col&#39; keyword in pd.read_csv is deprecated and will be removed in a future version. Explicitly remove unwanted columns after parsing instead.
   hal = pd.read_csv(&quot;https://github.com/opendata-education/Tyopajat/raw/refs/heads/main/materiaali/data/Halsua71.csv&quot;, sep = &quot;,&quot;,
-/tmp/ipykernel_2160/1939484206.py:9: FutureWarning: Support for nested sequences for &#39;parse_dates&#39; in pd.read_csv is deprecated. Combine the desired columns with pd.to_datetime after parsing instead.
+/tmp/ipykernel_2146/1939484206.py:9: FutureWarning: Support for nested sequences for &#39;parse_dates&#39; in pd.read_csv is deprecated. Combine the desired columns with pd.to_datetime after parsing instead.
   hal = pd.read_csv(&quot;https://github.com/opendata-education/Tyopajat/raw/refs/heads/main/materiaali/data/Halsua71.csv&quot;, sep = &quot;,&quot;,
 </pre></div>
 </div>
@@ -1138,6 +1145,8 @@ Lumensyvyys korjattu
 <section id="analyysia">
 <h2>4. Analyysiä<a class="headerlink" href="#analyysia" title="Link to this heading">#</a></h2>
 <p>Ryhdytään tekemään alustavia kuvaajia tarkastelluista suureista.</p>
+<section id="vedenkorkeus">
+<h3>4.1 Vedenkorkeus<a class="headerlink" href="#vedenkorkeus" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Leppäluoto</span>
@@ -1257,6 +1266,9 @@ Lumensyvyys korjattu
 <img alt="../_images/36ac4a3958647f4f9d72de802f1aa5c9e10c6d2a5e4847345a616b12b88ec87b.png" src="../_images/36ac4a3958647f4f9d72de802f1aa5c9e10c6d2a5e4847345a616b12b88ec87b.png" />
 </div>
 </div>
+</section>
+<section id="veden-lampotilat">
+<h3>4.2 Veden lämpötilat<a class="headerlink" href="#veden-lampotilat" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Veden lämpötilat</span>
@@ -1317,7 +1329,7 @@ Lumensyvyys korjattu
 <span class="n">p</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">poly1d</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">vaaka</span><span class="p">,</span> <span class="n">p</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;grey&quot;</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s2">&quot;dashed&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;trendi Maak&quot;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.7</span><span class="p">)</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Meriveden lämpötilamittaukset, vuosikeskiarvo&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Meriveden lämpötilamittaukset, keskiarvo (</span><span class="si">{</span><span class="n">ehto</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Veden lämpötila [°C]&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> Aika&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
@@ -1326,9 +1338,12 @@ Lumensyvyys korjattu
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/1a48238d743f63d730a3f71650b4fbb1cc865b8a3207fc7b9b5104bd74b6766f.png" src="../_images/1a48238d743f63d730a3f71650b4fbb1cc865b8a3207fc7b9b5104bd74b6766f.png" />
+<img alt="../_images/71e27b693fa0acf51a8eccf6e126b4792e07ef9e90b9924f11b7663e69d45691.png" src="../_images/71e27b693fa0acf51a8eccf6e126b4792e07ef9e90b9924f11b7663e69d45691.png" />
 </div>
 </div>
+</section>
+<section id="ilman-lampotilat">
+<h3>4.3 Ilman lämpötilat<a class="headerlink" href="#ilman-lampotilat" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ilman lämpötilat</span>
@@ -1349,6 +1364,74 @@ Lumensyvyys korjattu
 <img alt="../_images/1478056d12454bd5ce12e98fe4a665707d0b968d10a8a514ac2ba1511b986eb2.png" src="../_images/1478056d12454bd5ce12e98fe4a665707d0b968d10a8a514ac2ba1511b986eb2.png" />
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Valitaan tarkasteltava ehto</span>
+
+<span class="n">ehto</span> <span class="o">=</span> <span class="s2">&quot;Vuosi&quot;</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
+
+<span class="n">KAT</span> <span class="o">=</span> <span class="n">tank</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="n">ehto</span><span class="p">])</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">numeric_only</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<span class="n">vaaka</span> <span class="o">=</span> <span class="n">tank</span><span class="p">[</span><span class="n">ehto</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">vaaka</span><span class="p">,</span> <span class="n">KAT</span><span class="p">[</span><span class="s2">&quot;Lämpötilan keskiarvo [°C]&quot;</span><span class="p">],</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;slateblue&quot;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">vaaka</span><span class="p">,</span> <span class="n">KAT</span><span class="p">[</span><span class="s2">&quot;Lämpötilan keskiarvo [°C]&quot;</span><span class="p">],</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;blue&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;mittaukset Tankar&quot;</span><span class="p">)</span>
+
+<span class="c1"># Trendi.</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">vaaka</span><span class="p">))</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">KAT</span><span class="p">[</span><span class="s2">&quot;Lämpötilan keskiarvo [°C]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="c1"># Tästä lukua vaihtamalla voi muuttaa sovitetun yhtälön astetta.</span>
+<span class="n">z</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">polyfit</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">poly1d</span><span class="p">(</span><span class="n">z</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">vaaka</span><span class="p">,</span> <span class="n">p</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;grey&quot;</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s2">&quot;dashed&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;trendi Tankar&quot;</span><span class="p">,</span> <span class="n">alpha</span> <span class="o">=</span> <span class="mf">0.7</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Ilman lämpötilamittaukset, keskiarvo (</span><span class="si">{</span><span class="n">ehto</span><span class="si">}</span><span class="s2">)&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Ilman lämpötila [°C]&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> Aika&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/7171a5aeaa51ec394b75bd8a625305419231721b3b5eb717574223d86c1ee3d8.png" src="../_images/7171a5aeaa51ec394b75bd8a625305419231721b3b5eb717574223d86c1ee3d8.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Lähdetään metsästämään helteitä vaikkapa yhden vuoden ajalta</span>
+
+<span class="c1"># Valitaan vuosi</span>
+<span class="n">vuosi</span> <span class="o">=</span> <span class="mi">2020</span>
+<span class="n">helle</span> <span class="o">=</span> <span class="mi">25</span>
+<span class="n">valinta</span> <span class="o">=</span> <span class="n">tank</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;Vuosi == @vuosi&quot;</span><span class="p">)</span>
+<span class="n">helteet</span> <span class="o">=</span> <span class="n">valinta</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;`Lämpötilan keskiarvo [°C]` &gt;= @helle&quot;</span><span class="p">)</span>
+<span class="n">maksimi</span> <span class="o">=</span> <span class="n">valinta</span><span class="p">[</span><span class="s2">&quot;Lämpötilan keskiarvo [°C]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+
+<span class="c1"># Piirretään kuvaajat</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">valinta</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">valinta</span><span class="p">[</span><span class="s2">&quot;Lämpötilan keskiarvo [°C]&quot;</span><span class="p">],</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;slateblue&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Lämpötila&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">helteet</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">helteet</span><span class="p">[</span><span class="s2">&quot;Lämpötilan keskiarvo [°C]&quot;</span><span class="p">],</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Myrsky&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span> <span class="o">=</span> <span class="n">helle</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s1">&#39;dashed&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Helleraja&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Kokkolan Tankarin lämpötilat, </span><span class="si">{</span><span class="n">vuosi</span><span class="si">}</span><span class="s2">, maksimilämpötila </span><span class="si">{</span><span class="n">maksimi</span><span class="si">}</span><span class="s2"> °C&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Lämpötilan keskiarvo [°C]&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> Aika&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/7a531d57a8a2e3ffff9c11b71ea633524a97af99679f3104f2f97f0ff06d10ee.png" src="../_images/7a531d57a8a2e3ffff9c11b71ea633524a97af99679f3104f2f97f0ff06d10ee.png" />
+</div>
+</div>
+</section>
+<section id="tuuli">
+<h3>4.4 Tuuli<a class="headerlink" href="#tuuli" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tuulen keskimääräisen nopeuden arvo</span>
@@ -1405,22 +1488,88 @@ Lumensyvyys korjattu
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Sademäärät</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Lähdetään metsästämään myrskyjä vaikkapa yhden vuoden ajalta</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">lento</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">lento</span><span class="p">[</span><span class="s2">&quot;Sademäärä [mm]&quot;</span><span class="p">])</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">hal</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">hal</span><span class="p">[</span><span class="s2">&quot;Sademäärä [mm]&quot;</span><span class="p">])</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="c1"># Valitaan vuosi</span>
+<span class="n">vuosi</span> <span class="o">=</span> <span class="mi">2015</span>
+<span class="n">nopeus</span> <span class="o">=</span> <span class="mi">21</span>
+<span class="n">valinta</span> <span class="o">=</span> <span class="n">tank</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;Vuosi == @vuosi&quot;</span><span class="p">)</span>
+<span class="n">myrskyt</span> <span class="o">=</span> <span class="n">valinta</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;`Keskituulen nopeus [m/s]` &gt;= @nopeus&quot;</span><span class="p">)</span>
+<span class="n">maksimi</span> <span class="o">=</span> <span class="n">valinta</span><span class="p">[</span><span class="s2">&quot;Keskituulen nopeus [m/s]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
 
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">sant</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">sant</span><span class="p">[</span><span class="s2">&quot;Sademäärä [mm]&quot;</span><span class="p">])</span>
+<span class="c1"># Piirretään kuvaajat</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">valinta</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">valinta</span><span class="p">[</span><span class="s2">&quot;Keskituulen nopeus [m/s]&quot;</span><span class="p">],</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;slateblue&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Tuuli&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">myrskyt</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">myrskyt</span><span class="p">[</span><span class="s2">&quot;Keskituulen nopeus [m/s]&quot;</span><span class="p">],</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;red&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Myrsky&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span> <span class="o">=</span> <span class="n">nopeus</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s1">&#39;dashed&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Myrskyraja&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Kokkolan Tankarin keskituuli, </span><span class="si">{</span><span class="n">vuosi</span><span class="si">}</span><span class="s2">, maksiminopeus </span><span class="si">{</span><span class="n">maksimi</span><span class="si">}</span><span class="s2"> m/s&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Keskituulen nopeus [m/s]&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> Aika&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/a3eaefa799f6654dbb77eff82f05aa9916897137293afd75c4f59c9bea2f767f.png" src="../_images/a3eaefa799f6654dbb77eff82f05aa9916897137293afd75c4f59c9bea2f767f.png" />
-<img alt="../_images/1efef46b87168ba80563f48f827fc06e2cd1da26c32879833d0e8682f16f20f1.png" src="../_images/1efef46b87168ba80563f48f827fc06e2cd1da26c32879833d0e8682f16f20f1.png" />
+<img alt="../_images/ee65a1718e83b046dcb914cfcce6ce10bdf2d66a55c8e6dffb809e75bb9070fc.png" src="../_images/ee65a1718e83b046dcb914cfcce6ce10bdf2d66a55c8e6dffb809e75bb9070fc.png" />
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Tehdään päivämäärävalitsin tarkempaa katselua varten</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="s1">&#39;2015-02-07&#39;</span>
+<span class="n">b</span> <span class="o">=</span> <span class="s1">&#39;2015-03-01&#39;</span>
+<span class="n">nopeus</span> <span class="o">=</span> <span class="mi">21</span>
+<span class="n">vali</span> <span class="o">=</span> <span class="n">tank</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="s2">&quot;Aika &gt;= @a &amp; Aika &lt; @b&quot;</span><span class="p">)</span>
+
+<span class="n">maksimi</span> <span class="o">=</span> <span class="n">vali</span><span class="p">[</span><span class="s2">&quot;Keskituulen nopeus [m/s]&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+
+<span class="c1"># Piirretään kuvaajat</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">vali</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">vali</span><span class="p">[</span><span class="s2">&quot;Keskituulen nopeus [m/s]&quot;</span><span class="p">],</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;grey&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">vali</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">vali</span><span class="p">[</span><span class="s2">&quot;Keskituulen nopeus [m/s]&quot;</span><span class="p">],</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;slateblue&quot;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Tuuli&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span> <span class="o">=</span> <span class="n">nopeus</span><span class="p">,</span> <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;y&#39;</span><span class="p">,</span> <span class="n">linestyle</span> <span class="o">=</span> <span class="s1">&#39;dashed&#39;</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Myrskyraja&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Kokkolan Tankarin keskituuli, välillä </span><span class="si">{</span><span class="n">a</span><span class="si">}</span><span class="s2"> ja </span><span class="si">{</span><span class="n">b</span><span class="si">}</span><span class="s2">, maksiminopeus </span><span class="si">{</span><span class="n">maksimi</span><span class="si">}</span><span class="s2"> m/s.&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;Keskituulen nopeus [m/s]&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2"> Aika&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/1663801572449bc830b644d2a19056d944be94380ae2e596c08be926ada51982.png" src="../_images/1663801572449bc830b644d2a19056d944be94380ae2e596c08be926ada51982.png" />
+</div>
+</div>
+</section>
+<section id="sade-ja-lumi">
+<h3>4.5 Sade ja lumi<a class="headerlink" href="#sade-ja-lumi" title="Link to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Sademäärät</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">lento</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">lento</span><span class="p">[</span><span class="s2">&quot;Sademäärä [mm]&quot;</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Lentokenttä&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">hal</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">hal</span><span class="p">[</span><span class="s2">&quot;Sademäärä [mm]&quot;</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Halsuan kirkonkylä&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">sant</span><span class="p">[</span><span class="s2">&quot;Aika&quot;</span><span class="p">],</span> <span class="n">sant</span><span class="p">[</span><span class="s2">&quot;Sademäärä [mm]&quot;</span><span class="p">],</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Santahaka&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">(</span><span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/c8049b157ca989bea2d52130306d73da5fc3b48b66c87ff7f44f452922687e24.png" src="../_images/c8049b157ca989bea2d52130306d73da5fc3b48b66c87ff7f44f452922687e24.png" />
+<img alt="../_images/32c6ba11b305cd0c0f84fba702341cc7590975443eab176af88aa5eed7f463ca.png" src="../_images/32c6ba11b305cd0c0f84fba702341cc7590975443eab176af88aa5eed7f463ca.png" />
+</div>
+</div>
+</section>
 </section>
 </section>
 
@@ -1491,7 +1640,14 @@ Lumensyvyys korjattu
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tyokalut">1. Työkalut</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aineistot">2. Aineistot</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#aineiston-korjaus">3. Aineiston korjaus</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analyysia">4. Analyysiä</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#analyysia">4. Analyysiä</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#vedenkorkeus">4.1 Vedenkorkeus</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#veden-lampotilat">4.2 Veden lämpötilat</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ilman-lampotilat">4.3 Ilman lämpötilat</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tuuli">4.4 Tuuli</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sade-ja-lumi">4.5 Sade ja lumi</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 

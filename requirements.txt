@@ -4,3 +4,4 @@ numpy
 ghp-import
 pandas
 geopandas
+scipy

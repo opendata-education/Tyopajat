@@ -497,25 +497,29 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting fmiopendata
-  Downloading fmiopendata-0.4.3.tar.gz (26 kB)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Downloading fmiopendata-0.4.3.tar.gz (26 kB)
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Preparing metadata (setup.py) ... ?25l-
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> done
-?25hRequirement already satisfied: numpy in /opt/hostedtoolcache/Python/3.13.3/x64/lib/python3.13/site-packages (from fmiopendata) (2.2.5)
+?25hRequirement already satisfied: numpy in /opt/hostedtoolcache/Python/3.13.3/x64/lib/python3.13/site-packages (from fmiopendata) (2.2.6)
 Requirement already satisfied: requests in /opt/hostedtoolcache/Python/3.13.3/x64/lib/python3.13/site-packages (from fmiopendata) (2.32.3)
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting defusedxml (from fmiopendata)
   Downloading defusedxml-0.7.1-py2.py3-none-any.whl.metadata (32 kB)
-Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in /opt/hostedtoolcache/Python/3.13.3/x64/lib/python3.13/site-packages (from requests-&gt;fmiopendata) (3.4.1)
+Requirement already satisfied: charset-normalizer&lt;4,&gt;=2 in /opt/hostedtoolcache/Python/3.13.3/x64/lib/python3.13/site-packages (from requests-&gt;fmiopendata) (3.4.2)
 Requirement already satisfied: idna&lt;4,&gt;=2.5 in /opt/hostedtoolcache/Python/3.13.3/x64/lib/python3.13/site-packages (from requests-&gt;fmiopendata) (3.10)
 Requirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in /opt/hostedtoolcache/Python/3.13.3/x64/lib/python3.13/site-packages (from requests-&gt;fmiopendata) (2.4.0)
-Requirement already satisfied: certifi&gt;=2017.4.17 in /opt/hostedtoolcache/Python/3.13.3/x64/lib/python3.13/site-packages (from requests-&gt;fmiopendata) (2025.1.31)
+Requirement already satisfied: certifi&gt;=2017.4.17 in /opt/hostedtoolcache/Python/3.13.3/x64/lib/python3.13/site-packages (from requests-&gt;fmiopendata) (2025.4.26)
 Downloading defusedxml-0.7.1-py2.py3-none-any.whl (25 kB)
 Building wheels for collected packages: fmiopendata
+<span class=" -Color -Color-Yellow">  DEPRECATION: Building &#39;fmiopendata&#39; using the legacy setup.py bdist_wheel mechanism, which will be removed in a future version. pip 25.3 will enforce this behaviour change. A possible replacement is to use the standardized build interface by setting the `--use-pep517` option, (possibly combined with `--no-build-isolation`), or adding a `pyproject.toml` file to the source tree of &#39;fmiopendata&#39;. Discussion can be found at https://github.com/pypa/pip/issues/6334</span>
+
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Building wheel for fmiopendata (setup.py) ... ?25l-
@@ -525,15 +529,49 @@ Building wheels for collected packages: fmiopendata
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span> done
-?25h  Created wheel for fmiopendata: filename=fmiopendata-0.4.3-py3-none-any.whl size=30959 sha256=c1ff1ca9ba6a451f67bf608a0fd1ff563a52ec28daeb1a57e55588e164e59217
+?25h  Created wheel for fmiopendata: filename=fmiopendata-0.4.3-py3-none-any.whl size=30961 sha256=b21ccd67cc304544b26a3a429689594b16047d844da744e491e508938d93aa26
   Stored in directory: /home/runner/.cache/pip/wheels/8b/08/38/ca3e95e1d2083a04c6c4147e4d76c62b4d3b5f75dcb7edb285
 Successfully built fmiopendata
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: defusedxml, fmiopendata
+?25l
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Successfully installed defusedxml-0.7.1 fmiopendata-0.4.3
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">2/2</span> [fmiopendata]
+?25h
+Successfully installed defusedxml-0.7.1 fmiopendata-0.4.3
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">6</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">from</span><span class="w"> </span><span class="nn">fmiopendata.wfs</span><span class="w"> </span><span class="kn">import</span> <span class="n">download_stored_query</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1"># Ladataan luotaukset fmiopendata-paketin avulla</span>
+<span class="ne">----&gt; </span><span class="mi">6</span> <span class="n">snd</span> <span class="o">=</span> <span class="n">download_stored_query</span><span class="p">(</span><span class="s2">&quot;fmi::observations::weather::sounding::multipointcoverage&quot;</span><span class="p">)</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.13.3/x64/lib/python3.13/site-packages/fmiopendata/wfs.py:123,</span> in <span class="ni">download_stored_query</span><span class="nt">(query_id, args)</span>
+<span class="g g-Whitespace">    </span><span class="mi">120</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">121</span>     <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">&quot;No parser available for </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">query_id</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">123</span> <span class="k">return</span> <span class="n">download_and_parse</span><span class="p">(</span><span class="n">query_id</span><span class="p">,</span> <span class="n">args</span><span class="o">=</span><span class="n">args</span><span class="p">)</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.13.3/x64/lib/python3.13/site-packages/fmiopendata/sounding.py:111,</span> in <span class="ni">download_and_parse</span><span class="nt">(query_id, args)</span>
+<span class="g g-Whitespace">    </span><span class="mi">109</span>     <span class="n">url</span> <span class="o">=</span> <span class="n">url</span> <span class="o">+</span> <span class="s2">&quot;&amp;&quot;</span> <span class="o">+</span> <span class="s2">&quot;&amp;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">110</span> <span class="n">xml</span> <span class="o">=</span> <span class="n">read_url</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">111</span> <span class="k">return</span> <span class="n">ParseSoundings</span><span class="p">(</span><span class="n">xml</span><span class="p">)</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.13.3/x64/lib/python3.13/site-packages/fmiopendata/sounding.py:67,</span> in <span class="ni">ParseSoundings.__init__</span><span class="nt">(self, xml)</span>
+<span class="g g-Whitespace">     </span><span class="mi">65</span> <span class="bp">self</span><span class="o">.</span><span class="n">_xml</span> <span class="o">=</span> <span class="n">ET</span><span class="o">.</span><span class="n">fromstring</span><span class="p">(</span><span class="n">xml</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">66</span> <span class="bp">self</span><span class="o">.</span><span class="n">soundings</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="ne">---&gt; </span><span class="mi">67</span> <span class="bp">self</span><span class="o">.</span><span class="n">_parse</span><span class="p">()</span>
+
+<span class="nn">File /opt/hostedtoolcache/Python/3.13.3/x64/lib/python3.13/site-packages/fmiopendata/sounding.py:100,</span> in <span class="ni">ParseSoundings._parse</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">     </span><span class="mi">98</span> <span class="n">fields</span> <span class="o">=</span> <span class="n">member</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="n">wfs</span><span class="o">.</span><span class="n">SWE_FIELD</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">99</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">field</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">fields</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">100</span>     <span class="nb">setattr</span><span class="p">(</span><span class="n">sounding</span><span class="p">,</span> <span class="n">FIELD_NAMES</span><span class="p">[</span><span class="n">field</span><span class="o">.</span><span class="n">attrib</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">]],</span> <span class="n">data</span><span class="p">[</span><span class="n">i</span><span class="p">::</span><span class="nb">len</span><span class="p">(</span><span class="n">fields</span><span class="p">)])</span>
+<span class="g g-Whitespace">    </span><span class="mi">102</span> <span class="bp">self</span><span class="o">.</span><span class="n">soundings</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">sounding</span><span class="p">)</span>
+
+<span class="ne">KeyError</span>: &#39;RHP_PT1S_AVG&#39;
 </pre></div>
 </div>
 </div>
@@ -571,6 +609,19 @@ Successfully built fmiopendata
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Otetaan ensimmäinen luotaus, joka löytyy listasta.</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="n">sounding0</span> <span class="o">=</span> <span class="n">snd</span><span class="o">.</span><span class="n">soundings</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1"># Laitetaan paineet ja muut parametrit taulukoihin.</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">paine0</span> <span class="o">=</span> <span class="n">sounding0</span><span class="o">.</span><span class="n">pressures</span>
+
+<span class="ne">NameError</span>: name &#39;snd&#39; is not defined
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -581,7 +632,13 @@ Successfully built fmiopendata
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2487
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Tarkistetaan nopeasti montako riviä havaintoja valitussa luotauksessa on.</span>
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="nb">len</span><span class="p">(</span><span class="n">paine0</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;paine0&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -625,7 +682,19 @@ Successfully built fmiopendata
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/7993a1677c7d909e52900c3a94dcda7c4e6854d20efbfe5058eb6716e79eafba.png" src="../_images/7993a1677c7d909e52900c3a94dcda7c4e6854d20efbfe5058eb6716e79eafba.png" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">line</span> <span class="mi">8</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Lämpötila (°C)&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Paine (hPa)&quot;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="n">color</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
+<span class="ne">----&gt; </span><span class="mi">8</span> <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">lampotila0</span><span class="p">,</span> <span class="n">paine0</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Lämpötila&quot;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="n">color</span><span class="p">)</span>         <span class="c1"># Piirretään (T, p)</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kastepiste0</span><span class="p">,</span> <span class="n">paine0</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Kastepiste&quot;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;cyan&quot;</span><span class="p">)</span>       <span class="c1"># Piirretään (Td, p)</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span> <span class="o">=</span> <span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="n">labelcolor</span> <span class="o">=</span> <span class="n">color</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;lampotila0&#39; is not defined
+</pre></div>
+</div>
+<img alt="../_images/4ac33a7517ef25bd79bf28485120a01963c553f839b6c96e2b74af9ef523f1aa.png" src="../_images/4ac33a7517ef25bd79bf28485120a01963c553f839b6c96e2b74af9ef523f1aa.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -645,6 +714,19 @@ Successfully built fmiopendata
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Otetaan toinen luotaus, joka löytyy listasta</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">sounding1</span> <span class="o">=</span> <span class="n">snd</span><span class="o">.</span><span class="n">soundings</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># Laitetaan paineet ja muut parametrit taulukoihin</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">paine1</span> <span class="o">=</span> <span class="n">sounding1</span><span class="o">.</span><span class="n">pressures</span>
+
+<span class="ne">NameError</span>: name &#39;snd&#39; is not defined
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -654,7 +736,13 @@ Successfully built fmiopendata
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2332
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Tarkistetaan jälleen havaintojen määrä</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="nb">len</span><span class="p">(</span><span class="n">paine1</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;paine1&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -698,7 +786,19 @@ Successfully built fmiopendata
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/4ff8769e0fd4fdb5dc1a83ce3bf3e0c5655fbe0d19b059b6d52a498df0932676.png" src="../_images/4ff8769e0fd4fdb5dc1a83ce3bf3e0c5655fbe0d19b059b6d52a498df0932676.png" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">8</span><span class="p">],</span> <span class="n">line</span> <span class="mi">8</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Lämpötila (°C)&quot;</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;Paine (hPa)&quot;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="n">color</span><span class="p">,</span> <span class="n">fontsize</span> <span class="o">=</span> <span class="mi">15</span><span class="p">)</span>
+<span class="ne">----&gt; </span><span class="mi">8</span> <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">lampotila1</span><span class="p">,</span> <span class="n">paine1</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Lämpötila&quot;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="n">color</span><span class="p">)</span>         <span class="c1"># Piirretään (T, p)</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kastepiste1</span><span class="p">,</span> <span class="n">paine1</span><span class="p">,</span> <span class="n">label</span> <span class="o">=</span> <span class="s2">&quot;Kastepiste&quot;</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="s2">&quot;cyan&quot;</span><span class="p">)</span>       <span class="c1"># Piirretään (Td, p)</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">axis</span> <span class="o">=</span> <span class="s2">&quot;y&quot;</span><span class="p">,</span> <span class="n">labelcolor</span> <span class="o">=</span> <span class="n">color</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;lampotila1&#39; is not defined
+</pre></div>
+</div>
+<img alt="../_images/4ac33a7517ef25bd79bf28485120a01963c553f839b6c96e2b74af9ef523f1aa.png" src="../_images/4ac33a7517ef25bd79bf28485120a01963c553f839b6c96e2b74af9ef523f1aa.png" />
 </div>
 </div>
 </section>

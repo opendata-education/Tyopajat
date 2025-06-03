@@ -7,6 +7,7 @@ chapters:
   sections:
   - file: harjoitukset/mika-on-jupyter-notebook
   - file: harjoitukset/cms-esimerkki
+  - file: harjoitukset/CMS-hissi
   - file: harjoitukset/Vuosirenkaat
 - file: harjoitukset/esimerkit
   sections:
